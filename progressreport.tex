@@ -1,4 +1,5 @@
 \documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
 \begin{document}
 \title{Progress Report and Thesis plan}
 \author{Richard Ashley}
@@ -10,50 +11,96 @@ Supervisor: Tom Marsh
 \end{flushright}
 
 \begin{abstract} 
-Since May 2002, the  Ultracam high-speed CCD 
-photometric camera has been taking observations of a variety of 
-astronomical objects at the William Herschel Telescope (WHT), Very 
-Large Telescope (VLT) and New Technology Telescope (NTT). Over this 
-period it has generated approximately 10 Terabytes of raw data (CCD 
-frames plus meta-data) taken on 382 observing nights and including 
-approximately 566 target objects. In this data there are objects 
-that may hold scientific interest and have not been investigated. 
-Objects in the data need to be identified, listed and have 
-reductions performed to determine their light-curves. The goal of 
-this 1 year MSc project is to build an automated software pipeline 
-that will process the Ultracam data archive and produce a browse-able 
-version of the light-curves and meta-data for all of the 
-observations. 
+Since May 2002, the  Ultracam high-speed CCD photometric camera has been taking observations of a variety of astronomical objects at the William Herschel Telescope (WHT), Very Large Telescope (VLT) and New Technology Telescope (NTT). Over this period it has generated approximately 10 Terabytes of raw data (CCD frames plus meta-data) taken on 382 observing nights and including 
+approximately 566 target objects. In this data there are objects that may hold scientific interest and have not been investigated. 
+Objects in the data need to be identified, listed and have reductions performed to determine their light-curves. The goal of 
+this 1 year MSc project is to build an automated software pipeline that will process the Ultracam data archive and produce a browse-able 
+version of the light-curves and meta-data for all of the observations. 
 \end{abstract}
-
-\section{Automated Photometric Pipelines}
-
-A review of some other pipelines. 
 
 \section{The Ultracam automated pipeline} 
 
-Since May 2002, the  Ultracam high-speed CCD photometric camera has been taking 
-observations of a variety of astronomical objects at the William 
-Herschel Telescope (WHT), Very Large Telescope (VLT) and New 
-Technology Telescope (NTT). Over this period it has generated 
-approximately 10 Terabytes of raw data (CCD frames plus meta-data) 
-taken on 382 observing nights and including approximately 566 target 
-objects. In this data there are objects that may hold scientific 
-interest and have not been investigated. Objects in the data need to 
-be identified, listed and have reductions performed to determine 
-their light-curves.
+The Ultracam high speed photometry camera (hereafter, Ultracam) had its 'first-light' at the William Herschel Telescope (WHT) on the 16 May 2002. Since then it has been used on many occasions at three telescopes, namely the William Herschel Telescope (WHT), La Palma, Islas Canarias, the Very Large Telescope (VLT), Cerro Paranal, Chile and New Technology Telescope (NTT), La Silla, Chile. The camera is designed to be portable and can travel between these telescopes. 
+
+\subsection{About the camera}
+The camera has three CCD detectors enabling it to capture data in three colour bands simultaneously. Two dichroic beamsplitters divide the light from the collimator into three different beams, which shall hereafter be referred to as the ‘red’, ‘green’ and ‘blue’ channels. The three CCD detectors are mounted at right angles to each other on the camera. Therefore, each detector is at the end of a slightly different optical path. While the exposure timing is synchronised across the detectors, it is, however, possible to have detector in the blue channel remain exposed and not 'read-out' while the other two are going through multiple exposures and 'read-outs'. This is to allow for longer exposures where there might be less flux blue, either due to the intrinsic colour of the object being observed or a narrow band filter being used for that channel. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=90mm]{images/IMG_0121_scaled.JPG}
+\caption{The Ultracam being commissioned in May 2002.}
+\label{fig1}
+\end{figure}
+
+
+A key aspect of the design of the camera is its ability to perform at high cadence. It is possible to have the camera read-out at up to 500Hz (frames per channel per second) \cite{dhillon07}. This makes the camera useful for observations of rapid transient events and accurate timing. 
+
+The filters for each channel can be modified. In usual configurations the SDSS filter (u, g, r, i, z) set are used, but there is also a selection of narrow-band filters that can be substituted.  
+
+Each CCD has a total pixel area of 2048x1033 pixels. Half of these pixels are masked and never exposed to light. They are used as a temporary buffer for reading out the chip. CCD detectors are read out serially, but in order to decrease the time between exposures, the full image can be moved to the blanked out area of the chip and this can then be read out while the un-masked area of the chip is once again exposed to light. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=90mm]{images/ccd.png}
+\caption{The CCD detector (one channel) showing the masked-off area.}
+\label{fig2}
+\end{figure}
+
+The Ultracam gives the observer the ability to reduce the amount of the detector that is used for the exposure. This, again, speeds up the readout of the chip and enables the high cadence. Reducing the number of pixels exposed also decreases the amount of data storage needed for the run. The observer can define pairs of \emph{windows} that are centered on their objects of interest. By making the windows suitably small, the observer can have the camera in extremely high cadence mode. 
+
+The highest cadence mode is called \emph{Drift mode}. This mode uses the masked area of the CCD chip to store several exposures simultaneously. Only the portion of the CCD that is exposed is shifted into the masked area of the CCD meaning that the unmaksed area is ready to be re-exposed more quickly. This mode requires that only the lower portion of the detector, close to the boundary of the masked and un-masked areas, is exposed. In order to operate in Drift mode, it is likely that the observer will have to rotate the camera in order to place the target object(s) in the correct place on the CCD. This means that we can have any orientation ($0-180^{\circ}$) of the sky coordinates for any particular run of the Ultracam.   
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=40mm]{images/run010_r.png}
+  \caption{A 'fully' exposed CCD with 1 pair of windows (512x1024 pixels each)}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=40mm]{images/run016_r.png}
+  \caption{A 'windowed' exposure with 2 pairs of windows (350x300 and 250x250 pixels)}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+More details on the camera design and operation can be found in \emph{ULTRACAM: an ultrafast, triple-beam CCD camera for high-speed
+astrophysics \cite{dhillon07}}.
+
+\subsection{Observation and recording of data}
+
+Typically the telescope remains installed on the telescope for a week or so and is used for observations on consecutive nights. During the night there are several \emph{runs} made. A \emph{run} can be defined as a period when the camera is active and gathering data. Not all runs are used for gathering \emph{scientific} data. Some runs are used for target acquisition and camera calibration purposes. 
+
+The types of runs are: 
+\begin{itemize}
+	\item \emph{Science run}: These are the runs that contain the valuable scientific data. They usually comprise the longest portions of the observations during the night, unless the camera is having difficulties or adverse conditions are preventing useful astronomical observations.
+	\item \emph{Acquisition run}: These are runs, usually of short duration (ie a few minutes) during which the telescope is being moved in order to place the candidate object(s) in the field of view. The camera may also be rotated in order to align the CCD such that the targets avoid 'bad' pixels or are near to the lower boundary of the detector (eg for high speed readout in Drift mode). 
+	\item \emph{Flat-field}: At the start and the end of the night (usually during twilight) the observer will take a few runs to establish \emph{flat-fields} that will be used later for calibration of the CCD detectors.  
+	\item \emph{Bias}: A short run to build calibration readings for measuring CCD read-out noise. 
+	\item \emph{Timing calibration run}: One way to check the timing measurments of the camera is to take frames of a well-known rapidly oscillating source. For example, the crab nebula pulsar. The timing of the pulses as measured by the camera can be compared to the expected times for the pulsar and serve as a standard clock for calibration.
+\end{itemize}
+
+\subsection{The data archive}
+At the time of writing, the Ultracam data archive comprises of about 10 terabytes of saved data. This can be broken down as:
+\begin{itemize}
+	\item \emph{390} nights on which the Ultracam was operational at a telescope.
+	\item \emph{12 256} runs, including Science, Acquisition runs, etc as listed above. 
+	\item \emph{119 817 742} frames in total. This is includes the totals for each channel; red, green and blue.
+	\item \emph{10 181 269 485 298} bytes of raw image data.
+\end{itemize} 
+The data set is of a relatively large size and this means that it is not readily available outside of the university network. \emph{Check with Tom: Sheffield has a complete archive too.... Is it accessible in a different way over there?} 
+
+\subsection{Data reduction}
+
 
 \subsection{Goals of the project}
 
-The outcome of this MSc project will be a method to automate the 
-overall processing of the Ultracam data. The key aims will be field 
-identification, deep image generation and light-curve reduction for 
-all of the science runs in the data. 
+The outcome of this MSc project will be a method to automate the overall processing of the Ultracam data. The key aims will be field identification, deep image generation and light-curve reduction forall of the science runs in the data. 
 
-The final product should allow researchers to quickly browse the 
-reduced data and examine light-curves of each object in all of the 
-runs. The light-curves and runs should also be graded in terms of 
-quality (eg seeing, atmospheric transmission, etc)
+The final product should allow researchers to quickly browse the reduced data and examine light-curves of each object in all of the 
+runs. The light-curves and runs should also be graded in terms of quality (eg seeing, atmospheric transmission, etc) 
 
 The \emph{minimum} goals for this project are:
 \begin{itemize}
@@ -166,6 +213,10 @@ contents down to sub-heading level, an indication of page numbers
 and the state of completedness of each section 
 \item include a detailed timetable for completion of the research and writing the 
 thesis \end{itemize}
+
+\begin{thebibliography}{10}
+	\bibitem{dhillon07}Dhillon, V. S., Marsh, T.R. et al, 2007. \emph{ULTRACAM: an ultrafast, triple-beam CCD camera for high speed astrophysics}, MNRAS, 378.
+\end{thebibliography}
 
 \end{document}
 
