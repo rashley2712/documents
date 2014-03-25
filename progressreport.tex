@@ -9,18 +9,163 @@ Student: Richard Ashley
 Supervisor: Tom Marsh
 \end{flushright}
 
+\begin{abstract} 
+Since May 2002, the  Ultracam high-speed CCD 
+photometric camera has been taking observations of a variety of 
+astronomical objects at the William Herschel Telescope (WHT), Very 
+Large Telescope (VLT) and New Technology Telescope (NTT). Over this 
+period it has generated approximately 10 Terabytes of raw data (CCD 
+frames plus meta-data) taken on 382 observing nights and including 
+approximately 566 target objects. In this data there are objects 
+that may hold scientific interest and have not been investigated. 
+Objects in the data need to be identified, listed and have 
+reductions performed to determine their light-curves. The goal of 
+this 1 year MSc project is to build an automated software pipeline 
+that will process the Ultracam data archive and produce a browse-able 
+version of the light-curves and meta-data for all of the 
+observations. 
+\end{abstract}
+
+\section{Automated Photometric Pipelines}
+
+A review of some other pipelines. 
+
+\section{The Ultracam automated pipeline} 
+
+Since May 2002, the  Ultracam high-speed CCD photometric camera has been taking 
+observations of a variety of astronomical objects at the William 
+Herschel Telescope (WHT), Very Large Telescope (VLT) and New 
+Technology Telescope (NTT). Over this period it has generated 
+approximately 10 Terabytes of raw data (CCD frames plus meta-data) 
+taken on 382 observing nights and including approximately 566 target 
+objects. In this data there are objects that may hold scientific 
+interest and have not been investigated. Objects in the data need to 
+be identified, listed and have reductions performed to determine 
+their light-curves.
+
+\subsection{Goals of the project}
+
+The outcome of this MSc project will be a method to automate the 
+overall processing of the Ultracam data. The key aims will be field 
+identification, deep image generation and light-curve reduction for 
+all of the science runs in the data. 
+
+The final product should allow researchers to quickly browse the 
+reduced data and examine light-curves of each object in all of the 
+runs. The light-curves and runs should also be graded in terms of 
+quality (eg seeing, atmospheric transmission, etc)
+
+The \emph{minimum} goals for this project are:
+\begin{itemize}
+	\item Automated pipeline which can process ULTRACAM data to obtain light-curves for all objects within the field of any science runof all of the science runs for the Ultracam data. This data will include light-curves for all objects and all channels (colours or filters) in each run. An indicator of quality of the run will also be provided. 
+	\item A light-curve browser allowing a researcher to query and browse the Ultracam archive by date, object and position.
+	\item Images of the field for all three channels for each run, based on integration of frames in the run. The quality of the image will be ensured by discarding poor frames and taking into account movement of the frames due to tracking- and/or atmospheric effects. 
+\end{itemize}
+
+In addition to these minimum requirements, it would be \emph{desirable} to have results for:
+
+\begin{itemize}
+	\item Full photometric reduction. If the quality of the automated reduction (through sextractor) is not high enough for detailed science research, then the pipeline could include a stage that prepares and runs the current Ultracam pipeline reduction process for more accurate reductions.
+	\item Identification of moving objects seen in the run. For example, these might be Kuiper belt objects (moving at a few arcseconds per hour).
+	\item Automated alerts triggered when a interesting (variable) light curve is detected by the pipeline. 
+	\item Movies (in .mp4 format) of the run displayed in the light-curve browser. 
+\end{itemize}
+
+\subsection{User Interface}
+A User Interface (possibly HTML/Javascript based - to allow hosting on a website) will allow researchers to easily browse the reduced Ultracam data. The CCD image of the run should be displayed (together with accurate coordinates) and object labels alongside the light curves of each object. For crowded fields the researcher will be able to click on an object to see the light curve displayed in a separate panel. Below is a mockup of the ‘light-curve-browser’.
+Click the link to view in a browser
+
+
+Approach
+At a high level, the approach of this project will be to 
+run through all of the raw Ultracam data and pipe it to the 
+sextractor software that will identify and measure the objects in 
+the field. The code written in this project will build and monitor 
+the pipeline and produce the output results. Monitoring the pipeline 
+will require the code to identify and maintain a list of objects 
+from frame to frame in order to track and produce consistent 
+photometry. 
+
+
+
+
+
+\section{Thesis outline}
+
+\section{Timetable for work}
+
+Timeline 
+The high level view of the timeline for the 1 year duration of the MSc project is as follows:
+
+\emph{October - January}
+\begin{itemize} 
+	\item Prototyping and building of automatic Ultracam reduction pipeline.
+February
+	\item Demonstration to the department at Warwick through internal seminar.
+	\item Code refactoring.
+	\item Checking code into gitHub.
+\end{itemize}
+
+\emph{March}
+\begin{itemize} 
+	\item Code revisions based on feedback from demos, training and presentation.
+	\item Progress report and thesis plan due, 24th March
+\end{itemize}
+
+\emph{April}
+\begin{itemize} 
+	\item New demonstrations to the department at Monday morning meeting.
+	\item Identification of objects worth study.
+	\item Production of data metrics (colour-colour diagrams, magnitude-error plots, etc)
+	\item Viva with Director of Graduates 14th April 2014
+	\item Publishing to wider Ultracam audience (eg Sheffield) via an online demo/web interface.
+	\item Training of three department members (from Boris, Tom, Madelon, Elme) on how to operate the software.
+\end{itemize}
+	
+	
+\emph{May}
+\begin{itemize} 
+	\item Further investigation (and publication of identified objects)
+\end{itemize}
+
+\emph{June-July}
+\begin{itemize} 
+	\item Thesis iterations
+\end{itemize}
+	
+\emph{August}
+\begin{itemize} 
+	\item Thesis submission and viva
+\end{itemize}
+	
+\emph{Reading list}
+\begin{itemize} 
+	\item The Monitor Project: Data Processing and light-curve production, Irwin and Irwin, MNRAS Feb 2008
+	\item Cataclysmic Variable Stars: How and why they vary, Coel Hellier
+\end{itemize}
+
+
 \section{Instructions}
 
 Progress Report and Thesis Plan
 
-A progress report of at least 3000 words is to be submitted after six months (usually Easter or equivalent date). By this time most of the experimental work / calculations should be complete. The report should clearly indicate the progress to date and may contain material that could be used in the introductory chapters of your MSc thesis. The report will:
+A progress report of at least 3000 words is to be submitted after 
+six months (usually Easter or equivalent date). By this time most of 
+the experimental work / calculations should be complete. The report 
+should clearly indicate the progress to date and may contain 
+material that could be used in the introductory chapters of your MSc 
+thesis. The report will:
 
-\begin{itemize}
-\item briefly review the chosen project field, putting the work in context
-\item report on the research work completed
-\item show what still needs to be done to complete the MSc research
-\item contain a draft thesis plan, with detail of the contents down to sub-heading level, an indication of page numbers and the state of completedness of each section
-\item include a detailed timetable for completion of the research and writing the thesis
-\end{itemize}
+\begin{itemize} 
+\item briefly review the chosen project field, putting the work in context 
+\item report on the research work completed 
+\item show what still needs to be done to complete the MSc 
+research 
+\item contain a draft thesis plan, with detail of the 
+contents down to sub-heading level, an indication of page numbers 
+and the state of completedness of each section 
+\item include a detailed timetable for completion of the research and writing the 
+thesis \end{itemize}
+
 \end{document}
 
