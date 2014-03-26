@@ -18,7 +18,7 @@ this 1 year MSc project is to build an automated software pipeline that will pro
 version of the light-curves and meta-data for all of the observations. 
 \end{abstract}
 
-\section{The Ultracam automated pipeline} 
+\section{Introduction to the Ultracam} 
 
 The Ultracam high speed photometry camera (hereafter, Ultracam) had its 'first-light' at the William Herschel Telescope (WHT) on the 16 May 2002. Since then it has been used on many occasions at three telescopes, namely the William Herschel Telescope (WHT), La Palma, Islas Canarias, the Very Large Telescope (VLT), Cerro Paranal, Chile and New Technology Telescope (NTT), La Silla, Chile. The camera is designed to be portable and can travel between these telescopes. 
 
@@ -54,13 +54,13 @@ The highest cadence mode is called \emph{Drift mode}. This mode uses the masked 
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=40mm]{images/run010_r.png}
+  \includegraphics[width=60mm]{images/run010_r.png}
   \caption{A 'fully' exposed CCD with 1 pair of windows (512x1024 pixels each)}
-  \label{fig:test1}
+  \label{fig:KOI-824}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=40mm]{images/run016_r.png}
+  \includegraphics[width=60mm]{images/run016_r.png}
   \caption{A 'windowed' exposure with 2 pairs of windows (350x300 and 250x250 pixels)}
   \label{fig:test2}
 \end{minipage}
@@ -79,7 +79,7 @@ The types of runs are:
 	\item \emph{Acquisition run}: These are runs, usually of short duration (ie a few minutes) during which the telescope is being moved in order to place the candidate object(s) in the field of view. The camera may also be rotated in order to align the CCD such that the targets avoid 'bad' pixels or are near to the lower boundary of the detector (eg for high speed readout in Drift mode). 
 	\item \emph{Flat-field}: At the start and the end of the night (usually during twilight) the observer will take a few runs to establish \emph{flat-fields} that will be used later for calibration of the CCD detectors.  
 	\item \emph{Bias}: A short run to build calibration readings for measuring CCD read-out noise. 
-	\item \emph{Timing calibration run}: One way to check the timing measurments of the camera is to take frames of a well-known rapidly oscillating source. For example, the crab nebula pulsar. The timing of the pulses as measured by the camera can be compared to the expected times for the pulsar and serve as a standard clock for calibration.
+	\item \emph{Timing calibration run}: One way to check the timing measurments of the camera is to take frames of a well-known rapidly oscillating source. For example, the Crab Pulsar (PSR B0531+21). The timing of the pulses as measured by the camera can be compared to the expected times for the pulsar and serve as a standard clock for calibration.
 \end{itemize}
 
 \subsection{The data archive}
@@ -93,47 +93,85 @@ At the time of writing, the Ultracam data archive comprises of about 10 terabyte
 The data set is of a relatively large size and this means that it is not readily available outside of the university network. \emph{Check with Tom: Sheffield has a complete archive too.... Is it accessible in a different way over there?} 
 
 \subsection{Data reduction}
+Tom Marsh has developed a set of software tools that allow the observer to reduce the data in 'real-time' while the observations are taking place. This serves as a 'preview' for the observer and allows adjustments to be made during the run. After the run, the raw data is copied to the archive and this can be used for reductions later. This can happen the following day, or much later when the observer has returned from the telescope site. This data archive can be 're-reduced' at any time as all of the raw data is stored in the archive. 
 
+The current data reduction process for Ultracam is designed to produce three colour light curves from the raw image data. The pipeline consists of the following stages:
+\begin{enumerate}
+	\item Producing \emph{flat-fields} to calibrate the pixel sensitivity of each of the 3 CCD detectors. These flat-fields are subtracted from the image data during the reduction process.
+	\item Producing \emph{bias} frames that are used the calibrate the CCD detector's thermal noise characteristics. 
+	\item Defining \emph{apertures} for the objects of interest in the run. This step requires manually chosing the objects of interest in the frames and defining the aperture sizes for each object. Apertures are independently set for each channel (r, g, b). 
+	\item Running the \emph{reduction} software. This code uses the apertures defined in the previous step and measures the flux of each object in each colour. The software is able to track changes in the object's size and shape and small deviations in the positions of the objects. 
+\end{enumerate} 
+Although this process is not particularly cumbersome, it \emph{does} include some manual steps and it does not scale well when there is a lot of new data that needs to be reduced. The example in figure \ref{fig:KOI-824} contains more 1000 objects. Manually defining apertures for each of these objects in each channel is not really practical. 
 
-\subsection{Goals of the project}
+\section{Automating the Ultracam pipeline}
 
-The outcome of this MSc project will be a method to automate the overall processing of the Ultracam data. The key aims will be field identification, deep image generation and light-curve reduction forall of the science runs in the data. 
+\subsection{Project goals}
+The outcome of this MSc project will be a software pipeline that provides an automated way of reducing the raw data from the Ultracam.  The key outputs will be field identification, deep image generation and light-curve reduction for all of the science runs in the data. 
 
 The final product should allow researchers to quickly browse the reduced data and examine light-curves of each object in all of the 
 runs. The light-curves and runs should also be graded in terms of quality (eg seeing, atmospheric transmission, etc) 
 
 The \emph{minimum} goals for this project are:
 \begin{itemize}
-	\item Automated pipeline which can process ULTRACAM data to obtain light-curves for all objects within the field of any science runof all of the science runs for the Ultracam data. This data will include light-curves for all objects and all channels (colours or filters) in each run. An indicator of quality of the run will also be provided. 
-	\item A light-curve browser allowing a researcher to query and browse the Ultracam archive by date, object and position.
-	\item Images of the field for all three channels for each run, based on integration of frames in the run. The quality of the image will be ensured by discarding poor frames and taking into account movement of the frames due to tracking- and/or atmospheric effects. 
+	\item \emph{Automated pipeline} which can process ULTRACAM data to obtain light-curves for all objects within the field of any science run of all of the science runs for the Ultracam data. This data will include light-curves for all objects and all channels (colours or filters) in each run. An indicator of quality of the run will also be provided. 
+	\item A \emph{light-curve} browser allowing a researcher to query and browse the Ultracam archive by date, object and position.
+	\item \emph{Deep images} of the observed field for all three channels for each run, based on integration of frames in the run. The quality of the image will be ensured by discarding poor frames and taking into account movement of the frames due to tracking- and/or atmospheric effects. 
 \end{itemize}
 
 In addition to these minimum requirements, it would be \emph{desirable} to have results for:
 
 \begin{itemize}
-	\item Full photometric reduction. If the quality of the automated reduction (through sextractor) is not high enough for detailed science research, then the pipeline could include a stage that prepares and runs the current Ultracam pipeline reduction process for more accurate reductions.
-	\item Identification of moving objects seen in the run. For example, these might be Kuiper belt objects (moving at a few arcseconds per hour).
-	\item Automated alerts triggered when a interesting (variable) light curve is detected by the pipeline. 
-	\item Movies (in .mp4 format) of the run displayed in the light-curve browser. 
+	\item \emph{Full photometric reduction}. If the quality of the automated reduction is not high enough for science research, then the pipeline could include a stage that prepares and runs the current Ultracam pipeline reduction process for more accurate reductions.
+	\item \emph{Identification} of moving objects seen in the run. For example, these might be Kuiper belt objects (moving at a few arcseconds per hour).
+	\item \emph{Automated alerts} triggered when a interesting (variable) light curve is detected by the pipeline. 
+	\item \emph{Movies} (in .mp4 format) of the run displayed in the light-curve browser. 
 \end{itemize}
 
+\subsection{Approach}
+The key step in automating the Ultracam pipeline is finding a reliable way of identifying all of the objects in a run and tracking them across all of the frames. It is also necessary to identify the same objects in each of the three colour channels. 
+
+\subsubsection{Source extraction}
+A popular software tool used for source extraction is SExtractor \cite{bertin}. SExtractor is able to process an image field and produce a catalog of sources in that field along with a measurement of the flux count of each object. The flux count is calculated after making efforts to account for the background in the field and then fitting a profile to the object. \emph{Comment: Will need a full chapter on this in the thesis, including tweaks to the configuration parameters of SExtractor and how it affects the results.}
+
+\subsubsection{Algorithm}
+The stages of the reduction process are as follows:
+\begin{enumerate}
+	\item Stage 1: Create a list of objects found in the run. 
+	\begin{enumerate}
+		\item Read the raw image file, containing all frames for a particular run.
+		\item Initialise an empty list of objects
+		\item For each frame in the run
+		\begin{enumerate}
+			\item For each colour channel in the frame
+			\item Extract each window from the frame
+			\item Send the image to the SExtractor software
+			\item Read the results of the source extraction process, including pixel position and flux measurements for each object
+			\item For each object returned
+			\begin{enumerate} 
+				\item Try to match this object with one already in the list, based on closeness.
+				\item If the object is not already in a list, add this object to the list as a \emph{new} object.
+			\end{enumerate}
+		\end{enumerate}
+		\item Store the list of objects
+	\end{enumerate}
+	\item Stage 2: Filter this list, removing objects that are likely to be artifacts. 
+		
+\end{enumerate}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=130mm]{images/flowchart.png}
+	\caption{Schematic of the pipeline process.}
+	\label{flowchart}
+\end{figure}
+
+
+
+
+
 \subsection{User Interface}
-A User Interface (possibly HTML/Javascript based - to allow hosting on a website) will allow researchers to easily browse the reduced Ultracam data. The CCD image of the run should be displayed (together with accurate coordinates) and object labels alongside the light curves of each object. For crowded fields the researcher will be able to click on an object to see the light curve displayed in a separate panel. Below is a mockup of the ‘light-curve-browser’.
-Click the link to view in a browser
-
-
-Approach
-At a high level, the approach of this project will be to 
-run through all of the raw Ultracam data and pipe it to the 
-sextractor software that will identify and measure the objects in 
-the field. The code written in this project will build and monitor 
-the pipeline and produce the output results. Monitoring the pipeline 
-will require the code to identify and maintain a list of objects 
-from frame to frame in order to track and produce consistent 
-photometry. 
-
-
+A User Interface (HTML/Javascript based) - to allow hosting on a website) will allow researchers to easily browse the reduced Ultracam data. The CCD image of the run should be displayed (together with accurate coordinates) and object labels alongside the light curves of each object. For crowded fields the researcher will be able to click on an object to see the light curve displayed in a separate panel. Below is a mockup of the ‘light-curve-browser’.
 
 
 
@@ -185,12 +223,6 @@ February
 	\item Thesis submission and viva
 \end{itemize}
 	
-\emph{Reading list}
-\begin{itemize} 
-	\item The Monitor Project: Data Processing and light-curve production, Irwin and Irwin, MNRAS Feb 2008
-	\item Cataclysmic Variable Stars: How and why they vary, Coel Hellier
-\end{itemize}
-
 
 \section{Instructions}
 
@@ -216,6 +248,7 @@ thesis \end{itemize}
 
 \begin{thebibliography}{10}
 	\bibitem{dhillon07}Dhillon, V. S., Marsh, T.R. et al, 2007. \emph{ULTRACAM: an ultrafast, triple-beam CCD camera for high speed astrophysics}, MNRAS, 378.
+	\bibitem{bertin}Bertin, E. and {Arnouts}, S. \emph{SExtractor: Software for source extraction}, Astronomy \& Astrophysics Supplement 317, 393
 \end{thebibliography}
 
 \end{document}
