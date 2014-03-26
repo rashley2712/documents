@@ -35,14 +35,14 @@ The camera has three CCD detectors enabling it to capture data in three colour b
 
 A key aspect of the design of the camera is its ability to perform at high cadence. It is possible to have the camera read-out at up to 500Hz (frames per channel per second) \cite{dhillon07}. This makes the camera useful for observations of rapid transient events and accurate timing. 
 
-The filters for each channel can be modified. In usual configurations the SDSS filter (u, g, r, i, z) set are used, but there is also a selection of narrow-band filters that can be substituted.  
+The filters for each channel can be modified. In usual configurations the SDSS filter (u, g, r, i, z) set are used, but there are a selection of narrow-band filters that can be substituted.  
 
 Each CCD has a total pixel area of 2048x1033 pixels. Half of these pixels are masked and never exposed to light. They are used as a temporary buffer for reading out the chip. CCD detectors are read out serially, but in order to decrease the time between exposures, the full image can be moved to the blanked out area of the chip and this can then be read out while the un-masked area of the chip is once again exposed to light. 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=90mm]{images/ccd.png}
-\caption{The CCD detector (one channel) showing the masked-off area.}
+\caption{One of the three CCD detectors. The masked-off area is visible in the lower half of the chip surface.}
 \label{fig2}
 \end{figure}
 
@@ -62,7 +62,7 @@ The highest cadence mode is called \emph{Drift mode}. This mode uses the masked 
   \centering
   \includegraphics[width=60mm]{images/run016_r.png}
   \caption{A 'windowed' exposure with 2 pairs of windows (350x300 and 250x250 pixels)}
-  \label{fig:test2}
+  \label{fig:V713Cep}
 \end{minipage}
 \end{figure}
 
@@ -71,15 +71,15 @@ astrophysics \cite{dhillon07}}.
 
 \subsection{Observation and recording of data}
 
-Typically the telescope remains installed on the telescope for a week or so and is used for observations on consecutive nights. During the night there are several \emph{runs} made. A \emph{run} can be defined as a period when the camera is active and gathering data. Not all runs are used for gathering \emph{scientific} data. Some runs are used for target acquisition and camera calibration purposes. 
+Usually the camera remains installed on the telescope for a week or so and is used for observations on consecutive nights. During the night there are several \emph{runs} made. A \emph{run} can be defined as a period when the camera is active and gathering data. Not all runs are used for gathering \emph{scientific} data. Some runs are used for target acquisition and camera calibration purposes. 
 
 The types of runs are: 
 \begin{itemize}
 	\item \emph{Science run}: These are the runs that contain the valuable scientific data. They usually comprise the longest portions of the observations during the night, unless the camera is having difficulties or adverse conditions are preventing useful astronomical observations.
 	\item \emph{Acquisition run}: These are runs, usually of short duration (ie a few minutes) during which the telescope is being moved in order to place the candidate object(s) in the field of view. The camera may also be rotated in order to align the CCD such that the targets avoid 'bad' pixels or are near to the lower boundary of the detector (eg for high speed readout in Drift mode). 
-	\item \emph{Flat-field}: At the start and the end of the night (usually during twilight) the observer will take a few runs to establish \emph{flat-fields} that will be used later for calibration of the CCD detectors.  
-	\item \emph{Bias}: A short run to build calibration readings for measuring CCD read-out noise. 
-	\item \emph{Timing calibration run}: One way to check the timing measurments of the camera is to take frames of a well-known rapidly oscillating source. For example, the Crab Pulsar (PSR B0531+21). The timing of the pulses as measured by the camera can be compared to the expected times for the pulsar and serve as a standard clock for calibration.
+	\item \emph{Flat-field}: At the start and the end of the night (usually during twilight) the observer will take a few runs to create \emph{flat-fields} that will be used later for calibrating the variations in pixel sensitivity across each of the detectors.  
+	\item \emph{Bias}: A short run to build calibration readings for measuring the bias of the detector. This bias will be subtracted from the data during the reduction. 
+	\item \emph{Timing calibration run}: One way to check the timing measurments of the camera is to take frames of a well-known rapidly oscillating source. For example, the Crab Pulsar (PSR B0531+21). The timing of the pulses as measured by the camera can be compared to the expected times for the pulsar which serves as a standard clock for calibration.
 \end{itemize}
 
 \subsection{The data archive}
@@ -87,10 +87,10 @@ At the time of writing, the Ultracam data archive comprises of about 10 terabyte
 \begin{itemize}
 	\item \emph{390} nights on which the Ultracam was operational at a telescope.
 	\item \emph{12 256} runs, including Science, Acquisition runs, etc as listed above. 
-	\item \emph{119 817 742} frames in total. This is includes the totals for each channel; red, green and blue.
+	\item \emph{119 817 742} frames in total. This is total includes all the frames for each channel; red, green and blue.
 	\item \emph{10 181 269 485 298} bytes of raw image data.
 \end{itemize} 
-The data set is of a relatively large size and this means that it is not readily available outside of the university network. \emph{Check with Tom: Sheffield has a complete archive too.... Is it accessible in a different way over there?} 
+The data set is relatively large and this means that it is not readily available outside of the university network. \emph{Check with Tom: Sheffield has a complete archive too.... Is it accessible in a different way over there?} 
 
 \subsection{Data reduction}
 Tom Marsh has developed a set of software tools that allow the observer to reduce the data in 'real-time' while the observations are taking place. This serves as a 'preview' for the observer and allows adjustments to be made during the run. After the run, the raw data is copied to the archive and this can be used for reductions later. This can happen the following day, or much later when the observer has returned from the telescope site. This data archive can be 're-reduced' at any time as all of the raw data is stored in the archive. 
@@ -102,7 +102,7 @@ The current data reduction process for Ultracam is designed to produce three col
 	\item Defining \emph{apertures} for the objects of interest in the run. This step requires manually chosing the objects of interest in the frames and defining the aperture sizes for each object. Apertures are independently set for each channel (r, g, b). 
 	\item Running the \emph{reduction} software. This code uses the apertures defined in the previous step and measures the flux of each object in each colour. The software is able to track changes in the object's size and shape and small deviations in the positions of the objects. 
 \end{enumerate} 
-Although this process is not particularly cumbersome, it \emph{does} include some manual steps and it does not scale well when there is a lot of new data that needs to be reduced. The example in figure \ref{fig:KOI-824} contains more 1000 objects. Manually defining apertures for each of these objects in each channel is not really practical. 
+Although this process is not particularly cumbersome, it \emph{does} include some manual steps and it does not scale well when there is a lot of new data that needs to be reduced. The example in \emph{figure \ref{fig:KOI-824}} contains more than 1000 objects. Manually defining apertures for each of these objects in each channel is not really practical. 
 
 \section{Automating the Ultracam pipeline}
 
@@ -153,76 +153,185 @@ The stages of the reduction process are as follows:
 				\item If the object is not already in a list, add this object to the list as a \emph{new} object.
 			\end{enumerate}
 		\end{enumerate}
-		\item Store the list of objects
+		\item Store the list of objects for each of the three channels.
 	\end{enumerate}
-	\item Stage 2: Filter this list, removing objects that are likely to be artifacts. 
+	\item Stage 2: Filter this list, removing objects that are likely to be artifacts. This is done by looking for objects that do not persist across more than a pre-defined percentage of frames; and objects that have a size approximately equal to one pixel. 
+	\item Stage 3: Produce catalogs of the objects ordered by 'brightness' as measured by the flux estimate from SExtractor. Pass these catalogs to the Astrometry.net library to resolve the WCS solution for the fields. Since the three channels have a very slightly different view and different distortions of the image, their WCS solutions will differ by a small amount.
+	\item Stage 4: Using the WCS solutions, merge the three catalogs to 'cross-identify' each object across the three channels. This may seem to be a trivial step for many of the Ultracam runs because the differences in the fields from channel to channel are minor, however in crowded fields such as the one shown in \emph{figure \ref{fig:KOI-824}} simply matching objects based on their pixel coordinates is not enough to disambiguate them.
+	\item Stage 5: Produce deep images for each channel and export to a web-viewable format, such as PNG. 
+	\item Stage 6: Create .json data files and HTML files to enable viewing the output of the run through a web browser. 
+	\item Stage 7: Publish this 'web-enabled' data to a web site that is accessible outside of the university network.  
 		
 \end{enumerate}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=130mm]{images/flowchart.png}
-	\caption{Schematic of the pipeline process.}
+	\caption{Schematic of Stage 1 of the pipeline.}
 	\label{flowchart}
 \end{figure}
 
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=130mm]{images/webpublish.png}
+	\caption{Schematic of Stage 6 and 7 of the pipeline.}
+	\label{webpublish}
+\end{figure}
 
 
 
 \subsection{User Interface}
-A User Interface (HTML/Javascript based) - to allow hosting on a website) will allow researchers to easily browse the reduced Ultracam data. The CCD image of the run should be displayed (together with accurate coordinates) and object labels alongside the light curves of each object. For crowded fields the researcher will be able to click on an object to see the light curve displayed in a separate panel. Below is a mockup of the ‘light-curve-browser’.
+The core 'visible product' of the project will be a website that allows a user to browse all of the data in the Ultracam archive. The key features of this website will be:
+
+\begin{itemize}
+	\item A \emph{search} interface to allow the user to query the archive by object identifier and/or world coordinates (right ascension, declination). 
+	\item A catalog of runs organised my calendar date, containing \emph{thumbnail images} of the fields.
+	\item For each run, a web page that shows the user:
+	\begin{itemize}
+		\item the \emph{deep images} of the field in individual colours and also a combined (r,g,b) image.
+		\item the \emph{light-curves} of each object as the user clicks on the object with the mouse. 
+		\item \emph{previews} of the light curves as the user 'hovers-over' the object with the mouse. 
+	\end{itemize}
+	\item light-curves should be plotted as absolute measured flux or a \emph{relative flux} compared to some other objects in the field. 
+	\item the web page should also allow the user to \emph{export} the data to a standard format, such as FITs.
+	
+\end{itemize}
+See \emph{figure \ref{browser}} for an example of the web-page. 
 
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=90mm]{images/browser.png}
+	\caption{Preview of the webpage.}
+	\label{browser}
+\end{figure}
+
+\section{Progress so far}
+At the moment, the software for the pipeline as at a stage where it is able to produce light curves for many of the runs in the data archive. This means that, given a run, it is possible to produce a web-page (as described above) that has deep images for the field and light curves for all of the objects in the field. Therefore, at its most basic the pipeline 'works', however there is still significant work to be done on refining the details. 
+
+\subsection{WCS solution}
+After some ad-hoc tests using \emph{SCAMP \cite{scamp}} and \emph{Astrometry.net \cite{astrometry}} it seemed that the Astrometry.net software was more reliable at finding good WCS solutions to the fields. The software was downloaded to a local machine (including the extensive index files) and compiled. At the moment, this is now part of the pipeline but it does not consistently find WCS solutions for all of the fields. 
+
+There are several difficulties in reliably finding a WCS solution for the fields.  These are:
+\begin{itemize}
+	\item \emph{Lack of pointing data}: The Ultracam system does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data is archived, a \emph{SIMBAD} lookup is used. This gives us a world coordinate that is somewhere in the field, but it is not known which object (or pixel location) this applies to.  
+	\item \emph{Field rotation}: Since the Ultracam can be rotated about the optical axis to allow for optimal alignment of the objects, this means that the field of view can be at any arbitrary rotation giving an extra degree of freedom to the matching task. 
+	\item \emph{Windows}: Many of the Ultracam runs are configured to use only portions of the CCD area. You can see an example of this in \emph{figure \ref{fig:V713Cep}}. This means that there is an incomplete view of the sky for that field. When trying to match to existing indexes, there could be important, bright objects that are in the index file, but do not appear in the Ultracam field due to the masking caused by the windows.
+	\item \emph{Sparse fields}: On uncrowded fields, we might only have 4-5 objects that can be used for field identification. 
+	\item \emph{Very small windows}: Some runs, particularly ones in high cadence mode, use very small windows (eg 172x156 pixels) in order to speed up readout time. This means that the Ultracam images might only contain two objects or so. This makes matching to a reference catalog impossible. 
+	\item \emph{Choice of reference index by colour}: The Astrometry.net software uses 2MASS and Tycho-2 reference catalogs by default. These are based on infra-red and V magnitudes. This means that the blue channel (which is often using the SDSS u filter) might not match the reference indexes. Indeed, current tests often end with a match in red, a match in green and no match in blue. 
+\end{itemize}
+
+The current line of investigation in the project is to try to use positive matches in the red and/or green channel to 'seed' the search for matches in the blue channel. If this doesn't work, it may be worthwhile to seek alternative (bluer) reference catalogs. 
+
+For sparse fields, it might be worth looking for deeper reference catalogs. 
+
+For the very sparse fields, with 2 to 3 objects on them, it is unlikely that a WCS solution can be found. This is probably not a problem as the number of objects is so low, there is unlikely to be any ambiguity in cross-matching the object across the channels and combining the light-curves can be performed simply on the object's pixel coordinates alone.  
+
+
+\subsection{Quality of the photometry}
+The photometry of the objects is simply the flux estimate produced by the SExtractor software and has not been evaluated in terms of its accuracy relative to the existing Ultracam reduction pipeline. Also, there has been no effort to look at the errors in flux measurements (as estimated by SExtractor). This work still needs to be done. 
+
+A preliminary check of photometry is shown in \emph{figure \ref{fig:V834Cen}}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=120mm]{images/V834Cen.png}
+	\caption{Comparison of the photometry of the Ultracam pipeline with the new automated pipeline (this project). The data shows the 'r' band photometry for 60 seconds in the light-curve of the polar V834 Cen.}
+	\label{fig:V834Cen}
+\end{figure}
+
+\subsection{Run classification}
+Due to the diversity of data in the Ultracam archive, not all of the runs can be processed in the same way. Crowded fields with full-frame exposure need to be treated in a different way to high cadence runs of only a few objects. SExtractor parameters need to be tweaked in order to get the best results depending on the nature of the run. At the moment, this step is done manually and with some 'trial and error'. If the pipeline is to run in a truly automated way, then it needs to be able to adapt to this diversity and perform its one form of 'run classification'. This classification step should also attempt to identify non-science runs, such as flat-fields, biases and acquisition runs and deal with them appropriately. Some acquisition runs often become real science runs and contain valuable data. 
+
+\subsection{Search interface}
+At the moment, since there is no robust solution for solving WCS coordinates (yet), the search interface has not been built. It should be possible to query the archive using world coordinates. Some kind of WCS solution should be available for every science (and potentially also acquistion) run in order to build the search index.
+
+\subsection{Cover the entire data archive} 
+The browseable archive (the product of this project) should cover the entire Ultracam archive, from May 2002 to the present. Once some of the remaining issues have been resolved (mainly WCS solutions and Run classifications) then the pipeline should be set to run across the entire data set. 
 
 \section{Thesis outline}
 
+The outline of the thesis is as follows:
+
+\begin{enumerate}
+	\item \emph{Abstract}
+	\item \emph{Introduction} 
+	\begin{enumerate}
+	      \item \emph{The Ultracam instrument}: Discussion about the Ultracam instrument and how it works operationally. 
+	      \item \emph{Data archive}: Review of the data that is in the archive. How much and how well processed is the data? 
+	      \item \emph{Current pipeline}: How the current pipeline works. What are its limitations and strengths?
+	      \item \emph{Automated pipeline}: Motivation for building an automated pipeline and the benefits of having the archive more accessible. 
+	\end{enumerate}
+	\item \emph{Automating the reduction pipeline} 
+	\begin{enumerate}
+	      \item \emph{Algorithm of the pipeline}: Description of the key steps in reducing the data in the archive. 
+	      \item \emph{Source extraction}: Discussion of the mechanism to invoke SExtractor and the how it processes the fields 
+	      \item \emph{Object matching}: Analysis of the techniques used by the pipeline to keep track of the objects from frame to frame and across the channels. 
+	      \item \emph{WCS solutions}: Analysis of the various approaches to finding WCS solutions for the fields. 
+	      \item \emph{Web-publishing}: Description of the architectures and technologies used to publish on the web. Including a discussion on choices of ways of encapsulating and displaying the data (JSON, HTML5, charts, etc).
+	\end{enumerate}
+	\item \emph{Results}
+	\begin{enumerate}
+	      \item \emph{The archive}: A description of where to find and how to browse the data archive. 
+	      \item \emph{Data quality}: Analysis of the data quality (eg accuracy of photometry, WCS solutions, tracking of objects, distortion of the fields). Include a discussion on the quality of the photometry compared to the current Ultracam pipeline. How does 'tweaking' of the SExtractor parameters effect the quality of the data? 
+	      \item \emph{Highlights}: Highlight some 'interesting' objects in the archive. 
+	\end{enumerate}
+	\item \emph{User manual}
+	\begin{enumerate}
+	      \item \emph{Using the archive}: A detailed description of how to use the browser interface. 
+	      \item \emph{Running the pipeline}: Detailed instructions for installing and running the automated pipeline.  
+	\end{enumerate}
+	\item \emph{Conclusion and acknowledgements}
+\end{enumerate}      
+
+
+
 \section{Timetable for work}
 
-Timeline 
+\subsection{One year plan} 
 The high level view of the timeline for the 1 year duration of the MSc project is as follows:
 
-\emph{October - January}
-\begin{itemize} 
-	\item Prototyping and building of automatic Ultracam reduction pipeline.
-February
-	\item Demonstration to the department at Warwick through internal seminar.
-	\item Code refactoring.
-	\item Checking code into gitHub.
-\end{itemize}
+\begin{itemize}
+	\item \emph{October - January}
+	\begin{itemize} 
+		\item Prototyping and building of automatic Ultracam reduction pipeline.
+	\end{itemize}
+	\item \emph{February}
+	\begin{itemize} 
+		\item Demonstration to the department at Warwick through internal seminar.
+		\item Code refactoring.
+		\item Checking code into gitHub.
+	\end{itemize}
+	\item \emph{March}
+	\begin{itemize} 
+	      \item Code revisions based on feedback from demos, training and presentation.
+	      \item Progress report and thesis plan due, 24th March
+	\end{itemize}
+	\item \emph{April}
+	\begin{itemize} 
+	      \item New demonstrations to the department at Monday morning meeting.
+	      \item Identification of objects worth study.
+	      \item Production of data metrics (colour-colour diagrams, magnitude-error plots, etc)
+	      \item Viva with Director of Graduates 14th April 2014
+	      \item Publishing to wider Ultracam audience (eg Sheffield) via an online demo/web interface.
+	      \item Training of three department members (from Boris, Tom, Madelon, Elme) on how to operate the software.
+	\end{itemize}
+	\item \emph{May}
+	\begin{itemize} 
+	      \item Further investigation (and publication of identified objects)
+	\end{itemize}
+	\item \emph{June-July}
+	\begin{itemize} 
+	      \item Thesis iterations
+	\end{itemize}
+	\item \emph{August}
+	\begin{itemize} 
+	      \item Thesis submission and viva
+	\end{itemize}
+ \end{itemize}
 
-\emph{March}
-\begin{itemize} 
-	\item Code revisions based on feedback from demos, training and presentation.
-	\item Progress report and thesis plan due, 24th March
-\end{itemize}
-
-\emph{April}
-\begin{itemize} 
-	\item New demonstrations to the department at Monday morning meeting.
-	\item Identification of objects worth study.
-	\item Production of data metrics (colour-colour diagrams, magnitude-error plots, etc)
-	\item Viva with Director of Graduates 14th April 2014
-	\item Publishing to wider Ultracam audience (eg Sheffield) via an online demo/web interface.
-	\item Training of three department members (from Boris, Tom, Madelon, Elme) on how to operate the software.
-\end{itemize}
-	
-	
-\emph{May}
-\begin{itemize} 
-	\item Further investigation (and publication of identified objects)
-\end{itemize}
-
-\emph{June-July}
-\begin{itemize} 
-	\item Thesis iterations
-\end{itemize}
-	
-\emph{August}
-\begin{itemize} 
-	\item Thesis submission and viva
-\end{itemize}
-	
 
 \section{Instructions}
 
@@ -249,6 +358,8 @@ thesis \end{itemize}
 \begin{thebibliography}{10}
 	\bibitem{dhillon07}Dhillon, V. S., Marsh, T.R. et al, 2007. \emph{ULTRACAM: an ultrafast, triple-beam CCD camera for high speed astrophysics}, MNRAS, 378.
 	\bibitem{bertin}Bertin, E. and {Arnouts}, S. \emph{SExtractor: Software for source extraction}, Astronomy \& Astrophysics Supplement 317, 393
+	\bibitem{scamp}Bertin 2006 \emph{Automatic Astrometric and Photometric Calibration with SCAMP}, ASP Conference Series, Vol. 351, 2006, C. Gabriel, C. Arviset, D. Ponz, and E. Solano, eds., p. 112 
+	\bibitem{astrometry}Hogg, D. W. and Lang, D. \emph{Astrometry.net}, http://www.astrometry.net 
 \end{thebibliography}
 
 \end{document}
