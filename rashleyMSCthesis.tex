@@ -267,25 +267,20 @@ constructs.
 \chapter{Introduction}
 \input introduction.tex
 
-
                             %% More chapters.
 
-\chapter{Test}
+\chapter{Automating the pipeline}
+\input automation.tex
 
-%!
-%! There are a few variations of reference
-\begin{verbatim}\citet[chap. 2]{ballentine82}|
-\end{verbatim}
-for a textual one, as \citet[chap. 2]{ballentine82}.\\
- \\
-\begin{verbatim}\citep{abraham_etal}
- \end{verbatim}
- for a parenthetical citation \citep{abraham_etal},\\
+\chapter{Results}\label{chap:results}
+\input results.tex
 
- \begin{verbatim}\citep*{MTW}
- \end{verbatim}
- for a full list of authors use a * parenthetical citation \citep*{MTW},\\
- \\
+\chapter{User manual}
+\input usermanual.tex
+
+\chapter{Conclusion}
+\input conclusion.tex
+
 %!!!!!!!!!!!!!!!
 
 %  \appendix                            %% this will do the appendices
@@ -296,19 +291,13 @@ for a textual one, as \citet[chap. 2]{ballentine82}.\\
 
 \bibliographystyle{plainnat}
 
-\bibliography{sample}            %% Start your bibliography here;
+\bibliography{rashley}            %% Start your bibliography here;
                                  %! with sample.bib as your bibliography file. You can
                                %% also use:
                 %! \begin{thebibliography}
                 %!    \bibitem{etc....
                 %! \end{thebibliography}
                                %% to generate your bibliography.
-\begin{thebibliography}{10}
-	\bibitem{dhillon07}Dhillon, V. S., Marsh, T.R. et al, 2007. \emph{ULTRACAM: an ultrafast, triple-beam CCD camera for high speed astrophysics}, MNRAS, 378.
-	\bibitem{bertin}Bertin, E. and {Arnouts}, S. \emph{SExtractor: Software for source extraction}, Astronomy \& Astrophysics Supplement 317, 393
-	\bibitem{scamp}Bertin 2006 \emph{Automatic Astrometric and Photometric Calibration with SCAMP}, ASP Conference Series, Vol. 351, 2006, C. Gabriel, C. Arviset, D. Ponz, and E. Solano, eds., p. 112 
-	\bibitem{astrometry}Hogg, D. W. and Lang, D. \emph{Astrometry.net}, http://www.astrometry.net 
-\end{thebibliography}
 
 %\begin{thesisauthorvita}             %% Write your vita here; it can be
 %                                     %% anything in LaTeX2e par-mode.
