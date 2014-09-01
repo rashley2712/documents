@@ -41,6 +41,7 @@
 \usepackage[square]{natbib}                    %! needed for Harvard style of references.
                                                 %! for more notes see the bibliography section below
 \usepackage{enumerate}  %! used for the library form, but you might find it useful too.
+\usepackage{hyperref}
 % \mastersthesis                     %% Uncomment one of these; if you don't
 % \phdthesis                         %% use either, the default is \phdthesis.
 
@@ -267,15 +268,13 @@ constructs.
 \chapter{Introduction}
 \input introduction.tex
 
-                            %% More chapters.
-
 \chapter{Automating the pipeline}
 \input automation.tex
 
 \chapter{Results}\label{chap:results}
 \input results.tex
 
-\chapter{User manual}
+\chapter{User manual}\label{chap:usermanual}
 \input usermanual.tex
 
 \chapter{Conclusion}
