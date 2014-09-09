@@ -4,7 +4,40 @@ At the time of writing, the full ULTRACAM archive is still undergoing analysis b
 
 \section{Data quality}
 
-Analysis of the data quality (eg accuracy of photometry, WCS solutions, tracking of objects, distortion of the fields). Include a discussion on the quality of the photometry compared to the current Ultracam pipeline. How does 'tweaking' of the SExtractor parameters effect the quality of the data? 
+\subsection{Photometric calibration}
+The main purpose of this MSc project was to establish a process for automatically reducing the light-curves for all objects in the data archive rather than to focus on accurate and well-calibrated measurments. The diverse nature of the dataset means that it is not trivial to write a purely automated algorithm that can perform fully calibrated measurements. 
+
+Correct calibration of the photometry for ULTRACAM requires to the following steps:
+\begin{itemize}
+  \item Using \emph{flat fields} to take into account the varying sensitivity of the CCD detector across the field. 
+  \item Subtracting \emph{bias} frames from each image to remove the additional counts caused by having a non-zero bias on the CCD. 
+  \item Using a \emph{standard star} to produce offset brightness to calibrate to the standard magnitude system. For ULTRACAM these are usually Sloan u, g, r, i magnitudes.
+  \item Computing the \emph{atmospheric extinction} for the night by fitting extinction curves for a number of bright objects that have been measured over a range of airmass. 
+\end{itemize}
+During a typical night at the telescope, the observer will take steps to ensure that there is sufficient data to perform this calibration. They will take several bias frames, flat-fields and will observe standard stars. When the reduction is performed later, these various datasets will be combined to calibrate the photometry of the target objects. 
+
+The automated pipeline built for this project lacks the ability to correctly identify the correct bias reading, flat-fields and standard stars that should be used for photometric calibration. This would require human intervention. Therefore, this step is skipped altogether. The magnitudes and flux counts produced by the pipeline are \emph{not} calibrated and will differ from their true values by a certain offset.
+
+It is possible to take the output of the automated pipeline and calibrate the photometry, but, at the moment, this is a manual process. 
+
+\subsection{Comparison of the 2 pipelines}
+Since the ULTRACAM already has a well-established data reduction pipeline, it is useful to compare the results of this pipeline with the new, automated one built in this project. As mentioned above, the automated pipeline does not perform calibrated photometry, but we can still compare the non-calibrated photometry to get an estimate of how well our new pipeline performs.
+
+In order to do this, we chose a run of a target object that has often been observed with the ULTRACAM. The object is \emph{NN Ser}, a white-dwarf, M-dwarf eclipsing binary. The specific run in question is \emph{2013-07-13/run111}.
+
+Running the automated pipeline on this run is acheived simply by typing: \begin{verbatim}runbuilder.py 2013-07-13/run111 \end{verbatim} on the command line. Please refer to the user manual \cite{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes of processing time running a standard desktop machine in the University of Warwick astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=120mm]{images/2013-07-13-run111-r-withlabels.png}
+\caption{Snapshot taken from the automated pipeline browser for 2013-07-13/run111, target:NNSer. This is a stacked image from the 'red' CCD with the Sloan 'i' filter. }
+\label{fig:nnser}
+\end{figure}
+
+
+
+
+To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnser} 
 
 \section{Highlights}
 
