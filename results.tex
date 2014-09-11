@@ -52,7 +52,7 @@ Running the automated pipeline on this run is acheived simply by typing: \begin{
 \begin{figure}[!h]
 \centering
 \includegraphics[width=140mm]{images/comparison_auto.eps}
-\caption{Light curve of the comparison object, labeled '0' in figure \ref{fig:nnserfield}. This lightcurve was produced by the \emph{automated pipeline}. The vertical axis is the raw flux measurements calculated by SExtractor.  }
+\caption{Light curve of the comparison object, labeled '0' in figure \ref{fig:nnserfield}. This lightcurve was produced by the \emph{automated pipeline}. The 'Counts' are the raw flux measurements calculated by SExtractor.  }
 \label{fig:nnsercomparisonauto}
 \end{figure}
 
@@ -63,28 +63,63 @@ Running the automated pipeline on this run is acheived simply by typing: \begin{
 \label{fig:nnsercomparisontom}
 \end{figure}
 
-To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnserfield}. We set up the apertures manually using the \emph{setaper} tool. 
+To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnserfield}. We set up the apertures manually using the \emph{setaper} tool. This is an interactive program allowing the user to define the apertures using a mouse and an external configuration file. The reduction stage of the pipeline allows for the aperture to alter its size and position depending on the parameters defined by the user. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140mm]{images/setaper.png}
+\caption{Defining the apertures for the reduction using the \emph{traditional} pipeline. Note that the two apertures can be linked. This instructs the pipeline to maintain the pixel separation of the apertures even if there is a small amount of movement from frame to frame. This is useful if our target object is likely to alter in brightness during the run. }
+\label{fig:nnsercomparisontom}
+\end{figure}
+
 
 \subsection{Residuals}
-The plot in figure \ref{fig:residualplot} shows the residuals of the photometry created by subtracting the flux counts measured by the automated pipeline from those measured by the traditional pipeline. There is a systematic offset for each channel which suggests that the automated pipeline overestimates the flux by xx percent. This is due to.... 
+The plot in figure \ref{fig:residualplot} shows the residuals of the photometry created by subtracting the flux counts measured by the automated pipeline from those measured by the traditional pipeline. In table \ref{table:residuals} we show that the mean and standard deviations for these residuals. There is a systematic offset for each channel which suggests that the automated pipeline overestimates the flux by xx percent. This is due to.... 
 
 \begin{center}
-	\begin{tabular}{|l|r|r|}
+	\begin{tabular}{|l|r|r|r|r|}
 		\hline
-		Filter & Mean counts & Standard deviation\\
+		Filter & $Counts_{A}$ & $\sigma_{Counts A}$ & $Counts_{T}$ & $\sigma_{Counts T}$\\
 		\hline
-		'i' & 272138 & 4372 \\
-		'g' & 590943 & 494 \\
-		'u' & 404044 & 4878\\
+		'i' & 272138 & 1433 &  274648 & 1797\\
+		'g' & 176449 & 1233 & 177444  & 1476\\
+		'u' & 10489 & 140 & 10618 & 157 \\
 		\hline
 	\end{tabular}
 \end{center}
+\begin{verbatim}
+Diff mean [r]:1.25215214271[0.0036372754718]
+Diff mean [g]:1.22474549013[0.00452407286943]
+Diff mean [b]:1.26405760203[0.0192883107848]
+\end{verbatim}
+
+\begin{table}[ht]
+  \label{table:residuals}
+  \caption{Table showing the statistics of the residuals derived by subtracting the counts measured by the traditional pipeline, $Counts_{T}$ from the counts measured by the automated pipeline, $Counts_{A}$.}
+  \centering
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    Residuals & $mean(Counts_{A}-Counts_{T})$ & $\sigma_{CountsA - CountsT}$ & offset\\
+    \hline
+    'i' & -2513 & 736 & 3.4$\sigma$\\
+    'g' & -998 & 584 & 1.71$\sigma$\\
+    'u' & -129 & 76 & 1.70$\sigma$\\
+    \hline
+   \end{tabular}
+\end{table}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140mm]{images/differential_auto.eps}
+\caption{The lightcurve of object '0' and object '1' as labelled in figure \ref{fig:nnserfield}. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
+\label{fig:differentialauto}
+\end{figure}
 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=140mm]{images/residuals.eps}
-\caption{A plot of the residuals created by subtracting the flux counts derived from the \emph{traditional pipeline} from those derived using the \emph{automated pipeline}. }
+\caption{A plot of the residuals created by subtracting the flux counts derived from the \emph{traditional pipeline} from those derived using the \emph{automated pipeline}. The readings are the photometry for object labeled '0' in figure \ref{fig:nnserfield}}
 \label{fig:residualplot}
 \end{figure}
 
