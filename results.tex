@@ -25,7 +25,7 @@ Since the ULTRACAM already has a well-established data reduction pipeline, it is
 
 In order to do this, we chose a run of a target object that has often been observed with the ULTRACAM. The object is \emph{NN Ser}, a white-dwarf, M-dwarf eclipsing binary. The specific run in question is \emph{2013-07-13/run111}.
 
-Running the automated pipeline on this run is acheived simply by typing: \begin{verbatim}runbuilder.py 2013-07-13/run111 \end{verbatim} on the command line. Please refer to the user manual \cite{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes of processing time running a standard desktop machine in the University of Warwick astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
+Running the automated pipeline on this run is acheived simply by typing: \begin{verbatim}runbuilder.py 2013-07-13/run111 \end{verbatim} on the command line. Please refer to the user manual \cite{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes of processing time running a standard desktop machine in the University of Warwick Astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
 
 \begin{figure}[!h]
 \centering
@@ -36,30 +36,60 @@ Running the automated pipeline on this run is acheived simply by typing: \begin{
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=140mm]{images/nnser_lightcurve_automated.png}
-\caption{Light curve of the target object, NN Ser, labelled '7'. The vertical axis is the raw flux measurements calculated by SExtractor.  Comment: Replace this with a lightcurve plotted from matplotlib or something. Better x-axis labels.}
-\label{fig:nnserlightcurve}
-\end{figure}
-
-
-\begin{figure}[!h]
-\centering
 \includegraphics[width=140mm]{images/nnser_lightcurve_automated.eps}
-\caption{Light curve of the target object, NN Ser, labelled '7'. The vertical axis is the raw flux measurements calculated by SExtractor.  Comment: Replace this with a lightcurve plotted from matplotlib or something. Better x-axis labels.}
-\label{fig:nnserlightcurve}
+\caption{Light curve of the target object, NN Ser produced using the \emph{automated pipeline}. The vertical axis is the raw flux measurements calculated by SExtractor.}
+\label{fig:nnserlightcurveautomated}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140mm]{images/nnser_lightcurve_tom.eps}
+\caption{Light curve of the target object, NN Ser, produced using the \emph{standard pipeline}. Comment: Does Tom's pipeline automatically remove sky counts?}
+\label{fig:nnserlightcurvetom}
 \end{figure}
 
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=140mm]{images/nnser_comparison_lightcurve_automated.png}
-\caption{Light curve of the comparison object, labeled '0'. The vertical axis is the raw flux measurements calculated by SExtractor.  Comment: Replace this with a lightcurve plotted from matplotlib or something. Better x-axis labels.}
-\label{fig:nnsercomparison}
+\includegraphics[width=140mm]{images/comparison_auto.eps}
+\caption{Light curve of the comparison object, labeled '0' in figure \ref{fig:nnserfield}. This lightcurve was produced by the \emph{automated pipeline}. The vertical axis is the raw flux measurements calculated by SExtractor.  }
+\label{fig:nnsercomparisonauto}
 \end{figure}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140mm]{images/comparison_auto.eps}
+\caption{Light curve of the comparison object, labeled '0' in figure \ref{fig:nnserfield}. This lightcurve was produced by the \emph{traditional pipeline}. }
+\label{fig:nnsercomparisontom}
+\end{figure}
 
-To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnserfield} 
+To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnserfield}. We set up the apertures manually using the \emph{setaper} tool. 
 
+\subsection{Residuals}
+The plot in figure \ref{fig:residualplot} shows the residuals of the photometry created by subtracting the flux counts measured by the automated pipeline from those measured by the traditional pipeline. There is a systematic offset for each channel which suggests that the automated pipeline overestimates the flux by xx percent. This is due to.... 
+
+\begin{center}
+	\begin{tabular}{|l|r|r|}
+		\hline
+		Filter & Mean counts & Standard deviation\\
+		\hline
+		'i' & 272138 & 4372 \\
+		'g' & 590943 & 494 \\
+		'u' & 404044 & 4878\\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140mm]{images/residuals.eps}
+\caption{A plot of the residuals created by subtracting the flux counts derived from the \emph{traditional pipeline} from those derived using the \emph{automated pipeline}. }
+\label{fig:residualplot}
+\end{figure}
+
+\subsection{Apertures}
+Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no aperture defined for that frame. This means that objects that fade or are generally quite faint, might 'disappear' on some frames and then 're-appear' on subsequent frames. The tracking algorithm allows a 're-appearing' object to be identified with an object that appeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} where the automated pipeline 'loses' the target object in the 'g' and 'u' bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the field and can therefore continue to calculate flux in the aperture for the target even if the target is barely detectable above the sky background.
 
 
 \section{Highlights}
