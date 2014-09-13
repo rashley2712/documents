@@ -65,12 +65,6 @@ Running the automated pipeline on this run is acheived simply by typing: \begin{
 
 To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnserfield}. We set up the apertures manually using the \emph{setaper} tool. This is an interactive program allowing the user to define the apertures using a mouse and an external configuration file. The reduction stage of the pipeline allows for the aperture to alter its size and position depending on the parameters defined by the user. 
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=140mm]{images/setaper.png}
-\caption{Defining the apertures for the reduction using the \emph{traditional} pipeline. Note that the two apertures can be linked. This instructs the pipeline to maintain the pixel separation of the apertures even if there is a small amount of movement from frame to frame. This is useful if our target object is likely to alter in brightness during the run. }
-\label{fig:nnsercomparisontom}
-\end{figure}
 
 
 \subsection{Residuals}
