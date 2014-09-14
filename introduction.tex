@@ -2,7 +2,11 @@
 
 The Ultracam high speed photometry camera (hereafter, ULTRACAM) had its `first-light' at the William Herschel Telescope (WHT) on the 16 May 2002. Since then it has been used on many occasions at three telescopes, namely the William Herschel Telescope (WHT), La Palma, Islas Canarias, the Very Large Telescope (VLT), Cerro Paranal, Chile and New Technology Telescope (NTT), La Silla, Chile. The camera is designed to be portable and can travel between these telescopes. 
 
-The camera has three CCD detectors enabling it to capture data in three colour bands simultaneously. Two dichroic beamsplitters divide the light from the collimator into three different beams, which shall hereafter be referred to as the `red', `green' and `blue' channels. The three CCD detectors are mounted at right angles to each other on the camera. Therefore, each detector is at the end of a slightly different optical path. While the exposure timing is synchronised across the detectors, it is, however, possible to have the detector in the blue channel remain exposed and not 'read-out' while the other two are going through multiple exposures and 'read-outs'. This is to allow for longer exposures where there might be less flux in blue. Reduced flux in blue is caused by several factors, including lower transmission of the optics and atmosphere to blue light, the reduced sensitivity of the CCD detector to blue light and the intrinsic flux of most astronomical objects are lower in this channel.
+\subsection{Optics}
+
+The camera has three CCD detectors enabling it to capture data in three colour bands simultaneously. Two dichroic beamsplitters divide the light from the collimator into three beams, which shall hereafter be referred to as the `red', `green' and `blue' channels. The three CCD detectors are mounted at right angles to each other on the camera. Therefore, each detector is at the end of a slightly different optical path. The images produced on each of the three CCDs chips are therefore of the same field but with very slightly different orientations, distortions and offsets. Towards the edges of the chips, these differentials can add up to be on the order of 10 pixels from channel to channel. 
+
+While the exposure timing is synchronised across the detectors, it is, however, possible to have the detector in the blue channel remain exposed and not 'read-out' while the other two are going through multiple exposures and 'read-outs'. This is to allow for longer exposures where there might be less flux in blue. Reduced flux in blue is caused by several factors, including lower transmission of the optics and atmosphere to blue light, the reduced sensitivity of the CCD detector to blue light and the intrinsic flux of most astronomical objects is lower in this channel.
 
 \begin{figure}[!h]
 \centering
@@ -11,9 +15,28 @@ The camera has three CCD detectors enabling it to capture data in three colour b
 \label{fig1}
 \end{figure}
 
-A key aspect of the design of the camera is its ability to perform at high cadence. It is possible to have the camera read-out at up to 500Hz (frames per channel per second) \cite{dhillon07}. This makes the camera useful for observations of rapid transient events with accurate timing. Although the camera is not often used in this very high speed mode, there are a few observing runs where the camera has been operating with exposure times of approximately 0.005 seconds. These runs are described in chapter~\ref{chap:results}.
+\subsection{Filter sets}
+The filters for each channel can be altered by the observer. In usual configurations, the SDSS filters (u, g, r, i, z) are used, but there are a selection of narrow-band filters that can be substituted. Depending on the science measurements that the observer is trying to perform, these filters will be changed.   
 
-The filters for each channel can be altered by the observer. In usual configurations the SDSS filter (u, g, r, i, z) set are used, but there are a selection of narrow-band filters that can be substituted. Depending on the science measurements that the observer is trying to perform, these filters will be changed.   
+\subsection{Field size and pixel scale}
+ULTRACAM is usually mounted on one of the three telescopes mentioned in the introduction of this chapter. Field sizes, pixel scales and orientations are summarised in the table below. The orientations quoted refer to when the camera is \emph{not} rotated.
+
+\begin{center}
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Telescope & Field size (arc minutes) & Pixel scale (arc seconds/pixel) & Orientation \\
+		\hline
+		WHT & 7x7 &  0.40 & N(up), E(left)\\
+		NTT & 8x8 & 0.40 & N(up), W(left)\\
+		VLT & 6x6 & 0.40 & N(up), E(left) \\
+		\hline
+	\end{tabular}
+\end{center}
+Comment: Confirm these figures with Tom/Elme.
+
+
+\subsection{High speed operation}
+A key aspect of the design of the camera is its ability to perform at high cadence. It is possible to have the camera read-out at up to 500Hz (frames per channel per second) \cite{dhillon07}. This makes the camera useful for observations of rapid transient events with accurate timing. Although the camera is not often used in this very high speed mode, there are a few observing runs where the camera has been operating with exposure times of approximately 0.005 seconds. These runs are described in chapter~\ref{chap:results}.
 
 Each CCD has a total pixel area of 2057x1024 pixels. Half of these pixels are masked and never exposed to light. They are used as a temporary buffer for reading out the chip. CCD detectors are read out serially, but in order to decrease the time between exposures, the full image can be moved to the blanked out area of the chip and this can then be read out while the un-masked area of the chip is once again exposed to light. 
 
@@ -33,7 +56,7 @@ The highest cadence mode is called \emph{Drift mode}. This mode uses the masked 
   \setlength{\fboxsep}{0pt}
   \setlength{\fboxrule}{1pt}
   \fbox{\includegraphics[width=120mm]{images/run010_r_inverted.png}}
-  \caption{A 'fully' exposed CCD with 1 pair of windows (512x1024 pixels each)}
+  \caption{A 'fully' exposed CCD with 1 pair of windows (512x1024 pixels each).  This mode reads out the full area of the CCD chip, resulting in larger data sizes and a longer readout time. The field of view is approximately 7x7 arc minutes, but varies a little depending on the telescope that the camera is mounted on.}
   \label{fig:KOI-824}
 \end{figure}
 
@@ -50,9 +73,9 @@ The highest cadence mode is called \emph{Drift mode}. This mode uses the masked 
   \centering
   \setlength{\fboxsep}{0pt}
   \setlength{\fboxrule}{1pt}
-  \fbox{\includegraphics[width=120mm]{images/run016_r_inverted.png}}
-  \caption{The camera operating in \emph{drift-mode}. Note the small windows (?x?) located at the bottom of the imaging area. Comment: Image needs to be updated. }
-  \label{fig:V713Cep}
+  \fbox{\includegraphics[width=120mm]{images/run018_r_inverted.png}}
+  \caption{The camera operating in \emph{drift-mode}. Note the very small windows (172x156 pixels) located at the bottom of the imaging area.}
+  \label{fig:V834Cen}
 \end{figure}
 
 More details on the camera design and operation can be found in \cite{dhillon07}.
@@ -70,6 +93,41 @@ The types of runs are:
 	\item \emph{Bias}: A short run to build calibration readings for measuring the bias of the detector. This bias will be subtracted from the data during the reduction. 
 	\item \emph{Timing calibration run}: One way to check the timing measurments of the camera is to take frames of a well-known rapidly oscillating source. For example, the Crab Pulsar (PSR B0531+21). The timing of the pulses as measured by the camera can be compared to the expected times for the pulsar. This is used as a standard clock for timing calibration.
 \end{itemize}
+
+\subsection{Typical run length}
+Since ULTRACAM is designed for high-speed photometry, observers using the instrument are typical looking for variations that are clearly noticeable on timescales from a few minutes to a few hours. Most science runs are last for a few hours at the most. The longest runs are usually observations of exoplanet transits. These runs can last 4-7 hours. Very often they have a break in the middle of the run where the telescope has reached the zenith and the run is interupted since the telescope cannot observe at the zenith due to the alt-az mount design.  
+
+A look at the distribution of run length shows a large bulk of the runs are shorter than 5 minutes. This is because there are far more acquisition runs, flat-fields and bias runs than there are science runs. There are also many runs that are nominally science runs (and can be used as such) but are short because the observer has noticed something that they would like to change. This could be a change in focus, binning factor or integration time. The run is then cut short and a new run, is started.  
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=120mm]{images/hist0-600.eps}
+  \caption{Distribution of run length. Many runs are shorter than 5 minutes, but these are not usually \emph{science runs}.}
+  \label{fig:histogram0-600}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=120mm]{images/hist10-600.eps}
+  \caption{Distribution of run length after removing runs shorter than 10 minutes.}
+  \label{fig:histogram10-600}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=120mm]{images/hist60-600.eps}
+  \caption{Distribution of run length after removing runs shorter than 60 minutes.}
+  \label{fig:histogram60-600}
+\end{figure}
+
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=120mm]{images/hist120-600.eps}
+  \caption{Distribution of run length after removing runs shorter than 120 minutes.}
+  \label{fig:histogram120-600}
+\end{figure}
+
 
 \subsection{The data archive}
 At the time of writing, the ULTRACAM data archive comprises of about 10 terabytes of saved data. This can be broken down as:
