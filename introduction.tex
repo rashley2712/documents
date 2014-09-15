@@ -26,9 +26,9 @@ ULTRACAM is usually mounted on one of the three telescopes mentioned in the intr
 		\hline
 		Telescope & Field size (arc minutes) & Pixel scale (arc seconds/pixel) & Orientation \\
 		\hline
-		WHT & 7x7 &  0.40 & N(up), E(left)\\
-		NTT & 8x8 & 0.40 & N(up), W(left)\\
-		VLT & 6x6 & 0.40 & N(up), E(left) \\
+		WHT & 6.0x6.0 &  0.35 & N(up), E(left)\\
+		NTT & 6.0x6.0 & 0.35 & N(up), W(left)\\
+		VLT & 2.5x2.5 & 0.15 & N(up), E(left) \\
 		\hline
 	\end{tabular}
 \end{center}
@@ -97,7 +97,7 @@ The types of runs are:
 \subsection{Typical run length}
 Since ULTRACAM is designed for high-speed photometry, observers using the instrument are typical looking for variations that are clearly noticeable on timescales from a few minutes to a few hours. Most science runs are last for a few hours at the most. The longest runs are usually observations of exoplanet transits. These runs can last 4-7 hours. Very often they have a break in the middle of the run where the telescope has reached the zenith and the run is interupted since the telescope cannot observe at the zenith due to the alt-az mount design.  
 
-A look at the distribution of run length shows a large bulk of the runs are shorter than 5 minutes. This is because there are far more acquisition runs, flat-fields and bias runs than there are science runs. There are also many runs that are nominally science runs (and can be used as such) but are short because the observer has noticed something that they would like to change. This could be a change in focus, binning factor or integration time. The run is then cut short and a new run, is started. The longest run length in the 10 year data archive is one of 566 minutes or 9.5 hours, taken on 25th of April 2010 at the NTT. The output for this run can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2010-04-25/run020.html}
+A look at the distribution of run length shows a large bulk of the runs are shorter than 5 minutes. This is because there are far more acquisition runs, flat-fields and bias runs than there are science runs. There are also many runs that are nominally science runs (and can be used as such) but are short because the observer has noticed something that they would like to change. This could be a change in focus, binning factor or integration time. The run is then cut short and a new run is started. The longest run length in the 10 year data archive is 566 minutes or 9.5 hours, taken on 25th of April 2010 at the NTT. This was for the observation of a transit of the exoplanet Wasp-15b. The output for this run can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2010-04-25/run020.html}. 
 
 \begin{figure}[!h]
   \centering
@@ -128,16 +128,106 @@ A look at the distribution of run length shows a large bulk of the runs are shor
   \label{fig:histogram120-600}
 \end{figure}
 
+\subsection{Run cadences}
+As mentioned in the section describing the camera, ULTRACAM was designed specifically for high-speed photometry. This allows a relatively un-explored region of the observational parameter space to be opened up. Certain phenomena in astrophysics have observables that take place in short periods. Ultra-compact binaries, Cataclysmic variables, Neutron stars, etc all have signals that can be resolved at even sub-second intervals. ULTRACAM is also mounted on some relatively large telescopes, with mirrors ranging from 4.2m 8.2m in diameter. This means that it is able to perform high speed photometry of relatively faint objects. Since the commissioning of the camera in 2002, it has been used to observe a variety of objects, summarised in table \ref{tab:breakdown}. 
+
+Only certain objects require the highest cadences (\textless 1 second). These are X-ray binaries, Polars, Pulsars, Flare stars. Many other science runs can use the camera with a \textgreater 1 second exposure time. Long runs for exoplanet transit observations often use longer exposures of 2-3 seconds. The longest exposure times are around 20-25 seconds. This is only required when the object being observed is extremely faint.  
+
+\begin{table}
+  \begin{center}
+	\begin{tabular}{|l|r|}
+		\hline
+		Target & Time (percent) \\
+		\hline
+		Cataclysmic Variables & 25.3 \\
+		X-ray binaries & 17.4 \\
+		sdB stars/asteroseismology & 11.2 \\
+		etc & x.y \\
+		\hline
+	\end{tabular}
+  \end{center}
+\label{tab:breakdown}
+\caption{Breakdown of how ULTRACAM is used. Comment: This is the out of date table from \cite{dhillon07}. Should update this.}
+\end{table}
+
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=120mm]{images/cadences_hist0-25.eps}
+  \caption{Distribution of exposure times used in the \emph{science} runs.}
+  \label{fig:cadences}
+\end{figure}
+
+Figure \ref{fig:cadences} shows  distribution of exposure times by run, for all of the \emph{science} runs in the ULTRACAM data archive. There are several groupings apparent in the histogram. Firstly, the very short exposures for the rapidly variable objects, such as Polars, Pulsars and X-ray binaries. Then there is a cluster of runs with exposure times of 2, 3, 4 and 5.5 seconds. These are typically observations of eclipsing binaries. The next cluster occurs at about 10 seconds, which are usually runs for exoplanet transits. The final cluster of run lengths occurs at around 20 seconds, usually reserved for faint objects.
+
+\begin{table}
+  \begin{center}
+	\begin{tabular}{|l|r|}
+		\hline
+		Exposure time (seconds) & typical target \\
+		\hline
+		0-1 second & X-ray binaries, polars, CVs \\
+		2, 3, 4, 5.5 seconds & eclipsing binaries, exoplanet transits \\
+		10 seconds & exoplanet transits \\
+		25 seconds & faint objects \\
+		\hline
+	\end{tabular}
+  \end{center}
+\label{tab:breakdown}
+\caption{Typical exposure times and the type of target being observed. Comment: Characterisation here is not thorough. Will clean it up if this table is valuable.
+}
+\end{table}
 
 \subsection{The data archive}
 At the time of writing, the ULTRACAM data archive comprises of about 10 terabytes of saved data. This can be broken down as:
 \begin{itemize}
-	\item \emph{390} nights on which ULTRACAM was operational at a telescope.
-	\item \emph{12 256} runs, including science runs, acquisition runs, flat fields and biases. 
+	\item \emph{406} nights on which ULTRACAM was operational at a telescope.
+	\item \emph{12 649} runs, including science runs, acquisition runs, flat fields and biases. 
 	\item \emph{119 817 742} frames in total. This total includes all the frames for each channel: red, green and blue.
-	\item \emph{10 181 269 485 298} bytes of raw image data.
+	\item \emph{10 542 378 791 454} bytes or 10.54 terabytes of raw image data.
 \end{itemize} 
 
 The data set is relatively large and is housed on a network mounted storage device that is only available through the internal university computer network. This means that it is not possible to access this data from remote locations (for example, by research collaborators in different institutions). If a researcher needs to see some data, then they need to contact a member of department at Warwick or Sheffield and request a data reduction. There is no means to explore the ULTRACAM data set from a remote location. Providing a simple means of accessing the data from remote locations would benefit all of the research collaborators. 
 
+\section{Candidate objects}
 
+One of the main reasons for automating the pipeline is that we might, serendipitously, discover objects that are showing variability, that were not the intended target of the run. Depending on the choice of windows that the observer has selected and how crowded the sky in the field of view happens to be, we could have many objects recorded in the raw data that have not had light curves produced. Producing and analysing these new light curves will hopefully allow us to discover new variable objects. 
+
+Due to the nature of the exposure times and the run lengths (discussed in the previous sections), we are limited to picking up objects that have a variability that occurs within a few minutes to a few hours. We list below that types of objects that we expect to discover.
+
+\subsection{Eclipsing binaries}
+Binaries stars that have their orbit inclined towards Earth ($i \sim 90^\circ$) such that eclipses will occur at least once per orbit will show a change in flux that will be detected in the ULTRACAM data. Our typical run length of 1-3 hours favours binaries that have a short period (\textless 1 day). 
+
+\subsection{Contact binaries}
+Contact binaries are star systems where at least one of the stars has filled its Roche lobe and the stars are affectively 'in contact' with one another, allowing matter to flow, in at least one direction. 
+
+\subsubsection{W Uma stars}
+W Uma stars are binaries where both stars are in contact with each other. Also, each star in the contact binary is significantly distorted, resulting in ellipsoidal variations of the flux due to the fact that the projected area of the stars is constantly changing. Their periods fall in the 6 to 20 hours range and should therefore be clear in a typical ULTRACAM run lasting for, say, 30 minutes or more. 
+
+Need a reference for a W Uma review article.
+
+\subsubsection{Other contact binaries?}
+Anything else here?
+
+\subsection{Cataclysmic variables}
+Cataclysmic variables are highly variable on many different timescales. On the timescale of centuries, they can undergo \emph{nova} where they explode a shell of hydrogen that has been built up on their surface, increasing their brightness by 6-19 magnitudes. Over a period of weeks to months, their accretion disks can go into \emph{outbursts} increasing their magnitudes by a few magnitudes. On the timescale that is most relevant to a typical ULTRACAM run, we can expect to see eclipses of the white dwarf, bright-spot and disc (assuming this is an eclipsing system, with an appropriate orbital inclination) and flickering caused by the accretion stream flowing onto the bright-spot. 
+
+Reference to Coel Hellier's book here (or Brian's book). 
+
+\subsection{Intrinsic variables}
+
+\subsubsection{RR Lyrae stars}
+A bit about RR Lyraes and how we might see them in the ULTRACAM archive.
+
+\subsubsection{$\delta$ Scuti stars}
+A bit about $\delta$ Scuti stars and how we might see them in the ULTRACAM archive.
+
+\subsubsection{DAV and DBV stars}
+A bit about pulsating White Dwarf stars and how we might see them in the ULTRACAM archive.
+
+\subsection{Flare stars}
+
+Flare stars are usually red dwarf or brown dwarf stars that undergo flares in their atmospheres resulting in rapid changes in brightness on timescales of minutes to hours. This obvious change in brightness should be detected during an ULTRACAM run. 
+
+\subsection{Near Earth objects}
+Near Earth objects, such as asteroids and Kuiper belt objects should be visible in the ULTRACAM archive. Asteroids are likely to move across the field at a few arc seconds per minute, meaning that they would cover a fair fraction of the exposed image during the course of a 1-2 hour run of the ULTRACAM. Kuiper belt objects will have magnitudesof around ?? and would move only a few arcseconds per hour. 
