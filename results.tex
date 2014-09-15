@@ -1,6 +1,6 @@
 \section{The archive} 
 
-At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present \emph{159} nights, out of a total of \emph{390}, have been processed and are available for viewing at the following URL: \url{http://url.to.be.provided/}. Of these processed nights, approximately \emph{xx} have been investigated for variability. At the moment, the investigation is almost purely visual, based on a human inspecting each light curve. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve, one-by-one by press the 'right' and ;left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual~\ref{chap:usermanual}. 
+At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present \emph{159} nights, out of a total of \emph{390}, have been processed and are available for viewing at the following URL: \url{http://url.to.be.provided/}. Of these processed nights, approximately \emph{xx} have been investigated for variability. At the moment, the investigation is almost purely visual, based on a human inspecting each light curve. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve, one-by-one by pressing the 'right' and 'left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual~\ref{chap:usermanual}. 
 
 \section{Data quality}
 
@@ -44,28 +44,11 @@ Running the automated pipeline on this run is acheived simply by typing: \begin{
 \begin{figure}[!h]
 \centering
 \includegraphics[width=140mm]{images/nnser_lightcurve_tom.eps}
-\caption{Light curve of the target object, NN Ser, produced using the \emph{standard pipeline}. Comment: Does Tom's pipeline automatically remove sky counts?}
+\caption{Light curve of the target object, NN Ser, produced using the \emph{standard pipeline}. }
 \label{fig:nnserlightcurvetom}
 \end{figure}
 
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=140mm]{images/comparison_auto.eps}
-\caption{Light curve of the comparison object, labeled '0' in figure \ref{fig:nnserfield}. This lightcurve was produced by the \emph{automated pipeline}. The 'Counts' are the raw flux measurements calculated by SExtractor.  }
-\label{fig:nnsercomparisonauto}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=140mm]{images/comparison_auto.eps}
-\caption{Light curve of the comparison object, labeled '0' in figure \ref{fig:nnserfield}. This lightcurve was produced by the \emph{traditional pipeline}. }
-\label{fig:nnsercomparisontom}
-\end{figure}
-
 To reduce the same run using the standard pipeline, we defined apertures for the objects we wanted light curves for. In this case, we are interested in the objects labeled \emph{7} (the target 'NN Ser') and \emph{0} (a comparison star) in figure \ref{fig:nnserfield}. We set up the apertures manually using the \emph{setaper} tool. This is an interactive program allowing the user to define the apertures using a mouse and an external configuration file. The reduction stage of the pipeline allows for the aperture to alter its size and position depending on the parameters defined by the user. 
-
-
 
 \subsection{Residuals}
 The plot in figure \ref{fig:residualplot} shows the residuals of the photometry created by subtracting the flux counts measured by the automated pipeline from those measured by the traditional pipeline. In table \ref{table:residuals} we show that the mean and standard deviations for these residuals. There is a systematic offset for each channel which suggests that the automated pipeline overestimates the flux by xx percent. This is due to.... 
@@ -82,9 +65,16 @@ The plot in figure \ref{fig:residualplot} shows the residuals of the photometry 
 	\end{tabular}
 \end{center}
 \begin{verbatim}
+Auto pipeline
 Diff mean [r]:1.25215214271[0.0036372754718]
 Diff mean [g]:1.22474549013[0.00452407286943]
 Diff mean [b]:1.26405760203[0.0192883107848]
+
+Trad pipeline
+Diff mean [r]:1.2523[0.00340899]
+Diff mean [g]:1.22406[0.00422803]
+Diff mean [b]:1.25941[0.0174156]
+
 \end{verbatim}
 
 \begin{table}[ht]
@@ -105,24 +95,36 @@ Diff mean [b]:1.26405760203[0.0192883107848]
 \begin{figure}[!h]
 \centering
 \includegraphics[width=140mm]{images/differential_auto.eps}
-\caption{The lightcurve of object '0' and object '1' as labelled in figure \ref{fig:nnserfield}. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
+\caption{The lightcurve of object '0' and object '1' as labelled in figure \ref{fig:nnserfield} as produced by the \emph{automated pipeline}. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
 \label{fig:differentialauto}
 \end{figure}
 
-
 \begin{figure}[!h]
 \centering
-\includegraphics[width=140mm]{images/residuals.eps}
-\caption{A plot of the residuals created by subtracting the flux counts derived from the \emph{traditional pipeline} from those derived using the \emph{automated pipeline}. The readings are the photometry for object labeled '0' in figure \ref{fig:nnserfield}}
-\label{fig:residualplot}
+\includegraphics[width=140mm]{images/differential_trad.eps}
+\caption{The lightcurve of object '0' and object '1' as labelled in figure \ref{fig:nnserfield} as produced by the \emph{traditional pipeline}. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
+\label{fig:differentialtrad}
 \end{figure}
+
 
 \subsection{Apertures}
 Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no aperture defined for that frame. This means that objects that fade or are generally quite faint, might 'disappear' on some frames and then 're-appear' on subsequent frames. The tracking algorithm allows a 're-appearing' object to be identified with an object that appeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} where the automated pipeline 'loses' the target object in the 'g' and 'u' bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the field and can therefore continue to calculate flux in the aperture for the target even if the target is barely detectable above the sky background.
 
-
 \section{Highlights}
 
-Some 'interesting' objects discovered by the pipeline.
+Below we list some of the variable objects that have discovered as a result of running the automated pipeline on a fraction of the ULTRACAM archive. All of the objects were noticed after browsing through the light-curves 'by eye'. That is, using a human to visually inspect each light curve one-by-one. This task is made relatively easy in the browser interface and it is possible to inspect at a rate of about 1-2 objects per second. In future, we plan to apply some statistical tests to the data to perform the light curve inspection as a stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly accurate as more large scale sky surveys launch. We plan to re-use work from one or more of these surveys. References to VVV, LSST, NGTS, Wasp, Astrokit software, etc.
+
+\subsection{Contact binaries}
+
+  \begin{tabular}{l l}
+  \hline
+  ObjectID & 2013-07-21-run010-163 \\
+  Pixel position & (417, 650) \\
+  RA, DEC & 19:44:10.3, 40:18:08.1 (J2000) \\
+  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
+  Finding chart & \includegraphics[width=60mm]{images/2013-07-21-run010-163.png} \\
+  Light curve & \includegraphics[width=120mm]{images/2013-07-21-run010-163_lightcurve.png} \\
+  \hline
+  \end{tabular}
 
 

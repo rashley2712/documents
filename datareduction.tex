@@ -38,10 +38,7 @@ An automated pipeline can be run on the data immediately after the run is comple
 
 \subsection{Algorithm of the automated pipeline} 
 
-\subsubsection{Source extraction}
-A popular software tool used for source extraction is SExtractor \cite{bertin}. SExtractor is able to process an image field and produce a catalog of sources in that field along with a measurement of the flux count of each object. The flux count is calculated after making efforts to account for the background in the field and then fitting a profile to the object. \emph{Comment: Will need a full chapter on this in the thesis, including tweaks to the configuration parameters of SExtractor and how it affects the results.}
-
-\subsubsection{Algorithm}
+\subsubsection{Key stages for automation}
 The stages of the reduction process are as follows:
 \begin{enumerate}
 	\item Stage 1: Extract all of the 'detectable' objects in all of the frames. 
@@ -87,19 +84,24 @@ The stages of the reduction process are as follows:
 	\label{webpublish}
 \end{figure}
 
+\subsubsection{Source extraction}
+A popular software tool used for source extraction is SExtractor \cite{bertin}. SExtractor is able to process an image field and produce a catalog of sources in that field along with a measurement of the flux count of each object. The flux count is calculated after making efforts to account for the background in the field and then fitting a profile to the object. 
 
-\subsection{Source extraction}
-
-Discussion of the mechanism to invoke SExtractor and how SExtractor produces its measurements. 
+To follow: More info on how SExtractor performs the sky substraction, aperture fitting and flux measurement. Much of it pulled from the SExtractor manual. 
 
 \subsection{Object matching}
 
-Analysis of the techniques used for object matching.
+Analysis of the techniques used for object matching. First pass using pixel location and independent on each channel. 
+
+Second pass to identify the same object on different channels using pixel coordinates, as well as astrometric solutions (if available). 
 
 \subsection{WCS solutions}
+
+Discussion of using the Astrometry.net package. 
+
 After some ad-hoc tests using \emph{SCAMP \cite{scamp}} and \emph{Astrometry.net \cite{astrometry}} it seemed that the Astrometry.net software was more reliable at finding good WCS solutions to the fields. The software was downloaded to a local machine (including the extensive index files) and compiled. At the moment, this is now part of the pipeline but it does not consistently find WCS solutions for all of the fields. 
 
-There are several difficulties in reliably finding a WCS solution for the fields.  These are:
+There are several challenges to finding a WCS solution for the fields.  These are:
 \begin{itemize}
 	\item \emph{Lack of pointing data}: The Ultracam system does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data is archived, a \emph{SIMBAD} lookup is used. This gives us a world coordinate that is somewhere in the field, but it is not known which object (or pixel location) this applies to.  
 	\item \emph{Field rotation}: Since the Ultracam can be rotated about the optical axis to allow for optimal alignment of the objects, this means that the field of view can be at any arbitrary rotation giving an extra degree of freedom to the matching task. 
@@ -109,9 +111,9 @@ There are several difficulties in reliably finding a WCS solution for the fields
 	\item \emph{Choice of reference index by colour}: The Astrometry.net software uses 2MASS and Tycho-2 reference catalogs by default. These are based on infra-red and V magnitudes. This means that the blue channel (which is often using the SDSS u filter) might not match the reference indexes. Indeed, current tests often end with a match in red, a match in green and no match in blue. 
 \end{itemize}
 
-
-
 \subsection{Web publishing}
+
+Discussion of the choices made in publishing to the web. Particularly the pros and cons of doing all of the web interaction in the client and also the choice of JSON as the data transport mechanism. 
 
 The core `visible product' of the project is a website that allows a user to browse all of the data in the ULTRACAM archive. The key features of this website are:
 
@@ -129,7 +131,6 @@ The core `visible product' of the project is a website that allows a user to bro
 	
 \end{itemize}
 See Fig. \ref{browser} for an example of the web-page. 
-
 
 \begin{figure}[!h]
 	\centering
