@@ -87,7 +87,20 @@ The stages of the reduction process are as follows:
 \subsubsection{Source extraction}
 A popular software tool used for source extraction is SExtractor \cite{bertin}. SExtractor is able to process an image field and produce a catalog of sources in that field along with a measurement of the flux count of each object. The flux count is calculated after making efforts to account for the background in the field and then fitting a profile to the object. 
 
-To follow: More info on how SExtractor performs the sky substraction, aperture fitting and flux measurement. Much of it pulled from the SExtractor manual. 
+For each frame in the data run (which could consist of several to several thousand frames), we extract a bitmap of the image which consist of a 2D pixel map with the CCD counts (or ADU) for each pixel and pass this to SExtractor for source extraction. 
+
+SExtractor performs two passes on this image. On the first pass it makes an estimate of the "background signal" of the entire image. It does this by producing a mesh-grid of background readings for the whole image, applying a median clipping algorithm and then fitting a bicubic spline to interpolate between the mesh points. It then subtracts this background from the image. The size of the mesh grid is configurable and the pipeline allows the user to tweak this parameter if necessary, but it does \emph{not} adjust this parameter automatically. If small scale changes in the background are expected (for example, in runs like ??) then the mesh size should be reduced. The usual value that is used in the pipeline is a mesh grid size of 64 pixels.
+
+On the second pass, SExtractor applies a convolution filter to the image. This step is intended to increase the detectability (enhance the Signal to Noise ratio) for target objects on the frame. The filter we are using by default for this automated pipeline is a simple 'circular' PSF defined by the 3x3 mask:
+$
+\begin{array}{ccc}
+  1 & 2 & 1 \\
+  2 & 4 & 2 \\
+  1 & 1 & 1 \\
+\end{array}  
+$
+ This is an optional step and can be configured before running the automated pipeline. The default 
+
 
 \subsection{Object matching}
 
