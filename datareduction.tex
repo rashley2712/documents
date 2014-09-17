@@ -87,7 +87,7 @@ The stages of the reduction process are as follows:
 \subsubsection{Source extraction}
 A popular software tool used for source extraction is SExtractor \cite{bertin}. SExtractor is able to process an image field and produce a catalog of sources in that field along with a measurement of the flux count of each object. The flux count is calculated after making efforts to account for the background in the field and then fitting a profile to the object. 
 
-For each frame in the data run (which could consist of several to several thousand frames), we extract a bitmap of the image which consist of a 2D pixel map with the CCD counts (or ADU) for each pixel and pass this to SExtractor for source extraction. 
+For each frame in the data run (which could consist of several to several thousand frames), we extract a bitmap of the image, which consists of a 2D pixel map with the CCD counts (or ADU) for each pixel, and pass this to SExtractor for source extraction. 
 
 SExtractor performs two passes on this image. On the first pass it makes an estimate of the "background signal" of the entire image. It does this by producing a mesh-grid of background readings for the whole image, applying a median clipping algorithm and then fitting a bicubic spline to interpolate between the mesh points. It then subtracts this background from the image. The size of the mesh grid is configurable and the pipeline allows the user to tweak this parameter if necessary, but it does \emph{not} adjust this parameter automatically. If small scale changes in the background are expected (for example, in runs like ??) then the mesh size should be reduced. The usual value that is used in the pipeline is a mesh grid size of 64 pixels.
 
@@ -99,7 +99,27 @@ $
   1 & 1 & 1 \\
 \end{array}  
 $
- This is an optional step and can be configured before running the automated pipeline. The default 
+
+SExtractor then applies thresholding to the background subtracted and filtered image. The threshold for detection is defined as the pixel's ADU value above the background (in units of the background's standard deviation). This threshold is configurable and can be modified before running the automated pipeline. The default value we have used for most of the pipeline processing so far is '3'. Decreasing this parameter can be used to increase the number of objects detected for any particular run but reducing it too much will cause the source extraction to produce too many spurious object detections. For example, setting this value to '1' results in the source extraction picking up noise in the background as sources and this results in the automated pipeline grinding to halt as the number of potential objects climbs monotonically. At the moment, the automated pipeline is not able to automatically tune this parameter for each run, although this is something that should be considered for future iterations of the pipeline. Figure \ref{fig:tweakingthreshold} shows how reducing this threshold can increase the number of objects detected by the pipeline.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/2012-09-03_g_default.png}
+  \includegraphics[width=.8\linewidth]{images/2012-09-03_g_15sigma.png}
+  \caption{The effect of tweaking the DETECT\textunderscore THRESH parameter in SExtractor. The upper plot shows the objects detected in a run with the threshold set at $ 3\times \sigma_{background}$ [56 objects detected], while the lower plot was produced with DETECT\textunderscore THRESH set at $ 1.5\times \sigma_{background}$  [101 objects detected]. Note: setting it to 1.2 detected 149 objects, but took the pipeline 3x longer to run. }
+\label{fig:tweakingthreshold}
+\end{figure}
+
+
+SExtractor then determines the pixel position of each object by calculating a weighted mean in the $x$ and $y$ dimensions. The weighting applied to each pixel is the pixel intensity (after background subtraction and filtering). If $I_{i}$ is the pixel counts for pixel $i$ in the object, then:
+
+$ X = \frac{\sum\limits_{i=1}^{N} I_{i}x_{i}}{\sum\limits_{i=1}^{N} I_i}$
+
+$ Y = \frac{\sum\limits_{i=1}^{N} I_{i}y_{i}}{\sum\limits_{i=1}^{N} I_i}$
+
+For each object that has been selected through the threshold criterion, the flux is then calculated. 
+
+The output from SExtractor is a FITS file that contains a catalog of all of the detected objects with measurements of their
 
 
 \subsection{Object matching}
@@ -115,6 +135,7 @@ Discussion of using the Astrometry.net package.
 After some ad-hoc tests using \emph{SCAMP \cite{scamp}} and \emph{Astrometry.net \cite{astrometry}} it seemed that the Astrometry.net software was more reliable at finding good WCS solutions to the fields. The software was downloaded to a local machine (including the extensive index files) and compiled. At the moment, this is now part of the pipeline but it does not consistently find WCS solutions for all of the fields. 
 
 There are several challenges to finding a WCS solution for the fields.  These are:
+
 \begin{itemize}
 	\item \emph{Lack of pointing data}: The Ultracam system does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data is archived, a \emph{SIMBAD} lookup is used. This gives us a world coordinate that is somewhere in the field, but it is not known which object (or pixel location) this applies to.  
 	\item \emph{Field rotation}: Since the Ultracam can be rotated about the optical axis to allow for optimal alignment of the objects, this means that the field of view can be at any arbitrary rotation giving an extra degree of freedom to the matching task. 
