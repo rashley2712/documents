@@ -117,7 +117,23 @@ $ X = \frac{\sum\limits_{i=1}^{N} I_{i}x_{i}}{\sum\limits_{i=1}^{N} I_i}$
 
 $ Y = \frac{\sum\limits_{i=1}^{N} I_{i}y_{i}}{\sum\limits_{i=1}^{N} I_i}$
 
-For each object that has been selected through the threshold criterion, the flux is then calculated. 
+For each object that has been selected through the threshold criterion, the flux is then calculated. This is computed by one of 2 methods. 
+
+\begin{enumerate}
+  \item \emph{AUTO} Automatic aperture mode
+SExtractor 
+
+  \item \emph{APER} Fixed aperture mode 
+In this mode, the measurement of flux for the object is calculated by summing pixel intensity $I_{x,y}$  of all of the pixels that are within a pre-defined aperture radius centred on the x, y position as calculated above. 
+
+$Flux = \sum\limits_{x,y \in aperture}I_{x,y} $
+
+The aperture radius is defined before the pipeline is run. This can therefore be adjusted manually. Due to the diversity of data in the ULTRACAM archive, there is no obvious single choice for this value. For example, some of the runs of bright objects found in the Wasp and HAT surveys use the telesope in a deliberately de-focused state, this is described in the introduction \ref{chap:introduction}. Aperture sizes for these runs need to be between 50 and 80 pixels. However, other runs with the telescope in focus and containing more crowded fields of objects should have far smaller aperture sizes of between 8 and 15 pixels. It is conceivable that the decision on which aperture size could be automated. A simple way to do this would be to perform a 2-pass approach. First use AUTO aperture mode to allow SExtractor to return a list of aperture sizes, then choose a fixed aperture size that represents the best choice for this run. Perhaps the 'mode' of the aperture sizes returned by AUTO. This is something that will be considered for future iterations of the pipeline. 
+ 
+\end{enumerate}
+
+In order to facilitate the automatic running of the pipeline across the entire ULTRACAM data archive, the default setting for the flux measurement is the 'AUTO' aperture mode. After inspection of the output, runs that would benefit from fixed apertures can then be 're-computed' with a manual setting for the aperture size. 
+
 
 The output from SExtractor is a FITS file that contains a catalog of all of the detected objects with measurements of their
 
