@@ -8,9 +8,9 @@ The task is made relatively easy in the browser interface and it is possible to 
 
 \section{Discovered objects}
 
-Below we list some of the variable objects that have discovered as a result of running the automated pipeline on a fraction of the ULTRACAM archive. The pipeline is usually invoked by running a single command on a night's worth of data. For example, to build the light-curves for the night of, say, emph{2014-08-21}, then a single command, emph{daybuilder.py 2014-08-21} is issued from the command line. The pipeline then runs through all of the data for that night and generates a set of web pages. Depending on the amount of data for that night, this can take 1 hour to 8 hours. 
+Below we list some of the variable objects that have discovered as a result of running the automated pipeline on a fraction of the ULTRACAM archive. The pipeline is usually invoked by running a single command on a night's worth of data. For example, to build the light-curves for the night of, say, \emph{2014-08-21}, then a single command, \emph{daybuilder.py 2014-08-21} is issued from the command line. The pipeline then runs through all of the data for that night and generates a set of web pages. Depending on the amount of data for that night, this can take 1 hour to 8 hours. 
 
-
+\newpage
 \subsection{Eclipsing binaries}
 
   \begin{tabular}{l l}
@@ -20,11 +20,12 @@ Below we list some of the variable objects that have discovered as a result of r
   Run date & 2013-07-21 \\
   Pixel position & (452, 332) \\
   URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
-  Finding chart & \includegraphics[width=60mm]{images/2013-07-21-run010-48.png} \\
+       & \includegraphics[width=60mm]{images/2013-07-21-run010-48.png} \\
   \end{tabular}
   \includegraphics[width=120mm]{images/2013-07-21-run010-48_lightcurve.eps} \\
   Discussion of this object.
 
+  \newpage
   \begin{tabular}{l l}
   Classification & W Uma contact binary \\
   ObjectID & 2013-07-21-run010-163 \\
@@ -32,22 +33,28 @@ Below we list some of the variable objects that have discovered as a result of r
   Run date & 2013-07-21 \\
   Pixel position & (417, 650) \\
   URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
-  Finding chart & \includegraphics[width=60mm]{images/2013-07-21-run010-163.png} \\
+       & \includegraphics[width=60mm]{images/2013-07-21-run010-163.png} \\
   \end{tabular}
   \includegraphics[width=120mm]{images/2013-07-21-run010-163_lightcurve.eps} \\
   Discussion of this object.
 
-\begin{tabular}{l l}
-  Classification & Eclipsing dwarf binary \\
+  \newpage
+  \begin{tabular}{l l}
+  Classification & Eclipsing binary \\
   ObjectID & 2013-07-21-run011-162 \\
   Pixel position & (726, 341) \\
   RA, DEC & 19:54:02.6, 40:37:32.4 (J2000) \\
   URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run011.html} \\
-  Finding chart & \includegraphics[width=60mm]{images/2013-07-21-run011-162.png} \\
+       & \includegraphics[width=60mm]{images/2013-07-21-run011-162.png} \\
   \end{tabular}
   \includegraphics[width=120mm]{images/2013-07-21-run011-162_lightcurve.eps} \\
-  Discussion of this object.
+  The light curve of this object includes a primary eclipse of the object. Since the primary eclipse has a 'flat-bottom' we can conclude that this eclipse is total (ie that the primary is completely obscured by the secondary during the eclipse. This also means that the primary has a small diameter than the secondary. The primary eclipse duration is xxx minutes. The depth of the eclipse is about 0.7 magnitudes which corresponds to an actual drop in flux of 50%. 
 
+  It is notable that the ingress and the egress demonstrates broad 'wings' suggesting that the object being eclipsed (primary) is extended and the shape of the curve suggest distortion of the secondary.
+
+  Although the object is in a Kepler field and is, in fact, close to KOI-1546, a search through the Kepler archive \footnote{https://archive.stsci.edu/kepler/data_search/search.php} reveals that it is not listed. This is probably because the object is too faint. 
+
+\newpage
 \subsection{Intrinsic variables}
 
   \begin{tabular}{l l}
@@ -56,25 +63,60 @@ Below we list some of the variable objects that have discovered as a result of r
   Pixel position & (54, 362) \\
   RA, DEC & 19:44:17.53, 40:16:43.7 (J2000) \\
   URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
-  Finding chart & \includegraphics[width=60mm]{images/2013-07-21-run010-23.png} \\
+       & \includegraphics[width=60mm]{images/2013-07-21-run010-23.png} \\
   \end{tabular}
   \includegraphics[width=120mm]{images/2013-07-21-run010-23_lightcurve.eps} \\
   Discussion of this object.
 
 
+\newpage
 \subsection{Near Earth objects}
 
   \begin{tabular}{l l}
-  Classification & Asteroid \\
+  Classification & Asteroid: 1998 SU139 \\
+  ObjectID & 2011-08-26-run014-110 \\
+  Pixel position & start: (217, 9), end: (505, 54) \\
+  Distance travelled & 291 pixels or 101" \\
+  Field scale & 0.35"/pixel \\
+  Duration of run & 12355s (3.43 hours) \\
+  Tangential angular velocity & 0.495"/minute or 29.68"/hour\\ 
+  RA, DEC & MJD=55800.038, 20:51:12, -08:31:25 (J2000) \\
+  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2011-08-26/run014.html} \\
+  \end{tabular}
+  \includegraphics[width=140mm]{images/2011-08-26-run014-110-lightcurve.eps} \\
+  \includegraphics[width=90mm]{images/asteroid_pgram.eps} \\
+
+  The light curve of this object displays a clear sinusoid which must be caused be the object's rotation. A periodogram of this data peaks at a frequency of $0.0108 minutes^{-1}$ (a spin period of $1.53$ hours) for the 'i' filter and $0.0098 minutes^{-1}$ (a spin period of $1.70$ hours) for the 'g' filter. We assume that this asteriod's spin is caused by the YORP effect \cite{yorpeffect}. 
+
+  A look-up useing the \emph{NEOChecker} tool on the website of the IAU's Minor Planet Center \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} returns a result for this candidate as, most probably, asteroid \emph{1998 SU139}. The world coordinates reported by the tool differed from our own determination by about 6.5'. 
+
+  There is a clear relationship between the size of the asteroid and the minimum spin period. Observationally, it can be shown that, for an asteroid with a diameter greater than 250 metres, the spin period cannot be less than 2.33 hours~\cite{Jacobson2014}. The theoretical reasoning for this 'spin cut-off'  is that, assuming these asteroids are 'rubble-piles' then the rotational forces will be stronger than the gravitational forces and the rubble pile will drift apart. It is even suggested that this scenario is the mechanism by which asteroid binary pairs are created. At the moment, only two asteroids have been found that are exceptions to this rule, \emph{2001 OE84} and \emph{2005 UW163} with periods of 0.486 and 1.290 hours respectively \cite{Chang2014}. 
+
+  There are several more unconfirmed SFR asteroids reported by \cite{Masiero2009} and \cite{Dermawan2011}. Since these object have low birghtness and fast rotation, periods have not been accurately determined for them so far. Many of the light curves only have few tens of points. This project shows that ULTRACAM is a suitable instrument to use for follow up observations of these candidates.  
+
+  The diameter of the asteroid can be estimated by using its absolute magnitude $H$ and an assumption for the albedo $p$ using the formula, adapted from Jewitt \cite{Jewitt2013}
+
+  $D = \frac{1130}{\sqrt{p}}10^{-H/5} $
+
+  We have taken $H = 15.2$ from the JPL Small-Body Database \footnote{http://ssd.jpl.nasa.gov/sbdb.cgi} and assumed an albedo of $ p = 0.297$ for a V-type asteroid. This gives a diameter, $D = 1.89 km$ for this asteroid. 
+
+  If our period is correct, this could mean that we have discovered a new member of this rare, super-fast rotator (SFR) class of asteroid.If they are rubble-pile asteroids, then an additional mechanism is needed to explain how the object stays bound \cite{Holsapple2007}. 
+
+
+  \newpage
+  \begin{tabular}{l l}
+  Classification & Asteroid: 9108 Toruyusa (1997 AZ6) [offset of 7 arc minutes from the computed ephemeris]\\
   ObjectID & 2009-01-04-run024-61 \\
   Pixel position & start: (137, 422), end: (226, 447) \\
   Distance travelled & 92 pixels or 32" \\
   Field scale & 0.35"/pixel \\
   Duration of run & 3221s (53.7 minutes) \\
   Tangential angular velocity & 0.596"/minute or 35"/hour\\ 
-  RA, DEC & ??? ??? (J2000) \\
+  RA, DEC & MJD=54836.26642, 08:04:52.3 +16:18:10.6 (J2000) \\
   URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2009-01-04/run024.html} \\
-  Finding chart & \includegraphics[width=60mm]{images/2009-01-04-run024-61.png} \\
+       & \includegraphics[width=60mm]{images/2009-01-04-run024-61.png} \\
   \end{tabular}
-  Discussion of this object.
+
+  Using the NEOChecker \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} tool, the object detected in this run appears to be a well known asteroid, 9108 Toruyusa. The light curve, which lasts approximately 1 hour shows no significant variation and it has not been possible to determine a spin period for this asteroid.  
+
   
