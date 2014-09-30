@@ -1,6 +1,57 @@
 \section{The ULTRACAM instrument} 
 
-The Ultracam high speed photometry camera (hereafter, ULTRACAM) had its `first-light' at the William Herschel Telescope (WHT) on the 16 May 2002. Since then it has been used on many occasions at three telescopes, namely the William Herschel Telescope (WHT), La Palma, Islas Canarias, the Very Large Telescope (VLT), Cerro Paranal, Chile and New Technology Telescope (NTT), La Silla, Chile. The camera is designed to be portable and can travel between these telescopes. 
+The ULTRACAM high speed photometry camera (hereafter, ULTRACAM) had its `first-light' at the William Herschel Telescope (WHT) on the 16 May 2002. Since then it has been used on many occasions at three telescopes, namely the William Herschel Telescope (WHT), La Palma, Islas Canarias, the Very Large Telescope (VLT), Cerro Paranal, Chile and New Technology Telescope (NTT), La Silla, Chile. The camera is designed to be portable and can travel between these telescopes. It was designed specifically to take high speed photometry of faint objects in three colours. These three factors are fundamental to understanding the scientific value of ULTRACAM and also set important context into the reason for doing this project, so let's first discuss each one in turn. 
+
+\subsection{"High speed"}
+
+\subsection{"Faint objects"}
+ULTRACAM was designed to be installed on some of the larger telescopes in the world. The WHT has a mirror diameter of 3.5 metres, NTT xx metres and the VLT 
+
+\subsection{"Three colours"}
+In Astronomy, colour is an important property that can tells a great deal about the object. 
+
+\section{Candidate objects}
+
+One of the main reasons for automating the pipeline is that we might, serendipitously, discover objects that are showing variability, that were not the intended target of the run. Depending on the choice of windows that the observer has selected and how crowded the sky in the field of view happens to be, we could have many objects recorded in the raw data that have not had light curves produced. Producing and analysing these new light curves will hopefully allow us to discover new variable objects. 
+
+Due to the nature of the exposure times and the run lengths (discussed in the previous sections), we are limited to picking up objects that have a variability that occurs within a few minutes to a few hours. We list below that types of objects that we expect to discover.
+
+\subsection{Eclipsing binaries}
+Binaries stars that have their orbit inclined towards Earth ($i \sim 90^\circ$) such that eclipses will occur at least once per orbit will show a change in flux that will be detected in the ULTRACAM data. Our typical run length of 1-3 hours favours binaries that have a short period (\textless 1 day). 
+
+\subsection{Contact binaries}
+Contact binaries are star systems where at least one of the stars has filled its Roche lobe and the stars are effectively 'in contact' with one another, allowing matter to flow, in at least one direction. 
+
+\subsubsection{{W UMa} stars}
+{W UMa} stars are binaries where both stars are in contact with each other. Also, each star in the contact binary is significantly distorted, resulting in ellipsoidal variations of the flux due to the fact that the projected area of the stars is constantly changing. Their periods fall in the 6 to 20 hours range and should therefore be clear in a typical ULTRACAM run lasting for, say, 30 minutes or more. 
+
+Need a reference for a {W UMa} review article.
+
+\subsubsection{Other contact binaries?}
+Anything else here?
+
+\subsection{Cataclysmic variables}
+Cataclysmic variables are highly variable on many different timescales. On the timescale of centuries, they can undergo \emph{nova} where they explode a shell of hydrogen that has been built up on their surface, increasing their brightness by 6-19 magnitudes. Over a period of weeks to months, their accretion disks can go into \emph{outbursts} increasing their magnitudes by a few magnitudes. On the timescale that is most relevant to a typical ULTRACAM run, we can expect to see eclipses of the white dwarf, bright-spot and disc (assuming this is an eclipsing system, with an appropriate orbital inclination) and flickering caused by the accretion stream flowing onto the bright-spot. 
+
+Reference to Coel Hellier's book here (or Brian's book). 
+
+\subsection{Intrinsic variables}
+
+\subsubsection{RR Lyrae stars}
+A bit about RR Lyraes and how we might see them in the ULTRACAM archive.
+
+\subsubsection{$\delta$ Scuti stars}
+A bit about $\delta$ Scuti stars and how we might see them in the ULTRACAM archive.
+
+\subsubsection{DAV and DBV stars}
+A bit about pulsating White Dwarf stars and how we might see them in the ULTRACAM archive.
+
+\subsection{Flare stars}
+
+Flare stars are usually red dwarf or brown dwarf stars that undergo flares in their atmospheres resulting in rapid changes in brightness on timescales of minutes to hours. This obvious change in brightness should be detected during an ULTRACAM run. 
+
+\subsection{Near Earth objects}
+Near Earth objects, such as asteroids and Kuiper belt objects should be visible in the ULTRACAM archive. Asteroids are likely to move across the field at a few arc seconds per minute, meaning that they would cover a fair fraction of the exposed image during the course of a 1-2 hour run of the ULTRACAM. Kuiper belt objects will have magnitudesof around ?? and would move only a few arcseconds per hour.
 
 \subsection{Optics}
 
@@ -162,7 +213,7 @@ Only certain objects require the highest cadences (\textless 1 second). These ar
   \label{fig:cadences}
 \end{figure}
 
-Figure \ref{fig:cadences} shows  distribution of exposure times by run, for all of the \emph{science} runs in the ULTRACAM data archive. There are several groupings apparent in the histogram. Firstly, the very short exposures for the rapidly variable objects, such as Polars, Pulsars and X-ray binaries. Then there is a cluster of runs with exposure times of 2, 3, 4 and 5.5 seconds. These are typically observations of eclipsing binaries. The next cluster occurs at about 10 seconds, which are usually runs for exoplanet transits. The final cluster of run lengths occurs at around 20 seconds, usually reserved for faint objects.
+Figure \ref{fig:cadences} shows a distribution of exposure times by run, for all of the \emph{science} runs in the ULTRACAM data archive. There are several groupings apparent in the histogram. Firstly, the very short exposures for the rapidly variable objects, such as Polars, Pulsars and X-ray binaries. Then there is a cluster of runs with exposure times of 2, 3, 4 and 5.5 seconds. These are typically observations of eclipsing binaries. The next cluster occurs at about 10 seconds, which are usually runs for exoplanet transits. The final cluster of run lengths occurs at around 20 seconds, usually reserved for faint objects.
 
 \begin{table}
   \begin{center}
@@ -193,45 +244,4 @@ At the time of writing, the ULTRACAM data archive comprises of about 10 terabyte
 
 The data set is relatively large and is housed on a network mounted storage device that is only available through the internal university computer network. This means that it is not possible to access this data from remote locations (for example, by research collaborators in different institutions). If a researcher needs to see some data, then they need to contact a member of department at Warwick or Sheffield and request a data reduction. There is no means to explore the ULTRACAM data set from a remote location. Providing a simple means of accessing the data from remote locations would benefit all of the research collaborators. 
 
-\section{Candidate objects}
 
-One of the main reasons for automating the pipeline is that we might, serendipitously, discover objects that are showing variability, that were not the intended target of the run. Depending on the choice of windows that the observer has selected and how crowded the sky in the field of view happens to be, we could have many objects recorded in the raw data that have not had light curves produced. Producing and analysing these new light curves will hopefully allow us to discover new variable objects. 
-
-Due to the nature of the exposure times and the run lengths (discussed in the previous sections), we are limited to picking up objects that have a variability that occurs within a few minutes to a few hours. We list below that types of objects that we expect to discover.
-
-\subsection{Eclipsing binaries}
-Binaries stars that have their orbit inclined towards Earth ($i \sim 90^\circ$) such that eclipses will occur at least once per orbit will show a change in flux that will be detected in the ULTRACAM data. Our typical run length of 1-3 hours favours binaries that have a short period (\textless 1 day). 
-
-\subsection{Contact binaries}
-Contact binaries are star systems where at least one of the stars has filled its Roche lobe and the stars are effectively 'in contact' with one another, allowing matter to flow, in at least one direction. 
-
-\subsubsection{{W UMa} stars}
-{W UMa} stars are binaries where both stars are in contact with each other. Also, each star in the contact binary is significantly distorted, resulting in ellipsoidal variations of the flux due to the fact that the projected area of the stars is constantly changing. Their periods fall in the 6 to 20 hours range and should therefore be clear in a typical ULTRACAM run lasting for, say, 30 minutes or more. 
-
-Need a reference for a {W UMa} review article.
-
-\subsubsection{Other contact binaries?}
-Anything else here?
-
-\subsection{Cataclysmic variables}
-Cataclysmic variables are highly variable on many different timescales. On the timescale of centuries, they can undergo \emph{nova} where they explode a shell of hydrogen that has been built up on their surface, increasing their brightness by 6-19 magnitudes. Over a period of weeks to months, their accretion disks can go into \emph{outbursts} increasing their magnitudes by a few magnitudes. On the timescale that is most relevant to a typical ULTRACAM run, we can expect to see eclipses of the white dwarf, bright-spot and disc (assuming this is an eclipsing system, with an appropriate orbital inclination) and flickering caused by the accretion stream flowing onto the bright-spot. 
-
-Reference to Coel Hellier's book here (or Brian's book). 
-
-\subsection{Intrinsic variables}
-
-\subsubsection{RR Lyrae stars}
-A bit about RR Lyraes and how we might see them in the ULTRACAM archive.
-
-\subsubsection{$\delta$ Scuti stars}
-A bit about $\delta$ Scuti stars and how we might see them in the ULTRACAM archive.
-
-\subsubsection{DAV and DBV stars}
-A bit about pulsating White Dwarf stars and how we might see them in the ULTRACAM archive.
-
-\subsection{Flare stars}
-
-Flare stars are usually red dwarf or brown dwarf stars that undergo flares in their atmospheres resulting in rapid changes in brightness on timescales of minutes to hours. This obvious change in brightness should be detected during an ULTRACAM run. 
-
-\subsection{Near Earth objects}
-Near Earth objects, such as asteroids and Kuiper belt objects should be visible in the ULTRACAM archive. Asteroids are likely to move across the field at a few arc seconds per minute, meaning that they would cover a fair fraction of the exposed image during the course of a 1-2 hour run of the ULTRACAM. Kuiper belt objects will have magnitudesof around ?? and would move only a few arcseconds per hour. 
