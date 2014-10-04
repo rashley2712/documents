@@ -1,6 +1,6 @@
 \section{The archive} 
 
-At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present \emph{159} nights, out of a total of \emph{390}, have been processed and are available for viewing at the following URL: \url{http://url.to.be.provided/}. Of these processed nights, approximately \emph{xx} have been investigated for variability. At the moment, the investigation is almost purely visual, based on a human inspecting each light curve. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve, one-by-one by pressing the 'right' and 'left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual~\ref{chap:usermanual}. 
+At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present \emph{347} nights, out of a total of \emph{406}, have been processed and are available for viewing at the following URL: \url{http://url.to.be.provided/}. Of these processed nights, approximately \emph{xx} have been investigated for variability. At the moment, the investigation is performed by a visual check on the light-curve.visual. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve, one-by-one by pressing the 'right' and 'left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual~\ref{chap:usermanual}. 
 
 \section{Data quality}
 
@@ -9,9 +9,9 @@ The main purpose of this MSc project was to establish a process for automaticall
 
 Correct calibration of the photometry for ULTRACAM requires to the following steps:
 \begin{itemize}
-  \item Using \emph{flat fields} to take into account the varying sensitivity of the CCD detector across the field. 
+  \item Using \emph{flat fields} to take into account the varying sensitivity of the individual pixels of the CCD detector. 
   \item Subtracting \emph{bias} frames from each image to remove the additional counts caused by having a non-zero bias on the CCD. 
-  \item Using a \emph{standard star} to produce offset brightness to calibrate to the standard magnitude system. For ULTRACAM these are usually Sloan u, g, r, i magnitudes.
+  \item Using a \emph{standard star} to calculate the offset magnitude required to calibrate to the standard magnitude system. For ULTRACAM these are usually Sloan u, g, r, i magnitudes.
   \item Computing the \emph{atmospheric extinction} for the night by fitting extinction curves for a number of bright objects that have been measured over a range of airmass. 
 \end{itemize}
 During a typical night at the telescope, the observers will take steps to ensure that there is sufficient data to perform this calibration. They will take several bias frames, flat-fields and will observe standard stars. When the reduction is performed later, these various datasets will be combined to calibrate the photometry of the target objects. 
@@ -48,8 +48,7 @@ Running the automated pipeline on this run is achieved by simply typing: \begin{
 \label{fig:nnserlightcurvetom}
 \end{figure}
 
-In order to perform a comparison of the two pipelines though, it makes more sense to choose two objects in this run that we will treat as \emph{constant}. The two objects we have chosen are the two brightest objects in the field and are labeled '0' and '1 in figure \ref{fig:nnserfield}. We are making the assumption that these two objects are of constant brightness. This is not a crucial assumption since we will be comparing the \emph{differential} photometry of these two objects, in other words, the ratio $Counts_{0}/Counts_{1}$ and any variations due to intrinsic changes of the object or the variability of the atmosphere will be taken into account. Figures \ref{fig:differentialauto} and \ref{fig:differentialtrad} show the differential photometry for the two pipelines. Both of the pipelines have consistant values and agree with each to well within 1 standard deviation.
-
+The light-curves in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} are a good demonstration of the reduction of an interesting eclipse, but, in order to perform a comparison of the two pipelines, it makes more sense to choose two objects in this run that we can assume are \emph{constant} objects. The two objects we have chosen are the two brightest objects in the field and are labeled '0' and '1' in figure \ref{fig:nnserfield}. We are making the assumption that these two objects are of constant brightness. Since we will be comparing the \emph{differential} photometry of these two objects, in other words, the ratio $Counts_{0}/Counts_{1}$, any variations due to the systematic effects of the observation itself, such as atmospheric transmission, etc will be equivalent for both objects. Figures \ref{fig:differentialauto} and \ref{fig:differentialtrad} show the differential photometry for the two pipelines. Both of the pipelines have consistent values and agree with each to well within 1 standard deviation.
 
 \begin{table}[ht]
   \label{tab:differential}
@@ -70,17 +69,23 @@ In order to perform a comparison of the two pipelines though, it makes more sens
 \begin{figure}[!h]
 \centering
 \includegraphics[width=140mm]{images/differential_auto.eps}
-\caption{The lightcurve of object '0' and object '1' as labelled in figure \ref{fig:nnserfield} as produced by the \emph{automated pipeline}. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
+\caption{The light-curve of the flux ratio of object '0' and object '1' as labelled in figure \ref{fig:nnserfield} produced by the \emph{automated} pipeline. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
 \label{fig:differentialauto}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=140mm]{images/differential_trad.eps}
-\caption{The lightcurve of object '0' and object '1' as labelled in figure \ref{fig:nnserfield} as produced by the \emph{traditional pipeline}. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
+\caption{The light-curve of the flux ratio object '0'  object '1' as labelled in figure \ref{fig:nnserfield} produced by the \emph{traditional} pipeline. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
 \label{fig:differentialtrad}
 \end{figure}
 
-
 \subsection{Apertures}
 Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no aperture defined for that frame. This means that objects that fade or are generally quite faint, might 'disappear' on some frames and then 're-appear' on subsequent frames. The tracking algorithm allows a 're-appearing' object to be identified with an object that appeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} where the automated pipeline 'loses' the target object in the 'g' and 'u' bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the field and can therefore continue to calculate flux in the aperture for the target even if the target is barely detectable above the sky background.
+
+\section{Colour-Colour plots}
+Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. For a few selected runs, where we have > 100 objects clearly identified for the run, we can produce non-calibrated colour-colour diagrams. 
+
+\emph{Comment: Include c-c plot of 2013-07-21/run010}
+
+It should be added that it is possible to produce calibrated colour-colour diagrams from the automated pipeline, if we manually perform the calibration and correct our figures. \emph{Comment: We can include Matthew's colour colour plot here.} 
