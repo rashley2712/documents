@@ -14,7 +14,7 @@ CCDs have an intrinsic noise due to quantum mechanical effects known as readout 
 We cannot be certain that each pixel in the CCD array has the same sensitivity to light as its neighbours. This is a problem if we are trying to measure the flux of an object very accurately. If the object's light falls on different pixels in each subsequent exposure, then the pixel sensitivity will impact our calibration of the object's true flux. To measure each pixel's relative sensitivity, we expose the entire imaging area to a uniform source. The source is either a white screen mounted on the inside of the dome, or, more commonly, an exposure of the sky during twilight. This flat-field is then 'normalised' by dividing each pixel's count by the average of all the pixels. Each pixel's sensitivity can then be factored into our reduction af a \emph{science} run. 
 
 \emph{Source extraction \& Aperture creation:}
-Our exposed 2-dimensional image can have many objects on it and we need to pick out the objects of scientific interest. We also need to ignore spurious image artifacts such as those caused by cosmic rays. Source detection can be automatic, as we will use in this project, or manual, as performed with the current ULTRACAM data reduction pipeline. The source extraction stage will produce a list of apertures. The apertures are defined by having a position (usually the centroid of the object) and a 2-dimensional area, which is usually a circle centred on the object's position that captures all the light from the object but excludes light from any other nearby objects. These apertures are virtual; defined in $(x, y, radius)$ parameter space, rather than physical; as in the earlier 'photomultplier' days. 
+Our exposed 2-dimensional image can have many objects on it and we need to pick out the objects of scientific interest. We also need to ignore spurious image artifacts such as those caused by cosmic rays. Source detection can be automatic, as we will use in this project, or manual, as performed with the current ULTRACAM reduction pipeline. The source extraction stage will produce a list of apertures. The apertures are defined by having a position (usually the centroid of the object) and a 2-dimensional area, which is usually a circle centred on the object's position that captures all the light from the object but excludes light from any other nearby objects. These apertures are virtual; defined in $(x, y, radius)$ parameter space, rather than physical; as in the earlier 'photomultplier' days. 
 
 In this project, we are using {SExtractor}, a popular, third party software package to perform the source extraction and aperture definitions, \cite{bertin}
 
@@ -25,9 +25,9 @@ The Earth's atmosphere is not completely dark at night and still glows blue with
 
 \section{Current method of ULTRACAM data reduction}
 
-Professor Thomas Marsh at the University of Warwick has developed a set of software tools for reductions of the ULTRACAM data. For the rest of this document we will refer to this pipeline as the \emph{traditional} pipeline and the new pipeline created in this project as the \emph{automated} pipeline. 
+Professor Thomas Marsh at the University of Warwick has developed a set of software tools for reductions of these ULTRACAM data. For the rest of this document we will refer to this pipeline as the \emph{traditional} pipeline and the new pipeline created in this project as the \emph{automated} pipeline. 
 
-It is possible to run the traditional pipeline at the telescope during the observation. This allows observers to review the data in 'real-time'. This serves as a `preview' for the observer and allows adjustments to be made during the run. After the run, the raw data is copied to the archive and this can be used for reductions later. This can happen the following day, or much later, when the observer has returned from the observatory. Any of the data in the  data archive can be `re-reduced' at any time since \emph{all} raw data is stored. 
+It is possible to run the traditional pipeline at the telescope during the observation. This allows observers to review these data in 'real-time'. This serves as a `preview' for the observer and allows adjustments to be made during the run. After the run, the raw data are copied to the archive and this can be used for reductions later. This can happen the following day, or much later, when the observer has returned from the observatory. Any of these data in the  data archive can be `re-reduced' at any time since \emph{all} raw data are stored. 
 
 The current data reduction process for ULTRACAM is designed to produce three colour light curves from the raw image data. The pipeline consists of the following stages:
 \begin{enumerate}
@@ -51,12 +51,12 @@ Although this process is not particularly cumbersome, it \emph{does} include som
 \emph{Comment: Put a bit of information about taking measurements of standard stars and using this for calibration of magnitudes. Also producing and using extinction curves.}
 
 \section{Automating the pipeline}
-The outcome of this MSc project is a system that is able to process the raw image data from ULTRACAM and, without any manual intervention, produce a set of light curves for all of the objects in that data. It produces a set of web pages that can be viewed from anywhere with an Internet connection. 
+The outcome of this MSc project is a system that is able to process the raw image data from ULTRACAM and, without any manual intervention, produce a set of light curves for all of the objects in the data. It produces a set of web pages that can be viewed from anywhere with an internet connection. 
 
 \subsection{Motivation for automating the pipeline}
 ULTRACAM has recorded a large amount of photometric data at some of the world's best sites and largest telescopes. Since the CCD captures more objects than the observer is strictly interested in, there is a good chance that some objects of astronomical interest have been captured by ULTRACAM, but not been noticed or analysed during the reduction process. We could have some highly valuable and scientifically useful data hidden in the archive. By automating the reduction pipeline we can produce photometry for \emph{all} of the objects captured by ULTRACAM and then search through these light-curves to find new objects of interest. 
 
-By making the data easily accessible through a standard web-browser, the automated pipeline will allow collaborators who are not physically at the observatory to browse the data as it is being gathered. Although not exactly in 'real-time', the automated pipeline can be invoked \emph{immediately} after the run is completed.  This enables a strong collaboration with onsite and offsite teams during an observing run. 
+By making these data easily accessible through a standard web-browser, the automated pipeline will allow collaborators who are not physically at the observatory to browse these data as it is being gathered. Although not exactly in 'real-time', the automated pipeline can be invoked \emph{immediately} after the run is completed.  This enables a strong collaboration with onsite and offsite teams during an observing run. 
 
 \subsection{Algorithm of the automated pipeline} 
 We will first summarise the key steps in the automated pipeline at a high level, the subsequent sections will describe each in more detail:
@@ -73,7 +73,7 @@ The stages of the reduction process are as follows:
 			\item For each colour channel in the frame
 			\item Extract each window from the frame
 			\item Send the window bitmap data to the SExtractor software
-			\item Allow SExtractor to process the data and produce a catalog of all sources, with their positions and flux measurements
+			\item Allow SExtractor to process these data and produce a catalog of all sources, with their positions and flux measurements
 			\item Read the results of the source extraction process, including pixel position and flux measurements for each object
 			\item For each object returned
 			\begin{enumerate} 
@@ -87,8 +87,8 @@ The stages of the reduction process are as follows:
 	\item Stage 3: Produce catalogs of the objects ordered by 'brightness' as measured by the average flux. Pass these catalogs to the Astrometry.net library to resolve the WCS solution for the fields. Perform this tasks separately for each of the three channels (r, g, b). Since each channel has a very slightly different view of the field and different distortions in the image, the WCS solutions will differ by a small amount.
 	\item Stage 4: Using the WCS solutions, merge the three catalogs to 'cross-identify' each object across the three channels. This may seem to be a trivial step for many ULTRACAM runs because the differences in the fields from channel to channel are minor, however in crowded fields such as the one shown in Fig. \ref{fig:KOI-824} simply matching objects based on their pixel coordinates is not enough to disambiguate them.
 	\item Stage 5: Produce deep images for each channel and export to a web-viewable format, such as PNG. 
-	\item Stage 6: Create .json data files and HTML files to enable them to be loaded into a web-browser.
-	\item Stage 7: Publish this 'web-enabled' data to a web site that is accessible outside of the university network.  
+	\item Stage 6: Create .json object files and HTML files to enable them to be loaded into a web-browser.
+	\item Stage 7: Publish this 'web-enabled' version of the information to a web site that is accessible outside of the university network.  
 		
 \end{enumerate}
 
@@ -197,7 +197,7 @@ For each detected object in the window, we store:
   \end{itemize}
 \end{itemize}
 
-Before the pipeline attempts to match objects across each of the three channels (r, g, b), it performs a 'clean-up' of the data. It makes three passes of the object list performing the following filtering:
+Before the pipeline attempts to match objects across each of the three channels (r, g, b), it performs a 'clean-up' of these data. It makes three passes of the object list performing the following filtering:
 
 \begin{itemize}
   \item \emph{Cosmic ray} filtering. This step filters out any object that appears on only one frame in the run. 
@@ -257,7 +257,7 @@ Yet another complication is caused by the variation in the non-overlap of the th
 \begin{figure}
   \centering
   \includegraphics[width=140mm]{images/position_drift_longrun.png}
-  \caption{Another plot showing the change in relative positions of a single object in different channels over the course of a long run. This data is taken from the longest run in the ULTRACAM data archive, the 9.5 hour long run \emph{2010-04-25/run020}. During this run, the airmass varies from a minimum of 1.0 (corresponding with the center of the plot), to a maximum of 1.99 (at the extreme left and right ends of the plot). The change in offset from the red to the blue channels is about most noticeable on the $x$ position, where the blue channel's offset moves by as much as 13 pixels. }
+  \caption{Another plot showing the change in relative positions of a single object in different channels over the course of a long run. These data is taken from the longest run in the ULTRACAM data archive, the 9.5 hour long run \emph{2010-04-25/run020}. During this run, the airmass varies from a minimum of 1.0 (corresponding with the center of the plot), to a maximum of 1.99 (at the extreme left and right ends of the plot). The change in offset from the red to the blue channels is about most noticeable on the $x$ position, where the blue channel's offset moves by as much as 13 pixels. }
 \label{fig:positiondriftlongrun}
 \end{figure}
 
@@ -272,7 +272,7 @@ After some ad-hoc tests using \emph{SCAMP \cite{scamp}} and \emph{Astrometry.net
 There are several challenges to finding a WCS solution for the fields.  These are:
 
 \begin{itemize}
-	\item \emph{Lack of pointing data}: ULTRACAM does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data is archived, a \emph{SIMBAD} lookup is used. This gives us a world coordinate that is somewhere in the field, but it is not known which object (or pixel location) this applies to.  
+	\item \emph{Lack of telescope pointing information}: ULTRACAM does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data are archived, a \emph{SIMBAD} lookup is used. This gives us a world coordinate that is somewhere in the field, but it is not known which object (or pixel location) this applies to.  
 	\item \emph{Field rotation}: Since ULTRACAM can be rotated about the optical axis to allow for optimal alignment of the objects, the field of view can be at any arbitrary angle of rotation, giving an extra degree of freedom to the matching task. 
 	\item \emph{Windows}: Many ULTRACAM runs are configured to use only portions of the CCD area. You can see an example of this in Fig.  \ref{fig:V834Cen}. This means that there is an incomplete view of the sky for that field. When trying to match to existing indexes, there could be important, bright objects that are in the index file, but do not appear in the ULTRACAM field due to the masking caused by the windows.
 	\item \emph{Sparse fields}: On uncrowded fields, we might only have 4-5 objects that can be used for field identification. 
