@@ -49,22 +49,30 @@ WRITE_JSON      1       # Write a fits file or not?
 KEEP_TMP_FILES  0       # Keep the temporary (sextractor) files?
 RUNTEMPLATE     /storage/astro2/www/phrnaw/sitedev/sitecode/runxxx.jinja
 DAYTEMPLATE     /storage/astro2/www/phrnaw/sitedev/sitecode/day-xxxx-xx-xx.jinja
-MOVIE_TMP_PATH  /tmp/movie
 MINPIXELDISTANCE        10
-FONT    /usr/share/fonts/truetype/arial.ttf
 RUNINFO         /storage/astro1/phsaap/ultracam/logs/ultra.json
 WORKINGDIR      /storage/astro2/phrnaw/workingdir
 ROOTURL         http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/
 SEX_MAGNITUDE   FLUX_AUTO
 COMPARISON_THRESHOLD    95
 \end{lstlisting}
+
 These parameters should be modified before running the pipeline.
+
 \begin{itemize}
-\item \texttt{SITE\_PATH} Specifies where the document root for the web folder is. The pipeline will write the HTML and JSON files to this folder. For each date in the archive, the pipeline will create sub-directories in the format \texttt{YYYY-MM-DD}. A web server should be configured to serve HTTP requests from this folder. 
-\item \texttt{ULTRACAMRAW} This should point to the root folder where the raw ULTRACAM data is stored. Within this folder there will be sub-folders corresponding to each date on which the ULTRACAM was active. These folders will contain \texttt{.dat} and \texttt{.xml} files corresponding to each run recording during that observing night.  
-\item \texttt{ROOTURL} Specifies where the \texttt{SITE\_PATH} is accessed in URL space. In other words, this is the URL to the web site that is configured to serve files from the \texttt{SITE\_PATH} folder. 
-\item \texttt{SITE\_PATH}
+	\item \texttt{SITE\_PATH} Specifies where the document root for the web folder is. The pipeline will write the HTML and JSON files to this folder. For each date in the archive, the pipeline will create sub-directories in the format \texttt{YYYY-MM-DD}. A web server should be configured to serve HTTP requests from this folder. 
+	\item \texttt{ULTRACAMRAW} This should point to the root folder where the raw ULTRACAM data is stored. Within this folder there will be sub-folders corresponding to each date on which the ULTRACAM was active. These folders will contain \texttt{.dat} and \texttt{.xml} files corresponding to each run recording during that observing night.  
+	\item \texttt{ROOTURL} Specifies where the \texttt{SITE\_PATH} is accessed in URL space. In other words, this is the URL to the web site that is configured to serve files from the \texttt{SITE\_PATH} folder. 
+	\item \texttt{WORKINGDIR} This is a folder where the pipeline will place temporary working files used to connect the intermediate stages of the pipeline. They are not required for the web version of the output, but they can be useful to debug and diagnose the running of the pipeline to better understand how it has arrived at the final results. 
+	\item \texttt{RUNINFO} The location of file that contains important meta-data about the ULTRACAM archive, such as run numbers, durations, comments and RA and DEC locations of the field. This data is used to add information to the web pages and to aid the astrometry solution. 
+	\item \texttt{RUNTEMPLATE} \& \texttt{DAYTEMPLATE} Specify the location of the HTML template files that are used to create the final versions that for the web pages. 
+	\item \texttt{SEX\_MAGNITUDE} This parameter instructs the pipeline which value of the flux estimate produced by {SExtractor} to use for the brightness measurement of the object in the master catalog. Possible values are \texttt{FLUX\_AUTO, FLUX\_APER, MAG\_AUTO \& MAG\_APER}.
+	\item \texttt{MINPIXELDISTANCE} The minimum pixel difference used to allow a match of an object across the 3 channels. If the object is more than this distance from the same object in a different channel, then it is treated as a new object.
+	\item \texttt{COMPARISON\_THRESHOLD} The pipeline tries to find an object that can act as a comparison object for the other objects in the field. It does this by performing a statistical test for consistency of the differential flux measurements of the top 20 brightest objects in the field and then choosing the brightest of the objects that has the lowest standard deviation of the mean with another object in the field. This comparison is not used during the data reduction portion of the pipeline, but it is automatically selected as the default comparison object when the web browser session is first loaded. This parameter defines the minimum percentage of the run that the object has to persist on in order to be considered as a comparison object. 
 \end{itemize}
+
+\subsection{Producing the output for a particular run}
+The quickest way to create the output for a particular run is to use the macro-script, \texttt{runbuilder.py}. This script chains together the various stages of the pipeline to produce the HTML and JSON output required to view a particular run. 
 
 \subsection{objectdbcreator.py}
 
