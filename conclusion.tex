@@ -1,14 +1,17 @@
+The purpose of this project was to create a pipeline that automatically reduces the data contained in the ULTRACAM archive and to make it easily accessible to interested users around the world. To that extent we have succeeded. We wrote an automated pipeline that was able to process all of the data archive and produce web pages allowing the user to browse all of the ULTRACAM runs from first-light in 2004 to the present. 
+
+The automated pipeline enabled the checking of thousands of objects in hundreds of runs by rapidly scanning each light-curve by eye. With this process we found a few dozen objects that exhibited variability that had not yet been documented. Some of these objects are discussed in chapter \ref{chap:highlights}. We were also able to reproduce light-curves for the objects that were the original targets of the run without having prior knowledge about which were the intended targets. For example, we 'discovered' GU Mus, an X-ray binary, serendipitously, but after checking the finding charts, realised that this was a known variable and the intended target of the observer. Despite causing premature excitement, this 'error' goes some way to demonstrating that the automated pipeline is a legitimate and useful method of processing the ULTRACAM data. It enables the rapid inspection, browsing and sharing of the output of ULTRACAM. 
+
+The pipeline lacks robust photometric reduction processes. So, while it is useful for producing light-curves that are easily inspected by eye, it does not produce calibrated magnitudes and colours. The output of the pipeline can be used as input for a final calibration task, but this needs manual intervention to find the relevant runs that contain the standard stars and to find the appropriate runs containing flat fields and biases to apply to the reduction. 
 
 \section{Current status of the pipeline}
+Running the reduction of the automated pipeline is incredibly simple. As all of the tasks are automated, one single command is all that is needed to reduce a full night's worth of data and prepare all of the web pages used for browsing that night. 
 
-Where it works well and how it is useful to the researchers using ULTRACAM.
-\begin{itemize}
-  \item Fully automated. One command issued at the end of the night's observing will produce a browseable page. (ie \emph{daybuilder.py 2014-08-15})
-  \item Ability to browse the (nearly) complete ULTRACAM data from anywhere with an Internet connection. 
-  \item Light-curves for 10,000s of objects.
-\end{itemize}
+A macro script was created to allow the pipeline to make use of the internal distributed computing facility at the University of Warwick, called, Cluster of Workstations (CoWs). This has enabled us to go back through the entire ULTRACAM archive and process the vast majority of the runs. We have processed 373 nights out of a total of 406. 
 
-Where it fails or needs improvement.
+\subsection{Areas for immediate improvement}
+Finding a good astrometric solution for any particular field fails in many cases and, at the moment, we only have astrometric solutions for xx\% of the runs. As discussed in section \ref{sect:astrometry}
+
 \begin{itemize}
   \item Astrometry
   \item High cadence runs
@@ -31,7 +34,7 @@ Things to remember for ULTRACAM users.
 	\item Server-side and client-side components for the browser interface to remedy memory problems.
 	\item Automatic variability detection and light-curve classification. 
 	\item Investigate source-extraction alternatives to cope with crowded fields and out-of-focus runs.
-	\item Automatic tweaking of the source extractor parameters (such as DETECT\textunderscore THRESH)
+	\item Automatic tweaking of the source extractor parameters: The pipeline has a fairly 'brute-force' approach to reducing the photometry as it has to deal with a very diverse set of input data and therefore relies on 'best-guess' values for parameters such as aperture-size, background variability, object-detection thresholds and distance matching. Many of the reductions could be improved by tweaking these parameters to match the specific conditions of the particular run. It is conceivable that these tweaks could be automated in certain cases
 	\item Ability to combine 'consecutive' runs. 
 \end{itemize} 
  
