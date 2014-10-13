@@ -14,6 +14,7 @@ Another way of stating this is to say that HTML provides the Semantic structure,
 
 The final stage in the ULTRACAM automated pipeline produces a set of files that are available to a web browser. These files are hosted on a web server that is operated by the University of Warwick CSC team. The pipeline prepares that files and then writes them to the appropriate location in the University's local storage. As soon as the pipeline has finished running, the web pages can be viewed globally. 
 
+\label{sect:clientserver}
 Web applications like this, are often refered to as 'client-server' applications, meaning that the application consist of two parts, one running on the client (web browser) and the other running on the server of the institution hosting the application. Obviously, there is a one-to-many relationship between clients and server. There is usually only one server involved, but many clients can connect to that server and interact individually with the application. When writing the web interface for this project we had to make a decision on how much of the functionality we should place on the server versus the client. There were two main, competing, factors to consider:
 
 \begin{itemize}
@@ -50,11 +51,11 @@ See Fig. \ref{browser} for an example of the web-page.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=90mm]{images/website1.png}
-	\caption{Preview of the webpage.}
+	\caption{Example of the webpage for browsing the light-curves of a particular run.}
 	\label{browser}
 \end{figure}
 
   
 \section{Accessing the data}
-The pipeline deposits the output HTML, Javascript, image (PNG) and data files (JSON) to a folder that is configured to be server by the University of Warwick's CSC webserver at \url{http://deneb.astro.warwick.ac.uk}. Please refer to the User manual to find out how to access and browse the data \ref{chap:usermanual}. 
+The pipeline deposits the output HTML, Javascript, image (PNG) and data files (JSON) to a folder that is configured to be server by the University of Warwick's CSC web server at \url{http://deneb.astro.warwick.ac.uk}. Please refer to the User manual to find out how to access and browse the data \ref{chap:usermanual}. 
 

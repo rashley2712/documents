@@ -206,7 +206,7 @@ When viewing the web page for a particular run, the user can navigate the light-
 
 \subsubsection{Page loading process}
 The page has three main components, HTML, Javascript and JSON. The HTML and Javascript define the page structure and the interactions that can occur, while the JSON contains the reduction data for all of the objects in the run. The JSON datafile is requested from the web server as soon as the HTML and Javascript has finished loading (within 1 second or so). For long runs with many (>20) objects, this file can be quite large and will take some time to download. Depending on the data size and the speed of the internet connection, this download could take up to a minute or more, although in most cases it is usually completed in a few seconds. The status window at the top of the page will give an indication of when this data has completed the download. The request for the JSON data is made using an 'asynchronous' call and this means that the page is still working and some interactions can take place, like choosing the base image for example, but since to main data has not yet arrived, it won't be possible to display a light-curve.  
-
+r
 \subsubsection{Selecting a base image}
 The pipeline produces a deep image for each channel (r, g, b) based on stacking all of the individual frames captured by ULTRACAM. The page loads all three images in the background and, by default, displays the 'green' channel initially. Switching between these images can be performed by pressing the \texttt{r}, \texttt{g} and \texttt{b} keys on the keyboard. You can also switch these images by slecteing either the \texttt{Red},  \texttt{Green} or \texttt{Blue} of the \texttt{Base Image} radio options found below the image itself.
 
@@ -244,3 +244,5 @@ Once an object is selected, it is possible to produce a chart of the object's $(
 
 \subsubsection{Exporting to a CSV file}
 Once a light-curve is displayed, pressing the \texttt{e} key will start the download of a comma-seperated value (CSV) file. Most browsers will allow you to rename this file and save to the local disk. The data saved will reflect the light-curve that is currently displayed. ie. If the current light curve is displaying normalised values, then these are the ones that will be exported in the CSV file.
+
+\subsection{Walkthrough - spotting an exoplanet transit}
