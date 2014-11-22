@@ -1,26 +1,38 @@
 \section{Data reduction for CCD images in Astronomy}
-Since the late 1980's, Charge Coupled Devices (CCDs) have risen to prominence in astronomy. Before CCDs, high-speed photometry in the optical was accomplished using photomultiplier tubes. These are high tension (high voltage) devices that detect faint light by using the photoelectric effect followed by amplification. When a photon impinges on the detector, an electron is ejected, this electron is then `amplified' by a series of voltage steps until the resulting signal is read out by an analog to digital convertor. The main problem with this configuration is the photomultiplier only has one detection element and the starlight needs to pass through a physical aperture in the camera so that only light from the target object is measured. It is not possible to measure multiple objects simultaneously. CCDs are 2-dimensional matrices covered with light sensitive semi-conductors (each one defining a `pixel') that are able to measure and count photons. CCDs are present in all of the consumer electronic devices that feature a camera, but there are also highly sensitive and stable CCDs built specifically for use in astronomy. CCDs can be sensitive to optical, infra-red and ultraviolet light depending on the materials used and their manufacture. In ULTRACAM, all three of the CCDs are E2V 47-20 CCDs. They are frame-transfer chips with imaging areas of 1024 × 1024 pixels and storage areas of 1024 × 1033 pixels.  To improve quantum efficiency, the ULTRACAM chips are thinned, back-illuminated and antireflection coated with E2V's enhanced broad-band astronomy coating (in the case of the blue and green chips) and standard mid-band coating (in the case of the red chip), \cite{dhillon07}.
+Since the late 1980's, Charge Coupled Devices (CCDs) have risen to prominence in astronomy. Before CCDs, high-speed photometry in the optical was accomplished using photomultiplier tubes. These are high tension (high voltage) devices that detect faint light by using the photoelectric effect followed by amplification. When a photon impinges on the detector, an electron is ejected, this electron is then `amplified' by a series of voltage steps until the resulting signal is read out by an analog to digital convertor. The main problem with this configuration is the photomultiplier only has one detection element and the starlight needs to pass through a physical aperture in the camera so that only light from the target object is measured. It is not possible to measure multiple objects simultaneously. 
 
-Since the CCD is recording a 2-dimensional image of the sky, it will capture multiple objects simultaneously. This is its biggest advantage over the out-dated photomultiplier. Early CCDs lacked the quantum efficiency of photomultipliers, but this limitation has since been surpassed and photomultipliers are rarely used nowadays, at least for optical astronomy. They are still used to detect photons from scintillations in Cerenkov detectors and Neutrino detectors.  
+CCDs are 2-dimensional detectors covered with light sensitive semi-conductors (each one defining a `pixel') that are able to measure and count photons. The structure and construction of CCDs depend on their intended purpose. Consumer electronic devices such as mobile phones or digital cameras use an arrangement and read-out process different to the CCDs used in astronomy. In order to decrease read-out times, consumer devices use an architecture called 'interline' where the read-out pixels and electronics are located in alternate rows of the CCD. This means that the every alternate row of the CCD is masked from light and used for readout only. The disadvantage of this architecture is that the 'fill-factor' of the CCD is now reduced to 50\%. Astronomy purpose CCDs are usually full-frame transer devices. These devices are divided into 2 equal areas. One half of the device is exposed to light and the other half is masked. After each exposure, the exposed (or imaging) area is shifted completely into the masked (or storage) area. The imaging area is now ready to be exposed again, while the image can be read out from the storage area. This architecture has the advantage that it allows more time for the read-out process to take place. A slower read out process introduces less noise into the output. The fill factor of the imaging area is closer to 100\% as none of those pixels are masked. There is still a small gap between pixels though so we don't quite reach a fill-factor of 100\%. 
+
+CCDs can be sensitive to optical, infra-red and ultraviolet light depending on the materials used and their manufacture. In ULTRACAM, all three of the CCDs are E2V 47-20 CCDs. They are frame-transfer chips with imaging areas of 1024$\times$1024 pixels and storage areas of 1024$\times$1033 pixels.  To improve quantum efficiency, the ULTRACAM chips are thinned, back-illuminated and antireflection coated with E2V's enhanced broad-band astronomy coating (in the case of the blue and green chips) and standard mid-band coating (in the case of the red chip), (\cite{dhillon07}).
+
+Since the CCD is recording a 2-dimensional image of the sky, it will capture multiple objects simultaneously. In the 2-dimensional image it is possible to create a virtual aperture as part of the reduction process. Physical apertures (used with photomultipliers) needed to be large enough to account for changes in seeing and drifts in the target object's position as the telescope tracks the sky. Large apertures are a problem since the sky starts to contribute a significant amount of the total flux in the aperture. Nights with poor seeing and variable sky conditions were often not photometric in the days of photomultipliers. Nowadays, thank to the nature of the CCD imaging, we can still get photometric data from nights like this.  Although early CCDs lacked the quantum efficiency of photomultipliers, this limitation has since been surpassed. Photomultipliers are rarely used nowadays, at least for optical astronomy. They are still used to detect photons from scintillations in Cerenkov detectors and neutrino detectors.  
 
 In order to extract photometry from a CCD image, we need to perform several steps to convert the 2-dimensional image into a 1-dimensional flux measurement for each object in the image. This is known as `reduction'. 
 
 Reduction in CCD photometry can be summarised as follows: 
 
 \emph{Bias subtraction:}
-CCDs have an intrinsic noise due to quantum mechanical effects known as readout noise. In order to ensure that this noise does not fluctuate around zero, which would result in systematic errors at the analog to digital conversion stage of chip read-out, we set an arbitrary bias for the CCD to ensure that each pixel always reads out a positive value. This bias is adjusted depending on conditions at the telescope (eg. temperature). During the night of observations, bias frames are recorded by taking CCD readings without exposing the CCD to any light. These bias frames are then subtracted from each \emph{science} CCD frame. 
+CCDs have an intrinsic noise due to quantum mechanical effects known as readout noise. In order to ensure that this noise does not fluctuate around zero with the odd negative number in the output we set an arbitrary bias for the CCD to ensure that each pixel always reads out a positive value. Since we are storing our pixel ADU values as 16-bit unsigned integers, negative numbers would appears as large ADU values ($65535 - value$). During the night, bias frames are recorded by taking CCD readings without exposing the CCD to any light. These bias frames are then subtracted from each \emph{science} CCD frame. 
 
 \emph{Flat fields:}
-We cannot be certain that each pixel in the CCD array has the same sensitivity to light as its neighbours. This is a problem if we are trying to measure the flux of an object very accurately. If the object's light falls on different pixels in each subsequent exposure, then the pixel sensitivity will impact our calibration of the object's true flux. To measure each pixel's relative sensitivity, we expose the entire imaging area to a uniform source. The source is either a white screen mounted on the inside of the dome, or, more commonly, an exposure of the sky during twilight. This flat-field is then `normalised' by dividing each pixel's count by the average of all the pixels. Each pixel's sensitivity can then be factored into our reduction of a \emph{science} run. 
+We cannot be certain that each pixel in the CCD array has the same sensitivity to light as its neighbours. This is a problem if we are trying to measure the flux of an object very accurately. If the object's light falls on different pixels in each subsequent exposure, then the pixel sensitivity will impact our calibration of the object's true flux. To measure each pixel's relative sensitivity, we expose the entire imaging area to a uniform source. The source is either a white screen mounted on the inside of the dome, or, more commonly, an exposure of the sky during twilight. This flat-field is then `normalised' by dividing each pixel's count by the average of all the pixels. Each pixel's sensitivity can then be factored into our reduction of a science run. 
 
-\emph{Source extraction \& Aperture creation:}
-Our exposed 2-dimensional image can have many objects on it and we need to pick out the objects of scientific interest. We also need to ignore spurious image artifacts such as those caused by cosmic rays. Source detection can be automatic, as we will use in this project, or manual, as performed with the current ULTRACAM reduction pipeline. The source extraction stage will produce a list of apertures. The apertures are defined by having a position (usually the centroid of the object) and a 2-dimensional area, which is usually a circle centred on the object's position that captures all the light from the object but excludes light from any other nearby objects. These apertures are virtual; defined in $(x, y, radius)$ parameter space, rather than physical; as in the earlier `photomultiplier' devices. In this project, we are using {SExtractor}, a popular, third party software package to perform the source extraction and aperture definition, \cite{bertin}
+\emph{Source extraction \& aperture creation:}
+Our exposed 2-dimensional image can have many objects on it and we need to pick out the objects of scientific interest. We also need to ignore spurious image artifacts such as those caused by cosmic rays. Source detection can be automatic, as we will use in this project, or manual, as performed with the current ULTRACAM reduction pipeline. The source extraction stage will produce a list of apertures. The apertures are defined by having a position (usually the centroid of the object) and a 2-dimensional area, which is usually a circle centred on the object's position that captures all the light from the object but excludes light from any other nearby objects. These apertures are virtual; defined in $(x, y, radius)$ parameter space, rather than physical; as in the earlier `photomultiplier' devices. In this project, we are using {SExtractor}, a popular, third party software package to perform the source extraction and aperture definition, (\cite{bertin}).
 
 \emph{Sky subtraction \& Flux measurement:}
-The Earth's atmosphere is not completely dark at night and still glows blue with light scattered from the stars, reflected from the Earth or scattered from the moon. The flux of this sky background needs to be taken into account and subtracted from the total flux measured in the aperture in order to leave us with the flux that is contributed by our target object. There are two main methods of dealing with the sky background. The first is to derive an overall sky-background for the image, which is then subtracted from the flux measured in the aperture. The flux remaining is then the flux due to the target object. This overall sky background is not a single value, but a polynomial fit in order to allow for smooth variations across the field. The second approach is to fit a profile to the 2-dimensional data in the aperture. The profile shape is something that follows the image profile we would expect from a point source being spread out by the optics of the telescope and the Earth's atmosphere. This is known as the `point-spread-function' or {PSF}. We can fit either a Moffat profile or a Gaussian profile to match the PSF. The Moffat profile is favoured as its shape matches the real PSF of the star's image as the Moffat profile was derived by convolving atmospheric seeing profiles with telescope diffraction profiles. The sky background is then assumed to be the constant value in the equation of the fitted profile and the volume under the curve after subtraction of this constant is the flux of the star. 
+The Earth's atmosphere is not completely dark at night and still glows blue with light scattered from the stars, reflected from the Earth or scattered from the Moon. The flux of this sky background needs to be taken into account and subtracted from the total flux measured in the aperture in order to leave us with the flux that is contributed by our target object. There are two main methods of dealing with the sky background. The first is to derive an overall sky-background for the image, which is then subtracted from the flux measured in the aperture. The flux remaining is then the flux contributed by the target object. This overall sky background is not a single value, but a polynomial fit in order to allow for smooth variations across the field. The second approach is to fit a profile to the 2-dimensional data in the aperture. The profile shape is something that follows the image profile we would expect from a point source being spread out by the optics of the telescope and the Earth's atmosphere. This is known as the `point-spread-function' or {PSF}. We can fit either a Moffat profile or a Gaussian profile to match the PSF. The Moffat profile is favoured as its shape matches the real PSF of the star's image as the Moffat profile was derived by convolving atmospheric seeing profiles with telescope diffraction profiles, (\cite{Moffat69}). 
+
+The formula for the Moffat profile is 
+
+$ I_r = I_0 {[1 + {(\frac{r}{\theta})}^2]}^{-\beta} + C$
+
+where $I_0$ is the intensity at image center, $\theta$ is the half width at half maximum of the image in the absence of atmospheric scattering, $\beta$ is the atmospheric scattering coefficient and $C$ is the sky background (assumed to be constant over the small area of sky contained in the aperture). 
+
+The sky background is then assumed to be the constant value in the equation of the fitted profile and the volume under the curve after subtraction of this constant is the flux of the star. 
 
 \section{Current method of ULTRACAM data reduction}
-Thomas Marsh at the University of Warwick has developed a set of software tools for reduction of these ULTRACAM data. For the rest of this document we will refer to this pipeline as the \emph{traditional} pipeline and the new pipeline created in this project as the \emph{automated} pipeline. 
+Tom Marsh at the University of Warwick has developed a set of software tools for reduction of these ULTRACAM data. For the rest of this document we will refer to this pipeline as the \emph{traditional} pipeline and the new pipeline created in this project as the \emph{automated} pipeline. 
 
 It is possible to run the traditional pipeline at the telescope during the observation. This allows observers to review these data in `real-time'. This serves as a `preview' for the observer and allows adjustments to be made during the run. After the run, the raw data are copied to the archive and this can be used for reduction later. This can happen the following day, or much later, when the observer has returned from the observatory. Any of these data in the data archive can be `re-reduced' at any time since \emph{all} raw data are stored. 
 
@@ -31,19 +43,16 @@ The current data reduction process for ULTRACAM is designed to produce three col
 	\item Defining \emph{apertures} for the objects of interest in the run. This step involves manually choosing the objects of interest in the frames and defining the aperture sizes and positions for each object. Apertures are set independently for each channel (r, g, b). An example of this can be seen in figure \ref{fig:settingapertures}.
 	\item Running the \emph{reduction} software. The reduction code uses the apertures defined in the previous step and measures the flux of each object in each colour. The software is able to track changes in the object's size and shape due to changes in the point spread function (PSF) by scaling the virtual aperture. It is also able to track small changes in the positions of the objects. 
 \end{enumerate} 
-Although this process is not particularly cumbersome, it \emph{does} include some manual steps and it does not scale well when there are a large number of runs to be processed or if there are many target objects in a run. For example, the run shown in figure \ref{fig:KOI-824} contains more than 1000 objects. Manually defining apertures for each of these objects in each channel is not really practical. An automated method enables data reduction for all of the objects captured in each run without the need for manual intervention. 
+Although this process is not particularly cumbersome, it \emph{does} include some manual steps and it does not scale well when there are a large number of runs to be processed or if there are many target objects in a run. For example, the run shown in figure \ref{fig:KOI-824} contains more than 1000 objects. Manually defining apertures for each of these objects in each channel is not practical. An automated method enables data reduction for all of the objects captured in each run without the need for manual intervention. 
 
 \subsection{Aperture selection}
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
-\includegraphics[width=80mm]{images/setaper.png}
-\caption{Defining the apertures for the reduction using the \emph{traditional} pipeline. Note that the two apertures can be linked. This instructs the pipeline to maintain the pixel separation of the apertures even if there is a small amount of movement from frame to frame. This is useful if our target object is likely to alter in brightness during the run. }
+\includegraphics[width=110mm]{images/setaper.png}
+\caption{Defining the apertures for the reduction using the \emph{traditional} pipeline. Note that the two apertures can be linked. This instructs the pipeline to maintain the pixel separation of the apertures even if there is a small amount of movement from frame to frame. This is useful if our target object is likely to alter in brightness during the run.}
 \label{fig:settingapertures}
 \end{figure}
-
-\subsection{Photometric calibration}
-\emph{Comment: Put a bit of information about taking measurements of standard stars and using this for calibration of magnitudes. Also producing and using extinction curves.}
 
 \section{Automating the pipeline}
 The outcome of this MSc project is a system that is able to process the raw image data from ULTRACAM and, without any manual intervention, produce a set of light curves for all of the objects in the data. It produces a set of web pages that can be viewed from anywhere with an internet connection. 
@@ -103,27 +112,25 @@ The stages of the reduction process are as follows:
 \end{figure}
 
 \subsubsection{Source extraction}
-A popular software tool used for source extraction is \emph{SExtractor}, \cite{bertin}. SExtractor is able to process a 2-dimensional image and produce a catalog of sources in that image, along with a measurement of the flux of each object. 
+A popular software tool used for source extraction is \emph{SExtractor}, (\cite{bertin}). SExtractor is able to process a 2-dimensional image and produce a catalog of sources in that image, along with a measurement of the flux of each object. 
 
-For each frame in the data run (which could consist of several frames to several thousand frames), we extract a bitmap of the image, which consists of a 2D pixel map with the CCD counts (or ADU) for each pixel, and pass this to SExtractor for source extraction. 
+For each frame in the data run (which could consist of several frames to several thousand frames), we extract the image data, which consists of a 2D pixel map with the CCD counts (or ADU) for each pixel, and pass this to SExtractor for source extraction. 
 
-SExtractor performs two passes on this image. On the first pass it makes an estimate of the `background signal' of the entire image. We can assume that the `background-signal' contains both the sky-background and the bias of the CCDs as we have \emph{not} subtracted the bias from each frame before passing it to SExtractor. It estimates the background by creating a mesh-grid of background readings for the whole image, applying a median clipping algorithm and then fitting a bicubic spline to interpolate between the mesh points. It then subtracts this background from the image. The size of the mesh grid is configurable and the pipeline allows the user to tweak this parameter if necessary. Unfortunately, in the current version of the pipeline, this parameter is not configured automatically.  If small scale changes in the background are expected then the mesh size should be reduced. The usual value that is used in the pipeline is a mesh grid size of \emph{64 pixels}. We have not noticed any reductions where this choice of mesh size has caused any obvious problems. 
+SExtractor performs two passes on this image. On the first pass it makes an estimate of the `background signal' of the entire image. We can assume that the `background-signal' contains both the sky-background and the bias of the CCDs as we have not subtracted the bias from each frame before passing it to SExtractor. It estimates the background by creating a mesh-grid of background readings for the whole image, applying a median clipping algorithm and then fitting a bicubic spline to interpolate between the mesh points. It then subtracts this background from the image. The size of the mesh grid is configurable and the pipeline allows the user to tweak this parameter if necessary. Unfortunately, in the current version of the pipeline, this parameter is not configured automatically.  If small scale changes in the background are expected then the mesh size should be reduced. The usual value that is used in the pipeline is a mesh grid size of \emph{64 pixels}. We have not noticed any reductions where this choice of mesh size has caused any obvious problems. 
 
-On the second pass, SExtractor applies a convolution filter to the image. This step is intended to increase the detectability (enhance the Signal to Noise ratio) for target objects on the frame. The default filter used in the pipeline is a simple `circular' PSF defined by the 3x3 mask:
+On the second pass, SExtractor applies a convolution filter to the image. This step is intended to increase the detectability (enhance the signal-to-noise ratio) for target objects on the frame. The default filter used in the pipeline is a simple `circular' PSF defined by the 3x3 mask:
+
 $
 \begin{array}{ccc}
   1 & 2 & 1 \\
   2 & 4 & 2 \\
-  1 & 1 & 1 \\
+  1 & 2 & 1 \\
 \end{array}  
 $
-This filter is normalised before being applied to the image.ß
 
-\emph{Comment: Include a figure here showing a zoom of the image, pre and post filter. Doesn't really seem to make much difference.} 
+This filter is normalised before being applied to the image.
 
-SExtractor then applies thresholding to the background subtracted and filtered image. The threshold for detection is defined as the pixel's ADU value above the background (in units of the background's standard deviation). This threshold is configurable and can be modified before running the automated pipeline. The default value we have used for most of the pipeline processing so far is $3\sigma$. Decreasing this parameter will have the effect of increasing the number of objects detected for any particular run but reducing it too much will cause the source extraction to produce too many spurious object detections. For example, setting this value to $1\sigma$ results in the source extraction identifying noise in the background as sources and this leads to the automated pipeline being overloaded with new sources to process causing it to grind to a halt as the number of tracked objects climbs rapidly. At the moment, the automated pipeline is not able to automatically tune this parameter for each run, although this is something that should be considered for future iterations of the pipeline. Figure \ref{fig:tweakingthreshold} shows how reducing this threshold can increase the number of objects detected by the pipeline.
-
-\emph{Comment: SExtractor has real issues with segmenting the objects in a heavily defocused run. Experimenting with blending thresholds helps to improve segmentation. I could write a page or two on this, but I haven't automated any of it (yet). }
+SExtractor then applies thresholding to the background subtracted and filtered image. The threshold for detection is defined as the pixel's ADU value above the background (in units of the background's standard deviation). This threshold is configurable and can be modified before running the automated pipeline. The default value we have used for most of the pipeline processing so far is $3\sigma$. Decreasing this parameter will have the effect of increasing the number of objects detected for any particular run but reducing it too much will cause the source extraction to produce too many spurious object detections. For example, setting this value to $1\sigma$ results in the source extraction identifying noise in the background as sources and this leads to the automated pipeline being overloaded with too many new sources to process, causing it to grind to a halt as the number of tracked objects climbs rapidly. At the moment, the automated pipeline is not able to automatically tune this parameter for each run, although this is something that should be considered for future iterations of the software. Figure \ref{fig:tweakingthreshold} shows how modifying this threshold parameter can increase the number of objects detected by the pipeline.
 
 \begin{figure}
   \centering
@@ -135,10 +142,13 @@ SExtractor then applies thresholding to the background subtracted and filtered i
 
 SExtractor then determines the pixel position of each object by calculating a weighted mean in the $x$ and $y$ dimensions. The weighting applied to each pixel is the pixel intensity (after background subtraction and filtering). If $I_{i}$ is the pixel intensity for pixel $i$ in the segmented collection of pixels, $S$ then:
 
-$ X = \frac{\sum\limits_{i \in S} I_{i}x_{i}}{\sum\limits_{i \in S} I_i}$
+$ X = \frac{\sum\ I_{i}x_{i}}{\sum I_i}$, and
 
-$ Y = \frac{\sum\limits_{i \in S} I_{i}y_{i}}{\sum\limits_{i \in S} I_i}$
+$ Y = \frac{\sum\ I_{i}y_{i}}{\sum I_i}$
 
+The image in figure \ref{fig:tweakingthreshold} has been created by stacking all of the images in the sequence, consisting of 726 frames. Stacking reveals objects that are not visible above the noise when viewing each individual frame. Since the pipeline extracts sources for each frame in turn, it is not able to detect these fainter objects that are so clearly revealed on the deep, stacked images. This suggests that, for future iterations of the pipeline, a different approach might be taken for source extraction and aperture definition. One idea is to perform a first pass to produce a stacked image and then use this image for source detection and aperture creation. These pre-defined apertures would then be used as an input for the flux measurement of each frame. This approach would need some flexibility in order to be able to deal with small movements of the image from frame to frame and to enable aperture tracking of objects that move through the field (such as asteroids).
+
+\subsubsection{Flux measurement}
 For each object that has been selected through the threshold criterion, the flux is then calculated. This is computed by one of 2 methods. 
 
 \begin{enumerate}
@@ -180,7 +190,7 @@ The algorithm is started with an empty list of objects. In the first frame, this
 
 This approach will not cope with situations where the telescope may have been moved or disturbed during a run and there is a sudden `step-jump' in the positions of all of the objects on the frame. This is sometimes referred to as a `glitch'. If the `glitch' results in a movement that is greater than the distance threshold (usually 10 pixels) then the pipeline will claim to have detected many new objects. In order to deal with glitches, we use a simple technique to determine the pixel shift $(\Delta x, \Delta y)$ for each window, compared to the previous window. 
 
-We create 2 dimensional map centred at zero, with all values set to zero. For each source detected (object) in the current window we calculate the pixel displacement vector to every object in the previous window $(\delta x, \delta_y)_i$.  We then increment our image map by `1' at the corresponding position. When we have done this for all objects detected in the window, the resulting image `histogram' will have a peak at a value of $(\delta_x, \delta y)_{max}$ which corresponds to the overall offset of the second window from the first. ie $(\Delta x, \Delta y) = (\delta_x, \delta y)_{max}$. We find this peak by first smoothing the image map (with a gaussian blur) and then fitting a quadratic around the maximum value and determining its value when the derivatives are zero in the $x$ and $y$ directions. We then apply this offset to our current window before looking for matches to objects in the previous window.
+We create 2 dimensional map centred at zero, with all values set to zero. For each source detected (object) in the current window we calculate the pixel displacement vector to every object in the previous window $(\delta x, \delta y)_i$.  We then increment our image map by `1' at the corresponding position. When we have done this for all objects detected in the window, the resulting image `histogram' will have a peak at a value of $(\delta x, \delta y)_{max}$ which corresponds to the overall offset of the second window from the first. ie $(\Delta x, \Delta y) = (\delta x, \delta y)_{max}$. We find this peak by first smoothing the image map (with a gaussian blur) and then fitting a quadratic around the maximum value and determining its value when the derivatives are zero in the $x$ and $y$ directions. We then apply this offset to our current window before looking for matches to objects in the previous window.
 
 For each detected object in the window, we store: 
 \begin{itemize}
@@ -209,13 +219,13 @@ For each object in the green catalog indexed by the letter $i$, we calculate its
 
 $D_{i,j} = \sqrt{(\bar{x}_{red, j}-\bar{x}_{green, i})^2 + (\bar{y}_{red, j}-\bar{y}_{green, i})^2}$ 
 
-The matched master object for this green object is the one with the closest pixel distance $minimum(D_{i,j})$. We merge these two objects together in the catalog, which now contains one unique identifier (number) and the red and green photometry. If there is no match within the minimum distance threshold, then the object is treated as a `new' object and added to the master catalog. It is possible that an object can be identified in the green channel, but not in the red. In this case, it is still added to the master catalog as a new object. This means that we have the capability of dealing with objects that have photometry in one or two colours, but not all three. 
+The matched master object for this green object is the one with the closest pixel distance $(D_{i,j})_{min}$. We merge these two objects together in the catalog, which now contains one unique identifier (number) and the red and green photometry. If there is no match within the minimum distance threshold, then the object is treated as a `new' object and added to the master catalog. It is possible that an object can be identified in the green channel, but not in the red. In this case, it is still added to the master catalog as a new object. This means that we have the capability of dealing with objects that have photometry in one or two colours, but not all three. 
 
 The process is then repeated for the blue catalog. Again we match the blue coordinates to each object in the master catalog. First trying for a match of the blue coordinates to the red coordinates and then, if no match is found, we repeat looking for a match between the blue coordinates and the green coordinates. Once again, if no match is found, then the object is added to the master catalog as a `new' object.  
 
 It is obvious that this is a very crude method of object matching. It is, however, surprisingly robust for the majority of the ULTRACAM runs in the data archive. Many of the runs do not have crowded fields so there is little ambiguity in the object's positions. It can fail in a few situations. Since the red, green and blue channels do not have identical optical configurations, the images are not exactly aligned geometrically. The images in the r, g, b channels can differ from each other in terms of translation, rotation and distortion (across the image). This becomes particularly obvious for a full-frame image (using the full area of the CCD) and is most visible towards the edges. An example of this difference in the pixel locations from channel-to-channel can be seen in figures \ref{fig:nonoverlap} and \ref{fig:nonoverlapzoom}.
 
-Yet another complication is caused by the variation in the non-overlap of the three channels during the course of a particular observing run. When the airmass of the target field undergoes a significant change, variation in the image distortion due to the atmosphere varies in each channel. It is also true that the camera's physical orientation changes and the optical paths will undergo changes due to flexure in the instrument's chassis. The change in the offset position from channel to channel can change by as much as ~4 pixels as the airmass changes from 1.0 to 1.2 and for larger airmass changes, the object will move by as much as 15 pixels in the blue channel relative to the red and green channels. 
+Yet another complication is caused by the variation in the non-overlap of the three channels during the course of a particular observing run. When the airmass of the target field undergoes a significant change variation in the image distortion due to the atmosphere varies in each channel. It is also true that the camera's physical orientation changes and the optical paths will undergo changes due to flexure in the instrument's chassis. The change in the offset position from channel to channel can be as much as ~4 pixels as the airmass goes from 1.0 to 1.2 and for even larger airmass variation the object will move by as much as 15 pixels in the blue channel relative to the red and green channels. See figures \ref{fig:positiondrift} and \ref{fig:positiondriftlongrun} for examples of this pixel drifting effect. 
 
 \begin{figure}
   \centering
@@ -224,24 +234,12 @@ Yet another complication is caused by the variation in the non-overlap of the th
 \label{fig:nonoverlap}
 \end{figure}
 
-
-
 \begin{figure}
   \centering
   \includegraphics[width=50mm]{images/overlay_multiply_closeup.png}
   \caption{A close up of figure \ref{fig:nonoverlap} showing the bottom right hand corner. Note that the blue image is significantly translated with respect to the red and green image. To make matters worse, this distortion is not constant throughout the duration of a single run and changes as the airmass of the target field changes.}
 \label{fig:nonoverlapzoom}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=100mm]{images/objectOffset_run010_g.eps}
-  \includegraphics[width=100mm]{images/objectOffset_run010_b.eps}
-  \caption{The difference in object mean positions between the `red' channel and the `green' channel (upper image) and the `red' channel and `blue' channel lower image), for run: \emph{2013-07-21/run010} }
-\label{fig:greenblueoffset}
-\end{figure}
-
-
 
 \begin{figure}
   \centering
@@ -253,7 +251,7 @@ Yet another complication is caused by the variation in the non-overlap of the th
 \begin{figure}
   \centering
   \includegraphics[width=140mm]{images/position_drift_longrun.png}
-  \caption{Another plot showing the change in relative positions of a single object in different channels over the course of a long run. These data is taken from the longest run in the ULTRACAM data archive, the 9.5 hour long run \emph{2010-04-25/run020}. During this run, the airmass varies from a minimum of 1.0 (corresponding with the center of the plot), to a maximum of 1.99 (at the extreme left and right ends of the plot). The change in offset from the red to the blue channels is about most noticeable on the $x$ position, where the blue channel's offset moves by as much as 13 pixels. }
+  \caption{Another plot showing the change in relative positions of a single object in different channels over the course of a long run. These data is taken from the longest run in the ULTRACAM data archive, the 9.5 hour long run \emph{2010-04-25/run020}. During this run, the airmass varies from a minimum of 1.0 (corresponding with the center of the plot), to a maximum of 1.99 (at the extreme left and right ends of the plot). The change in offset from the red to the blue channels is most noticeable on the $x$ position, where the blue channel's offset moves by as much as 13 pixels. }
 \label{fig:positiondriftlongrun}
 \end{figure}
 
@@ -263,16 +261,31 @@ The process can fail when cross-matching across the different channels only if t
 
 Once the object cross-matching stage is complete, the pipeline writes the new `three-colour' master catalog to a folder on the web server's file space ready to be loaded in the web viewer. 
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{images/objectOffset_run010_g.eps}
+  \caption{The difference in object mean positions between the `red' channel and the `green' channel for run: \emph{2013-07-21/run010} }
+\label{fig:greenblueoffset}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{images/objectOffset_run010_b.eps}
+  \caption{The difference in object mean positions between the `red' channel and the `blue' channel for run: \emph{2013-07-21/run010} }
+\label{fig:greenblueoffset}
+\end{figure}
+
 \subsection{WCS solutions}\label{sect:astrometry}
 
-After some ad-hoc tests using \emph{SCAMP \cite{scamp}} and \emph{Astrometry.net \cite{astrometry}} it seemed that the Astrometry.net software was more reliable at finding good WCS solutions to the fields. The software was downloaded to a local machine (including the extensive index files) and compiled. Despite being the solution that yields the most positive results so far, it still does not consistently find WCS solutions for all of the fields. 
+After some ad-hoc tests using SCAMP (\cite{scamp}) and Astrometry.net (\cite{astrometry}) it seemed that the Astrometry.net software was more reliable at finding good WCS solutions to the fields. The software was downloaded to a local machine (including the extensive index files) and compiled. Despite being the solution that yields the most positive results so far, it still does not consistently find WCS solutions for all of the fields. 
 
 There are several challenges to finding a WCS solution for the fields.  These are:
 
 \begin{itemize}
 	\item \emph{Lack of telescope pointing information}: ULTRACAM does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data are archived, a \emph{SIMBAD} lookup is used. This gives us a world coordinate that is somewhere in the field, but it is not known which object (or pixel location) this applies to.  
 	\item \emph{Field rotation}: Since ULTRACAM can be rotated about the optical axis to allow for optimal alignment of the objects, the field of view can be at any arbitrary angle of rotation, giving an extra degree of freedom to the matching task. 
-	\item \emph{Windows}: Many ULTRACAM runs are configured to use only portions of the CCD area. You can see an example of this in figure \ref{fig:V834Cen}. This means that there is an incomplete view of the sky for that field. When trying to match to existing indexes, there could be important, bright objects that are in the index file, but do not appear in the ULTRACAM field due to the masking caused by the windows.
+	\item \emph{Windows}: Many ULTRACAM runs are configured to use only portions of the CCD area. An example of this is shown in figure \ref{fig:V834Cen}. This means that there is an incomplete view of the sky for that field. When trying to match to existing indexes, there could be important, bright objects that are in the index file, but do not appear in the ULTRACAM field due to the masking caused by the windows.
 	\item \emph{Sparse fields}: On uncrowded fields, we might only have 4-5 objects that can be used for field identification. 
 	\item \emph{Very small windows}: Some runs, particularly ones in high cadence mode, use very small windows (eg 172x156 pixels) in order to decrease readout time. This means that our images (and input catalogs) might only contain two objects or so. This makes matching to a reference catalog impossible. 
 	\item \emph{Choice of reference index by colour}: The Astrometry.net software uses USNO-B and Tycho-2 reference catalogs by default. These are based on infra-red and V magnitudes. This means that the blue channel (which is often using the SDSS u filter) might not match the reference indexes. Indeed, current tests often result in a match in red, a match in green but no match in blue. 
@@ -292,19 +305,29 @@ $\left(\begin{array}{c} \alpha \\ \delta \end{array} \right) = \left(\begin{arra
 
 Where $(x', y')$ are the pixel offsets to the reference pixel $(x_{ref}, y_{ref})$.
 
-These values are saved to the web repository as a JSON object, ready to be loaded when the web browser accesses the page. 
+These values are saved to the web repository as a JSON object, ready to be loaded when the web browser accesses the page. Javascript Object Notation (JSON) is a plain text file format that encapsulates object structure as becoming increasingly common as a convenient way to store data to be displayed on web pages. It has some similarities to XML, but with a reduced syntax. It is described in more detail in the following chapter \ref{chap:webfrontend}.
 
-These 4 values define a scale transformation and a rotation from pixel to world coordinates. They do \emph{not} take into account distortion across the image. In order to encapsulate this distortion, Astrometry.net also provides Simple Imaging Polynomial (SIP) correction parameters, \cite{sippolynomial}. In this project, we use a SIP polynomial of the 3rd order to account for distortion across the ULTRACAM field. Figure \ref{fig:sipfit} shows the SIP polynomial corrections applied to the positions of each object identified in the run \emph{2013-07-21/run010}. The correcting factors provided by this polynomial are generally very small, providing a corrections of a few thousandths of a pixel in most cases. 
+These 4 values define a scale transformation and a rotation from pixel to world coordinates. They do \emph{not} take into account distortion across the image. In order to encapsulate this distortion, Astrometry.net also provides Simple Imaging Polynomial (SIP) correction parameters, (\cite{sippolynomial}). In this project, we use a SIP polynomial of the 3rd order to account for distortion across the ULTRACAM field. Figure \ref{fig:sipfit} shows the SIP polynomial corrections applied to the positions of each object identified in the run \emph{2013-07-21/run010}. The correcting factors provided by this polynomial are generally very small, providing a corrections of a few thousandths of a pixel in most cases. 
 
 \begin{figure}
   \centering
-  \includegraphics[width=60mm]{images/SIP_run010_r.eps}
-  
-  \includegraphics[width=60mm]{images/SIP_run010_g.eps}
-  
-  \includegraphics[width=60mm]{images/SIP_run010_b.eps}
-
-\caption{An indication of the distortion present in the field for the `red', `green' and `blue' channels of ULTRACAM. The background bitmap shows the deep image of the field. The vectors leading away from the objects were generated by calculating the 'World' coordinates (WCS) for the object's position (without the SIP corrections) and the reverting those WCS coordinates back to pixel coordinates (using the SIP corrections). The displacements have been exaggerated by a factor of $10^7$.}
-\label{fig:sipfit}
+  \includegraphics[width=\textwidth]{images/SIP_run010_r.eps}
+  \caption{An indication of the distortion present in the field for the `red' channel. The background image shows the deep image of the field. The vectors leading away from the objects were generated by calculating the 'World' coordinates (WCS) for the object's position (without the SIP corrections) and the reverting those WCS coordinates back to pixel coordinates (using the SIP corrections). The displacements have been exaggerated by a factor of $10^7$.}
+\label{fig:sipfitr}
 \end{figure}
+  
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{images/SIP_run010_g.eps}
+  \caption{An indication of the distortion present in the field for the `green' channel. The background bitmap shows the deep image of the field. The vectors leading away from the objects were generated by calculating the 'World' coordinates (WCS) for the object's position (without the SIP corrections) and the reverting those WCS coordinates back to pixel coordinates (using the SIP corrections). The displacements have been exaggerated by a factor of $10^7$.}
+\label{fig:sipfitg}
+\end{figure}
+  
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{images/SIP_run010_b.eps}
+  \caption{An indication of the distortion present in the field for the `blue' channels. The background bitmap shows the deep image of the field. The vectors leading away from the objects were generated by calculating the 'World' coordinates (WCS) for the object's position (without the SIP corrections) and the reverting those WCS coordinates back to pixel coordinates (using the SIP corrections). The displacements have been exaggerated by a factor of $10^7$.}
+\label{fig:sipfitb}
+\end{figure}
+
 
