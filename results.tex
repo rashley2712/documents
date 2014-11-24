@@ -23,28 +23,28 @@ It is possible to take the output of the automated pipeline and calibrate the ph
 \subsection{Comparison of the 2 pipelines}
 Since the ULTRACAM already has a well-established data reduction pipeline, it is useful to compare the results of this pipeline with the new, automated one built in this project. As mentioned above, the automated pipeline does not perform calibrated photometry, but we can still compare the non-calibrated photometry to get an estimate of how well our new pipeline performs.
 
-In order to do this, we chose a run of a target object that has often been observed with the ULTRACAM. The object is \emph{NN Ser}, a white-dwarf, M-dwarf eclipsing binary. The specific run in question is \emph{2013-07-13/run111}.
+In order to do this, we chose a run of a target object that has often been observed with the ULTRACAM. The object is NN Ser, a white-dwarf, M-dwarf eclipsing binary. The specific run in question is \emph{2013-07-13/run111}.
 
-Running the automated pipeline on this run is achieved by simply typing: \texttt{runbuilder.py 2013-07-13/run111} on the command line. Please refer to the user manual in appendix \ref{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes of processing time running on a standard desktop machine in the University of Warwick Astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
+Producing the photometry using the automated pipeline on this run is achieved by simply typing: \texttt{runbuilder.py 2013-07-13/run111} on the command line. Please refer to the user manual in appendix \ref{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes processing time running on a standard desktop machine in the University of Warwick Astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
 
 \begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-13-run111-r-withlabels.png}
-\caption{Snapshot taken from the automated pipeline browser for 2013-07-13/run111. The target, {NN Ser} is labeled object `7' in the image. This is a stacked image from the 'red' CCD with the Sloan 'i' filter. }
+\caption{Snapshot taken from the automated pipeline browser for 2013-07-13/run111. The target, {NN Ser} is labeled object `7' and the object we have used as the comparison is labeled '0' in the image. This is a stacked image from the 'red' CCD with the Sloan 'i' filter. }
 \label{fig:nnserfield}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=140mm]{images/nnser_lightcurve_automated.eps}
-\caption{Light curve of the target object, NN Ser produced using the \emph{automated pipeline}. The vertical axis is the raw flux measurements calculated by SExtractor.}
+\caption{Light curve of the target object, NN Ser produced using the \emph{automated pipeline}. The intensity of the target is plotted as its flux relative to the comparison star in the field. The red, green and blue data points are the measurements taken in the Sloan i, g, and u filters, respectively.}
 \label{fig:nnserlightcurveautomated}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=140mm]{images/nnser_lightcurve_tom.eps}
-\caption{Light curve of the target object, NN Ser, produced using the \emph{standard pipeline}. }
+\caption{Light curve of the target object, NN Ser, produced using the \emph{standard pipeline}. The intensity of the target is plotted as its flux relative to the comparison star in the field. The red, green and blue data points are the measurements taken in the Sloan i, g, and u filters, respectively. Note how the automated pipeline (previous figure) completely loses the eclipsing target in the $u$ and $g$ filters during the primary eclipse. This is in contrast to this traditional pipeline. This is due to the fact that the automated pipeline creates new apertures for each frame in the run and the target is too faint during the eclipse to trigger the aperture creation.}
 \label{fig:nnserlightcurvetom}
 \end{figure}
 
@@ -108,4 +108,4 @@ Although the automated pipeline does not perform a calibration of the magnitudes
 \label{fig:differentialtrad}
 \end{figure}
 
-It should be added that it is possible to produce calibrated colour-colour diagrams from the automated pipeline, if we manually perform the calibration and correct our figures. \emph{Comment: We can include Matthew's colour colour plot here.} 
+It should be added that it is possible to produce calibrated colour-colour diagrams from the automated pipeline, if we manually perform the calibration and correct our figures. 
