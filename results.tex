@@ -1,6 +1,6 @@
 \section{The archive} 
 
-At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present \emph{347} nights, out of a total of \emph{406}, have been processed and are available for viewing at the following URL: \url{http://url.to.be.provided/}. Of these processed nights, approximately \emph{xx} have been investigated for variability. At the moment, the investigation is performed by a visual check on the light-curve.visual. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve, one-by-one by pressing the 'right' and 'left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual~\ref{chap:usermanual}. 
+At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present \emph{347} nights, out of a total of \emph{406}, have been processed and are available for viewing on a web server hosted at the University of Warwick. Of these processed nights, approximately \emph{xx} have been investigated for variability. At the moment, the investigation is performed by a visual check on the light-curve. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve in turn by pressing the 'right' and 'left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual at appendix ~\ref{chap:usermanual}. 
 
 \section{Data quality}
 
@@ -25,7 +25,7 @@ Since the ULTRACAM already has a well-established data reduction pipeline, it is
 
 In order to do this, we chose a run of a target object that has often been observed with the ULTRACAM. The object is \emph{NN Ser}, a white-dwarf, M-dwarf eclipsing binary. The specific run in question is \emph{2013-07-13/run111}.
 
-Running the automated pipeline on this run is achieved by simply typing: \texttt{runbuilder.py 2013-07-13/run111} on the command line. Please refer to the user manual \ref{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes of processing time running on a standard desktop machine in the University of Warwick Astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
+Running the automated pipeline on this run is achieved by simply typing: \texttt{runbuilder.py 2013-07-13/run111} on the command line. Please refer to the user manual in appendix \ref{chap:usermanual} for instructions on how to install and run the pipeline.  The reduction takes about 5 minutes of processing time running on a standard desktop machine in the University of Warwick Astronomy department. The output of this reduction can be seen at \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/run111.html}.
 
 \begin{figure}
 \centering
@@ -34,14 +34,14 @@ Running the automated pipeline on this run is achieved by simply typing: \texttt
 \label{fig:nnserfield}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
 \includegraphics[width=140mm]{images/nnser_lightcurve_automated.eps}
 \caption{Light curve of the target object, NN Ser produced using the \emph{automated pipeline}. The vertical axis is the raw flux measurements calculated by SExtractor.}
 \label{fig:nnserlightcurveautomated}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
 \includegraphics[width=140mm]{images/nnser_lightcurve_tom.eps}
 \caption{Light curve of the target object, NN Ser, produced using the \emph{standard pipeline}. }
@@ -86,14 +86,14 @@ Since the automated pipeline relies on the third party software, SExtractor, to 
 \section{Colour-Colour plots}
 Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. For a few selected runs, where we have > 100 objects clearly identified for the run, we can produce non-calibrated colour-colour diagrams. 
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-21-run010-2colour.eps}
 \caption{The colour-colour plot of run: \emph{2013-07-21/run010}. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978, which is slightly out of the galactic plane. The field contains The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards.}
 \label{fig:differentialtrad}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-21-run011-2colour.eps}
 \caption{The colour-colour plot of run: \emph{2013-07-21/run011}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards.}
@@ -101,7 +101,7 @@ Although the automated pipeline does not perform a calibration of the magnitudes
 \end{figure}
 
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
 \includegraphics[width=120mm]{images//2011-04-22-run019-omegacen-2colour.eps}
 \caption{The colour-colour plot of run: \emph{2011-04-22/run019}. The field contains 1088 objects identified in edge of the globular cluster \emph{Omega Centaurus}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The extreme blue outliers are errors caused by the pipeline mis-identifying objects across the three channels.}
