@@ -48,55 +48,49 @@ Producing the photometry using the automated pipeline on this run is achieved by
 \label{fig:nnserlightcurvetom}
 \end{figure}
 
-The light-curves in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} are a good demonstration of the reduction of an interesting eclipse, but, in order to perform a comparison of the two pipelines, it makes more sense to choose two objects in this run that we can assume are \emph{constant} objects. The two objects we have chosen are the two brightest objects in the field and are labeled '0' and '1' in figure \ref{fig:nnserfield}. We are making the assumption that these two objects are of constant brightness. Since we will be comparing the \emph{differential} photometry of these two objects, in other words, the ratio $Counts_{0}/Counts_{1}$, any variations due to the systematic effects of the observation itself, such as atmospheric transmission, etc will be equivalent for both objects. Figures \ref{fig:differentialauto} and \ref{fig:differentialtrad} show the differential photometry for the two pipelines. Both of the pipelines have consistent values and agree with each to well within 1 standard deviation.
+The light-curves in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} are a good demonstration of the reduction of an interesting eclipse, but, in order to perform a comparison of the two pipelines, it makes more sense to choose two objects in this run that we can assume are \emph{constant} objects. The object we have chosen as the comparison star is the brightest one in the field and is labeled `0' in figure \ref{fig:nnserfield}. The figure \ref{fig:comparephotometry} shows a plot of the relative flux counts for object `0' and is produced by taking the flux reading from the \emph{automated} pipeline and dividing it by the flux reading from the \emph{traditional} pipeline. 
 
-\begin{table}[ht]
+\begin{figure}[!h]
+\centering
+\includegraphics[width=140mm]{images/compare_photometry.eps}
+\caption{A comparison of the flux measurements for a single object (object `0' in figure \ref{fig:nnserfield}). The plot is produced by dividing the flux counts as measured by the \emph{automated} pipeline by the flux counts as measured by the \emph{traditional} pipeline.}
+\label{fig:comparephotometry}
+\end{figure}
+
+\begin{table}
   \label{tab:differential}
-  \caption{Table showing the statistics of the differential photometry produced by dividing the flux counts for object '0' by the flux counts for object '1'.}
+  \caption{Table showing the statistics of the relative photometry produced by dividing the flux counts from the \emph{automated} pipeline by the flux counts from the \emph{traditional} pipeline for object '0'.}
   \centering
   \begin{tabular}{|l|r|r|}
     \hline
-    Filter & Traditional pipeline & Automated pipeline  \\
-           &  $mean[std. dev]$    & $mean[std. dev]$ \\
+    Filter & Relative flux  \\
+           &  $mean[std. dev]$ \\
     \hline
-    'i'    & 1.2521[0.0036]       & 1.2523[0.0034] \\
-    'g'    & 1.2247[0.0045]       & 1.2240[0.0042]\\
-    'u'    & 1.264[0.019]         & 1.259[0.017] \\
+    'i'    & 0.991[0.003] \\
+    'g'    & 0.994[0.003] \\
+    'u'    & 0.988[0.007] \\
     \hline
    \end{tabular}
 \end{table}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=140mm]{images/differential_auto.eps}
-\caption{The light-curve of the flux ratio of object '0' and object '1' as labelled in figure \ref{fig:nnserfield} produced by the \emph{automated} pipeline. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
-\label{fig:differentialauto}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=140mm]{images/differential_trad.eps}
-\caption{The light-curve of the flux ratio object '0'  object '1' as labelled in figure \ref{fig:nnserfield} produced by the \emph{traditional} pipeline. The vertical axis shows the flux counts for object '0' divided by the flux counts for object '1'. Both of the objects are assumed to be constant sources. }
-\label{fig:differentialtrad}
-\end{figure}
 
 \subsection{Apertures}
-Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no aperture defined for that frame. This means that objects that fade or are generally quite faint, might 'disappear' on some frames and then 're-appear' on subsequent frames. The tracking algorithm allows a 're-appearing' object to be identified with an object that appeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} where the automated pipeline 'loses' the target object in the 'g' and 'u' bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the field and can therefore continue to calculate flux in the aperture for the target even if the target is barely detectable above the sky background.
+Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no aperture defined for that frame. This means that objects that fade or are generally quite faint, might 'disappear' on some frames and then 're-appear' on subsequent frames. The tracking algorithm allows a 're-appearing' object to be identified with an object that had previously disappeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} where the automated pipeline 'loses' the target object in the 'g' and 'u' bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the field and can therefore continue to measure flux in the aperture for the target even if the target is barely detectable above the sky background.
 
 \section{Colour-Colour plots}
-Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. For a few selected runs, where we have > 100 objects clearly identified for the run, we can produce non-calibrated colour-colour diagrams. 
+Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. For a few selected runs, where we have > 100 objects clearly identified for the run, we can produce non-calibrated colour-colour diagrams. In these automatically produced plots, there are some 'outliers' showing colours that are too extreme to be genuine astronomical bodies. These outliers are due to objects being mis-identified across the three colour channels as can happen in crowded fields. In other words, an object might have been identified as the 'same' object in the blue channel (due to its proximity on the image) but is actually only near neighbour to another object in the red and green channels. The pipeline has mistakenly placed all three measurements as belonging to the same object. 
 
 \begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-21-run010-2colour.eps}
-\caption{The colour-colour plot of run: \emph{2013-07-21/run010}. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978, which is slightly out of the galactic plane. The field contains The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards.}
+\caption{The colour-colour plot of run: \emph{2013-07-21/run010}. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978, which is slightly out of the galactic plane. The field contains The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline. }
 \label{fig:differentialtrad}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-21-run011-2colour.eps}
-\caption{The colour-colour plot of run: \emph{2013-07-21/run011}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards.}
+\caption{The colour-colour plot of run: \emph{2013-07-21/run011}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline. }
 \label{fig:differentialtrad}
 \end{figure}
 
