@@ -1,42 +1,67 @@
 
 \section{Object identification}
-For each night, an 'index page' is generated, which shows a list of all of the runs in the night along with thumbnail images of the field of view. This allows the user to quickly navigate to the runs that are 'of interest'. In other words, runs that contain science data, rather than acquisitions, biases, flat-fields. By clicking on the thumbnail of the run, they are taken to a 'run page'. This page shows the full image for each of the three channels. These images are created by stacking all of the individual frames in the run. The page also shows all of the objects that have been identified and have light-curves available. The user can view the light-curves by using the mouse to click on each object, or can scroll through all of the light-curves systematically, by using the left and right arrow keys. 
+The pipeline is usually invoked by running a single command on a night's worth of data. For example, to build the light-curves for the night of, say, \emph{2014-08-21}, then a single command, \texttt{daybuilder.py 2014-08-21} is issued from the command line. The pipeline then runs through all of the data for that night and generates a set of web pages. Depending on the amount of data for that night, this can take 1 hour to 8 hours. 
+
+For each night, an index page, which shows a list of all of the runs in the night along with thumbnail images of the field of view, is created. This allows the user to quickly navigate to the runs that are of interest. In other words, runs that contain science data, rather than acquisitions, biases or flat-fields. By clicking on the thumbnail of the run, the user is taken to a run page. This page shows the full image for each of the three channels. These images are created by stacking all of the individual frames in the run. The page also shows all of the objects that have been identified and have light-curves available. The user can view the light-curves by using the mouse to click on each object, or can scroll through all of the light-curves systematically, by using the left and right arrow keys. 
 
 Scrolling through the light curves in a systematic fashion makes it easy for the user to quickly identify which objects are showing an obvious variability. All of the objects listed below were discovered in this way. 
 
-The task is made relatively easy in the browser interface and it is possible to inspect the light curves at a rate of about 1-2 objects per second. In future, we plan to apply some statistical tests to these data to perform the light curve inspection as a stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. References to VVV, LSST, NGTS, Wasp, Astrokit software, etc.
+The task is made relatively easy in the browser interface and it is possible to inspect the light curves at a rate of about 1-2 objects per second. In future, we plan to apply some automated tests to these data to perform the light curve inspection as an integral stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. The recently published Astrokit software, (\cite{Astrokit2014}) is one tool that we plan to trial in the next version of the automated pipeline. 
+
+\emph{Comment: References to VVV, LSST, NGTS, Wasp,  etc.}
 
 \section{Discovered objects}
+As discussed in the introduction, chapter \ref{chap:introduction}, we expect to find some new variables in the ULTRACAM archive. These will be objects displaying some kind of variability that is clearly visible over the length of the run and the cadence of the observations. The kinds of objects that should be clear will include eclipsing binaries, contact binaries, flare stars, RR Lyrae and $\delta$ Scuti stars. We might also expect to see other short period variables like cataclysmic variables and DV white dwarfs. Since the pipeline is able to track slow moving objects, we can also expect that we will capture photometry of asteroids.   
 
-Below we list some of the variable objects that have discovered as a result of running the automated pipeline on a fraction of the ULTRACAM archive. The pipeline is usually invoked by running a single command on a night's worth of data. For example, to build the light-curves for the night of, say, \emph{2014-08-21}, then a single command, \emph{daybuilder.py 2014-08-21} is issued from the command line. The pipeline then runs through all of the data for that night and generates a set of web pages. Depending on the amount of data for that night, this can take 1 hour to 8 hours. 
+So far, we have only inspected approximately 20\% of the reduced data but we have have a few dozen variable objects
+Below we list some of the variable objects that have discovered as a result of running the automated pipeline on a fraction of the ULTRACAM archive. 
 
 \newpage
 \subsection{Eclipsing binaries}
 
+  \begin{figure}
+    \includegraphics[width=120mm]{images/2005-05-10-run012-73-lightcurve-cropped.png} 
+    \label{fig:2005-05-10-run012}
+    \caption{Sloan i and g light curves of object: 2005-05-10-run012-73}
+  \end{figure}
+  
   \begin{tabular}{l l}
   Classification & {W UMa} contact binary \\
+  Original target & GU Mus \\
   ObjectID & 2005-05-10-run012-73 \\
-  RA, DEC & 19:44:09/8, 40:16:34.4 (J2000) \\
+  RA, DEC & 19:44:09.8, 40:16:34.4 (J2000) \\
   Run date & 2005-05-10 \\
   Pixel position & (232, 65) \\
-  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2005-05-10/run012.html} \\
-       & \includegraphics[width=40mm]{images/2005-05-10-run012-73.png} \\
+  %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2005-05-10/run012.html} \\
+   & \includegraphics[width=40mm]{images/2005-05-10-run012-73.png} \\
   \end{tabular}
-  \includegraphics[width=120mm]{images/2005-05-10-run012-73-lightcurve.eps} \\
-  Discussion of this object.
+  
+  The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005. The compact object was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands, (\cite{tariq2010}). About 4 arc minutes to the west we have detected a suspected {W Uma} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of yy minutes. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. 
+
+The cause of the O'Connell effect is something that is still debated in astronomy, (\cite{oconnelleffect}). Differences in the brightness of the minima of the light-curves is something that is expected and is caused by the different sizes and temperatures of each component in the system. Based on a geometric model of the eclipse though, we would expect the maxima to be of equal brightness since we are seeing the system `side-on' at both maxima with the same ellipsoidal faces presented to the observer. Current explanations consist of star-spots that are locked in rotational synchronisation with the orbit and are presented preferentially on one side of the system; gas streams in systems that are relatively far apart (contact or near-contact, rather than over-contact); and circumstellar material that might be kinetically heated and gather preferentially on the leading edge of the orbiting bodies.  
+
+
+% This target has another day of observations. 2005-05-09. The data should be combined, ephemeris found and light curve phase folded. 
+
+\newpage
+
+\begin{figure}
+  \includegraphics[width=120mm]{images/2013-07-21-run010-48_lightcurve.eps} 
+  \label{fig:2005-05-10-run012}
+  \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-48}
+\end{figure}
 
   \begin{tabular}{l l}
   Classification & {W UMa} contact binary \\
   ObjectID & 2013-07-21-run010-48 \\
-  RA, DEC & 19:44:09/8, 40:16:34.4 (J2000) \\
+  Original target & J19440167+4017435 also KOI-823 \\
+  RA, DEC & 19:44:09.8, 40:16:34.4 (J2000) \\
   Run date & 2013-07-21 \\
   Pixel position & (452, 332) \\
-  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
+  % URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
        & \includegraphics[width=60mm]{images/2013-07-21-run010-48.png} \\
   \end{tabular}
-  \includegraphics[width=120mm]{images/2013-07-21-run010-48_lightcurve.eps} \\
-  Discussion of this object.
-
+ 
   \newpage
   \begin{tabular}{l l}
   Classification & {W UMa} contact binary \\
@@ -118,8 +143,8 @@ Below we list some of the variable objects that have discovered as a result of r
 
   If our period is correct, this could mean that we have discovered a new member of this rare, fast rotator class of asteroid. 
 
-
   \newpage
+
   \begin{tabular}{l l}
   Classification & Asteroid: 9108 Toruyusa (1997 AZ6) [offset of 7 arc minutes from the computed ephemeris]\\
   ObjectID & 2009-01-04-run024-61 \\
