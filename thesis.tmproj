@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>documents</key>
+	<array>
+		<dict>
+			<key>filename</key>
+			<string>highlights.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>introduction.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>rashleyMSCthesis.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>conclusion.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>automation.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>datareduction.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>results.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>usermanual.tex</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>webfrontend.tex</string>
+			<key>selected</key>
+			<true/>
+		</dict>
+	</array>
+	<key>fileHierarchyDrawerWidth</key>
+	<integer>200</integer>
+	<key>metaData</key>
+	<dict/>
+	<key>showFileHierarchyDrawer</key>
+	<true/>
+	<key>windowFrame</key>
+	<string>{{1468, 259}, {1081, 746}}</string>
+</dict>
+</plist>
