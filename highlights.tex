@@ -6,7 +6,7 @@ For each night, an index page, which shows a list of all of the runs in the nigh
 
 Scrolling through the light curves in a systematic fashion makes it easy for the user to quickly identify which objects are showing an obvious variability. All of the objects listed below were discovered in this way. 
 
-The task is made relatively easy in the browser interface and it is possible to inspect the light curves at a rate of about 1-2 objects per second. In future, we plan to apply some automated tests to these data to perform the light curve inspection as an integral stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. The recently published Astrokit software, (\cite{Astrokit2014}) is one tool that we plan to trial in the next version of the automated pipeline. 
+The task is made relatively easy in the browser interface and it is possible to inspect the light curves at a rate of about 1-2 objects per second. In future, we plan to apply some automated tests to these data to perform the light curve inspection as an integral stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. The recently published Astrokit software, \citep{Astrokit2014} is one tool that we plan to trial in the next version of the automated pipeline. 
 
 \emph{Comment: References to VVV, LSST, NGTS, Wasp,  etc.}
 
@@ -44,9 +44,9 @@ We have only inspected approximately 20\% of the reduced data but we have found 
    & \includegraphics[width=40mm]{images/2005-05-10-run012-73.png} \\
   \end{tabular}
   
-The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands, (\cite{tariq2010}). About 4 arc minutes to the west we have detected a suspected {W Uma} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 180$ minutes. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. 
+The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands, \citep{tariq2010}. About 4 arc minutes to the west we have detected a suspected {W Uma} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 180$ minutes or 0.13 days. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. 
 
-The cause of the O'Connell effect is something that is still debated in astronomy, (\cite{oconnelleffect}). Differences in the brightness of the minima of the light-curves is something that is expected and is caused by the different sizes and temperatures of each component in the system. Based on a geometric model of the eclipse though, we would expect the maxima to be of equal brightness. This is because we are seeing the system `side-on' at both maxima with the same ellipsoidal faces presented to the observer. Current explanations for the O'Connell effect consist of star-spots that are locked in rotational synchronisation with the orbit and are presented preferentially on one side of the system; gas streams in systems that are relatively far apart (contact or near-contact, rather than over-contact); and circumstellar material that might be kinetically heated and gathered preferentially on the leading edge of the orbiting bodies.  
+The cause of the O'Connell effect is something that is still under some debate, \citep{oconnelleffect}. Differences in the brightness of the minima of the light-curves is something that is expected and is caused by the different sizes and temperatures of each component in the system. Based on a geometric model of the eclipse though, we would expect the maxima to be of equal brightness. This is because we are seeing the system `side-on' at both maxima with the same ellipsoidal faces presented to the observer. Current explanations for the O'Connell effect consist of star-spots that are locked in rotational synchronisation with the orbit and are presented preferentially on one side of the system; gas streams in systems that are relatively far apart (contact or near-contact, rather than over-contact); and circumstellar material that might be kinetically heated and gathered preferentially on the leading edge of the orbiting bodies.  
 
 In figure \ref{fig:2005-05-10-run012-colour} we plot the $(g-r)$ colour of the object. There is a clear modulation in the colour which must be due to temperature differences around the geometry of the system. The minimum (coolest) $(g - r)$ colour corresponds with the minimum of the light-curve. This is consistent with the idea that the hemispheres of the components in contact with each other are hotter due to a mutual reflection effect, while the outer hemispheres are cooler. The amplitude of the colour variation is $\Delta{(g-r)} \sim 0.06$ magnitudes.
 
@@ -81,7 +81,7 @@ In figure \ref{fig:2005-05-10-run012-colour} we plot the $(g-r)$ colour of the o
  
 This variable was the first one picked up by the automated pipeline and revealed itself during the very early development of the software. It appears on a relatively crowded Kepler field which has at least 5 newly discovered variable objects. Although this field has been monitored by the Kepler satellite, a search through the Kepler online archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} has not resulted in any data for this object. Since the aim of the Kepler mission is to discover exoplanets via observation of transits on stars that are relatively constant, it usually discards stars that are clearly highly variable. 
 
-We suggest that this object is another {W Uma} category variable with an approximate period 400 minutes. Unfortunately we do not have complete period coverage of the object's orbit and therefore this period is a very rough estimate. The target, KOI-823, has been observed on another occasion, 2013-07-28, but the field was set up differently (more to the west) and this object was not included. 
+We suggest that this object is another {W Uma} category variable with an approximate period 400 minutes or 0.27 days. Unfortunately we do not have complete period coverage of the object's orbit and therefore this period is a very rough estimate. The target, KOI-823, has been observed on another occasion, 2013-07-28, but the field was set up differently (more to the west) and this object was not included. 
 
 The colour plots for the object are shown in figure \ref{fig:2013-07-21-run010-48-colour}. As for the previous object, it seems that the $(g-i)$ colour peak coincide with the brightness maximum. However, it appears that the peak of the $(u-g)$ plot occurs significantly before the peak in brightness. \emph{Comment: Explanation for this?}
 
@@ -141,78 +141,113 @@ It is notable that the ingress and the egress demonstrates broad `wings' suggest
 Although the object is in a Kepler field and is, in fact, close to KOI-1546, a search through the Kepler archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} reveals that it is not listed. This is probably because the object is too faint and the data for this object has not been downloaded. 
 
 \newpage
+
+
 \subsection{Intrinsic variables}
 
-  \begin{tabular}{l l}
+\begin{figure}
+  \center
+  \includegraphics[width=120mm]{images/2013-07-21-run010-23_lightcurve-bin8.eps} \\
+  \label{fig:2013-07-21-run010-23}
+  \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
+\end{figure}
+
+\begin{figure}
+  \center
+  \includegraphics[width=120mm]{images/2013-07-21-run010-23_colourcurve-bin8.eps} \\
+  \label{fig:2013-07-21-run010-23-colour}
+  \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
+\end{figure}
+
+
+
+\begin{tabular}{l l}
   Classification & $\delta$ Scuti \\
   ObjectID & 2013-07-21-run010-23 \\
+  Original target & J19440167+4017435 or KIC5115978 \\
   Pixel position & (54, 362) \\
   RA, DEC & 19:44:19.6, 40:16:43.7 (J2000) \\
-  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
+  % URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
        & \includegraphics[width=60mm]{images/2013-07-21-run010-23.png} \\
-  \end{tabular}
-  \includegraphics[width=120mm]{images/2013-07-21-run010-23_lightcurve.eps} \\
-  This object was found on a run that included the exoplanet host, KIC5115978, which has at least one planet, \cite{KIC5115978}. The new variable is located about 6 arc minutes away from the target. A search of the Kepler data archive \footnote{\url{http://archive.stsci.edu/kepler/kepler_fov/search.php}} gives no results for this object. Unfortunately this object is not in a Kepler field of view, but lies in a position that does not fall on the Kepler CCD. We have no further photometry for this object. 
+\end{tabular}
 
-  There is evidence that the colour is varying in phase with magnitude, most noticeably in $g-i$. The lightcurve is the shape we would expect, with a steeper slope during increasing flux than decreasing. This object is an A or F class star, as would be expected for δ-Scuti variables. The period is approximately 0.04 days, consistent with the expected range 0.03-0.3 days.
+This object was found on a run that included the exoplanet host, KIC5115978, which has at least one planet, \citep{KIC5115978}. The new variable is located about 6 arc minutes away from the target. A search of the Kepler data archive \footnote{\url{http://archive.stsci.edu/kepler/kepler_fov/search.php}} gives no results for this object. Unfortunately this object is not in the Kepler field of view, but lies in a position that does not fall on the Kepler CCD. We have no further photometry for this object. 
+
+There is evidence that the colour is varying in phase with magnitude, most noticeably in $(g - i)$, see figure \ref{fig:2013-07-21-run010-23-colour}. The light-curve is the shape we would expect, with a steeper slope during increasing flux than decreasing. The period is approximately 0.04 days, consistent with the expected range 0.03-0.3 days.
 
 
 \newpage
 \subsection{Near Earth objects}
 
-  \begin{tabular}{l l}
+\begin{figure}
+  \center
+  \includegraphics[width=140mm]{images/2011-08-26-run014-110-lightcurve-bin4.png} 
+  \label{fig:2011-08-26-run014-110}
+  \caption{Sloan i, g light curves of asteroid: 2011-08-26-run014-110. Data points are binned by a factor of 4.}
+\end{figure}
+
+
+\begin{figure}
+  \center
+  \includegraphics[width=90mm]{images/2011-08-26-run014-110-pgram-bin4.eps} 
+  \label{fig:2013-07-21-run010-23}
+  \caption{Periodogram of both the i and g light curves for the object: 2011-08-26-run014-110. The peaks occur at $g_{peak} = 0.0100 minutes^{-1}$ and  $r_{peak} = 0.0108 minutes^{-1}$ }
+\end{figure}
+
+
+\begin{tabular}{l l}
   Classification & Asteroid: 1998 SU139 \\
   ObjectID & 2011-08-26-run014-110 \\
+  Original target & LY Aqr \\
   Pixel position & start: (217, 9), end: (505, 54) \\
-  Distance travelled & 291 pixels or 101" \\
-  Field scale & 0.35"/pixel \\
+  Distance travelled & 291 pixels or 87" \\
+  Field scale & 0.30"/pixel for the WHT\\
   Duration of run & 12355s (3.43 hours) \\
-  Tangential angular velocity & 0.495"/minute or 29.68"/hour\\ 
+  Tangential angular velocity & 0.424"/minute or 25.4"/hour\\ 
   RA, DEC & MJD=55800.038, 20:51:12, -08:31:25 (J2000) \\
-  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2011-08-26/run014.html} \\
-  \end{tabular}
-  \includegraphics[width=140mm]{images/2011-08-26-run014-110-lightcurve.eps} \\
-  \includegraphics[width=90mm]{images/asteroid_pgram.eps} \\
+  %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2011-08-26/run014.html} \\
+\end{tabular}
 
-  The light curve of this object displays a clear sinusoid which must be caused by variations in reflected sunlight that is modulated as the object rotates. A periodogram of these data peaks at a frequency of $0.0108 minutes^{-1}$ (a spin period of $1.53$ hours) for the 'i' filter and $0.0098 minutes^{-1}$ (a spin period of $1.70$ hours) for the 'g' filter. This assumes that one period in the light curve is equal to exactly one rotation of the asteroid. This might not be true if the asteroid has several light and dark patches on its surface. 
 
-  Rotation of asteroids is driven by a process known as the YORP effect, (\cite{yorpeffect}). 
+The light curve of this object displays a clear sinusoid which must be caused by variations in reflected sunlight that is modulated as the object rotates. A periodogram of these data peaks at a frequency of $0.0108 minutes^{-1}$ (a spin period of $1.54$ hours) for the 'i' filter and $0.0100 minutes^{-1}$ (a spin period of $1.66$ hours) for the 'g' filter. This assumes that one period in the light curve is equal to exactly one rotation of the asteroid. This might not be true if the asteroid has several light and dark patches on its surface. 
 
-  A look-up using the \emph{NEOChecker} tool on the website of the IAU's Minor Planet Center \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} returns a result for this candidate as, most probably, asteroid \emph{1998 SU139}. The world coordinates reported by the tool differed from our own determination by about 6.5'. 
+Rotation of asteroids is driven by a process known as the YORP effect, \citep{yorpeffect}. 
 
-  There is a clear relationship between the size of the asteroid and the minimum spin period. Observationally, it can be shown that, for an asteroid with a diameter greater than 250 metres, the spin period cannot be less than 2.33 hours, \cite{Jacobson2014}. The theoretical reasoning for this 'spin cut-off'  is that, assuming these asteroids are 'rubble-piles' then, above certain angular velocity, the centrifugal forces pulling the rubble pile apart will be stronger than the gravitational forces holding it together and the rubble pile will break up. At the moment, only two asteroids have been found that are exceptions to this rule, \emph{2001 OE84} and \emph{2005 UW163} with periods of 0.486 and 1.290 hours respectively, \cite{Chang2014}. 
+A look-up using the \emph{NEOChecker} tool on the website of the IAU's Minor Planet Center \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} returns a result for this candidate as, most probably, asteroid \emph{1998 SU139}. The world coordinates reported by the tool differed from our own determination by about 6.5'. 
+
+There is a clear relationship between the size of the asteroid and the minimum spin period. Observationally, it can be seen that, for an asteroid with a diameter greater than 250 metres, the spin period cannot be less than 2.33 hours, \citep{Jacobson2014}. The theoretical reasoning for this 'spin cut-off'  is that, assuming these asteroids are 'rubble-piles' then, above certain angular velocity, the centrifugal forces pulling the rubble pile apart will be stronger than the gravitational forces holding it together and the rubble pile will break up. At the moment, only two asteroids have been found that are exceptions to this rule, \emph{2001 OE84} and \emph{2005 UW163} with periods of 0.486 and 1.290 hours respectively, \citep{Chang2014}. 
 
   \begin{figure}
     \center
     \includegraphics[width=90mm]{images/jacobson-asteroid-rotation-dot.png} 
     \label{fig:2005-05-10-run012}
-    \caption{The spin period distribution as a function of radius for near-Earth (NEA), Mars crossing (MCA) and Main Belt (MBA) asteroids as reported in the Asteroid Lightcurve Database (\cite{2009Icar..202..134W}). The dashed lines indicate the critical surface disruption period $P_d \sim 2.33$ hours for radii $R > 250$ metres. Taken from \cite{Jacobson2014}. The red square on the plot shows the position of our object as estimated in this text. 
-}
+    \caption{The spin period distribution as a function of radius for near-Earth (NEA), Mars crossing (MCA) and Main Belt (MBA) asteroids as reported in the Asteroid Lightcurve Database (\cite{2009Icar..202..134W}). The dashed lines indicate the critical surface disruption period $P_d \sim 2.33$ hours for radii $R > 250$ metres. Taken from \cite{Jacobson2014}. The red square on the plot shows the position of our object as estimated in this text.}
   \end{figure}
   
 
-  There are several more unconfirmed super-fast rotators (SFR) asteroids reported by \cite{Masiero2009} and \cite{Dermawan2011}. Since these objects have low brightness and fast rotation, periods have not yet been accurately determined. Many of the light curves only have few tens of data points. The fact that we have managed to determine a spin period for this object demonstrates that ULTRACAM is a suitable instrument to use for follow up observations of these other candidates.  
+There are several more unconfirmed super-fast rotators (SFR) asteroids reported by \citet{Masiero2009} and \citet{Dermawan2011}. Since these objects have low brightness and fast rotation, periods have not yet been accurately determined. Many of the light curves only have few tens of data points. The fact that we have managed to determine a spin period for this object demonstrates that ULTRACAM is a suitable instrument to use for follow up observations of these other candidates.  
 
-  The diameter of the asteroid can be estimated by using its absolute magnitude $H$ and an assumption for the albedo $p$ using the formula, adapted from \cite{Jewitt2013}
+The diameter of the asteroid can be estimated by using its absolute magnitude $H$ and an assumption for the albedo $p$ using the formula, adapted from \citet{Jewitt2013}
 
-  $D = \frac{1130}{\sqrt{p}}10^{-H/5} $
+$D = \frac{1130}{\sqrt{p}}10^{-H/5} $
 
-  We have taken $H = 15.2$ from the JPL Small-Body Database \footnote{http://ssd.jpl.nasa.gov/sbdb.cgi} and assumed an albedo of $ p = 0.297$ for a V-type asteroid. This gives a diameter, $D = 1.89$ km for this asteroid. 
+We have taken $H = 15.2$ from the JPL Small-Body Database \footnote{http://ssd.jpl.nasa.gov/sbdb.cgi} and assumed an albedo of $ p = 0.297$ for a V-type asteroid. This gives a diameter, $D = 1.89$ km for this asteroid. 
 
-  If our period is correct, this could mean that we have discovered a new member of this rare, fast rotator class of asteroid. 
+If our period is correct, this could mean that we have discovered a new member of this rare, fast rotator class of asteroid. 
 
-  \newpage
+\newpage
 
-  \begin{tabular}{l l}
+\begin{tabular}{l l}
   Classification & Asteroid: 9108 Toruyusa (1997 AZ6) [offset of 7 arc minutes from the computed ephemeris]\\
   ObjectID & 2009-01-04-run024-61 \\
+  Original target & SDSS J0804+1616 \\
   Pixel position & start: (137, 422), end: (226, 447) \\
-  Distance travelled & 92 pixels or 32" \\
-  Field scale & 0.35"/pixel \\
+  Distance travelled & 92 pixels or 27.6" \\
+  Field scale & 0.30"/pixel for the WHT \\
   Duration of run & 3221s (53.7 minutes) \\
-  Tangential angular velocity & 0.596"/minute or 35"/hour\\ 
+  Tangential angular velocity & 0.514"/minute or 31"/hour\\ 
   RA, DEC & MJD=54836.26642, 08:04:52.3 +16:18:10.6 (J2000) \\
-  URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2009-01-04/run024.html} \\
+  %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2009-01-04/run024.html} \\
        & \includegraphics[width=60mm]{images/2009-01-04-run024-61.png} \\
   \end{tabular}
 

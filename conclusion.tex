@@ -16,18 +16,9 @@ ULTRACAM was designed to be used as a high speed photometric camera. Many of the
 
 For runs with high cadence and for runs with many objects, the volume of data stored in the JSON files is fairly large $\sim 300$ Mbyte. This taxes the memory management of the browser. With a standard desktop machine (8 Gbyte RAM, 1.6GHz Intel i5 with 6Mbyte cache) this is not a critical problem as all of the run pages load and function in Firefox and Chrome. Nevertheless, the lag times when loading the data and plotting the light-curves can be several tens of seconds and this makes the user interface sluggish. Javascript relies on internal garbage collection to handle most of its memory management and it is clear that, in these high load runs, memory leaks will eventually cause the browser to reach a memory maximum. Although it doesn't crash, the lag becomes longer than a minute and the page needs a reload. The obvious solution to this problem is the reduce the amount of data that is loaded in to the browser. This would require a change in the application architecture to balance the load between the client (browser) and the web server. This approach would increase the amount of code required on the server and is discussed in section \ref{sect:clientserver}.  
 
-ULTRACAM is used to observe transits of exoplanets with high precision photometry and timing. The exoplanet targets are relatively bright compared to most objects observed by ULTRACAM and, in order to avoid saturating the CCDs, the telescope is deliberately de-focussed in order to sread the light over many more pixels. The source extraction software, SExtractor) 
-  
-\section{Recommendations for ULTRACAM users}
+ULTRACAM is used to observe transits of exoplanets with high precision photometry and timing. The exoplanet targets are relatively bright compared to most objects observed by ULTRACAM and, in order to avoid saturating the CCDs, the telescope is deliberately de-focussed in order to spread the light over many more pixels and this results in star images that resemble discs, rather than a fairly tightly constrained Moffat profile. The source extraction software, SExtractor, is able to treat these extended images and measure the total flux, but this requires a change to the configuration parameters. This step is not automated by the pipeline at the moment, but this is planned for the next version. 
 
-Things to remember for ULTRACAM users. 
-\begin{itemize}
-	\item Accurate entry of the target info.
-	\item Don't rotate the camera unless you have to.
-	\item Large fields of view if you can. Don't worry about data size. 
-\end{itemize} 
-
-\section{Next steps}
+\section{Future improvements to the automated pipeline}
 \begin{itemize}
 	\item Photometric calibration using, say, Sloan fields, citing PTF pipeline as an example.
 	\item Server-side and client-side components for the browser interface to remedy memory problems.
@@ -37,4 +28,14 @@ Things to remember for ULTRACAM users.
 	\item Ability to combine 'consecutive' runs. 
 \end{itemize} 
  
+\section{Recommendations for ULTRACAM users}
+During the processing of the 10 year long ULTRACAM data archive, it has become clear that, by following a few simple guidelines, the observers can aid the automatic photometric reduction of the data. 
+
+\begin{itemize}
+	\item Accurate entry of the target info: Finding an accurate WCS solution for each of the fields is improved when we have a world coordinate for the target object. Since the camera does not automatically acquire pointing data from the telescope, this information is dependant on the observer entering this information into the observing log, either as explicit coordinates or by providing an accurate and recognised object identifier that can later be referenced. 
+	\item Flat-fields, biases and photometric standards: The automated pipeline is not able to calibrate the photometry using standard stars since, at the moment, there is no reliable way to determine which runs contain measurements of relevant photometric standards. This process is performed manually in the traditional version of the pipeline. This is also true for flat-fields and for bias frames. If a standard practice of entering certain metadata into the observing logs was adopted, then we might be able to automate the application of flat-fields, biases and photometric standards to the automated pipeline. 
+	\item Avoiding field rotation
+	\item Large fields of view if you can. Don't worry about data size. 
+\end{itemize} 
+
 
