@@ -77,28 +77,28 @@ The light-curves in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnse
 Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no aperture defined for that frame. This means that objects that fade or are generally quite faint, might 'disappear' on some frames and then 're-appear' on subsequent frames. The tracking algorithm allows a 're-appearing' object to be identified with an object that had previously disappeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in figures \ref{fig:nnserlightcurveautomated} and \ref{fig:nnserlightcurvetom} where the automated pipeline 'loses' the target object in the 'g' and 'u' bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the field and can therefore continue to measure flux in the aperture for the target even if the target is barely detectable above the sky background.
 
 \section{Colour-Colour plots}
-Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. For a few selected runs, where we have > 100 objects clearly identified for the run, we can produce non-calibrated colour-colour diagrams. In these automatically produced plots, there are some 'outliers' showing colours that are too extreme to be genuine astronomical bodies. These outliers are due to objects being mis-identified across the three colour channels as can happen in crowded fields. In other words, an object might have been identified as the 'same' object in the blue channel (due to its proximity on the image) but is actually only near neighbour to another object in the red and green channels. The pipeline has mistakenly placed all three measurements as belonging to the same object. 
+Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. For a few selected runs, where we have \textgreater 100 objects clearly identified for the run, we can produce non-calibrated colour-colour diagrams. In these automatically produced plots, there are some 'outliers' showing colours that are too extreme to be genuine astronomical bodies. These outliers are due to objects being mis-identified across the three colour channels as can happen in crowded fields. In other words, an object might have been identified as the 'same' object in the blue channel (due to its proximity on the image) but is actually only near neighbour to another object in the red and green channels. The pipeline has mistakenly placed all three measurements as belonging to the same object. 
 
 \begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-21-run010-2colour.eps}
 \caption{The colour-colour plot of run: \emph{2013-07-21/run010}. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978, which is slightly out of the galactic plane. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated with photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline. }
-\label{fig:differentialtrad}
+\label{fig:run010-2colour}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=120mm]{images/2013-07-21-run011-2colour.eps}
 \caption{The colour-colour plot of run: \emph{2013-07-21/run011}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated with photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline. }
-\label{fig:differentialtrad}
+\label{fig:run011-2colour}
 \end{figure}
 
 
 \begin{figure}
 \centering
-\includegraphics[width=120mm]{images//2011-04-22-run019-omegacen-2colour.eps}
-\caption{The colour-colour plot of run: \emph{2011-04-22/run019}. The field contains 1088 objects identified in edge of the globular cluster \emph{Omega Centaurus}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The extreme blue outliers are errors caused by the pipeline mis-identifying objects across the three channels.}
-\label{fig:differentialtrad}
+\includegraphics[width=120mm]{images//2011-04-22-run019-omegacen-colourmagnitude.eps}
+\caption{A colour-magnitude plot of run: \emph{2011-04-22/run019}. The field contains 1088 objects found in a field taken of the outer perimeter of the globular cluster \emph{Omega Centaurus}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline.}
+\label{fig:OmegaCen-colourmagnitude}
 \end{figure}
 
 It should be added that it is possible to produce calibrated colour-colour diagrams from the automated pipeline, if we manually perform the calibration and correct our figures. 
