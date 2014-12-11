@@ -75,9 +75,8 @@ ULTRACAM is an ultrafast, triple-beam, cascade dichroic CCD camera, and has help
 \centering
 \includegraphics[width=120mm]{images/ucamoptics.png}
 \caption{A ray-trace through the ULTRACAM optics, showing the major optical components: the collimator, dichroics, cameras, filters and detector windows. The diagram is to scale – the largest lens is in the collimator and has a diameter of 120 mm. The diagram is taken from \citet{dhillon07}.}
-\label{fig1}
+\label{fig:optics}
 \end{figure}
-
 
 The camera has three CCD detectors enabling it to capture data in three colour bands simultaneously. Two dichroic beamsplitters divide the light from the collimator into three beams, which shall hereafter be referred to as the `red', `green' and `blue' channels. The three CCD detectors are mounted at right angles to each other on the camera. Therefore, each detector is at the end of a slightly different optical path. The images produced on each of the three CCDs chips are therefore of the same field but with very slightly different orientations, distortions and offsets. Towards the edges of the chips, these differences can be on the order of 10 pixels from channel to channel. 
 
@@ -87,7 +86,7 @@ In general, the exposures are synchronised across all three detectors, meaning t
 \centering
 \includegraphics[width=90mm]{images/IMG_0121_scaled.JPG}
 \caption{The Ultracam being commissioned in May 2002.}
-\label{fig1}
+\label{fig:ultracam}
 \end{figure}
 
 \subsection{Filter sets}
@@ -190,34 +189,12 @@ A look at the distribution of run length shows a large bulk of the runs are shor
   \label{fig:histogram0-600}
 \end{figure}
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=120mm]{images/hist10-600_log.eps}
-  \caption{Distribution of run length after removing runs shorter than 10 minutes. Note that this is plotted on a logarithmic scale.}
-  \label{fig:histogram10-600}
-\end{figure}
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=120mm]{images/hist60-600_log.eps}
-  \caption{Distribution of run length after removing runs shorter than 60 minutes. Note that this is plotted on a logarithmic scale.}
-  \label{fig:histogram60-600}
-\end{figure}
-
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=120mm]{images/hist120-600_log.eps}
-  \caption{Distribution of run length after removing runs shorter than 120 minutes. Note that this is plotted on a logarithmic scale.}
-  \label{fig:histogram120-600}
-\end{figure}
-
 \subsection{Run cadences}
-As mentioned in the section describing the camera, ULTRACAM was specifically designed for high-speed photometry. Certain phenomena in astrophysics have observable variability in the optical region that is apparent over relatively short periods. Ultra-compact binaries, cataclysmic variables, neutron stars, etc all have optical variability that can be resolved at even sub-second intervals. ULTRACAM is mounted on some relatively large telescopes, with mirrors ranging from $4.2m - 8.2m$ in diameter. This means that it is able to perform high-speed photometry of relatively faint objects. 
+As mentioned in the section describing the camera, ULTRACAM was specifically designed for high-speed photometry. Certain phenomena in astrophysics have observable variability in the optical region that is apparent over relatively short periods. Ultra-compact binaries, cataclysmic variables, neutron stars, etc all have optical variability that can be resolved at even sub-second intervals. ULTRACAM is mounted on some relatively large telescopes, with mirrors ranging from 4.2m - 8.2m in diameter. This means that it is able to perform high-speed photometry of relatively faint objects. 
 
 Only certain objects require the highest cadences (\textless 1 second). These are X-ray binaries, polars, pulsars and flare stars. Many other science runs can use the camera with a \textgreater 1 second exposure time. Long runs for exoplanet transit observations often use longer exposures of 2-3 seconds. The longest exposure times are around 20-25 seconds. This is only required when the object being observed is extremely faint (\textgreater 19 magnitude).  
 
-\begin{figure}[!h]
+\begin{figure}
   \centering
   \includegraphics[width=120mm]{images/cadences_hist0-25.eps}
   \caption{Distribution of exposure times used in the \emph{science} runs.}

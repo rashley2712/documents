@@ -13,34 +13,89 @@ As discussed in the introduction, chapter \ref{chap:introduction}, we expect to 
 
 We have only inspected approximately 20\% of the reduced data but we have found a few dozen variable objects so far. Below we list a selection of these objects. 
 
+\begin{table}
+  \begin{tabular}{| l | l | l |}
+  \hline
+  Type& ID & Position, J(2000) \\
+  \hline
+    {W Uma} & 2005-05-10-run012-73 & 11:26:26.2, -68:40:50 \\
+    {W Uma} & 2013-07-21-run010-48 & 19:44:09.8, 40:16:34.4\\
+    {W Uma} & 2013-07-21-run010-163 & 19:44:10.3, 40:18:08.1\\
+    Eclipsing binary & 2013-07-21-run011-162 & 19:54:01.7, 40:37:34\\
+    $\delta$ Scuti & 2013-07-21-run010-23 & 19:44:19.6, 40:16:43.7\\
+  \hline
+    \parbox[c]{5cm}{Asteroid\\ } & \parbox[c]{5cm}{2011-08-26-run014-110\\ 1998 SU139\\ } & \parbox[c]{5cm}{20:51:12, -08:31:25\\ at MJD=55800.038}\\
+    \parbox[c]{5cm}{Asteroid\\ } & \parbox[c]{5cm}{2009-01-04-run024-61\\9108 Toruyusa (1997 AZ6)\\}& \parbox[c]{5cm}{08:04:52.3, +16:18:10.6\\at  MJD=54836.26642}\\
+
+  \hline
+  \end{tabular}
+  \caption{Table of a few of the interesting objects that have been revealed using the automated pipeline. This list contains just a few highlights of the dozen objects detected so far.}
+  \label{tab:newobjects}
+\end{table}
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{ccc}
+  
+  \parbox{4.5cm}{
+     \center
+     \includegraphics[width=40mm]{images/2005-05-10-run012-73.png} \\
+     2005-05-10-run012-73
+     }
+   &  
+   \parbox{4.5cm}{
+     \center
+      \includegraphics[width=40mm]{images/2013-07-21-run010-48.png} \\
+    2013-07-21-run010-48
+   }
+   &
+   \parbox{4.5cm}{
+     \center
+     \includegraphics[width=40mm]{images/2013-07-21-run010-163.png} \\
+     2013-07-21-run010-163
+   } 
+   \\
+   \parbox{4.5cm}{
+     \center
+     \includegraphics[width=40mm]{images/2013-07-21-run011-162.png} \\
+     2013-07-21-run011-162
+     }
+   &  
+   \parbox{4.5cm}{
+     \center
+     \includegraphics[width=40mm]{images/2013-07-21-run010-23.png} \\
+     2013-07-21-run010-23
+   }
+   &
+   \\
+  \end{tabular}
+  \caption{Finding charts for the objects listed in table \ref{tab:newobjects}, excluding the asteroids.}
+  \label{tab:findingcharts}
+\end{table}
+
 \newpage
-\subsection{Eclipsing binaries}
+
+\subsection{{W UMa}: 2005-05-10-run012-73}
 
   \begin{figure}
     \center
     \includegraphics[width=120mm]{images/2005-05-10-run012-lightcurve-bin16.eps} 
-    \label{fig:2005-05-10-run012}
     \caption{Sloan i and g light curves of object: 2005-05-10-run012-73. The data points are binned by a factor of 16. }
+    \label{fig:2005-05-10-run012}
   \end{figure}
   
   \begin{figure}
     \center
     \includegraphics[width=120mm]{images/2005-05-10-run012-colourcurve-bin16.eps} 
-    \label{fig:2005-05-10-run012-colour}
     \caption{The $(g - i)$ colour light-curve of object: 2005-05-10-run012-73. The data points are binned by a factor of 16. }
+    \label{fig:2005-05-10-run012-colour} 
   \end{figure}
   
 
-  \begin{tabular}{l l}
-  Classification & {W UMa} contact binary \\
-  Original target & GU Mus \\
-  ObjectID & 2005-05-10-run012-73 \\
-  RA, DEC & 11:26:26.2, -68:40:50 (J2000) \\
-  Run date & 2005-05-10 \\
-  Pixel position & (232, 65) \\
+  %Run date & 2005-05-10 \\
+  %Pixel position & (232, 65) \\
   %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2005-05-10/run012.html} \\
-   & \includegraphics[width=40mm]{images/2005-05-10-run012-73.png} \\
-  \end{tabular}
   
 The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands, \citep{tariq2010}. About 4 arc minutes to the west we have detected a suspected {W Uma} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 390$ minutes or 0.27 days. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. The object was too faint in the Sloan u band for us to produce any photometry. 
 
@@ -50,32 +105,28 @@ In figure \ref{fig:2005-05-10-run012-colour} we plot the $(g-r)$ colour of the o
 
 % This target has another day of observations. 2005-05-09. The data should be combined, ephemeris found and light curve phase folded. 
 
-\newpage
+\subsection{{W UMa}: 2013-07-21-run010-48}
 
 \begin{figure}
   \includegraphics[width=120mm]{images/2013-07-21-run010-48_lightcurve-bin4.eps} 
-  \label{fig:2013-07-21-run010-48}
   \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-48. The data points are binned by a factor of 4.}
+  \label{fig:2013-07-21-run010-48}
 \end{figure}
 
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-48_colourcurve-bin4.eps}
-  \label{fig:2013-07-21-run010-48-colour}
   \caption{Colour plots of $(u-g)$ and $(g-r)$ for object: 2013-07-21-run010-48. Data points are binned by a factor of 4.}
+  \label{fig:2013-07-21-run010-48-colour}
 \end{figure}
 
 
-  \begin{tabular}{l l}
-  Classification & {W UMa} contact binary \\
-  ObjectID & 2013-07-21-run010-48 \\
-  Original target & J19440167+4017435 or KOI-823 \\
-  RA, DEC & 19:44:09.8, 40:16:34.4 (J2000) \\
-  Run date & 2013-07-21 \\
-  Pixel position & (452, 332) \\
-  % URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
-       & \includegraphics[width=60mm]{images/2013-07-21-run010-48.png} \\
-  \end{tabular}
+%  Classification & {W UMa} contact binary \\
+%  ObjectID & 2013-07-21-run010-48 \\
+%   Original target & J19440167+4017435 or KOI-823 \\
+%   RA, DEC & 19:44:09.8, 40:16:34.4 (J2000) \\
+%   Run date & 2013-07-21 \\
+%   Pixel position & (452, 332) \\
  
 This variable was the first one picked up by the automated pipeline and revealed itself during the very early development of the software. It appears on a relatively crowded Kepler field which has at least 5 newly discovered variable objects. Although this field has been monitored by the Kepler satellite, a search through the Kepler online archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} has not resulted in any data for this object. Since the aim of the Kepler mission is to discover exoplanets via observation of transits on stars that are relatively constant, it usually discards stars that are clearly variable. 
 
@@ -84,140 +135,125 @@ We suggest that this object is another {W Uma} category variable with an approxi
 The colour plots for the object are shown in figure \ref{fig:2013-07-21-run010-48-colour}. As for the previous object, it seems that the $(g-i)$ colour peak coincides with the brightness maximum. However, it appears that the peak of the $(u-g)$ plot occurs significantly before the peak in brightness. \emph{Comment: Explanation for this?}
 
 
-\newpage
+\subsection{{W UMa}: 2013-07-21-run010-163}
 
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-163_lightcurve-bin8.eps}
-  \label{fig:2013-07-21-run010-163}
   \caption{Sloan i and g light curves of object: 2013-07-21-run010-163. Data points are binned by a factor of 8.}
+  \label{fig:2013-07-21-run010-163}
 \end{figure}
 
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-163_colourcurve-bin8.eps}
-  \label{fig:2013-07-21-run010-163}
   \caption{The $(g - i)$ colour light-curve of object: 2013-07-21-run010-163. Data points are binned by a factor of 8.}
+  \label{fig:2013-07-21-run010-163-colour}
 \end{figure}
 
 
-\begin{tabular}{l l}
-  Classification & {W UMa} contact binary \\
-  ObjectID & 2013-07-21-run010-163 \\
-  Original target & J19440167+4017435 or KOI-823 \\
-  RA, DEC & 19:44:10.3, 40:18:08.1 (J2000) \\
-  Run date & 2013-07-21 \\
-  Pixel position & (417, 650) \\
+%   Classification & {W UMa} contact binary \\
+%   ObjectID & 2013-07-21-run010-163 \\
+%   Original target & J19440167+4017435 or KOI-823 \\
+%   RA, DEC & 19:44:10.3, 40:18:08.1 (J2000) \\
+%   Run date & 2013-07-21 \\
+%   Pixel position & (417, 650) \\
   % URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
-       & \includegraphics[width=60mm]{images/2013-07-21-run010-163.png} \\
-  \end{tabular}
 
 This object is another suspected {W Uma} variable found on the same field as the previous object. The light-curve for this object includes one minimum and one maximum, although not a full orbit. From this light-curve we can estimate a period of about 460 minutes or 0.32 days.
 
 
-\newpage
+\subsection{Eclipsing binary: 2013-07-21-run011-162}
   
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run011-162_lightcurve-bin8.eps}
-  \label{fig:2013-07-21-run011-162}
   \caption{Sloan i, g and u light curves of object: 2013-07-21-run011-162. Data points are binned by a factor of 8.}
+  \label{fig:2013-07-21-run011-162}
 \end{figure}
 
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run011-162_colourcurve-bin8.eps}
-  \label{fig:2013-07-21-run011-162-colour}
   \caption{$(u - g)$ and $(g - i)$ plots for the object: 2013-07-21-run011-162. Data points are binned by a factor of 8.}
+  \label{fig:2013-07-21-run011-162-colour}
 \end{figure} 
 
 
-\begin{tabular}{l l}
-  Classification & Eclipsing binary \\
-  ObjectID & 2013-07-21-run011-162 \\
-  Original target & 2MASS J19540329+403822 or KOI-1546 \\
-  Pixel position & (726, 341) \\
-  RA, DEC & 19:54:01.7, 40:37:34 (J2000) \\
-  % URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run011.html} \\
-       & \includegraphics[width=60mm]{images/2013-07-21-run011-162.png} \\
-\end{tabular}
+%   Classification & Eclipsing binary \\
+%   ObjectID & 2013-07-21-run011-162 \\
+%   Original target & 2MASS J19540329+403822 or KOI-1546 \\
+%   Pixel position & (726, 341) \\
+%   RA, DEC & 19:54:01.7, 40:37:34 (J2000) \\
+%   URL: \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run011.html} \\
 
 The light curve of this object includes a primary eclipse. Since the eclipse profile has a 'flat-bottom' we can conclude that this eclipse is total (ie that the primary is completely obscured by the secondary during the eclipse. This also means that the primary has a smaller diameter than the secondary. The primary eclipse duration is 37 minutes. The depth of the eclipse is about 0.7 magnitudes which corresponds to a drop in flux of 50\%. 
 
-It is notable that the ingress and the egress demonstrates broad `wings' suggesting that the object being eclipsed (primary) is extended and the shape of the curve suggests tidal distortion of the secondary. The colour plots in figure \ref{fig:2013-07-21-run011-162-colour} show that the minimum temperature of the system coincides with the center of the eclipse. The colour plots do not show the clear flat-bottom that we see in the light-curves for $i$ and $g$. 
+It is notable that the ingress and the egress demonstrates broad `wings' suggesting that the object being eclipsed (primary) is extended and the shape of the curve suggests tidal distortion of the secondary. The colour plots in figure \ref{fig:2013-07-21-run011-162-colour} show that the minimum of the $(g-i)$ coincides with the center of the eclipse. The colour plots do not show the clear flat-bottom that we see in the light-curves for $i$ and $g$. 
 
 Although the object is in a Kepler field and is, in fact, close to KOI-1546, a search through the Kepler archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} reveals that it is not listed. 
 
-\newpage
 
 
-\subsection{Intrinsic variables}
+\subsection{$\delta$ Scuti: 2013-07-21-run010-23}
 
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-23_lightcurve-bin8.eps} \\
-  \label{fig:2013-07-21-run010-23}
   \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
+  \label{fig:2013-07-21-run010-23}
 \end{figure}
 
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-23_colourcurve-bin8.eps} \\
+  \caption{$(u - g)$ and $(g - i)$ plots for the object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
   \label{fig:2013-07-21-run010-23-colour}
-  \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
 \end{figure}
 
 
 
-\begin{tabular}{l l}
-  Classification & $\delta$ Scuti \\
-  ObjectID & 2013-07-21-run010-23 \\
-  Original target & J19440167+4017435 or KIC5115978 \\
-  Pixel position & (54, 362) \\
-  RA, DEC & 19:44:19.6, 40:16:43.7 (J2000) \\
-  % URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html} \\
-       & \includegraphics[width=60mm]{images/2013-07-21-run010-23.png} \\
-\end{tabular}
+%   Classification & $\delta$ Scuti \\
+%   ObjectID & 2013-07-21-run010-23 \\
+%   Original target & J19440167+4017435 or KIC5115978 \\
+%   Pixel position & (54, 362) \\
+%   RA, DEC & 19:44:19.6, 40:16:43.7 (J2000) \\
 
 This object was found on a run that included the exoplanet host, KIC5115978, which has at least one planet, \citep{KIC5115978}. The new variable is located about 6 arc minutes away from the target. A search of the Kepler data archive \footnote{\url{http://archive.stsci.edu/kepler/kepler_fov/search.php}} gives no results for this object. Unfortunately this object is not in the Kepler field of view, but lies in a position that does not fall on the Kepler CCD. We have no further photometry for this object. 
 
 There is evidence that the colour is varying in phase with magnitude, most noticeably in $(g - i)$, see figure \ref{fig:2013-07-21-run010-23-colour}. The light-curve is the shape we would expect, with a steeper slope during increasing flux than decreasing. The period is approximately 0.04 days, consistent with the expected range 0.03-0.3 days.
 
-
-\newpage
-\subsection{Near Earth objects}
+\subsection{Asteroid: 1998 SU139}
 
 \begin{figure}
   \center
-  \includegraphics[width=140mm]{images/2011-08-26-run014-110-lightcurve-bin4.png} 
-  \label{fig:2011-08-26-run014-110}
+  \includegraphics[width=140mm]{images/2011-08-26-run014-110-lightcurve-bin4.eps} 
   \caption{Sloan i, g light curves of asteroid: 2011-08-26-run014-110. Data points are binned by a factor of 4.}
+  \label{fig:2011-08-26-run014-110}
 \end{figure}
 
 
 \begin{figure}
   \center
   \includegraphics[width=90mm]{images/2011-08-26-run014-110-pgram-bin4.eps} 
-  \label{fig:2013-07-21-run010-23}
-  \caption{Periodogram of both the i and g light curves for the object: 2011-08-26-run014-110. The peaks occur at $g_{peak} = 0.0100 \ \mbox{minutes}^{-1}$ and  $r_{peak} = 0.0108\ \mbox{minutes}^{-1}$ }
+  \caption{Periodogram of both the i and g light curves for the object: 2011-08-26-run014-110. The peaks occur at $g_{peak} = 0.0107 \ \mbox{minutes}^{-1}$ and  $r_{peak} = 0.0114\ \mbox{minutes}^{-1}$ }
+  \label{fig:asteroidpgram}
 \end{figure}
 
-
-\begin{tabular}{l l}
-  Classification & Asteroid: 1998 SU139 \\
-  ObjectID & 2011-08-26-run014-110 \\
-  Original target & LY Aqr \\
-  Pixel position & start: (217, 9), end: (505, 54) \\
-  Distance travelled & 291 pixels or 87" \\
-  Field scale & 0.30"/pixel for the WHT\\
-  Duration of run & 12355s (3.43 hours) \\
-  Tangential angular velocity & 0.424"/minute or 25.4"/hour\\ 
-  RA, DEC & MJD=55800.038, 20:51:12, -08:31:25 (J2000) \\
+  
+%   Classification & Asteroid: 1998 SU139 \\
+%   ObjectID & 2011-08-26-run014-110 \\
+%   Original target & LY Aqr \\
+%   Pixel position & start: (217, 9), end: (505, 54) \\
+%   Distance travelled & 291 pixels or 87" \\
+%   Field scale & 0.30"/pixel for the WHT\\
+%   Duration of run & 12355s (3.43 hours) \\
+%   Tangential angular velocity & 0.424"/minute or 25.4"/hour\\ 
+%   RA, DEC & MJD=55800.038, 20:51:12, -08:31:25 (J2000) \\
   %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2011-08-26/run014.html} \\
-\end{tabular}
 
 
-The light curve of this object displays a clear sinusoid which must be caused by variations in reflected sunlight that is modulated as the object rotates. A periodogram of these data peaks at a frequency of $0.0108 minutes^{-1}$ (a spin period of $1.54$ hours) for the 'i' filter and $0.0100 minutes^{-1}$ (a spin period of $1.66$ hours) for the 'g' filter. This assumes that one period in the light curve is equal to exactly one rotation of the asteroid. This might not be true if the asteroid has several light and dark patches on its surface. 
+The light curve of this object displays a clear sinusoid which must be caused by variations in reflected sunlight that is modulated as the object rotates. A periodogram of these data peaks at a frequency of 0.0114 minutes\textsuperscript{-1} (a spin period of $1.46$ hours) for the 'i' filter and 0.0107 minutes\textsuperscript{-1} (a spin period of $1.56$ hours) for the 'g' filter. This assumes that one period in the light curve is equal to exactly one rotation of the asteroid. This might not be true if the asteroid has several light and dark patches on its surface. 
 
 Rotation of asteroids is driven by a process known as the YORP effect, \citep{yorpeffect}. 
 
@@ -228,8 +264,8 @@ There is a clear relationship between the size of the asteroid and the minimum s
   \begin{figure}
     \center
     \includegraphics[width=90mm]{images/jacobson-asteroid-rotation-dot.png} 
-    \label{fig:2005-05-10-run012}
     \caption{The spin period distribution as a function of radius for near-Earth (NEA), Mars crossing (MCA) and Main Belt (MBA) asteroids as reported in the Asteroid Lightcurve Database (\cite{2009Icar..202..134W}). The dashed lines indicate the critical surface disruption period $P_d \sim 2.33$ hours for radii $R > 250$ metres. Taken from \cite{Jacobson2014}. The red square on the plot shows the position of our object as estimated in this text.}
+    \label{fig:spinrotationcutoff}
   \end{figure}
   
 
@@ -243,21 +279,19 @@ We have taken $H = 15.2$ from the JPL Small-Body Database \footnote{http://ssd.j
 
 If our period is correct, this could mean that we have discovered a new member of this rare, fast rotator class of asteroid. 
 
-\newpage
-
-\begin{tabular}{l l}
-  Classification & Asteroid: 9108 Toruyusa (1997 AZ6) [offset of 7 arc minutes from the computed ephemeris]\\
-  ObjectID & 2009-01-04-run024-61 \\
-  Original target & SDSS J0804+1616 \\
-  Pixel position & start: (137, 422), end: (226, 447) \\
-  Distance travelled & 92 pixels or 27.6" \\
-  Field scale & 0.30"/pixel for the WHT \\
-  Duration of run & 3221s (53.7 minutes) \\
-  Tangential angular velocity & 0.514"/minute or 31"/hour\\ 
-  RA, DEC & MJD=54836.26642, 08:04:52.3 +16:18:10.6 (J2000) \\
+\subsection{Asteroid: 910 Toruyusa}
+  
+This asteroid was discovered moving through the field of an ULTRACAM run from 
+% Classification & Asteroid: 9108 Toruyusa (1997 AZ6) [offset of 7 arc minutes from the computed ephemeris]\\
+%   ObjectID & 2009-01-04-run024-61 \\
+%   Original target & SDSS J0804+1616 \\
+%   Pixel position & start: (137, 422), end: (226, 447) \\
+% %   Distance travelled & 92 pixels or 27.6" \\
+%   Field scale & 0.30"/pixel for the WHT \\
+%   Duration of run & 3221s (53.7 minutes) \\
+%   Tangential angular velocity & 0.514"/minute or 31"/hour\\ 
+%   RA, DEC & MJD=54836.26642, 08:04:52.3 +16:18:10.6 (J2000) \\
   %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2009-01-04/run024.html} \\
-       & \includegraphics[width=60mm]{images/2009-01-04-run024-61.png} \\
-  \end{tabular}
 
   Using the NEOChecker \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} tool, the object detected in this run appears to be a well known asteroid, 9108 Toruyusa. The light curve, which lasts approximately 1 hour shows no significant variation and it has not been possible to determine a spin period for this asteroid.  
 
