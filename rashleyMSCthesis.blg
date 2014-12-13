@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: rashleyMSCthesis.aux
+The style file: plainnat.bst
+Database file #1: rashley.bib
+You've used 34 entries,
+            2773 wiz_defined-function locations,
+            826 strings with 13638 characters,
+and the built_in function-call counts, 22480 in all, are:
+= -- 1775
+> -- 2136
+< -- 23
++ -- 716
+- -- 682
+* -- 2114
+:= -- 3670
+add.period$ -- 119
+call.type$ -- 34
+change.case$ -- 325
+chr.to.int$ -- 34
+cite$ -- 68
+duplicate$ -- 737
+empty$ -- 1288
+format.name$ -- 730
+if$ -- 4526
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 34
+newline$ -- 193
+num.names$ -- 142
+pop$ -- 625
+preamble$ -- 1
+purify$ -- 293
+quote$ -- 0
+skip$ -- 676
+stack$ -- 0
+substring$ -- 468
+swap$ -- 90
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 364
+warning$ -- 0
+while$ -- 132
+width$ -- 0
+write$ -- 476

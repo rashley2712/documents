@@ -14,22 +14,22 @@ As discussed in the introduction, chapter \ref{chap:introduction}, we expect to 
 We have only inspected approximately 20\% of the reduced data but we have found a few dozen variable objects so far. Below we list a selection of these objects. 
 
 \begin{table}
-  \begin{tabular}{| l | l | l |}
+  \caption{Table of a few of the interesting objects that have been revealed using the automated pipeline. This list contains just a few highlights of the dozen objects detected so far.}
+  \begin{tabularx}{15.4cm}{ l  l  l }
   \hline
   Type& ID & Position, J(2000) \\
   \hline
-    {W Uma} & 2005-05-10-run012-73 & 11:26:26.2, -68:40:50 \\
-    {W Uma} & 2013-07-21-run010-48 & 19:44:09.8, 40:16:34.4\\
-    {W Uma} & 2013-07-21-run010-163 & 19:44:10.3, 40:18:08.1\\
-    Eclipsing binary & 2013-07-21-run011-162 & 19:54:01.7, 40:37:34\\
-    $\delta$ Scuti & 2013-07-21-run010-23 & 19:44:19.6, 40:16:43.7\\
+    {W UMa} & 2005-05-10-run012-73 & 11:26:26.2 $-68$:40:50 \\
+    {W UMa} & 2013-07-21-run010-48 & 19:44:09.3 $+40$:16:34.0\\
+    {W UMa} & 2013-07-21-run010-163 & 19:44:10.1 $+40$:18:09.1\\
+    Eclipsing binary & 2013-07-21-run011-162 & 19:54:01.7 $+40$:37:34\\
+    $\delta$ Scuti & 2013-07-21-run010-23 & 19:44:19.7 $+40$:16:45.3\\
   \hline
-    \parbox[c]{5cm}{Asteroid\\ } & \parbox[c]{5cm}{2011-08-26-run014-110\\ 1998 SU139\\ } & \parbox[c]{5cm}{20:51:12, -08:31:25\\ at MJD=55800.038}\\
-    \parbox[c]{5cm}{Asteroid\\ } & \parbox[c]{5cm}{2009-01-04-run024-61\\9108 Toruyusa (1997 AZ6)\\}& \parbox[c]{5cm}{08:04:52.3, +16:18:10.6\\at  MJD=54836.26642}\\
+    \parbox[c]{5cm}{Asteroid\\1998 SU139\\ } & \parbox[c]{5cm}{2011-08-26-run014-110\\  } & \parbox[c]{5cm}{20:51:12.0 $-08$:31:25\\ at MJD=55800.038}\\
+    \parbox[c]{5cm}{Asteroid\\9108 Toruyusa (1997 AZ6) } & \parbox[c]{5cm}{2009-01-04-run024-61\\}& \parbox[c]{5cm}{08:04:52.3 $+16$:18:10.6\\at  MJD=54836.26642}\\
 
   \hline
-  \end{tabular}
-  \caption{Table of a few of the interesting objects that have been revealed using the automated pipeline. This list contains just a few highlights of the dozen objects detected so far.}
+  \end{tabularx}
   \label{tab:newobjects}
 \end{table}
 
@@ -40,37 +40,38 @@ We have only inspected approximately 20\% of the reduced data but we have found 
   
   \parbox{4.5cm}{
      \center
-     \includegraphics[width=40mm]{images/2005-05-10-run012-73.png} \\
+     \includegraphics[width=45mm]{images/2005-05-10-run012-73.png} \\
      2005-05-10-run012-73
      }
    &  
    \parbox{4.5cm}{
      \center
-      \includegraphics[width=40mm]{images/2013-07-21-run010-48.png} \\
+      \includegraphics[width=45mm]{images/2013-07-21-run010-48.png} \\
     2013-07-21-run010-48
    }
    &
    \parbox{4.5cm}{
      \center
-     \includegraphics[width=40mm]{images/2013-07-21-run010-163.png} \\
+     \includegraphics[width=45mm]{images/2013-07-21-run010-163.png} \\
      2013-07-21-run010-163
    } 
    \\
    \parbox{4.5cm}{
      \center
-     \includegraphics[width=40mm]{images/2013-07-21-run011-162.png} \\
+     \includegraphics[width=45mm]{images/2013-07-21-run011-162.png} \\
      2013-07-21-run011-162
      }
    &  
    \parbox{4.5cm}{
      \center
-     \includegraphics[width=40mm]{images/2013-07-21-run010-23.png} \\
+     \includegraphics[width=45mm]{images/2013-07-21-run010-23.png} \\
      2013-07-21-run010-23
    }
    &
+
    \\
   \end{tabular}
-  \caption{Finding charts for the objects listed in table \ref{tab:newobjects}, excluding the asteroids.}
+  \caption{Finding charts for the objects listed in table \ref{tab:newobjects}, excluding the asteroids. These charts are taken from the Web interface of the processed ULTRACAM archive and are to be used to help identify the target when reviewing the data in the web browser.}
   \label{tab:findingcharts}
 \end{table}
 
@@ -97,7 +98,7 @@ We have only inspected approximately 20\% of the reduced data but we have found 
   %Pixel position & (232, 65) \\
   %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2005-05-10/run012.html} \\
   
-The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands, \citep{tariq2010}. About 4 arc minutes to the west we have detected a suspected {W Uma} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 390$ minutes or 0.27 days. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. The object was too faint in the Sloan u band for us to produce any photometry. 
+The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands, \citep{tariq2010}. About 4 arc minutes to the west we have detected a suspected {W UMa} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 390$ minutes or 0.27 days. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. The object was too faint in the Sloan u band for us to produce any photometry. 
 
 The cause of the O'Connell effect is something that is still under some debate. Differences in the depth of the minima of the light-curves is something that is expected and is caused by the different sizes and temperatures of each component in the system. Differences in the height of the maxima though is less obvious. Based on a geometric model of the eclipse though, we would expect the maxima to be of equal brightness. When the light-curve is at a maximum we are seeing the system side-on with the maximum area ellipsoidal faces presented to the observer. Current explanations for the O'Connell effect consist of star-spots that are locked in rotational synchronisation with the orbit and are presented preferentially on one side of the system; gas streams that create a hot-spot on or near one of the stars; and circumstellar material that is kinetically heated and gathered preferentially on the leading edge of the orbiting bodies, \citep{oconnelleffect}.  
 
@@ -130,7 +131,7 @@ In figure \ref{fig:2005-05-10-run012-colour} we plot the $(g-r)$ colour of the o
  
 This variable was the first one picked up by the automated pipeline and revealed itself during the very early development of the software. It appears on a relatively crowded Kepler field which has at least 5 newly discovered variable objects. Although this field has been monitored by the Kepler satellite, a search through the Kepler online archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} has not resulted in any data for this object. Since the aim of the Kepler mission is to discover exoplanets via observation of transits on stars that are relatively constant, it usually discards stars that are clearly variable. 
 
-We suggest that this object is another {W Uma} category variable with an approximate period 400 minutes or 0.27 days. Unfortunately we do not have complete period coverage of the object's orbit and therefore this period is a very rough estimate. The target, KOI-823, has been observed with ULTRACAM on another occasion, 2013-07-28, but the field was set up differently (more to the west) and this object was not included. 
+We suggest that this object is another {W UMa} category variable with an approximate period 400 minutes or 0.27 days. Unfortunately we do not have complete period coverage of the object's orbit and therefore this period is a very rough estimate. The target, KOI-823, has been observed with ULTRACAM on another occasion, 2013-07-28, but the field was set up differently (more to the west) and this object was not included. 
 
 The colour plots for the object are shown in figure \ref{fig:2013-07-21-run010-48-colour}. As for the previous object, it seems that the $(g-i)$ colour peak coincides with the brightness maximum. However, it appears that the peak of the $(u-g)$ plot occurs significantly before the peak in brightness. \emph{Comment: Explanation for this?}
 

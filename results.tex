@@ -1,5 +1,5 @@
 \section{Introduction}
-Once the first version of the automated pipeline was built, we started using it to reduce the ULTRACAM archive. We evaluated some key aspects of the automated pipeline. Whether the photometry it produces is of sufficient quality to allow researchers to view light-curves that clearly demonstrate the astronomical events occuring in the data. We also wanted to see whether the ease of access to the data allowed us to discover new variable objects. Finally, we tried to use the pipeline to process the entire ULTRACAM archive to test if it was robust enough to reduce the data despite the diversity of the inputs. 
+Once the first version of the automated pipeline was built, we started using it to reduce the ULTRACAM archive. We evaluated some key aspects of the automated pipeline. The first aspect to investigate was whether the photometry the pipeline produces is of sufficient quality to allow researchers to view light-curves that clearly demonstrate the astronomical events occuring in the data. We looked at some well known objects and compared the photometry produced by the traditional pipeline with this new automated pipeline. We also wanted to evaluate the usability of the web interface as a method of discovering new variable objects. We visually inspected to output of the automated pipeline looking for variability in the light-curves. We also expected to be able to easily identify the  intended target of the each run even if the field contained many more objects since it should give itself away by its variability. Finally, we attempted to use the pipeline to process the entire ULTRACAM archive to verify if it was robust enough to reduce the full set of the ULTRACAM data despite the diversity of the input. 
 
 \section{Quality of the photometry}
 The main purpose of this MSc project was to establish a process for automatically reducing the light-curves for all objects in the data archive rather than trying to produce accurate and well-calibrated measurements. The diverse nature of the dataset means that it is not trivial to write an automated algorithm that can perform fully calibrated measurements. The automated pipeline lacks the ability to correctly identify the appropriate bias readings, flat-fields and standard stars that should be used for photometric calibration. Therefore, this step is skipped altogether. The magnitudes and flux counts produced by the automated pipeline are not calibrated and will differ from their true values by a certain offset. 
@@ -75,41 +75,84 @@ Since the automated pipeline relies on the third party software, SExtractor, to 
 
 As an alternative to comparing the light-curves side-by-side we can check the systematic differences between the pipelines by comparing their measured flux values as a ratio of each other. We used both pipelines to produce light-curves for the comparison star labeled `0' in figure \ref{fig:nnserfield}. Rather than plotting each light curve separately, we have plotted the counts measured by the automated pipeline divided by the counts measured by the traditional pipeline. This is shown in figure \ref{fig:comparephotometry}. The statistics of this data set is shown in table \ref{tab:differential}. The traditional pipeline gives a slightly higher reading for the overall flux than the new automated pipeline, resulting in a mean that is less than unity. The likely cause of this is the different size of aperture used by each pipeline. This will be investigated as the pipeline is enhanced to give calibrated photometry in future versions. 
 
+As a deeper inspection of the systematics between the two pipelines we plotted relative flux counts measured in each pipeline as a ratio of each other. Firstly we computed the relative flux of object `2' to object '0' in the automated pipeline, $F_{auto}$. Then we computed the same ratio for the same two objects in the traditional pipeline, $F_{trad}$. These two sets of values were combined to produce the plot in figure \ref{fig:ratio-of-ratios} by dividing these two ratios, $\frac{F_{auto}}{F_{trad}}$. The amplitude of the scatter in these plots is on the order of 1\% in the blue channel and 0.1\% for the red and green channels. 
+
 \begin{figure}
 \centering
 \includegraphics[width=140mm]{images/compare_photometry.eps}
-\caption{A comparison of the flux measurements for a single object (object `0' in figure \ref{fig:nnserfield}). The plot is produced by dividing the flux counts as measured by the \emph{automated} pipeline by the flux counts as measured by the \emph{traditional} pipeline.}
+\caption{Object 0: A comparison of the flux measurements for a single object labeled `0' in figure \ref{fig:nnserfield}. The plot is produced by dividing the flux counts as measured by the \emph{automated} pipeline by the flux counts as measured by the \emph{traditional} pipeline.}
 \label{fig:comparephotometry}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=140mm]{images/compare_photometry_2.eps}
+\caption{Object 2: A comparison of the flux measurements for a single object, labeled `2' in figure \ref{fig:nnserfield}. The plot is produced by dividing the flux counts as measured by the \emph{automated} pipeline by the flux counts as measured by the \emph{traditional} pipeline. Comparing this plot to the similar plot for object `0' in figure \ref{fig:comparephotometry} show very similar systematics.}
+\label{fig:comparephotometry2}
 \end{figure}
 
 \begin{table}
   \centering
-  \begin{tabular}{|l|r|r|}
+  \caption{Table showing the statistics of the relative photometry produced by dividing the flux counts from the automated pipeline by the flux counts from the traditional pipeline for objects `0'  and `2' in figure \ref{fig:nnserfield}.}
+  \begin{tabular}{l r r }
     \hline
-    Filter & Relative flux  \\
-           &  $mean[std. dev]$ \\
+    Filter & Relative flux  for object `0' & Relative flux  for object `2'\\
+           &  $mean[std. dev]$ &  $mean[std. dev]$\\
     \hline
-    'i'    & 0.991[0.003] \\
-    'g'    & 0.994[0.003] \\
-    'u'    & 0.988[0.007] \\
+    `i'    & 0.991[0.003]  & 0.988[0.002] \\
+    `g'    & 0.994[0.003] & 0.995[0.003]\\
+    `u'    & 0.988[0.007] & 0.987[0.005]\\
     \hline
    \end{tabular}
-  \caption{Table showing the statistics of the relative photometry produced by dividing the flux counts from the automated pipeline by the flux counts from the traditional pipeline for object `0' in figure \ref{fig:nnserfield}.}
   \label{tab:differential}
   
 \end{table}
 
+\begin{figure}
+\centering
+\includegraphics[width=140mm]{images/ratio-of-ratios.eps}
+\caption{Traditional pipeline vs the automated pipeline: A comparison of the flux ratio $F$, defined as the flux ratio of the Counts for object `2' to object `0' for the automated pipeline vs the same set of values derived from the traditional pipeline. There appears to be a regular signal in the green channel at an amplitude of about 0.1\%. This is not seen in other similar plots generated for other runs.}
+\label{fig:ratio-of-ratios}
+\end{figure}
+
 
 \section{Object matching}
-As discussed in chapter \ref{chap:datareduction}, the automated pipeline can struggle to cross-identify the same object across the different channels, r, g, b. This is usually only a problem in crowded fields where the average pixel position of the object does not clearly distinguish it from nearby objects. In other words, an object might have been identified as the same object in the blue channel (due to its proximity on the image) but is actually a near neighbour to this object in the red and green channels, so the pipeline has mistakenly assigned all three measurements as belonging to the same object.
+As discussed in chapter \ref{chap:datareduction}, the automated pipeline can struggle to cross-identify the same object across the channels, r, g, b. This is usually only a problem in crowded fields where the average pixel position of the object does not clearly distinguish it from nearby objects. In other words, an object might have been identified as the same object in the blue channel (due to its proximity on the image) but is actually a near neighbour to this object in the red and green channels, so the pipeline has mistakenly assigned all three measurements as belonging to the same object.
 
-By plotting colour-colour and colour-magnitude diagrams for a few of the crowded fields in the ULTRACAM archive we can get an indication of the severity of this mis-matching problem. Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. We can also produce a colour-magnitude diagram if we have a field that contains objects that are all at the same distance from us. In these automatically produced plots, there are some 'outliers' showing colours that are too extreme to be genuine astronomical bodies. 
+By plotting colour-colour and colour-magnitude diagrams for a few of the crowded fields in the ULTRACAM archive we can get an indication of the severity of this mis-matching problem. Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible to create colour-colour diagrams provided that we are not concerned with the correct offsets for our $(u-g)$ and $(g-r)$ axes. We can also produce a colour-magnitude diagram if we have a field that contains objects that are all at the same distance from us. In these automatically produced plots, there are some outliers showing colours that are too extreme to be genuine astronomical bodies. 
+
+In figure \ref{fig:run010-2colour} we have plotted colour-colour diagram of \emph{run010} taken on \emph{2013-07-21}. In this diagram it is clear that there are some outliers. If we zoom in these (see figure \ref{fig:run010-2colour-zoom}) and show the labels the objects as they have been identified in the automated pipeline, we can go back to the web interface to check if the cross-identification has worked correctly. An outlier in figure \ref{fig:run010-2colour-zoom} is identified as object `465' in the run. Looking at figure \ref{fig:comparewebmismatch} we can see that the pipeline has incorrectly identified a neighbour of object in the blue channel as it was brighter in blue and relatively nearby. Figure \ref{fig:run010-2colour} uses a colour map to show the relative distances of the object from channel to channel. The relative distance has been calculated by taking the Pythagorean distance ($D$) of the object's seperation from the red to the green channel, ($D_{rg}$) and the object's separation from the red to the blue channel, ($D_{rb}$).  
+
+$D = \sqrt{ D_{rg}^2 + D_{rb}^2}$, where
+
+$D_{rg} = \sqrt{ (x_r - x_g)^2 + (y_r - y_g)^2} $ and
+
+$D_{rb} = \sqrt{ (x_r - x_b)^2 + (y_r - y_b)^2} $.
+
+It seems that this separation distance $D$ is not clear discriminator of whether an object is matched correctly. In crowded fields, confusion occurs when objects are close together. Setting the minimum matching distance threshold to a lower value does not significantly reduce the number of mismatches. In fact, the systematic differences between each of the channels, especially towards the edge of the image, are larger than the seperation of individual objects on each field. This can also be seen in figure \ref{fig:positiondriftlongrun}.  We conclude that in order to address this issue with the pipeline we need a more robust algorithm for clearly identifying each object's position in each of the channels (perhaps with an accurate WCS solution) and then performing the cross identification. 
 
 \begin{figure}
 \centering
-\includegraphics[width=120mm]{images/2013-07-21-run010-2colour.eps}
-\caption{The colour-colour plot of run: \emph{2013-07-21/run010}. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978, which is slightly out of the galactic plane. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated with photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline. }
+\includegraphics[width=140mm]{images/2013-07-21-run010-2colour.eps}
+\caption{The colour-colour plot of run: \emph{2013-07-21/run010}. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated with photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline. The colour map indicates how seperated the $(x, y)$ positions for the object are in each of the 3 channels.}
 \label{fig:run010-2colour}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=120mm]{images/colour-colour-zoom-with-labels.eps}
+\caption{A closer look at some of the outliers in figure \ref{fig:run010-2colour} showing the automated pipeline's identification label for each object. Going back to the web browser and inspecting them shows that both of the object's labeled `465' and `215' were mis-identified in the blue channel. }
+\label{fig:run010-2colour-zoom}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.30\linewidth]{images/mismatch-run010_r.png}
+  \includegraphics[width=.30\linewidth]{images/mismatch-run010_g.png}
+  \includegraphics[width=.30\linewidth]{images/mismatch-run010_b.png}
+  \caption{Checking the matching of the colour-colour outlier labeled `465' in figure \ref{fig:run010-2colour-zoom}. The object has been incorrectly identified with a neighbour that is brighter in the blue channel.}
+\label{fig:comparewebmismatch}
 \end{figure}
 
 \begin{figure}
@@ -119,17 +162,39 @@ By plotting colour-colour and colour-magnitude diagrams for a few of the crowded
 \label{fig:run011-2colour}
 \end{figure}
 
-
 \begin{figure}
 \centering
-\includegraphics[width=120mm]{images//2011-04-22-run019-omegacen-colourmagnitude.eps}
-\caption{A colour-magnitude plot of run: \emph{2011-04-22/run019}. The field contains 1088 objects found in a field taken of the outer perimeter of the globular cluster \emph{Omega Centaurus}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The outliers with extreme red and blue colours are due to mistaken classification by the automated pipeline.}
+\includegraphics[width=120mm]{images/2011-04-22-run019-omegacen-colourmagnitude.eps}
+\caption{A colour-magnitude plot of run: \emph{2011-04-22/run019}. The plot includes 790 objects found in a field taken of the outer perimeter of the globular cluster \emph{Omega Centaurus}. The offsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. We have magnitude limited our sample to the 790 brightest objects in the Sloan 'r' filter.}
 \label{fig:OmegaCen-colourmagnitude}
 \end{figure}
 
-\section{Processing the entire ULTRACAM archive}
-In order to make the processing of the ULTRACAM archive as free from manual intervention as possible, a few additional scripts were written to coordinate the steps of the pipeline as described in the previous two chapters. These wrapper scripts were designed to trigger the pipeline for a full day's worth of data with a single command. The University of Warwick has a high performance computing facility called `Cluster of Workstations' (CoWS) that uses idle computing time on all of the desktop machines in the department. A script was written that sends the automated pipeline processing jobs to this shared facility. Using this approach, it was possible to process nearly all of the ULTRACAM archive in about 2 weeks. At present \emph{347} nights, out of a total of \emph{406}, have been processed and are available for viewing on a web server hosted at the University of Warwick. 
+\section{Finding variable objects}
+In this section we present two examples of how the web interface makes browsing of the ULTRACAM archive accessible and fast and allows us to discover new variable objects. The first example is the serendipitous discovery of {GU Mus}, the X-ray transient object that was observed in quiescence in May 2005 at the VLT. We originally suspected that it was a cataclysmic variable. {GU Mus} was at magnitude of 20.65 in Sloan g at the time, \citep{tariq2010}, and was considered to be rather faint for a typical ULTRACAM target. Since the ULTRACAM data does not include the pixel position of the target object in the field, it was not obvious to which one out of the 205 objects identified by the pipeline was {GU Mus}. The normal method for finding the target object is to revert to finding charts and existing catalogs. Figure \ref{fig:gumus-discovery} contains image captures from the web browser interface showing how the light curves and the field are represented to the user. By pressing the `left' and `right' arrow keys, the user can scroll through all of the light curves like pages in a book. For this run, there were 205 individual light-curves available for browsing. By quickly flipping through the light curves the user can spot any obvious variability. Most objects show light-curves similar to the upper one shown in figure \ref{fig:gumus-discovery} with no obvious variability above the noise. The object with the identification number `58' however, was showing clear evidence of flickering. We assumed that we had discovered a new CV. Since {GU Mus} is a faint object, it took us a day to find an accurate finding chart. When we did so, we realised that our `new' variable was actually {GU Mus} itself. Although our initial excitement was dampened, this incident was seen as good evidence that the automated pipeline and the browser interface is capable of surfacing faint variable objects. As a bonus, the object just a few arc minutes to the right turned out to be variable too. It is a {W UMa} variable and is discussed in chapter \ref{chap:highlights}.
 
-The runs that have not been processed are a few very high cadence runs with exposure times of less than 0.1 seconds and numbers of frames exceeding 50,000. The automated pipeline can take more than 8 hours of processing time for these runs. Using the Cluster of Workstations is possible to continue to process these runs. However, it was felt that a different  and more optimised version of the pipeline should be built to treat these runs differently, rather than using brute-force to process them. These runs usually have very few objects in the fields, typically only the target object and the comparison and this situation is handled very well by the traditional pipeline. The processing of high cadence runs with very few objects was not a goal for this project. 
+\begin{figure}
+\centering
+\includegraphics[width=150mm]{images/gumus-comparison-lc.png}
+\includegraphics[width=150mm]{images/gumus-discovery-lc.png}
+\caption{Flickering: A screen-capture from the web browser interface showing how variable objects reveal themselves when scrolling through the light-curves. The upper plot shows a non-variable object. The lower plot shows an object that is exhibiting flickering.  The currently selected object is indicated by the diamond and the comparison object is indicated by the square. The y-axis of the light-curve is the relative flux of the selected object to the comparison object normalised to include the full range of variability within the same set of axes. The scaling of the y-axis was chosen to accentuate any variability in the light-curve and make it clearly visible in all three colours.}
+\label{fig:gumus-discovery}
+\end{figure}
+
+The second example from the browser interface is the detection of an exoplanet transit through inspection of the light-curves produced by the automated pipeline. The run was taken at the WHT in July as a follow up of the KOI-823, or KIC 5115978. This object is known to have at least one exoplanet, \citep{KIC5115978}. Although the transit does not have a large amplitude (approximately 1\% in relative flux), it is still clearly visible when browsing through the light-curves in the browser interface. 
+
+\begin{figure}
+\centering
+\includegraphics[width=150mm]{images/koi823-r-lc.png}
+\includegraphics[width=150mm]{images/koi823-g-lc.png}
+\caption{Exoplanet transit: A screen-capture from the web browser interface showing an exoplanet transit for KIC 5115978 in the Sloan i and g bands. The target object is indicated by the diamond and the comparison object is indicated by the square. The y-axis of the light-curve is the relative flux of the selected object to the comparison object.}
+\label{fig:gumus-discovery}
+\end{figure}
+
+
+\section{Reducing the entire ULTRACAM archive}
+In order to make the processing of the ULTRACAM archive as free from manual intervention as possible, a few additional scripts were written to coordinate the steps of the pipeline as described in the previous two chapters. These wrapper scripts were designed to trigger the pipeline for a full day's worth of data with a single command. The University of Warwick has a high performance computing facility called `Cluster of Workstations' (CoWS) that uses idle computing time on all of the desktop machines in the department. A script was written that sends the automated pipeline processing jobs to this shared facility. Using this approach, it was possible to process nearly all of the ULTRACAM archive in about 2 weeks. At present, \emph{347} nights, out of a total of \emph{406}, have been processed and are available for viewing on a web server hosted at the University of Warwick. 
+
+The runs that have not been processed are a few very high cadence runs with exposure times of less than 0.1 seconds and numbers of frames exceeding 50,000. The automated pipeline can take more than 8 hours of processing time for these runs. The Cluster of Workstations has sufficient computing power to complete the processing of these runs. However, it was felt that a different  and more optimised version of the pipeline should be built that will treat these runs differently. These runs usually have very few objects in the fields, typically only the target object and the comparison and this situation is handled very well by the traditional pipeline. The processing of high cadence runs with very few objects was not a goal for this project. 
 
 Of these 347 nights, approximately 20\% of the science runs have been investigated for objects with variability. The method of investigation is to perform by a visual check of the light-curve. The web interface is designed such that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve in turn by pressing the 'right' and 'left'  arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual, appendix ~\ref{chap:usermanual}. 
+

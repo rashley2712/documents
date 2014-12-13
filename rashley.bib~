@@ -1,0 +1,532 @@
+%   ****************************************
+%   * File: SAMPLE.BIB                     *
+%   ****************************************
+%   * An invented bib file                 *
+%   * For the sample texts                 *
+%   * The order is unimportant and there   *
+%   * may be more entries than references  *
+%   * in the text                          *
+%   ****************************************
+% 
+
+@ARTICLE{dhillon07,
+   author = {{Dhillon}, V.~S. and {Marsh}, T.~R. and {Stevenson}, M.~J. and 
+	{Atkinson}, D.~C. and {Kerry}, P. and {Peacocke}, P.~T. and 
+	{Vick}, A.~J.~A. and {Beard}, S.~M. and {Ives}, D.~J. and {Lunney}, D.~W. and 
+	{McLay}, S.~A. and {Tierney}, C.~J. and {Kelly}, J. and {Littlefair}, S.~P. and 
+	{Nicholson}, R. and {Pashley}, R. and {Harlaftis}, E.~T. and 
+	{O'Brien}, K.},
+    title = "{ULTRACAM: an ultrafast, triple-beam CCD camera for high-speed astrophysics}",
+  journal = {Monthly Notices of the Royal Astronomical Society},
+archivePrefix = "arXiv",
+   eprint = {0704.2557},
+ keywords = {instrumentation: detectors, instrumentation: photometers, techniques: photometric},
+     year = 2007,
+    month = jul,
+   volume = 378,
+    pages = {825-840},
+      doi = {10.1111/j.1365-2966.2007.11881.x},
+   adsurl = {http://adsabs.harvard.edu/abs/2007MNRAS.378..825D},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{PollaccoSuperWASP,
+   author = {{Pollacco}, D.~L. and {Skillen}, I. and {Collier Cameron}, A. and 
+	{Christian}, D.~J. and {Hellier}, C. and {Irwin}, J. and {Lister}, T.~A. and 
+	{Street}, R.~A. and {West}, R.~G. and {Anderson}, D.~R. and 
+	{Clarkson}, W.~I. and {Deeg}, H. and {Enoch}, B. and {Evans}, A. and 
+	{Fitzsimmons}, A. and {Haswell}, C.~A. and {Hodgkin}, S. and 
+	{Horne}, K. and {Kane}, S.~R. and {Keenan}, F.~P. and {Maxted}, P.~F.~L. and 
+	{Norton}, A.~J. and {Osborne}, J. and {Parley}, N.~R. and {Ryans}, R.~S.~I. and 
+	{Smalley}, B. and {Wheatley}, P.~J. and {Wilson}, D.~M.},
+    title = "{The WASP Project and the SuperWASP Cameras}",
+  journal = {\pasp},
+   eprint = {astro-ph/0608454},
+ keywords = {Instrumentation: Photometers, Stars: Planetary Systems, Techniques: Photometric},
+     year = 2006,
+    month = oct,
+   volume = 118,
+    pages = {1407-1418},
+      doi = {10.1086/508556},
+   adsurl = {http://adsabs.harvard.edu/abs/2006PASP..118.1407P},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@ARTICLE{wingetreview,
+author = {Winget, D.E. and Kepler, S.O.},
+title = {Pulsating White Dwarf Stars and Precision Asteroseismology},
+journal = {Annual Review of Astronomy and Astrophysics},
+volume = {46},
+number = {1},
+pages = {157-199},
+year = {2008},
+doi = {10.1146/annurev.astro.46.060407.145250}
+}
+
+
+
+@ARTICLE{Moffat69,
+   author = {{Moffat}, A.~F.~J.},
+    title = "{A Theoretical Investigation of Focal Stellar Images in the Photographic Emulsion and Application to Photographic Photometry}",
+  journal = {\aap},
+     year = 1969,
+    month = dec,
+   volume = 3,
+    pages = {455},
+   adsurl = {http://adsabs.harvard.edu/abs/1969A%26A.....3..455M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{oconnelleffect,
+   author = {{Wilsey}, N.~J. and {Beaky}, M.~M.},
+    title = "{Revisiting the O'Connell Effect in Eclipsing Binary Systems}",
+  journal = {Society for Astronomical Sciences Annual Symposium},
+     year = 2009,
+    month = may,
+   volume = 28,
+    pages = {107},
+   adsurl = {http://adsabs.harvard.edu/abs/2009SASS...28..107W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{tariq2010,
+   author = {{Shahbaz}, T. and {Dhillon}, V.~S. and {Marsh}, T.~R. and {Casares}, J. and 
+	{Zurita}, C. and {Charles}, P.~A.},
+    title = "{Observations of the quiescent X-ray transients GRS 1124-684 (=GUMus) and Cen X-4 (=V822Cen) taken with ULTRACAM on the VLT}",
+  journal = {Monthly Notices of the Royal Astronomical Society},
+archivePrefix = "arXiv",
+   eprint = {1001.0537},
+ primaryClass = "astro-ph.SR",
+ keywords = {accretion, accretion discs, binaries: close, stars: individual: GRS 1124-684 (=GUMus), stars: individual: Cen X-4 (=V822Cen)},
+     year = 2010,
+    month = apr,
+   volume = 403,
+    pages = {2167-2175},
+      doi = {10.1111/j.1365-2966.2010.16262.x},
+   adsurl = {http://adsabs.harvard.edu/abs/2010MNRAS.403.2167S},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2012ApJS..201...36B,
+   author = {{Burton}, J.~R. and {Watson}, C.~A. and {Littlefair}, S.~P. and 
+	{Dhillon}, V.~S. and {Gibson}, N.~P. and {Marsh}, T.~R. and 
+	{Pollacco}, D.},
+    title = "{z'-band Ground-based Detection of the Secondary Eclipse of WASP-19b}",
+  journal = {\apjs},
+archivePrefix = "arXiv",
+   eprint = {1206.3585},
+ primaryClass = "astro-ph.EP",
+ keywords = {planets and satellites: atmospheres, planets and satellites: individual: WASP-19b, stars: solar-type},
+     year = 2012,
+    month = aug,
+   volume = 201,
+      eid = {36},
+    pages = {36},
+      doi = {10.1088/0067-0049/201/2/36},
+   adsurl = {http://adsabs.harvard.edu/abs/2012ApJS..201...36B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@BOOK{KurtzBook,
+   author = {{Aerts}, C. and {Christensen-Dalsgaard}, J. and {Kurtz}, D.~W.},
+    title = "{Asteroseismology}",
+ keywords = {Physics, Astronomy, Astrophysics and Cosmology},
+booktitle = {Asteroseismology, Astronomy and Astrophysics Library.~ISBN 978-1-4020-5178-4.~Springer Science+Business Media B.V., 2010, p.},
+     year = 2010,
+   adsurl = {http://adsabs.harvard.edu/abs/2010aste.book.....A},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+ publisher = {Springer}
+
+}
+
+
+@INPROCEEDINGS{ULTRACAMFlare,
+   author = {{Kowalski}, A.~F. and {Mathioudakis}, M. and {Hawley}, S.~L. and 
+	{Hilton}, E.~J. and {Dhillon}, V.~S. and {Marsh}, T.~R. and 
+	{Copperwheat}, C.~M.},
+    title = "{White Light Flare Continuum Observations with ULTRACAM}",
+booktitle = {16th Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun},
+     year = 2011,
+   series = {Astronomical Society of the Pacific Conference Series},
+   volume = 448,
+archivePrefix = "arXiv",
+   eprint = {1103.0822},
+ primaryClass = "astro-ph.SR",
+   editor = {{Johns-Krull}, C. and {Browning}, M.~K. and {West}, A.~A.},
+    month = dec,
+    pages = {1157},
+   adsurl = {http://adsabs.harvard.edu/abs/2011ASPC..448.1157K},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@ARTICLE{ULTRACAMFlareOscillations,
+   author = {{Mathioudakis}, M. and {Bloomfield}, D.~S. and {Jess}, D.~B. and 
+	{Dhillon}, V.~S. and {Marsh}, T.~R.},
+    title = "{The periodic variations of a white-light flare observed with ULTRACAM}",
+  journal = {\aap},
+   eprint = {astro-ph/0605196},
+ keywords = {waves, stars: activity, stars: atmospheres, stars: flare, stars: individual: EQ Pegasi},
+     year = 2006,
+    month = sep,
+   volume = 456,
+    pages = {323-327},
+      doi = {10.1051/0004-6361:20054752},
+   adsurl = {http://adsabs.harvard.edu/abs/2006A%26A...456..323M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@BOOK{WarnerBook,
+   author = {{Warner}, B.},
+    title = "{Cataclysmic Variable Stars}",
+booktitle = {Cataclysmic Variable Stars, by Brian Warner, pp.~592.~ISBN 052154209X.~Cambridge, UK: Cambridge University Press, September 2003.},
+     year = 2003,
+    month = sep,
+   adsurl = {http://adsabs.harvard.edu/abs/2003cvs..book.....W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+ publisher = {Cambridge University Press}
+}
+
+@ARTICLE{Lucy68,
+   author = {{Lucy}, L.~B.},
+    title = "{The Structure of Contact Binaries}",
+  journal = {Astrophysical Journal},
+     year = 1968,
+    month = mar,
+   volume = 151,
+    pages = {1123},
+      doi = {10.1086/149510},
+   adsurl = {http://adsabs.harvard.edu/abs/1968ApJ...151.1123L},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{Lucy68lightcurves,
+   author = {{Lucy}, L.~B.},
+    title = "{The Light Curves of W Ursae Majoris Stars}",
+  journal = {\apj},
+     year = 1968,
+    month = sep,
+   volume = 153,
+    pages = {877},
+      doi = {10.1086/149712},
+   adsurl = {http://adsabs.harvard.edu/abs/1968ApJ...153..877L},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@ARTICLE{kron,
+	AUTHOR = {Kron, R. G.},
+	YEAR = {1980},
+	TITLE = {Photometry of a complete sample of faint galaxies},
+	JOURNAL = {Astrophysical Journal Supplement Series},
+	VOLUME = {43},
+	PAGES = {305}
+}
+
+@ARTICLE{Chang2014,
+	AUTHOR = {Chan-Kao Chang and Adam Waszczak and Hsing-Wen Lin and Wing-Huen Ip and Thomas. A. Prince and Shrinivas R. Kulkarni and Russ Laher and Jason Surace},
+	TITLE = {A New Large Super-Fast Rotator: (335433) {2005 UW163}},
+	YEAR = {2014},
+	JOURNAL = {Astrophysical Journal},
+	VOLUME = {391},
+	PAGES = {L35}
+}
+
+
+@ARTICLE{Holsapple2007,
+	AUTHOR = {Holsapple, K A},
+	TITLE = {Spin limits of Solar System bodies: From the small fast-rotators to 2003 EL61},
+	YEAR = {2007},
+	JOURNAL = {Icarus},
+	VOLUME = {187},
+	PAGES = {500}
+	}
+
+@ARTICLE{Jewitt2013,
+	AUTHOR = {David Jewitt and Masateru Ishiguro and Jessica Agarwal},
+	TITLE = {Large particles in active asteroid {P/2010 A2}},
+	YEAR = {2013},
+	JOURNAL = {Astrophysical Journal},
+	VOLUME = {764},
+	PAGES = {L5}
+	}
+
+
+@ARTICLE{Dermawan2011,
+	AUTHOR = {B. Dermawan and T. Nakamura and F. Yoshida},
+	TITLE = {Subaru Lightcurve Observations of Sub-km-Sized Main-Belt Asteroids},
+	YEAR = {2011},
+	JOURNAL = {Publ. Astron. Soc. Japan},
+	VOLUME = {63},
+	PAGES = {555-576}
+	}
+
+
+@ARTICLE{Masiero2009,
+	AUTHOR = {Joseph Masiero and Robert Jedicke and Josef \v{D}urech and Stephen Gwyn and Larry Denneau and Jeff Larsen},
+	TITLE = {The Thousand Asteroid Light Curve Survey},
+	YEAR = {2009},
+	JOURNAL = {Icarus},
+	VOLUME = {204},
+	PAGES = {145}
+	}
+
+
+@ARTICLE{temphold,
+	AUTHOR = {William J. Borucki},
+	TITLE = {Characteristics of {Kepler} planetary candidates based on the first data set.},
+	YEAR = {2011},
+	JOURNAL = {The Astrophysical Journal},
+	VOLUME = {728},
+	PAGES = {117}
+	}
+
+
+@ARTICLE{KIC5115978,
+   author = {{Borucki}, W.~J. and {Koch}, D.~G. and {Basri}, G. and {Batalha}, N. and 
+	{Boss}, A. and {Brown}, T.~M. and {Caldwell}, D. and {Christensen-Dalsgaard}, J. and 
+	{Cochran}, W.~D. and {DeVore}, E. and {Dunham}, E.~W. and {Dupree}, A.~K. and 
+	{Gautier}, III, T.~N. and {Geary}, J.~C. and {Gilliland}, R. and 
+	{Gould}, A. and {Howell}, S.~B. and {Jenkins}, J.~M. and {Kjeldsen}, H. and 
+	{Latham}, D.~W. and {Lissauer}, J.~J. and {Marcy}, G.~W. and 
+	{Monet}, D.~G. and {Sasselov}, D. and {Tarter}, J. and {Charbonneau}, D. and 
+	{Doyle}, L. and {Ford}, E.~B. and {Fortney}, J. and {Holman}, M.~J. and 
+	{Seager}, S. and {Steffen}, J.~H. and {Welsh}, W.~F. and {Allen}, C. and 
+	{Bryson}, S.~T. and {Buchhave}, L. and {Chandrasekaran}, H. and 
+	{Christiansen}, J.~L. and {Ciardi}, D. and {Clarke}, B.~D. and 
+	{Dotson}, J.~L. and {Endl}, M. and {Fischer}, D. and {Fressin}, F. and 
+	{Haas}, M. and {Horch}, E. and {Howard}, A. and {Isaacson}, H. and 
+	{Kolodziejczak}, J. and {Li}, J. and {MacQueen}, P. and {Meibom}, S. and 
+	{Prsa}, A. and {Quintana}, E.~V. and {Rowe}, J. and {Sherry}, W. and 
+	{Tenenbaum}, P. and {Torres}, G. and {Twicken}, J.~D. and {Van Cleve}, J. and 
+	{Walkowicz}, L. and {Wu}, H.},
+    title = "{Characteristics of Kepler Planetary Candidates Based on the First Data Set}",
+  journal = {Astrophysical Journal},
+ keywords = {planets and satellites: detection, surveys},
+     year = 2011,
+    month = feb,
+   volume = 728,
+      eid = {117},
+    pages = {117},
+      doi = {10.1088/0004-637X/728/2/117},
+   adsurl = {http://adsabs.harvard.edu/abs/2011ApJ...728..117B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{Jacobson2014,
+	AUTHOR = {Seth A. Jacobson and Francesco Marzari and Alessandro Rossi and Daniel J. Scheeres and Donald R. Davis},
+	TITLE = {Effect of rotational disruption on the size-frequency distribution of the Main Belt asteroid population},
+	YEAR = {2014},
+	JOURNAL = {Monthly Notices of the Royal Astronomical Society: Letters},
+	VOLUME = {439},
+	PAGES = {L94}
+	}
+
+@ARTICLE{binaryfraction,
+	AUTHOR = {Eggleton, P. P. and 	Tokovinin, A. A.},
+	TITLE = {A catalogue of multiplicity among bright stellar systems},
+	YEAR = {2008},
+	JOURNAL = {Monthly Notices of the Royal Astronomical Society},
+	VOLUME = {389},
+	PAGES = {869-879}
+	}
+	
+
+@ARTICLE{bertin,
+	AUTHOR = {Bertin, E. and {Arnouts}, S.},
+	TITLE = {{SExtractor}: Software for source extraction},
+	YEAR = {2006},
+	JOURNAL = { Astronomy \& Astrophysics Supplement },
+	VOLUME = {317},
+	PAGES = {393}
+}
+
+
+@ARTICLE{yorpeffect,
+   author = {{Bottke}, Jr., W.~F. and {Vokrouhlick{\'y}}, D. and {Rubincam}, D.~P. and 
+	{Nesvorn{\'y}}, D.},
+    title = "{The Yarkovsky and Yorp Effects: Implications for Asteroid Dynamics}",
+  journal = {Annual Review of Earth and Planetary Sciences},
+     year = 2006,
+    month = may,
+   volume = 34,
+    pages = {157-191},
+      doi = {10.1146/annurev.earth.34.031405.125154},
+   adsurl = {http://adsabs.harvard.edu/abs/2006AREPS..34..157B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{CatalinaCatalog,
+   author = {{Drake}, A.~J. and {Graham}, M.~J. and {Djorgovski}, S.~G. and 
+	{Catelan}, M. and {Mahabal}, A.~A. and {Torrealba}, G. and {Garc{\'{\i}}a-{\'A}lvarez}, D. and 
+	{Donalek}, C. and {Prieto}, J.~L. and {Williams}, R. and {Larson}, S. and 
+	{Christen sen}, E. and {Belokurov}, V. and {Koposov}, S.~E. and 
+	{Beshore}, E. and {Boattini}, A. and {Gibbs}, A. and {Hill}, R. and 
+	{Kowalski}, R. and {Johnson}, J. and {Shelly}, F.},
+    title = "{The Catalina Surveys Periodic Variable Star Catalog}",
+  journal = {\apjs},
+archivePrefix = "arXiv",
+   eprint = {1405.4290},
+ primaryClass = "astro-ph.SR",
+ keywords = {catalogs, Galaxy: halo, Galaxy: stellar content, Galaxy: structure, techniques: photometric, stars: variables: general },
+     year = 2014,
+    month = jul,
+   volume = 213,
+      eid = {9},
+    pages = {9},
+      doi = {10.1088/0067-0049/213/1/9},
+   adsurl = {http://adsabs.harvard.edu/abs/2014ApJS..213....9D},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{neosmalltelescope,
+	AUTHOR = {Ovidiu Vaduvescu},
+	TITLE = {OBSERVING NEAR EARTH ASTEROIDS WITH A SMALL TELESCOPE},
+	YEAR = {2005},
+	JOURNAL = {Romanian Astronomical Journal}
+}
+
+@INCOLLECTION{asteroseismology,
+	AUTHOR = {Handler, Gerald},
+	TITLE = {Asteroseismology},
+	YEAR = {2013},
+	BOOKTITLE = {Planets, Stars and Stellar Systems, Volume 4: Stellar Structure and Evolution},
+	CHAPTER = {4},
+	EDITOR = {Oswalt, T., D. and Barstow, M. A.},
+	PUBLISHER = {Springer Science},
+	PAGES = {208-239}
+}
+
+@INCOLLECTION{stellaractivity,
+	AUTHOR = {Paganano, Isabella},
+	TITLE = {Stellar Activity},
+	YEAR = {2013},
+	BOOKTITLE = {Planets, Stars and Stellar Systems, Volume 4: Stellar Structure and Evolution},
+	CHAPTER = {10},
+	EDITOR = {Oswalt, T., D. and Barstow, M. A.},
+	PUBLISHER = {Springer Science},
+	PAGES = {588-547}
+}
+
+@CONFERENCE{scamp,
+	AUTHOR = {Bertin, E.},
+	TITLE = {Automatic Astrometric and Photometric Calibration with {SCAMP}},
+	YEAR = {2006},
+	BOOKTITLE = {ASP Conference Series, Vol. 351, 2006, C. Gabriel, C. Arviset, D. Ponz, and E. Solano, eds},
+	PAGES = {112}
+}
+
+@MISC{astrometry, 
+	AUTHOR = {Hogg, D. W. and Lang, D.},
+	TITLE = {Astrometry.net},
+	HOWPUBLISHED = {http://www.astrometry.net },
+	YEAR = {2012}
+}
+
+@MISC{neowebsite, 
+	TITLE = {{IAU Minor Planet Center, NEOChecker} tool},
+	HOWPUBLISHED = {http://scully.cfa.harvard.edu/cgi-bin/checkneo.cgi},
+	YEAR = {2014}
+}
+
+
+@MISC{sippolynomial,
+	AUTHOR = {David L. Shupe and Richard N. Hook},
+	TITLE = {The {SIP} Convention for Representing Distortion in FITS ImageHeaders},
+	YEAR = {2008},
+	URL = { http://fits.gsfc.nasa.gov/registry/sip/SIP_distortion_v1_0.pdf }
+	}
+
+
+
+@article{0004-637X-764-1-62,
+  author={James R. A. Davenport and Andrew C. Becker and Andrew A. West and John J. Bochanski and Suzanne L. Hawley and Jon Holtzman and Heather C. Gunning and Eric J. Hilton and Ferah A. Munshi and Meagan Albright},
+  title={The Very Short Period M Dwarf Binary SDSS J001641–000925},
+  journal={The Astrophysical Journal},
+  volume={764},
+  number={1},
+  pages={62},
+  url={http://stacks.iop.org/0004-637X/764/i=1/a=62},
+  year={2013},
+  abstract={We present follow-up observations and analysis of the recently discovered short period low-mass eclipsing binary, SDSS J001641–000925. With an orbital period of 0.19856 days, this system has one of the shortest known periods for an M dwarf binary system. Medium-resolution spectroscopy and multi-band photometry for the system are presented. Markov Chain Monte Carlo modeling of the light curves and radial velocities yields estimated masses for the stars of M 1 = 0.54 ± 0.07 M ☉ and M 2 = 0.34 ± 0.04 M ☉ , and radii of R 1 = 0.68 ± 0.03 R ☉ and R 2 = 0.58 ± 0.03 R ☉ , respectively. This solution places both components above the critical Roche overfill limit, providing strong evidence that SDSS J001641–000925 is the first verified M-dwarf contact binary system. Within the follow-up spectroscopy we find signatures of non-solid body rotation velocities, which we interpret as evidence for mass transfer or loss within the system. In addition, our photometry samples the system over nine years, and we find strong evidence for period decay at the rate of ##IMG## [http://ej.iop.org/images/0004-637X/764/1/62/apj457271ieqn1.gif] {$\dot{P}\sim$} 8 s yr –1 . Both of these signatures raise the intriguing possibility that the system is in over-contact, and actively losing angular momentum, likely through mass loss. This places SDSS J001641–000925 as not just the first M-dwarf over-contact binary, but one of the few systems of any spectral type known to be actively undergoing coalescence. Further study of SDSS J001641–000925 is ongoing to verify the nature of the system, which may prove to be a unique astrophysical laboratory.}
+}
+
+@ARTICLE{Astrokit2014,
+   author = {{Burdanov}, A.~Y. and {Krushinsky}, V.~V. and {Popov}, A.~A.
+	},
+    title = "{Astrokit-an efficient program for high-precision differential CCD photometry and search for variable stars}",
+  journal = {Astrophysical Bulletin},
+archivePrefix = "arXiv",
+   eprint = {1408.0664},
+ primaryClass = "astro-ph.IM",
+ keywords = {methods: observational, methods: data analysis, techniques: photometric, stars: variables: general},
+     year = 2014,
+    month = jul,
+   volume = 69,
+    pages = {368-376},
+      doi = {10.1134/S1990341314030122},
+   adsurl = {http://adsabs.harvard.edu/abs/2014AstBu..69..368B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2009Icar..202..134W,
+   author = {{Warner}, B.~D. and {Harris}, A.~W. and {Pravec}, P.},
+    title = "{The asteroid lightcurve database}",
+  journal = {\icarus},
+     year = 2009,
+    month = jul,
+   volume = 202,
+    pages = {134-146},
+      doi = {10.1016/j.icarus.2009.02.003},
+   adsurl = {http://adsabs.harvard.edu/abs/2009Icar..202..134W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{exoplanettransits,
+   author = {{Winn}, J.~N.},
+    title = "{Transits and Occultations}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1001.2010},
+ primaryClass = "astro-ph.EP",
+ keywords = {Astrophysics - Earth and Planetary Astrophysics},
+     year = 2010,
+    month = jan,
+   adsurl = {http://adsabs.harvard.edu/abs/2010arXiv1001.2010W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+
+
+
+@article{pulsarreview,
+author = {Phinney, E. S. and Kulkarni, S. R.},
+title = {Binary and Millisecond Pulsars},
+journal = {Annual Review of Astronomy and Astrophysics},
+volume = {32},
+number = {1},
+pages = {591-639},
+year = {1994},
+doi = {10.1146/annurev.aa.32.090194.003111},
+
+URL = { 
+        http://dx.doi.org/10.1146/annurev.aa.32.090194.003111
+    
+},
+eprint = { 
+        http://dx.doi.org/10.1146/annurev.aa.32.090194.003111
+    
+}
+
+}
+
+

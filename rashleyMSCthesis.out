@@ -1,0 +1,69 @@
+\BOOKMARK [0][-]{chapter*.2}{Acknowledgments}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Declarations}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{Abstract}{}% 3
+\BOOKMARK [0][-]{chapter*.5}{Abbreviations}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Chapter Introduction}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Candidate objects}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.2.1}{Eclipsing binaries}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.2}{W UMa systems}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.3}{Ellipsoidal variables}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.4}{Cataclysmic variables}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.5}{Intrinsic variables}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.6}{Flare stars}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.7}{Asteroids}{section.1.2}% 14
+\BOOKMARK [1][-]{section.1.3}{The ULTRACAM instrument}{chapter.1}% 15
+\BOOKMARK [2][-]{subsection.1.3.1}{Camera Optics}{section.1.3}% 16
+\BOOKMARK [2][-]{subsection.1.3.2}{Filter sets}{section.1.3}% 17
+\BOOKMARK [2][-]{subsection.1.3.3}{Field size and pixel scale}{section.1.3}% 18
+\BOOKMARK [2][-]{subsection.1.3.4}{High speed operation}{section.1.3}% 19
+\BOOKMARK [1][-]{section.1.4}{ULTRACAM data}{chapter.1}% 20
+\BOOKMARK [2][-]{subsection.1.4.1}{Data capture}{section.1.4}% 21
+\BOOKMARK [2][-]{subsection.1.4.2}{Typical run length}{section.1.4}% 22
+\BOOKMARK [2][-]{subsection.1.4.3}{Run cadences}{section.1.4}% 23
+\BOOKMARK [2][-]{subsection.1.4.4}{The data archive}{section.1.4}% 24
+\BOOKMARK [0][-]{chapter.2}{Chapter Automating the reduction of the imaging photometry}{}% 25
+\BOOKMARK [1][-]{section.2.1}{Data reduction for CCD images in Astronomy}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.2}{Current method of ULTRACAM data reduction}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.3}{Automating the pipeline}{chapter.2}% 28
+\BOOKMARK [2][-]{subsection.2.3.1}{Motivation for automating the pipeline}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.2}{Algorithm of the automated pipeline}{section.2.3}% 30
+\BOOKMARK [2][-]{subsection.2.3.3}{Object matching}{section.2.3}% 31
+\BOOKMARK [2][-]{subsection.2.3.4}{WCS solutions}{section.2.3}% 32
+\BOOKMARK [0][-]{chapter.3}{Chapter Creating a browse-able front-end for the data}{}% 33
+\BOOKMARK [1][-]{section.3.1}{Web browsers}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.2}{Web technologies}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.3}{The Web site}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.4}{Accessing the data}{chapter.3}% 37
+\BOOKMARK [0][-]{chapter.4}{Chapter Results from the automated pipeline}{}% 38
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.2}{Quality of the photometry}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.3}{Object matching}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.4}{Finding variable objects}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.5}{Reducing the entire ULTRACAM archive}{chapter.4}% 43
+\BOOKMARK [0][-]{chapter.5}{Chapter Objects identified by the automated pipeline}{}% 44
+\BOOKMARK [1][-]{section.5.1}{Object identification}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.2}{Discovered objects}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.2.1}{W UMa: 2005-05-10-run012-73}{section.5.2}% 47
+\BOOKMARK [2][-]{subsection.5.2.2}{W UMa: 2013-07-21-run010-48}{section.5.2}% 48
+\BOOKMARK [2][-]{subsection.5.2.3}{W UMa: 2013-07-21-run010-163}{section.5.2}% 49
+\BOOKMARK [2][-]{subsection.5.2.4}{Eclipsing binary: 2013-07-21-run011-162}{section.5.2}% 50
+\BOOKMARK [2][-]{subsection.5.2.5}{ Scuti: 2013-07-21-run010-23}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.6}{Asteroid: 1998 SU139}{section.5.2}% 52
+\BOOKMARK [2][-]{subsection.5.2.7}{Asteroid: 910 Toruyusa}{section.5.2}% 53
+\BOOKMARK [0][-]{chapter.6}{Chapter Conclusion}{}% 54
+\BOOKMARK [1][-]{section.6.1}{Current status of the pipeline}{chapter.6}% 55
+\BOOKMARK [2][-]{subsection.6.1.1}{Areas for immediate improvement}{section.6.1}% 56
+\BOOKMARK [1][-]{section.6.2}{Future enhancements}{chapter.6}% 57
+\BOOKMARK [1][-]{section.6.3}{Recommendations for ULTRACAM users}{chapter.6}% 58
+\BOOKMARK [0][-]{appendix.A}{Appendix Automated software user manual}{}% 59
+\BOOKMARK [1][-]{section.A.1}{Running the pipeline}{appendix.A}% 60
+\BOOKMARK [2][-]{subsection.A.1.1}{Prerequisites}{section.A.1}% 61
+\BOOKMARK [2][-]{subsection.A.1.2}{Installing the Python code}{section.A.1}% 62
+\BOOKMARK [2][-]{subsection.A.1.3}{Config file}{section.A.1}% 63
+\BOOKMARK [2][-]{subsection.A.1.4}{ucambuilder.conf}{section.A.1}% 64
+\BOOKMARK [2][-]{subsection.A.1.5}{Producing the output for a particular run}{section.A.1}% 65
+\BOOKMARK [2][-]{subsection.A.1.6}{Producing the output for a full night's observing}{section.A.1}% 66
+\BOOKMARK [1][-]{section.A.2}{Using the archive}{appendix.A}% 67
+\BOOKMARK [2][-]{subsection.A.2.1}{Night summary page}{section.A.2}% 68
+\BOOKMARK [2][-]{subsection.A.2.2}{Run page}{section.A.2}% 69

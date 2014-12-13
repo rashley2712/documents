@@ -1,0 +1,1536 @@
+Library Declaration and Deposit Agreement
+
+1. STUDENT DETAILS Richard Ashley 1360981 2. THESIS DEPOSIT 2.1 I understand that under my registration at the University, I am required to deposit my thesis with the University in BOTH hard copy and in digital format. The digital version should normally be saved as a single pdf ﬁle. 2.2 The hard copy will be housed in the University Library. The digital version will be deposited in the University’s Institutional Repository (WRAP). Unless otherwise indicated (see 2.3 below) this will be made openly accessible on the Internet and will be supplied to the British Library to be made available online via its Electronic Theses Online Service (EThOS) service. [At present, theses submitted for a Masters degree by Research (MA, MSc, LLM, MS or MMedSci) are not being deposited in WRAP and not being made available via EthOS. This may change in future.] 2.3 In exceptional circumstances, the Chair of the Board of Graduate Studies may grant permission for an embargo to be placed on public access to the hard copy thesis for a limited period. It is also possible to apply separately for an embargo on the digital version. (Further information is available in the Guide to Examinations for Higher Degrees by Research.) 2.4 (a) Hard Copy I hereby deposit a hard copy of my thesis in the University Library to be made publicly available to readers immediately. I agree that my thesis may be photocopied. (b) Digital Copy I hereby deposit a digital copy of my thesis to be held in WRAP and made available via EThOS. My thesis can be made publicly available online. 3. GRANTING OF NON-EXCLUSIVE RIGHTS Whether I deposit my Work personally or through an assistant or other agent, I agree to the following: Rights granted to the University of Warwick and the British Library and the user of the thesis through this agreement are nonexclusive. I retain all rights in the thesis in its present version or future versions. I agree that the institutional repository administrators and the British Library or their agents may, without changing content, digitise and migrate the thesis to any medium or format for the purpose of future preservation and accessibility.
+
+4. DECLARATIONS (a) I DECLARE THAT: • I am the author and owner of the copyright in the thesis and/or I have the authority of the authors and owners of the copyright in the thesis to make this agreement. Reproduction of any part of this thesis for teaching or in academic or other forms of publication is subject to the normal limitations on the use of copyrighted materials and to the proper and full acknowledgement of its source. • The digital version of the thesis I am supplying is the same version as the ﬁnal, hardbound copy submitted in completion of my degree, once any minor corrections have been completed. • I have exercised reasonable care to ensure that the thesis is original, and does not to the best of my knowledge break any UK law or other Intellectual Property Right, or contain any conﬁdential material. • I understand that, through the medium of the Internet, ﬁles will be available to automated agents, and may be searched and copied by, for example, text mining and plagiarism detection software. (b) IF I HAVE AGREED (in Section 2 above) TO MAKE MY THESIS PUBLICLY AVAILABLE DIGITALLY, I ALSO DECLARE THAT: • I grant the University of Warwick and the British Library a licence to make available on the Internet the thesis in digitised format through the Institutional Repository and through the British Library via the EThOS service. • If my thesis does include any substantial subsidiary material owned by third-party copyright holders, I have sought and obtained permission to include it in any version of my thesis available in digital format and that this permission encompasses the rights that I have granted to the University of Warwick and to the British Library. 5. LEGAL INFRINGEMENTS I understand that neither the University of Warwick nor the British Library have any obligation to take legal action on behalf of myself, or other rights holders, in the event of infringement of intellectual property rights, breach of contract or of any other right, in the thesis.
+
+Please sign this agreement and return it to the Graduate School Ofﬁce when you submit your thesis.
+
+Student’s signature: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .Date: . . . . . . . . . . . . . . . . .
+
+MEN S T A T A G I MOLEM
+
+IV ER S
+
+I TAS WARWI C
+
+EN
+
+Automated reduction of the Ultracam data archive
+
+by
+
+Richard Ashley
+Thesis
+Submitted to the University of Warwick for the degree of
+
+Master of Science by Research
+
+Department of Physics
+September 2014
+
+SI
+
+UN
+
+S
+
+Contents
+Acknowledgments Declarations Abstract Abbreviations Chapter 1 Introduction 1.1 1.2 About this project . . . . . . . . . . . . . . . . . . . . . . . . . . . . Candidate objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.1 1.2.2 1.2.3 1.2.4 1.2.5 1.2.6 1.2.7 1.3 1.3.1 1.3.2 1.3.3 1.3.4 1.4 1.4.1 1.4.2 1.4.3 1.4.4 Eclipsing binaries . . . . . . . . . . . . . . . . . . . . . . . . . W UMa systems . . . . . . . . . . . . . . . . . . . . . . . . . Ellipsoidal variables . . . . . . . . . . . . . . . . . . . . . . . Cataclysmic variables . . . . . . . . . . . . . . . . . . . . . . Intrinsic variables . . . . . . . . . . . . . . . . . . . . . . . . . Flare stars . . . . . . . . . . . . . . . . . . . . . . . . . . . . Asteroids . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Camera Optics . . . . . . . . . . . . . . . . . . . . . . . . . . Filter sets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Field size and pixel scale . . . . . . . . . . . . . . . . . . . . . High speed operation . . . . . . . . . . . . . . . . . . . . . . . Data capture . . . . . . . . . . . . . . . . . . . . . . . . . . . Typical run length . . . . . . . . . . . . . . . . . . . . . . . . Run cadences . . . . . . . . . . . . . . . . . . . . . . . . . . . The data archive . . . . . . . . . . . . . . . . . . . . . . . . . iv v vi vii 1 1 3 3 3 4 4 5 6 6 7 7 7 7 8 13 13 14 14 18
+
+The ULTRACAM instrument . . . . . . . . . . . . . . . . . . . . . .
+
+ULTRACAM data . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+i
+
+Chapter 2 Automating the reduction of the imaging photometry 2.1 2.2 Data reduction for CCD images in Astronomy . . . . . . . . . . . . . Current method of ULTRACAM data reduction . . . . . . . . . . . 2.2.1 2.2.2 2.3 2.3.1 2.3.2 2.3.3 2.3.4 Aperture selection . . . . . . . . . . . . . . . . . . . . . . . . Photometric calibration . . . . . . . . . . . . . . . . . . . . . Motivation for automating the pipeline . . . . . . . . . . . .
+
+19 19 22 23 23 24 24 24 30 35 42 42 43 45 46 47 47 47 47 48 49 50 57 57 58 59 64 66 70 70 70 71 72 72
+
+Automating the pipeline . . . . . . . . . . . . . . . . . . . . . . . . . Algorithm of the automated pipeline . . . . . . . . . . . . . . Object matching . . . . . . . . . . . . . . . . . . . . . . . . . WCS solutions . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Chapter 3 Creating a browse-able front-end for the data 3.1 3.2 3.3 3.4 Web browsers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Web technologies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . The Web site . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Accessing the data . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Chapter 4 Photometry results from the automated pipeline 4.1 4.2 The archive . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Data quality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.2.1 4.2.2 4.2.3 4.3 Photometric calibration . . . . . . . . . . . . . . . . . . . . . Comparison of the 2 pipelines . . . . . . . . . . . . . . . . . . Apertures . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Colour-Colour plots . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Chapter 5 Objects identiﬁed by the automated pipeline 5.1 5.2 Object identiﬁcation . . . . . . . . . . . . . . . . . . . . . . . . . . . Discovered objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2.1 5.2.2 5.2.3 Eclipsing binaries . . . . . . . . . . . . . . . . . . . . . . . . . Intrinsic variables . . . . . . . . . . . . . . . . . . . . . . . . . Near Earth objects . . . . . . . . . . . . . . . . . . . . . . . .
+
+Chapter 6 Automated software user manual 6.1 Running the pipeline . . . . . . . . . . . . . . . . . . . . . . . . . . . 6.1.1 6.1.2 6.1.3 6.1.4 Prerequisites . . . . . . . . . . . . . . . . . . . . . . . . . . . Installing the Python code . . . . . . . . . . . . . . . . . . . . Conﬁg ﬁle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ucambuilder.conf . . . . . . . . . . . . . . . . . . . . . . . . .
+
+ii
+
+6.1.5 6.1.6 6.2 6.2.1 6.2.2 6.2.3
+
+Producing the output for a particular run . . . . . . . . . . . Producing the output for a full night’s observing . . . . . . . Night summary page . . . . . . . . . . . . . . . . . . . . . . . Run page . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Walkthrough - spotting an exoplanet transit . . . . . . . . . .
+
+74 80 80 80 81 85 86 87 87 88 89
+
+Using the archive . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Chapter 7 Conclusion 7.1 7.2 7.3 Current status of the pipeline . . . . . . . . . . . . . . . . . . . . . . 7.1.1 Areas for immediate improvement . . . . . . . . . . . . . . . Future improvements to the automated pipeline . . . . . . . . . . . . Recommendations for ULTRACAM users . . . . . . . . . . . . . . .
+
+iii
+
+Acknowledgments
+I would like to thank the following people who made this project possible. Professor Tom Marsh for having the idea for this project and helping and guiding me through the development of the automated pipeline. Prof. Marsh also created the Python and C libraries which are extensively used by this project to read and extract the raw ULTRACAM data. Matthew Green who worked through the light-curves of thousands of objects and found our most interesting variables. Doctor Elm´ Breedt for teaching me to use the current ULTRACAM data e reduction pipeline and for assistance with many diverse queries. This project makes use of software provided by Astrometry.net and Astromatic.net
+
+iv
+
+Declarations
+I declare that this thesis is my own, original work except where it has been explicitly stated within the work. In instances of collaborative research my own contribution has been indicated. Use of other published material is clearly acknowledged or referenced. I declare that my own original work has not been published prior to submission of this document and has not been submitted to another University for a degree at any level.
+
+v
+
+Abstract
+Since May 2002, the Ultracam high-speed CCD photometric camera (ULTRACAM) has been taking observations of a variety of astronomical objects using the William Herschel Telescope (WHT), Very Large Telescope (VLT) and New Technology Telescope (NTT). Over this period it has produced approximately 10 Terabytes of raw data (CCD frames plus meta-data) taken on 406 observing nights and covering approximately 566 target objects. In this data there may be objects that hold scientiﬁc interest but have not been investigated since they were not the intended target object of the observer. Objects in the data need to be identiﬁed, listed and have reductions performed to determine their light-curves. The goal of this 1 year MSc project is to write the software for an automated reduction pipeline that will process the ULTRACAM data archive and produce a browse-able version of the light-curves and meta-data for all of the observations in the past 10 years.
+
+vi
+
+Abbreviations
+WHT The William Herschel Telescope located at the Roque de los Muchachos observatory on the island of La Palma, Spain. VLT The Very Large Telescope located at Cerro Paranal, Chile. NTT The New Technology Telescope located at La Silla, Chile. run Each data ﬁle generated by the ULTRACAM is called a ’run’. On every night that the camera is in use, a unique run identiﬁer is generated from the combination of the date and an ordered sequence of run numbers. This means that any ULTRACAM run is uniquely identiﬁed by a run date and a run number. The format we will use to specify a unique run in this document is YYYY-MM-DD/runXXX where ’YYYY’ is the year, ’MM’ the month and ’DD’ the date of the night on which the run was produced. ’XXX’ is a unique run number on that date. For example: Run number 111 on the 13th of July 2013 is referenced as 2013-07-13/run111. ADU Analogue Digital Unit. The value returned for each pixel from the CCD chip after a readout. This is an indirect measure of the ﬂux arriving at the pixel.
+
+vii
+
+Chapter 1
+
+Introduction
+1.1 About this project
+
+The ULTRACAM high speed photometry camera (hereafter, ULTRACAM) had its ‘ﬁrst-light’ at the William Herschel Telescope (WHT) on the 16 May 2002. Since then it has been used on many occasions at three telescopes, namely the William Herschel Telescope (WHT), La Palma, Islas Canarias, the Very Large Telescope (VLT), Cerro Paranal, Chile and New Technology Telescope (NTT), La Silla, Chile. The camera is portable and can travel between these three telescopes. It was designed speciﬁcally to perform high speed photometry of faint objects in three colours. These design attributes are fundamental to understanding the scientiﬁc value of ULTRACAM and also set important context around the reason for doing this project, therefore, we will begin by describing each one in turn. High-speed: By ’high speed’ we mean that ULTRACAM can take images at a high frame rate. Observations in astronomy very often rely on long exposures to capture enough light in order to perform the measurements. The general assumption is that the objects we are looking at do not change on very short timescales (< seconds). This is not true for all objects. Indeed, some objects are variable on incredibly short timescales. At the most extreme end of this scale are pulsars, which spin at a rate of 100s of times per second. When compact objects such as white dwarfs are eclipsed in a binary system, the light from the eclipsed object usually disappears within 2-3 minutes although some have ingress times as short as 30 seconds, making a very steep eclipse proﬁle. In fact, a sub-class of these stars, cataclysmic cariables (CVs) with strong magnetic ﬁelds have a very compact bright region that can disappear in a matter of a few seconds. The ingress and egress of exoplanets transiting the disc of their parent star can last for a few minutes or so. Certain
+
+1
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+2
+
+pulsating stars show variations in their light output on timescales of a few minutes. Faint objects: ULTRACAM was designed to be installed on some of the larger telescopes in the world. The WHT has a mirror diameter of 4.2 metres, NTT 3.5 metres and the VLT 8.2 metres. These large mirrors enable the gathering of a large amount of light from our target objects. Since ULTRACAM is a ’high-speed’ camera, we do not have the luxury of taking long exposures in order to accumulate enough light, we need the mirror to give us as many photons as possible. The combination of ULTRACAM with large telescopes like the VLT has enabled researchers to take high speed photometric measurements of targets such as GU Mus, which is a 20th magnitude (now in quiescence) x-ray nova with a time resolution of ∼ 5 seconds, (Shahbaz et al. [2010]). It can also take even higher speed data of cataclysmic variables, such as V834Cen, a 17th magnitude polar CV at a time resolution of ∼ 0.05 seconds. Colour: In Astronomy, colour is an important property that can tells a great deal about the object. By measuring the amount of light, or ﬂux from the object in diﬀerent portions of the electromagnetic spectrum, we can deduce properties of the object, most notably, temperature. Colour is also valuable during an eclipse. If the colour of our target changes during the eclipse, this allows us to decouple the separate colours of the two objects in the binary. During an exoplanet transit, subtle changes in colour during primary transit and also just before and after secondary transit, might help us determine the colour of the planet and therefore give us a clue to the composition of its surface and/or atmosphere, (Burton et al. [2012]). Thanks to its design, ULTRACAM has been used primarily to study the sorts of objects listed above. In nearly all observing runs there is a speciﬁc target object deﬁned and the camera and telescope are set up to optimise the observations for this kind of object. Exposure times, ﬁlters and ﬁeld sizes are chosen to pick out the target object as cleanly as possible and provide the data that is appropriate to the scientiﬁc needs. Nevertheless, the nature of the camera means that it will also capture data for any other objects that just happen to be in the ﬁeld of view (or indeed ’passing-through’ the ﬁeld of view) during the run. One of the main reasons for automating the reduction pipeline is that we might, serendipitously, discover objects that, although not the intended targets of the run, are, nevertheless, displaying some kind of variability. Depending on the size and orientation of the windows that the observer has selected and how crowded the sky in the ﬁeld of view is, we could have many objects recorded in the raw data that have not had lightcurves produced. Producing and analysing these new light-curves will hopefully allow us to discover new variable objects.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+3
+
+1.2
+
+Candidate objects
+
+What kinds of objects should we expect to discover when sifting through the ULTRACAM archive? Obviously, we should expect to ﬁnd variables of similar classes to those that the camera was designed to observe, but also (we hope) some that, due to the nature of the observations made, will appear in these raw data serendipitously. In this section we list some of these object classes.
+
+1.2.1
+
+Eclipsing binaries
+
+Many of the stars in the galaxy do not exist alone in their place, but form one component of a multiple star system. It is estimated that ﬁeld star population in the solar neighbourhood consists of 50% binary systems, Eggleton and Tokovinin [2008]. A fraction of these systems will have their orbit in a plane that is viewed ’side-on’ from Earth (i ∼ 90◦ ) and therefore the geometry is such that eclipses will occur at least once per orbit. These eclipses will be seen as a drop in ﬂux. The eclipse proﬁle will indicate the relative sizes of the two objects in the system. Also, the timing of the event gives us an indication of the separation distance. If the two objects diﬀer in temperature, then the eclipse will show a change in colour which will be detected by ULTRACAM’s 3-channel camera. Since the typical run length for ULTRACAM is about 1-3 hours, we are biased towards detecting binaries with short orbital periods (<1 day).
+
+1.2.2
+
+W UMa systems
+
+W UMa systems are binary systems in which both stars have ﬁlled their Roche lobes and their atmospheres are eﬀectively merged, although their cores are separate and in orbit about each other, (Lucy [1968]). They have an interesting property in that their outer layers appear to be at similar temperature over the full extent of both of the objects, which implies that signiﬁcant heat transfer must be taking place in the ’neck’ that joins the stars together. As these objects rotate, we see a change in ﬂux due to the non-spherical shape of each star as they is present diﬀerent surface areas towards the Earth. Since the stars are in contact with each other, eclipses are visible for across a wide range of inclinations (90◦ > i > 30◦ ). The depth of this ﬂux change will depend on the inclination of the orbit. If we are seeing the orbit ’fromabove’, with inclination, i ∼ 0 then we will see very little variability. At inclinations of i ∼ 90 we will see the maximum drop in ﬂux of approximately ∼ 50%. Since the out temperatures of these bodies are similar there is little change in colour during
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+4
+
+Figure 1.1: Diagram showing the layout of a W UMa contact binary. The surface of the outer envelope is deﬁned by a Roche equipotential. The + symbol denotes the centre of gravity of the system. From Davenport et al. [2013]. the orbital cycle. Their periods fall in the 6 to 20 hour range and should therefore be obvious in the ULTRACAM data for a run of duration 30 minutes or more.
+
+1.2.3
+
+Ellipsoidal variables
+
+Stars in binaries that are not in contact but still suﬃciently close to each other to cause tidal distortion of one or more of the components will show variability for the same reasons as the W UMa stars. The projected area of the star presented towards the Earth varies over the orbital cycle. The typical change in brightness of an ellipsoidal variable is about 0.1 magnitudes or a 10% change in ﬂux. Orbital periods should be similar to those of the W UMa category, about 6-20 hours and should be visible in the ULTRACAM data.
+
+1.2.4
+
+Cataclysmic variables
+
+Cataclysmic variables are stars that are nominally in contact in that at least one of the stars has ﬁlled its Roche lobe and material is streaming from this star onto the companion. The companion in this case is a white dwarf. The white dwarf has a mass of somewhere between 0.4M and 1.4M , yet a radius that is similar to the radius of the Earth. The white dwarf’s surface is, therefore, a long way from the gravitational equilibrium point where this ﬂowing material leaves the donor star and starts to fall inwards. Since the material has its own angular momentum, it cannot fall directly toward the White Dwarf, but spirals inward, usually forming an
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+5
+
+accretion disc through which it eventually migrates onto the white dwarf’s surface. Cataclysmic variables are highly variable on many diﬀerent timescales. On the timescale of centuries, they can undergo nova explosions where they explode a shell of hydrogen that has been built up on their surface, increasing their brightness by 6-19 magnitudes. Over a period of weeks to months, their accretion disks can go into outburst, increasing their magnitudes by a few magnitudes. On the timescale that is most relevant to a typical ULTRACAM run, we can expect to see eclipses of the white dwarf, bright-spot and disc (assuming this is an eclipsing system) and ﬂickering caused by the accretion stream ﬂowing onto the bright-spot. For a complete overview of the ﬁeld of study of Cataclysmic Variables, refer to Warner [2003].
+
+1.2.5
+
+Intrinsic variables
+
+RR Lyrae stars RR Lyrae stars are horizontal branch stars that have evolved away from the main sequence and are in the instability strip. Pulsations in RR Lyraes are driven primarily by helium ionisation zones in their interiors. The mechanism by which opacity drives pulsations is known as the κ mechanism, (Handler [2013]). They exhibit periods of several hours to a few days and their light curves are usually non-sinusoidal (with harmonics) and often have a ’sawtooth’ shape. The brightness variation can be between 0.3 and 1.2 magnitudes (or 30 to 300 %). The colours change signiﬁcantly during the cycle as the surface temperature rises and falls and this should be clear in the ULTRACAM data. RR Lyraes are most common in older stellar populations and it is worthwhile taking a closer look at one or two runs in the archive that were observations of the border regions of the globular cluster, Omega Centaurus. δ Scuti stars δ Scuti stars are driven by similar mechanisms to the RR Lyraes but these are generally more massive stars and are still on the main sequence. They exhibit nonradial pulsation modes and therefore have shorter characteristic periods but with lower amplitudes. Typical periods for the oscillations in δ Scutis range from 18 minutes hour to 8 hours, with amplitudes up to ∼ 0.1 mag, (Aerts et al. [2010]). Like the RR Lyraes, the surface temperature of the star changes during the pulsation cycle and we expect to see a colour modulation in the light-curve.
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Pulsating White Dwarfs
+
+6
+
+White dwarf stars pass through a region of the HR diagram that can be seen as an extension of the classical instability strip. In this region, the white dwarf will experience a similar driving mechanism to that which drives pulsations for the main sequence and horizontal branch stars, namely the κ mechanism. This zone is found in the white dwarf’s thin hydrogen or helium atmosphere. Pulsating hydrogen white dwarfs are known as DAVs or ZZ Ceti stars and helium white dwarfs as DBVs. Usually they have a fairly complex oscillation pattern, with many frequencies, as they oscillate with many modes excited. Nevertheless, a pulsating white dwarf should be fairly obvious when observed with ULTRACAM. The oscillations will have periods of a few minutes and amplitudes on the order of 0.1 mag. Pulsations in white dwarfs stars are discussed in Asteroseismology, Aerts et al. [2010].
+
+1.2.6
+
+Flare stars
+
+Flare stars are usually red dwarf or brown dwarf stars that undergo ﬂares in their atmospheres resulting in rapid changes in brightness on timescales of minutes to hours. Typical ﬂare rates for the ﬂare star UV Cet are about every 2.5 to 6 hours. In the optical region we expect the ﬂares to appear as impulse rises with an exponential decay lasting minutes to hours. During the ﬂare, we can expect the intensity to double, (Paganano [2013]). Flares have also been shown to exhibit colour changes and there is evidence for an anti-correlated time-evolution between the relative ﬂux and the ﬂare colour. ULTRACAM has already been used to measure colour changes during ﬂare events, (Kowalski et al. [2011]).
+
+1.2.7
+
+Asteroids
+
+Solar system objects such as asteroids should be visible in the ULTRACAM archive. Main asteroid belt and near-Earth objects are likely to move across the ﬁeld at a rate of a few arc seconds per minute, meaning that they would cover a fair fraction of the exposed CCD during the course of a 1-2 hour run of the ULTRACAM. We can expect a ∼ 300 m sized near Earth object to have a magnitude in V of around 15, (Vaduvescu [2005]) which is an appropriate brightness for most ULTRACAM observations. Kuiper belt objects will have apparent magnitudes of around V ∼ 20 and would move only a few arcseconds per hour. It is fairly unlikely (although not impossible) that we might record one of these objects in an ULTRACAM run.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+7
+
+1.3
+
+The ULTRACAM instrument
+
+ULTRACAM is an ultrafast, triple-beam, cascade dichroic CCD camera, and has helped open up simultaneous multiband, sub-second time domain astronomy, (Dhillon et al. [2007]).
+
+1.3.1
+
+Camera Optics
+
+The camera has three CCD detectors enabling it to capture data in three colour bands simultaneously. Two dichroic beamsplitters divide the light from the collimator into three beams, which shall hereafter be referred to as the ‘red’, ‘green’ and ‘blue’ channels. The three CCD detectors are mounted at right angles to each other on the camera. Therefore, each detector is at the end of a slightly diﬀerent optical path. The images produced on each of the three CCDs chips are therefore of the same ﬁeld but with very slightly diﬀerent orientations, distortions and oﬀsets. Towards the edges of the chips, these diﬀerences can be on the order of 10 pixels from channel to channel. In general, the exposure timing in synchronised across all three detectors, meaning the all three CCD start their exposure, stop their exposure and read-out at the same time. It is, however, possible to have the detector in the blue channel remain exposed and not ’read-out’ while the other two are going through multiple exposures and ’read-outs’. This is to allow for longer exposures where there might be less ﬂux in blue. Reduced ﬂux in blue is caused by several factors, including lower transmission of the optics and atmosphere to blue light, the reduced sensitivity of the CCD detector to blue light and the intrinsic ﬂux of most astronomical objects is lower in this channel.
+
+1.3.2
+
+Filter sets
+
+The ﬁlters for each channel can be altered by the observer. In usual conﬁgurations, the SDSS ﬁlters (u, g, r, i, z) are used, but there are a selection of narrow-band ﬁlters that can be substituted. Depending on the scientiﬁc measurements that the observer is trying to perform, these ﬁlters can be changed.
+
+1.3.3
+
+Field size and pixel scale
+
+ULTRACAM is usually mounted on one of the three telescopes mentioned in the introduction of this chapter (VLT, NTT, WHT). Field sizes, pixel scales and orientations are summarised in table 1.1. The orientations quoted refer to when the
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+8
+
+Figure 1.2: The Ultracam being commissioned in May 2002. Telescope WHT NTT VLT Field size (arc minutes) 5.0x5.0 6.0x6.0 2.5x2.5 Pixel scale (arc seconds/pixel) 0.30 0.35 0.15 Orientation N(up), E(left) N(up), W(left) N(up), W(left)
+
+Table 1.1: The ﬁeld sizes and pixel scales of ULTRACAM on each of the three telescopes. camera is not rotated.
+
+1.3.4
+
+High speed operation
+
+A key aspect of the design of the camera is its ability to perform at high cadence, or frames per second. It is possible to have the camera read-out at up to 500Hz (frames per channel per second), Dhillon et al. [2007]. This makes the camera useful for observations of rapid transient events with accurate timing. Although the camera is not often used in this very high speed mode, there are a few observing runs where the camera has been operating with exposure times of approximately 0.005 seconds. These runs are described in chapter 4. Each CCD has a total pixel area of 2057x1024 pixels. Half of these pixels are
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+9
+
+masked and never exposed to light. They are used as a temporary buﬀer for reading out the chip. CCD detectors are read out serially, but in order to decrease the time between exposures, the full image can be moved from the imaging area of the CCD to the storage and this can then be read out while the imaging area is once again exposed to light.
+
+Figure 1.3: One of the three CCD detectors. The masked-oﬀ area is visible in the lower half of the chip surface. ULTRACAM gives the observer the option to reduce the area of the detector that is used for the exposure. This reduces the chip readout time and enables the higher cadences. Reducing the number of pixels exposed also decreases the amount of data storage needed for the run. The observer can deﬁne pairs of windows that are centred on the objects of interest, or target objects. By making the windows suitably small, the observer can use the camera in extremely high cadence mode. The highest cadence mode is called Drift mode. This mode uses the storage area of the CCD to store several exposures simultaneously. Only a portion of the imaging area of the CCD is shifted into the storage area. The fact that the camera is not shifting the whole of the imaging area means that it is is ready to be reexposed almost immediately. This mode requires that only the lower portion of the imaging area, close to the boundary of the masked and un-masked areas, is selected used for the exposures. Due to the geometry of this readout mode, it is necessary that the exposed area of the CCD is immediately adjacent to the boundary with the masked-oﬀ section of the chip. This means that the camera has to be rotated so that the target object (and a suitable comparison star) are positioned correctly. ULTRACAM is therefore designed to be rotated about the optical axis of
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+10
+
+Figure 1.4: A ’fully’ exposed CCD with 1 pair of windows (512x1024 pixels each). This mode reads out the full area of the CCD chip, resulting in larger data size and a longer readout time. The ﬁeld of view is approximately 7x7 arc minutes, but varies according to the telescope that the camera is mounted on. the telescope so that there is an additional degree of freedom in positioning of the target objects. For any particular run, it is possible that we can have any orientation (0 − 180◦ ) of the camera relative to the sky coordinates. The ULTRACAM logs do not record this rotation angle. This is an important point to remember when we try to ﬁnd astrometric solutions for the runs. More details on the camera design and operation can be found in Dhillon et al. [2007].
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+11
+
+Figure 1.5: A ’masked’ exposure with 2 pairs of windows (350x300 and 250x250 pixels each, respectively)
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+12
+
+Figure 1.6: The camera operating in drift-mode. Note the very small windows (172x156 pixels) located at the bottom of the imaging area.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+13
+
+1.4
+1.4.1
+
+ULTRACAM data
+Data capture
+
+Usually the camera remains installed on the telescope for a week or so and is used for observations on consecutive nights. Each separate recording of data is called a run. On most nights, many runs are recorded. A run can be deﬁned as a period when the camera is active and gathering data. Not all runs are used for gathering scientiﬁc data. Some runs are used for target acquisition and camera calibration purposes. The types of runs are: • Science runs: These are the runs that contain the valuable scientiﬁc data. They usually comprise the longest portions of the observations during the night, unless the camera is having diﬃculties or adverse weather conditions are preventing useful astronomical observations. • Acquisition runs: These are runs, usually of short duration (ie a few minutes) during which the telescope is being moved in order to place the candidate object(s) in the ﬁeld of view. The camera may also be rotated in order to align the CCD such that the targets avoid ‘bad’ pixels or are near to the lower boundary of the detector (eg for high speed readout in drift mode). • Flat ﬁelds: At the start and the end of the night (usually during twilight) the observer will take a few runs to create sky-ﬂats that will be used later for calibrating the variations in pixel sensitivity across each of the detectors. Sky-ﬂats are generated by exposing the camera to patches of sky during the twilight. • Biases: A set of short exposures with the CCD not exposed to light to build calibration readings for measuring the bias of the detector. This bias will be subtracted from these data during the reduction. • Timing calibration runs: One way to check the timing calibration of the camera is to take frames of a well-known, rapidly oscillating source, for example, the Crab Pulsar (PSR B0531+21). The timing of the optical pulses as measured by the camera can then be compared to the expected times for the pulsar. This is used as a standard clock for timing calibration. • Darks: Dark frames are taken with the camera exposed to no light at all, or as close to no light as is physically possible. They should be taken over a
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+14
+
+range of exposure times similar to the exposure times that are used during the science runs and with the detector at the same temperature too. The purpose of these dark frames is to correct for the gradual accumulation of electrons in the pixels of the detector due to thermal noise. The three ULTRACAM sensors are Peltier cooled to ∼ 233 K and at this temperature are expected to deliver a dark current of ∼ 0.05 e− pixel−1 s−1 .
+
+1.4.2
+
+Typical run length
+
+Since ULTRACAM is designed for high-speed photometry, observers using the instrument are typically looking for variations that are clearly noticeable on timescales from a few minutes to a few hours. Most science runs last for a few hours at the most. The longest runs are usually observations of exoplanet transits which can last from about 4-7 hours. Very often, these have a break in the middle if the telescope goes through the zenith. All three of the telescopes on which ULTRACAM is usually mounted employ the ‘Alt-az’ mount design, rather than an ‘Equatorial’ mount. Alt-az designs cannot observe directly at the zenith and the run is interrupted for 3 minutes or so, while the telescope is repositioned after the zenith ‘blind-spot’. A look at the distribution of run length shows a large bulk of the runs are shorter than 5 minutes. This is because there are far more acquisition runs, ﬂatﬁelds and bias runs than there are science runs. There are also many runs that are nominally science runs (and can be used as such) but are short because the observer has noticed something that they would like to change. This could be a change in focus, binning factor or integration time. The run is then cut short and a new run is started. The longest run length in the 10 year data archive is 566 minutes or 9.5 hours, taken on 25th of April 2010 at the NTT. This was for the observation of a transit of the exoplanet Wasp-15b. The output for this run can be seen at http: //deneb.astro.warwick.ac.uk/phrnaw/sitedev/2010-04-25/run020.html.
+
+1.4.3
+
+Run cadences
+
+As mentioned in the section describing the camera, ULTRACAM was speciﬁcally designed for high-speed photometry. Certain phenomena in astrophysics have observable variability in the optical region that is apparent over relatively short periods. Ultra-compact binaries, cataclysmic variables, neutron stars, etc all have optical variability that can be resolved at even sub-second intervals. ULTRACAM is mounted on some relatively large telescopes, with mirrors ranging from 4.2m − 8.2m in diameter. This means that it is able to perform high-speed photometry of rel-
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+15
+
+4000 3500 3000 Number of runs 2500 2000 1500 1000 500 0 0 100 200 300 400 Run length (minutes) 500 600
+
+Figure 1.7: Distribution of run length. Many runs are shorter than 5 minutes, but these are not usually science runs.
+
+600 500 Number of runs 400 300 200 100 0 100 200 300 400 Run length (minutes) 500 600
+
+Figure 1.8: Distribution of run length after removing runs shorter than 10 minutes.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+16
+
+140 120 100 Number of runs 80 60 40 20 0 100 200 300 400 Run length (minutes) 500 600
+
+Figure 1.9: Distribution of run length after removing runs shorter than 60 minutes.
+
+40 35 30 Number of runs 25 20 15 10 5 0 200 300 400 Run length (minutes) 500 600
+
+Figure 1.10: Distribution of run length after removing runs shorter than 120 minutes.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+17
+
+atively faint objects. Since the commissioning of the camera in 2002, it has been used to observe a variety of objects, summarised in table ??. Only certain objects require the highest cadences (<1 second). These are X-ray binaries, polars, pulsars and ﬂare stars. Many other science runs can use the camera with a >1 second exposure time. Long runs for exoplanet transit observations often use longer exposures of 2-3 seconds. The longest exposure times are around 20-25 seconds. This is only required when the object being observed is extremely faint.
+
+1000
+
+800
+
+Number of runs
+
+600
+
+400
+
+200
+
+0 0
+
+5
+
+10 15 Exposure time (s)
+
+20
+
+25
+
+Figure 1.11: Distribution of exposure times used in the science runs. Figure 1.11 shows a distribution of exposure times by run, for all of the science runs in the ULTRACAM data archive. There are several groupings apparent in the histogram. Firstly, the very short exposures for the rapidly variable objects, such as polars, pulsars and X-ray binaries. Then there is a cluster of runs with exposure times of 2, 3, 4 and 5.5 seconds. These are typically observations of eclipsing white dwarf binaries. The next cluster occurs at about 10 seconds, which are usually runs for exoplanet transits. The ﬁnal cluster of run lengths occurs at around 20 seconds, usually reserved for very faint objects, V ∼ 20.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+18
+
+1.4.4
+
+The data archive
+
+At the time of writing, the ULTRACAM data archive comprises of about 10 terabytes. This can be broken down as: • 406 nights on which ULTRACAM was operational at a telescope. • 12 649 runs, including science runs, acquisition runs, ﬂat ﬁelds and biases. • 119 817 742 frames in total. This total includes all the frames for each channel: red, green and blue. • 10.54 terabytes of raw image data. The data set is relatively large and is housed on a network-mounted storage device that is only available through the internal university computer network. This means that it is not possible to access these data from remote locations (for example, by research collaborators in diﬀerent institutions). If a researcher needs to access the output of an observing run, then they need to contact a member of department at Warwick or Sheﬃeld and request a data reduction. There is no means of accessing or exploring the ULTRACAM data set from a remote location. Providing a simple means of accessing these data from remote locations would beneﬁt all of the research collaborators and is one of the aims of this project.
+
+Chapter 2
+
+Automating the reduction of the imaging photometry
+2.1 Data reduction for CCD images in Astronomy
+
+Since the late 1980’s, Charge Coupled Devices (CCDs) have risen to prominence in astronomy. Before CCDs, high-speed photometry in the optical was accomplished using photomultiplier tubes. These are high tension (high voltage) devices that detect faint light by using the photoelectric eﬀect followed by ampliﬁcation. When a photon impinges on the detector, an electron is ejected, this electron is then ‘ampliﬁed’ by a series of voltage steps until the resulting signal is read out by an analog to digital convertor. The main problem with this conﬁguration is the photomultiplier only has one detection element and the starlight needs to pass through a physical aperture in the camera so that only light from the target object is measured. It is not possible to measure multiple objects simultaneously. CCDs are 2-dimensional detectors covered with light sensitive semi-conductors (each one deﬁning a ‘pixel’) that are able to measure and count photons. The structure and construction of CCDs depend on their intended purpose. Consumer electronic devices such as mobile phones or digital cameras use an arrangement and read-out process diﬀerent to the CCDs used in astronomy. In order to decrease readout times, consumer devices use an architecture called ’interline’ where the read-out pixels and electronics are located in alternate rows of the CCD. This means that the every alternate row of the CCD is masked from light and used for readout only. The disadvantage of this architecture is that the ’ﬁll-factor’ of the CCD is now reduced to 50%. Astronomy purpose CCDs are usually full-frame transer devices. These devices are divided into 2 equal areas. One half of the device is exposed to light
+
+19
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+20
+
+and the other half is masked. After each exposure, the exposed (or imaging) area is shifted completely into the masked (or storage) area. The imaging area is now ready to be exposed again, while the image can be read out from the storage area. This architecture has the advantage that it allows more time for the read-out process to take place. A slower read out process introduces less noise into the output. The ﬁll factor of the imaging area is closer to 100% as none of those pixels are masked. There is still a small gap between pixels though so we don’t quite reach a ﬁll-factor of 100%. CCDs can be sensitive to optical, infra-red and ultraviolet light depending on the materials used and their manufacture. In ULTRACAM, all three of the CCDs are E2V 47-20 CCDs. They are frame-transfer chips with imaging areas of 1024×1024 pixels and storage areas of 1024×1033 pixels. To improve quantum eﬃciency, the ULTRACAM chips are thinned, back-illuminated and antireﬂection coated with E2V’s enhanced broad-band astronomy coating (in the case of the blue and green chips) and standard mid-band coating (in the case of the red chip), (Dhillon et al. [2007]). Since the CCD is recording a 2-dimensional image of the sky, it will capture multiple objects simultaneously. In the 2-dimensional image it is possible to create a virtual aperture as part of the reduction process. Physical apertures (used with photomultipliers) needed to be large enough to account for changes in seeing and drifts in the target object’s position as the telescope tracks the sky. Large apertures are a problem since the sky starts to contribute a signiﬁcant amount of the total ﬂux in the aperture. Nights with poor seeing and variable sky conditions were often not photometric in the days of photomultipliers. Nowadays, thank to the nature of the CCD imaging, we can still get photometric data from nights like this. Although early CCDs lacked the quantum eﬃciency of photomultipliers, this limitation has since been surpassed. Photomultipliers are rarely used nowadays, at least for optical astronomy. They are still used to detect photons from scintillations in Cerenkov detectors and neutrino detectors. In order to extract photometry from a CCD image, we need to perform several steps to convert the 2-dimensional image into a 1-dimensional ﬂux measurement for each object in the image. This is known as ‘reduction’. Reduction in CCD photometry can be summarised as follows: Bias subtraction: CCDs have an intrinsic noise due to quantum mechanical eﬀects known as readout noise. In order to ensure that this noise does not ﬂuctuate around zero with the odd negative number in the output we set an arbitrary bias for the CCD to ensure that each pixel always reads out a positive value. Since we are
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+21
+
+storing our pixel ADU values as 16-bit unsigned integers, negative numbers would appears as large ADU values (65535 − value). During the night, bias frames are recorded by taking CCD readings without exposing the CCD to any light. These bias frames are then subtracted from each science CCD frame. Flat ﬁelds: We cannot be certain that each pixel in the CCD array has the same sensitivity to light as its neighbours. This is a problem if we are trying to measure the ﬂux of an object very accurately. If the object’s light falls on diﬀerent pixels in each subsequent exposure, then the pixel sensitivity will impact our calibration of the object’s true ﬂux. To measure each pixel’s relative sensitivity, we expose the entire imaging area to a uniform source. The source is either a white screen mounted on the inside of the dome, or, more commonly, an exposure of the sky during twilight. This ﬂat-ﬁeld is then ‘normalised’ by dividing each pixel’s count by the average of all the pixels. Each pixel’s sensitivity can then be factored into our reduction of a science run. Source extraction & aperture creation: Our exposed 2-dimensional image can have many objects on it and we need to pick out the objects of scientiﬁc interest. We also need to ignore spurious image artifacts such as those caused by cosmic rays. Source detection can be automatic, as we will use in this project, or manual, as performed with the current ULTRACAM reduction pipeline. The source extraction stage will produce a list of apertures. The apertures are deﬁned by having a position (usually the centroid of the object) and a 2-dimensional area, which is usually a circle centred on the object’s position that captures all the light from the object but excludes light from any other nearby objects. These apertures are virtual; deﬁned in (x, y, radius) parameter space, rather than physical; as in the earlier ‘photomultiplier’ devices. In this project, we are using SExtractor, a popular, third party software package to perform the source extraction and aperture deﬁnition, (Bertin and Arnouts [2006]). Sky subtraction & Flux measurement: The Earth’s atmosphere is not completely dark at night and still glows blue with light scattered from the stars, reﬂected from the Earth or scattered from the Moon. The ﬂux of this sky background needs to be taken into account and subtracted from the total ﬂux measured in the aperture in order to leave us with the ﬂux that is contributed by our target object. There are two main methods of dealing with the sky background. The ﬁrst is to derive an overall sky-background for the image, which is then subtracted from the ﬂux measured in the aperture. The ﬂux remaining is then the ﬂux contributed by the target object. This overall sky background is not a single value, but a polynomial ﬁt in order to allow for smooth variations across the ﬁeld. The second approach
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+22
+
+is to ﬁt a proﬁle to the 2-dimensional data in the aperture. The proﬁle shape is something that follows the image proﬁle we would expect from a point source being spread out by the optics of the telescope and the Earth’s atmosphere. This is known as the ‘point-spread-function’ or PSF. We can ﬁt either a Moﬀat proﬁle or a Gaussian proﬁle to match the PSF. The Moﬀat proﬁle is favoured as its shape matches the real PSF of the star’s image as the Moﬀat proﬁle was derived by convolving atmospheric seeing proﬁles with telescope diﬀraction proﬁles. The sky background is then assumed to be the constant value in the equation of the ﬁtted proﬁle and the volume under the curve after subtraction of this constant is the ﬂux of the star.
+
+2.2
+
+Current method of ULTRACAM data reduction
+
+Thomas Marsh at the University of Warwick has developed a set of software tools for reduction of these ULTRACAM data. For the rest of this document we will refer to this pipeline as the traditional pipeline and the new pipeline created in this project as the automated pipeline. It is possible to run the traditional pipeline at the telescope during the observation. This allows observers to review these data in ‘real-time’. This serves as a ‘preview’ for the observer and allows adjustments to be made during the run. After the run, the raw data are copied to the archive and this can be used for reduction later. This can happen the following day, or much later, when the observer has returned from the observatory. Any of these data in the data archive can be ‘re-reduced’ at any time since all raw data are stored. The current data reduction process for ULTRACAM is designed to produce three colour light curves from the raw image data. The pipeline consists of the following stages: 1. Producing bias frames that are used the calibrate the CCD detector’s thermal noise characteristics. 2. Producing ﬂat-ﬁelds to calibrate the pixel sensitivity of each of the 3 CCD detectors. 3. Deﬁning apertures for the objects of interest in the run. This step involves manually choosing the objects of interest in the frames and deﬁning the aperture sizes and positions for each object. Apertures are set independently for each channel (r, g, b). An example of this can be seen in ﬁgure 2.1. 4. Running the reduction software. The reduction code uses the apertures deﬁned in the previous step and measures the ﬂux of each object in each colour. The
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+23
+
+software is able to track changes in the object’s size and shape due to changes in the point spread function (PSF) by scaling the virtual aperture. It is also able to track small changes in the positions of the objects. Although this process is not particularly cumbersome, it does include some manual steps and it does not scale well when there are a large number of runs to be processed or if there are many target objects in a run. For example, the run shown in ﬁgure 1.4 contains more than 1000 objects. Manually deﬁning apertures for each of these objects in each channel is not really practical. An automated method enables data reduction for all of the objects captured in each run without the need for manual intervention.
+
+2.2.1
+
+Aperture selection
+
+Figure 2.1: Deﬁning the apertures for the reduction using the traditional pipeline. Note that the two apertures can be linked. This instructs the pipeline to maintain the pixel separation of the apertures even if there is a small amount of movement from frame to frame. This is useful if our target object is likely to alter in brightness during the run.
+
+2.2.2
+
+Photometric calibration
+
+Comment: Put a bit of information about taking measurements of standard stars and using this for calibration of magnitudes. Also producing and using extinction curves.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+24
+
+2.3
+
+Automating the pipeline
+
+The outcome of this MSc project is a system that is able to process the raw image data from ULTRACAM and, without any manual intervention, produce a set of light curves for all of the objects in the data. It produces a set of web pages that can be viewed from anywhere with an internet connection.
+
+2.3.1
+
+Motivation for automating the pipeline
+
+ULTRACAM has recorded a large amount of photometric data at some of the world’s best sites and largest telescopes. Since the CCD captures more objects than the observer is strictly interested in, there is a good chance that some objects of astronomical interest have been captured by ULTRACAM, but not been noticed or analysed during the reduction process. We could have some highly valuable and scientiﬁcally useful data hidden in the archive. By automating the reduction pipeline we can produce photometry for all of the objects captured by ULTRACAM and then search through these light-curves to ﬁnd new objects of interest. By making these data accessible through a standard web-browser, the automated pipeline will allow collaborators who are not physically at the observatory to browse these data as it is being gathered. Although not strictly ‘real-time’, the automated pipeline can be invoked immediately after the run is completed. This enables a closer collaboration with on-site and oﬀ-site teams during an observing run as the oﬀ-site team can see and review the reduced data very easily.
+
+2.3.2
+
+Algorithm of the automated pipeline
+
+We will ﬁrst summarise the key steps in the automated pipeline at a high level. The subsequent sections will describe each in more detail: Key stages for automation The stages of the reduction process are as follows: 1. Stage 1: Extract all of the ‘detectable’ objects in all of the frames. (a) Read the raw image ﬁle, containing all frames for a particular run. (b) Initialise an empty list of objects (c) For each frame in the run i. For each colour channel in the frame. ii. Extract each window from the frame.
+
+Draft of 1:09 pm, Saturday, November 22, 2014 iii. Send the window bitmap data to the SExtractor software.
+
+25
+
+iv. Use SExtractor to process these data and produce a catalog of all sources, with their positions and ﬂux measurements. v. Read the results of the source extraction process, including pixel position and ﬂux measurements for each object. vi. For each object returned: A. Try to match this object with one already in the list, based on nearest distance. B. If the object is not already in a list, add this object to the list as a new object. (d) Store the list of objects for each of the three channels. 2. Stage 2: Filter this list, removing objects that are likely to be artifacts. This is done by looking for objects that do not persist across more than a pre-deﬁned percentage of frames; and objects that have a size equal to one pixel. 3. Stage 3: Produce catalogs of the objects ordered by ‘brightness’ as measured by the average ﬂux. Pass these catalogs to the Astrometry.net library to resolve the WCS solution for the ﬁelds. Perform this task separately for each of the three channels (r, g, b). Since each channel has a very slightly diﬀerent view of the ﬁeld and diﬀerent distortions in the image, their respective WCS solutions will diﬀer by a small amount. 4. Stage 4: Using the WCS solutions, merge the three catalogs to ‘cross-identify’ each object across the three channels. This may seem to be a trivial step for many ULTRACAM runs because the diﬀerences in the ﬁelds from channel to channel are minor, however in crowded ﬁelds such as the one shown in ﬁgure 1.4, simply matching objects based on their pixel coordinates is not enough to disambiguate them. 5. Stage 5: Produce deep images for each channel and export to a web-viewable format, such as the Portable Network Graphics (PNG) format. 6. Stage 6: Create .json object ﬁles and HTML ﬁles to enable them to be loaded into a web-browser. 7. Stage 7: Publish this ‘web-enabled’ version of the information to a web site that is accessible outside of the university network.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+26
+
+Figure 2.2: Schematic of Stage 1 of the pipeline.
+
+Figure 2.3: Schematic of Stage 6 and 7 of the pipeline. Source extraction A popular software tool used for source extraction is SExtractor, Bertin and Arnouts [2006]. SExtractor is able to process a 2-dimensional image and produce a catalog of sources in that image, along with a measurement of the ﬂux of each object. For each frame in the data run (which could consist of several frames to several thousand frames), we extract a bitmap of the image, which consists of a 2D
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+27
+
+pixel map with the CCD counts (or ADU) for each pixel, and pass this to SExtractor for source extraction. SExtractor performs two passes on this image. On the ﬁrst pass it makes an estimate of the ‘background signal’ of the entire image. We can assume that the ‘background-signal’ contains both the sky-background and the bias of the CCDs as we have not subtracted the bias from each frame before passing it to SExtractor. It estimates the background by creating a mesh-grid of background readings for the whole image, applying a median clipping algorithm and then ﬁtting a bicubic spline to interpolate between the mesh points. It then subtracts this background from the image. The size of the mesh grid is conﬁgurable and the pipeline allows the user to tweak this parameter if necessary. Unfortunately, in the current version of the pipeline, this parameter is not conﬁgured automatically. If small scale changes in the background are expected then the mesh size should be reduced. The usual value that is used in the pipeline is a mesh grid size of 64 pixels. We have not noticed any reductions where this choice of mesh size has caused any obvious problems. On the second pass, SExtractor applies a convolution ﬁlter to the image. This step is intended to increase the detectability (enhance the Signal to Noise ratio) for target objects on the frame. The default ﬁlter used in the pipeline is a 1 2 1 simple ‘circular’ PSF deﬁned by the 3x3 mask: 2 4 2 This ﬁlter is normalised 1 1 1 before being applied to the image. Comment: Include a ﬁgure here showing a zoom of the image, pre and post ﬁlter. Doesn’t really seem to make much diﬀerence. SExtractor then applies thresholding to the background subtracted and ﬁltered image. The threshold for detection is deﬁned as the pixel’s ADU value above the background (in units of the background’s standard deviation). This threshold is conﬁgurable and can be modiﬁed before running the automated pipeline. The default value we have used for most of the pipeline processing so far is 3σ. Decreasing this parameter will have the eﬀect of increasing the number of objects detected for any particular run but reducing it too much will cause the source extraction to produce too many spurious object detections. For example, setting this value to 1σ results in the source extraction identifying noise in the background as sources and this leads to the automated pipeline being overloaded with new sources to process causing it to grind to a halt as the number of tracked objects climbs rapidly. At the moment, the automated pipeline is not able to automatically tune this parameter for each run, although this is something that should be considered for future itera-
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+28
+
+Figure 2.4: The eﬀect of tweaking the DETECT THRESH parameter in SExtractor. The upper plot shows the objects detected in a run with the threshold set at 3 × σbackground [56 objects detected], while the lower plot was produced with DETECT THRESH set at 1.5 × σbackground [101 objects detected]. Note: setting it to 1.2 detected 149 objects, but took the pipeline 3x longer to run. tions of the pipeline. Figure 2.4 shows how reducing this threshold can increase the number of objects detected by the pipeline. Comment: SExtractor has real issues with segmenting the objects in a heavily defocused run. Experimenting with blending thresholds helps to improve segmentation. I could write a page or two on this, but I haven’t automated any of it (yet). SExtractor then determines the pixel position of each object by calculating a weighted mean in the x and y dimensions. The weighting applied to each pixel is the pixel intensity (after background subtraction and ﬁltering). If Ii is the pixel intensity for pixel i in the segmented collection of pixels, S then:
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+I i xi
+
+29
+
+X=
+
+i∈S
+
+Ii
+i∈S
+
+I i yi
+
+Y =
+
+i∈S
+
+Ii
+i∈S
+
+For each object that has been selected through the threshold criterion, the ﬂux is then calculated. This is computed by one of 2 methods. 1. AUTO: Automatic aperture mode SExtractor uses a routine inspired by Kron’s “ﬁrst moment” algorithm Kron [1980]. It deﬁnes an elliptical aperture that has an elongation r1 =
+rIr . Ir
+
+and position angle θ deﬁned by the second order moments of
+
+the object’s light distribution. Across this ellipse, a ﬁrst moment is computed The aperture is then scaled by user deﬁned parameters to 2.5-3.5 times r1 . This scale factor is conﬁgurable by the user before the run, but does not require modiﬁcation for this project. 2. APER: Fixed aperture mode In this mode, the measurement of ﬂux for the object is calculated by summing pixel intensity, Ix,y , of all of the pixels that are within a pre-deﬁned aperture radius centred on the x, y position as calculated above. SExtractor does not perform a Moﬀat ﬁt to the PSF. F LU X =
+x,y∈aperture
+
+Ix,y
+
+When using the ﬁxed aperture mode, the aperture radius is deﬁned before the pipeline is run and is speciﬁed manually. Due to the diversity of data in the ULTRACAM archive, there is no obvious single choice for this value. For example, some of the runs containing bright sources (ie magnitude 12 and brighter) that are followup observations of sources found in the SuperWASP1 and HAT2 surveys use the telescope in a deliberately de-focused state. Defocussing the telescope to this extent transforms the Moﬀat-like PSF into something that resembles a ﬂat disc, or even, in extreme case, a disc with a hole in the centre (which is an image of the secondary mirror). In this case, the fact that SExtractor does not attempt a Moﬀat ﬁt is an advantage. Aperture sizes for these runs need to be between 50 and 80 pixels. When the telescope is in focus, for ‘normal’ observations and with crowded ﬁelds, we need to use far smaller apertures of between 8 and 15 pixels. It is conceivable that the decision on which aperture size could be automated in this pipeline. A simple way to do this would be to perform a 2-pass approach. First use
+1 2
+
+http://www.superwasp.org/ http://hatnet.org/
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+30
+
+Figure 2.5: AUTO vs FIXED apertures in SExtractor. The image on the left is the result of using the AUTO aperture setting in SExtractor. Note that apertures can be elliptical and are allowed to overlap. On the right is a FIXED aperture setting with the aperture diameter set (manually) to 15 pixels. The FIXED aperture is always circular. AUTO aperture mode to allow SExtractor to return a list of aperture sizes, then choose a ﬁxed aperture size that represents the best choice for this run, most likely the median of the aperture sizes returned after the ﬁrst-pass. This is something that will be considered for future iterations of the pipeline. In order to facilitate the automatic running of the pipeline across the entire ULTRACAM data archive, the default setting for the ﬂux measurement is the ‘AUTO’ aperture mode. This means that SExtractor uses the algorithm (described above) to determine the most appropriate aperture size for each object. After inspection of the output, runs that would beneﬁt from ﬁxed apertures can then be ‘re-computed’ with a manual setting for the aperture size. The output from SExtractor is a FITS ﬁle that contains a catalog of all of the detected objects with measurements of their ﬂux. At this stage of the pipeline there is no concept of ‘state’. Each individual window of each frame in each channel (r, g, b) are treated separately by SExtractor and there is no tracking of objects from frame to frame or channel to channel. This task is undertaken by the automated pipeline software built for this project.
+
+2.3.3
+
+Object matching
+
+The automated pipeline needs to build up light curves for all of the objects and, in order to do so, it needs to keep track of these objects throughout the run (across frames and channels). The approach is to use the pixel (x, y) coordinates of the
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+31
+
+objects returned by SExtractor as the key attribute for identifying an object that recurs from frame to frame. For each window sent to SExtractor, the pipeline performs the following steps: 1. Read the catalog ﬁle, containing the (x, y) coordinates and ﬂuxes for all objects in the window. 2. Rank all of the objects from brightest to faintest. 3. Transform the pixel coordinates from the reference frame of the individual window, to an overall reference frame, matching the size of the full CCD. 4. Match all objects in the catalog. For each object in the list, check its proximity to any objects that have been identiﬁed on previous frames. The distance threshold for a match is conﬁgurable and the default is 10 pixels. If there is more than one match, the closest match wins. If there is no match, then this is a ‘new’ object and it is added it to the list of detected objects. The algorithm is started with an empty list of objects. In the ﬁrst frame, this list grows to include most of the objects we expect to detect in the run. However, the number of objects being tracked will slowly increase as the run is being processed. At this stage of the pipeline we do not remove any objects from our list. This approach will not cope with situations where the telescope may have been moved or disturbed during a run and there is a sudden ‘step-jump’ in the positions of all of the objects on the frame. This is sometimes referred to as a ‘glitch’. If the ‘glitch’ results in a movement that is greater than the distance threshold (usually 10 pixels) then the pipeline will claim to have detected many new objects. In order to deal with glitches, we use a simple technique to determine the pixel shift (∆x, ∆y) for each window, compared to the previous window. We create 2 dimensional map centred at zero, with all values set to zero. For each source detected (object) in the current window we calculate the pixel displacement vector to every object in the previous window (δx, δy )i . We then increment our image map by ‘1’ at the corresponding position. When we have done this for all objects detected in the window, the resulting image ‘histogram’ will have a peak at a value of (δx , δy)max which corresponds to the overall oﬀset of the second window from the ﬁrst. ie (∆x, ∆y) = (δx , δy)max . We ﬁnd this peak by ﬁrst smoothing the image map (with a gaussian blur) and then ﬁtting a quadratic around the maximum value and determining its value when the derivatives are zero
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+32
+
+in the x and y directions. We then apply this oﬀset to our current window before looking for matches to objects in the previous window. For each detected object in the window, we store: • ID A unique ID for this object that will persist across all frames for this object. • For each frame in the run: – Flux The ﬂux measurement for this object, as determined by SExtractor. – Position The pixel (x, y) position for this object, as determined by SExtractor, adjusted to the reference frame of the CCD. Note we do not include the small oﬀset measured from frame-to-frame as determined be the image map procedure described above. – Flux radius As measured by SExtractor, this is deﬁned as the radius of the circle centred on the barycenter that encloses about half of the total ﬂux. For a Gaussian proﬁle, this is equal to 1/2 the FWHM. Before the pipeline attempts to match objects across each of the three channels (r, g, b), it performs a ’clean-up’ of these data. It makes three passes of the object list performing the following ﬁltering: • Cosmic ray ﬁltering. This step ﬁlters out any object that appears on only one frame in the run. • Low coverage ﬁltering. This step removes any objects that appear on fewer than a pre-deﬁned percentage of frames. This value is conﬁgurable. The default is 20%. This value should be set to ‘0’ if we are looking for any kind of transient object in the run. • Single pixel ﬁltering. This step removes any object that has a Flux radius, as measured by SExtractor, that is less than or equal to 1 pixel. At this stage, the pipeline has produced three distinct object lists. One for each of the red, green and blue channels. These lists are referred to as ‘catalogs’ as they now contain position and photometric information for each object detected in the run. Now the pipeline attempts to cross-identify objects across all three catalogs. This is done based on the object’s average position (x, y) in each channel and the minimum distance between it and it’s corresponding location in the other channel. If there is an astrometric solution for each channel then this is used in favour of the pixel position as the astrometric solutions are likely to be far more accurate
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+33
+
+than the pixel positions. Unfortunately, for most of our runs, we do not have an astrometric solution and we have to revert to matching based on pixel distance. Astrometric solutions, and our diﬃculties with ﬁnding solutions, are discussed later in this chapter in section 2.3.4. The position we use is the mean pixel position of the object through the duration of the run. So we have three values to match (¯, y )red , (¯, y )green and x ¯ x ¯ (¯, y )blue . Since the red catalog (which is derived from the optical channel that x ¯ is usually conﬁgured to use the the Sloan ‘i’ or ‘r’ ﬁlter) has the most number of objects detected, it is used to seed the ‘master’ catalog. In other words, the master catalog is initialised with all of the objects in the red catalog. For each object in the ‘master’ catalog, the pipeline consults the catalogs from the other two channels looking for a nearest match in distance within a pre-deﬁned threshold. For each object in the green catalog indexed by the letter i, we calculate its distance from each object in the master catalog Di,j . Di,j = (¯red,j − xgreen,i )2 + (¯red,j − ygreen,i )2 x ¯ y ¯ The matched master object for this green object is the one with the closest pixel distance minimum(Di,j ). We merge these two objects together in the catalog, which now contains one unique identiﬁer (number) and the red and green photometry. If there is no match within the minimum distance threshold, then the object is treated as a ‘new’ object and added to the master catalog. It is possible that an object can be identiﬁed in the green channel, but not in the red. In this case, it is still added to the master catalog as a new object. This means that we have the capability of dealing with objects that have photometry in one or two colours, but not all three. The process is then repeated for the blue catalog. Again we match the blue coordinates to each object in the master catalog. First trying for a match of the blue coordinates to the red coordinates and then, if no match is found, we repeat looking for a match between the blue coordinates and the green coordinates. Once again, if no match is found, then the object is added to the master catalog as a ‘new’ object. It is obvious that this is a very crude method of object matching. It is, however, surprisingly robust for the majority of the ULTRACAM runs in the data archive. Many of the runs do not have crowded ﬁelds so there is little ambiguity in the object’s positions. It can fail in a few situations. Since the red, green and blue channels do not have identical optical conﬁgurations, the images are not exactly aligned geometrically. The images in the r, g, b channels can diﬀer from each other in terms of translation, rotation and distortion (across the image). This becomes
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+34
+
+Figure 2.6: Images of the three channels overlaid (without any distortion correction applied). It is clear that the three channels do not have identical images. Translation, rotation and diﬀerential distortion are all visible. This makes matching of objects across the three channels diﬃcult in some runs. particularly obvious for a full-frame image (using the full area of the CCD) and is most visible towards the edges. An example of this diﬀerence in the pixel locations from channel-to-channel can be seen in ﬁgures 2.6 and 2.7. Yet another complication is caused by the variation in the non-overlap of the three channels during the course of a particular observing run. When the airmass of the target ﬁeld undergoes a signiﬁcant change, variation in the image distortion due to the atmosphere varies in each channel. It is also true that the camera’s physical orientation changes and the optical paths will undergo changes due to ﬂexure in the instrument’s chassis. The change in the oﬀset position from channel to channel can change by as much as 4 pixels as the airmass changes from 1.0 to 1.2 and for larger airmass changes, the object will move by as much as 15 pixels in the blue channel relative to the red and green channels. This trend is dealt with in the ﬁrst stage of the pipeline by allowing the object to move gradually from frame-to-frame. It compensates by constantly updating the object’s position in each frame and using the new value as the comparison position
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+35
+
+Figure 2.7: A close up of ﬁgure 2.6 showing the bottom right hand corner. Note that the blue image is signiﬁcantly translated with respect to the red and green image. To make matters worse, this distortion is not constant throughout the duration of a single run and changes as the airmass of the target ﬁeld changes. when looking for matches in the next frame. It can deal with a general ‘slow’ migration in the object’s position. Therefore, in the ﬁrst pass of the automated pipeline, when we are building the catalogs for each channel independently of each other, we do not have these problems with object matching. The process can fail when cross-matching across the diﬀerent channels only if the mean position of the object is displaced by a large amount from channel to channel, or the ﬁeld is crowded and there is more than one match for any particular set of objects. Fortunately, for many of the crowded ﬁelds, we can ﬁnd an astrometric solution. In this case, we are no longer relying on pixel coordinates, but world coordinates to perform the match across the channels and these image distortions have been accounted for. Once the object cross-matching stage is complete, the pipeline writes the new ‘three-colour’ master catalog to a folder on the web server’s ﬁle space ready to be loaded in the web viewer.
+
+2.3.4
+
+WCS solutions
+
+After some ad-hoc tests using SCAMP Bertin [2006] and Astrometry.net Hogg and Lang [2012] it seemed that the Astrometry.net software was more reliable at ﬁnding good WCS solutions to the ﬁelds. The software was downloaded to a local machine (including the extensive index ﬁles) and compiled. Despite being the solution that yields the most positive results so far, it still does not consistently ﬁnd WCS solutions for all of the ﬁelds. There are several challenges to ﬁnding a WCS solution for the ﬁelds. These are:
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+36
+
+1200
+
+1000
+
+800
+
+600
+
+400
+
+200
+
+0 0
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+1200
+
+1200
+
+1000
+
+800
+
+600
+
+400
+
+200
+
+0
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+Figure 2.8: The diﬀerence in object mean positions between the ‘red’ channel and the ‘green’ channel (upper image) and the ‘red’ channel and ‘blue’ channel lower image), for run: 2013-07-21/run010
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+37
+
+Figure 2.9: Plot of the (x, y) position of the object in the lower left corner of ﬁgure 2.7 showing how the position varies of the course of the run 3 hours. During this time the airmass, sec z, of the target ﬁeld varies from 1.02 to 1.21. Note how the x position of the object in the blue channel drifts with respect to the x position of the object in the red and green channels. The step changes in the object’s position are caused by the observer making manual adjustments to the guiding at the telescope.
+
+Figure 2.10: Another plot showing the change in relative positions of a single object in diﬀerent channels over the course of a long run. These data is taken from the longest run in the ULTRACAM data archive, the 9.5 hour long run 2010-0425/run020. During this run, the airmass varies from a minimum of 1.0 (corresponding with the center of the plot), to a maximum of 1.99 (at the extreme left and right ends of the plot). The change in oﬀset from the red to the blue channels is about most noticeable on the x position, where the blue channel’s oﬀset moves by as much as 13 pixels.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+38
+
+• Lack of telescope pointing information: ULTRACAM does not integrate with the pointing software of any of the telescopes and does not get pointing information automatically. We rely on the observer to enter a name of the candidate object for each run and then, when the data are archived, a SIMBAD lookup is used. This gives us a world coordinate that is somewhere in the ﬁeld, but it is not known which object (or pixel location) this applies to. • Field rotation: Since ULTRACAM can be rotated about the optical axis to allow for optimal alignment of the objects, the ﬁeld of view can be at any arbitrary angle of rotation, giving an extra degree of freedom to the matching task. • Windows: Many ULTRACAM runs are conﬁgured to use only portions of the CCD area. You can see an example of this in ﬁgure 1.6. This means that there is an incomplete view of the sky for that ﬁeld. When trying to match to existing indexes, there could be important, bright objects that are in the index ﬁle, but do not appear in the ULTRACAM ﬁeld due to the masking caused by the windows. • Sparse ﬁelds: On uncrowded ﬁelds, we might only have 4-5 objects that can be used for ﬁeld identiﬁcation. • Very small windows: Some runs, particularly ones in high cadence mode, use very small windows (eg 172x156 pixels) in order to decrease readout time. This means that our images (and input catalogs) might only contain two objects or so. This makes matching to a reference catalog impossible. • Choice of reference index by colour : The Astrometry.net software uses USNOB and Tycho-2 reference catalogs by default. These are based on infra-red and V magnitudes. This means that the blue channel (which is often using the SDSS u ﬁlter) might not match the reference indexes. Indeed, current tests often result in a match in red, a match in green but no match in blue. After the ﬁrst stage of the automated pipeline we have three catalogs of objects for each of the channels (red, green and blue). These catalogs contain pixel coordinates and ﬂux measurements for each frame in the run that the object has been identiﬁed. We produce a simpliﬁed catalog based on the mean pixel positions and mean ﬂux for each object (xi , yi , Fi ). This catalog is then sorted in order of ¯ ¯ ¯ decreasing mean ﬂux, F . The Astrometry.net package is given this input catalog and asked to ﬁnd an astrometric solution for the ﬁeld.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+39
+
+Astrometry.net compares objects in its reference catalog to the catalog and pixel positions in the input. The matching algorithm is based on comparing the relative positions of quadruples of stars. The indexes are ‘pre-built’ and derived from the USNO-B survey, which contains ∼ 109 stars and Tycho-2 which has ∼ 2.5 × 106 stars. In addition to providing Astrometry.net a catalog of objects to match, we also pass in the known location of the ﬁeld that has been provided via a SIMBAD lookup of the coordinates of the target object as speciﬁed by the observer at the telescope. This gives us the world coordinates that are guaranteed
+3
+
+to be somewhere within
+
+our ﬁeld. We provide a limit to the coordinates of the solution as a maximum distance of 1 degree from our input location. We also provide upper and lower limits to the expected ﬁeld scale of the solution. Providing these parameters saves computation time as it restricts Astrometry.net to a small region of the index and removes the need of doing a comprehensive search. Considering that our ﬁeld sizes are only a few arc minutes wide, specifying 1 degree as the search radius is probably overkill. A future task for this automated pipeline project will be to ﬁnd the optimal value for this parameter. If Astrometry.net can ﬁnd a solution for our ﬁeld, it generates a FITS format ﬁle containing the parameters deﬁning the solution. These parameters consist of the position in right ascension and declination (αref , δref ) of a particular reference pixel in the image (xref , yref ), plus 4 parameters that deﬁne a transformation matrix to move from pixel coordinates (x, y) to world coordinates, (α, δ). These values are labeled CD1 1, CD1 2, CD2 1 and CD2 2. The transformation from pixel coordinates to world coordinates is then given by: α αref CD1 1 CD1 2 x = + δ δref CD2 1 CD2 2 y Where (x , y ) are the pixel oﬀsets to the reference pixel (xref , yref ). These values are saved to the web repository as a JSON object, ready to be loaded when the web browser accesses the page. These 4 values deﬁne a scale transformation and a rotation from pixel to world coordinates. They do not take into account distortion across the image. In order to encapsulate this distortion, Astrometry.net also provides Simple Imaging Polynomial (SIP) correction parameters, Shupe and Hook [2008]. In this project, we use a SIP polynomial of the 3rd order to account for distortion across the ULTRACAM ﬁeld. Figure 2.11 shows the SIP polynomial corrections applied to the
+Provided that the telescope operator has correctly entered the target name, and the SIMBAD lookup has been successful.
+3
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+40
+
+positions of each object identiﬁed in the run 2013-07-21/run010. The correcting factors provided by this polynomial are generally very small, providing a corrections of a few thousandths of a pixel in most cases.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+41
+
+0
+
+200
+
+400
+
+600
+
+800
+
+1000 0 200 400 600 800 1000
+
+0
+
+200
+
+400
+
+600
+
+800
+
+1000 0 200 400 600 800 1000
+
+0
+
+200
+
+400
+
+600
+
+800
+
+1000 0 200 400 600 800 1000
+
+Figure 2.11: An indication of the distortion present in the ﬁeld for the ‘red’, ‘green’ and ‘blue’ channels of ULTRACAM. The background bitmap shows the deep image of the ﬁeld. The vectors leading away from the objects were generated by calculating the ’World’ coordinates (WCS) for the object’s position (without the SIP corrections) and the reverting those WCS coordinates back to pixel coordinates (using the SIP corrections). The displacements have been exaggerated by a factor of 107 .
+
+Chapter 3
+
+Creating a browse-able front-end for the data
+The goal of this project was not only to automate the processing of the ULTRACAM raw data, but also to provide a mechanism whereby the entire data archive could be made available for easy access to researchers worldwide. The obvious approach is to make the output of the project available through a web enabled interface. From the outset of the project, all eﬀorts have been focused on ensuring that the resulting data is all accessible through an easy-to-use web interface.
+
+3.1
+
+Web browsers
+
+In order to make access as easy as possible, a very obvious request is to create a solution that does not require the user to install any additional software on their own computer. Since we can reasonably safely assume that everyone who has an interest in accessing the ULTRACAM data has a standard Web browser installed, a web version of this data archive is the best solution. A more speciﬁc deﬁnition of our assumption is that we expect that the user accessing the archive will have a browser that has the capability of rendering HTML5 markup, Javascript and CSS. These technologies are standard in all popular web browsers in mid-2014. The only notable exception is that Internet Explorer, by Microsoft, is not supported in this project. Although Internet Explorer is a modern browser and does have support for the required technologies, its implementation of these technologies is signiﬁcantly diﬀerent to that of all of the other browsers and would have required extra coding for support. We felt that, since the majority of astronomers don’t use the Microsoft operating system, we were well justiﬁed in
+
+42
+
+Draft of 1:09 pm, Saturday, November 22, 2014 making this omission.
+
+43
+
+3.2
+
+Web technologies
+
+HTML, CSS and JavaScript are three core technologies driving the development of the dynamic, interactive and ﬂexible applications we are becoming accustomed to on the web these days. We chose these three technologies to present the ULTRACAM archive. The result of this is that this archive is immediately available to anyone with a modern web browser and working on any type of computer (desktop, laptop or tablet). There are some high demands on memory, so it is not recommended that the archive is browsed using a mobile phone, although, in theory, there is no functionality that restricts use on such a device (just the memory constraints). HTML provides the underlying structure of a modern webpage. It is a semantic markup language, meaning that its purpose is to inform the browser on the document’s structure. Despite the habit of many people who dabble at making web pages, HTML is not meant to be used to alter the presentation of content. CSS (or Cascading Style Sheets) is the layer that is meant to inform the browser on how the presentation of each element on the page should look. For example, it might deﬁne the fonts or colours for each particular element (or set of elements), like headings, paragraphs, etc. Javascript provides the interactive portion of the page, allowing the user to trigger actions when a mouse is clicked or a new object is loaded. It can be used to manipulate the structure of the existing page. It also provides the mechanism for mathematical computation. Another way of stating this is to say that HTML provides the Semantic structure, CSS the Presentation layer and JavaScript the Programmatic environment. This is also described as the classic ”Model-View-Controller” approach used in many development paradigms in the ﬁeld of Computer Science. The ﬁnal stage in the ULTRACAM automated pipeline produces a set of ﬁles that are available to a web browser. These ﬁles are hosted on a web server that is operated by the University of Warwick CSC team. The pipeline prepares that ﬁles and then writes them to the appropriate location in the University’s local storage. As soon as the pipeline has ﬁnished running, the web pages can be viewed globally. Web applications like this, are often refered to as ’client-server’ applications, meaning that the application consist of two parts, one running on the client (web browser) and the other running on the server of the institution hosting the application. Obviously, there is a one-to-many relationship between clients and server. There is usually only one server involved, but many clients can connect to that server
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+44
+
+and interact individually with the application. When writing the web interface for this project we had to make a decision on how much of the functionality we should place on the server versus the client. There were two main, competing, factors to consider: • Complexity of the application: Writing an application that has complex components on both the server-side and the client-side, increases the diﬃculty in launching and maintaining the application. We need to install and conﬁgure a web server that is able to run code locally and that also needs access to local data sources, such as databases. If we structure our application such this is only relies on the web server to host and serve static ﬁles, then the management of the server-side portion is trivial. If, on the other hand, we decide to split the application code to run on both the client and the server, then we need code on both components in order to coordinate the interaction between the two. Also, the connection between client and server can add some latency (time-lag) to the interactions. This would be noticeable if, say, every time the user clicks on a new object in the ﬁeld, we need to make a request to the server to fetch a new batch of data to render. • Browser memory constraints: Loading all of the data required to display the results of one of the ULTRACAM runs can be quite demanding on the browser. For some runs there are several hundred objects each with several hundred exposures. This can result in a JSON ﬁle for the object data that is >1 MByte in size. All of this has to be loaded into the browser’s memory. If the user is working on a tablet or an older desktop PC or laptop, then this can cause memory issues. Some long runs with extremely high cadences have very few objects, but hundreds of thousands of exposures and these will tax the memory management of the browser. That said, it is true that for the vast majority of the runs, the memory load on the browser, although signiﬁcant, is not a problem. In order to aid rapid development of this project, we decided to opt for a purely client-side code implementation, leaving the web server to serve only static ﬁles. This is working adequately in terms of meeting the needs and scope of the project, but it is clear that, for future iterations of this pipeline we should carefully consider moving to an application model that relies more heavily on the server to manipulate, store and serve data. We cannot place any more load on the client. As our data storage tool, we chose JSON (JavaScript Object Notation)
+1
+
+1
+
+http://json.org/
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+45
+
+as the format as this meant that it could be easily loaded by the Javascript code running in the browser. JavaScript has several built-in methods to load and parse a JSON object. JSON is a ﬂexible, open format that allows a hierarchical structure to be deﬁned for each object stored. It is also designed to be human-readable, meaning that it is possible to open in a text editor and check to contents. The problem with this format is that it is stored as ’plain text’ and uncompressed. Also the text format itself deﬁnes the structure of each objects it contains, leading to some amount of redundancy in the ﬁle (eg the repeating of labels, etc). While it is true that JSON is ineﬃcient in many ways, it is a useful format to use thanks to its ﬂexibility and the ease with which the developer can check and debug the data. Many client-server applications use a relational database to store their data, often something like MySQL. Since we were not writing any code to run on the server-side and purely relying on the web server for static ﬁles, this did not seem appropriate. It is a topic that will be re-considered when we look at implementing server-side code in future iterations of this automated pipeline.
+
+3.3
+
+The Web site
+
+The core ‘visible product’ of the project is a website that allows a user to browse all of the data in the ULTRACAM archive. The key features of this website are: • A catalog of runs organised by calendar date, containing thumbnail images of the ﬁelds. • For each run, a web page that shows the user: – deep images of the ﬁeld in each of the three channels (r, g, b). – light-curves of each object as the user clicks on the object with the mouse. – plots of the pixel position of each object over the course of the run. – world coordinates of each object, provided that a correct astrometric solution has been found for the run. – light curve for the object that is currently being used as the ’comparison’ object. • light-curves can be plotted as absolute measured ﬂux or a relative ﬂux compared to the comparison object in the ﬁeld. • the web page allows the user to export the data in a CSV format. See Fig. 3.1 for an example of the web-page.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+46
+
+Figure 3.1: Example of the webpage for browsing the light-curves of a particular run.
+
+3.4
+
+Accessing the data
+
+The pipeline deposits the output HTML, Javascript, image (PNG) and data ﬁles (JSON) to a folder that is conﬁgured to be server by the University of Warwick’s CSC web server at http://deneb.astro.warwick.ac.uk. Please refer to the User manual to ﬁnd out how to access and browse the data 6.
+
+Chapter 4
+
+Photometry results from the automated pipeline
+4.1 The archive
+
+At the time of writing, the full ULTRACAM archive is still undergoing analysis by the automated pipeline. At present 347 nights, out of a total of 406, have been processed and are available for viewing at the following URL: http://url.to.be. provided/. Of these processed nights, approximately xx have been investigated for variability. At the moment, the investigation is performed by a visual check on the light-curve.visual. The web interface is designed so that it is easy for the viewer to examine the light-curves of all of the objects systematically. The user-interface allows the users to see each light curve, one-by-one by pressing the ’right’ and ’left’ arrow keys on the keyboard. More information on how to use this interface can be found in the User Manual 6.
+
+4.2
+4.2.1
+
+Data quality
+Photometric calibration
+
+The main purpose of this MSc project was to establish a process for automatically reducing the light-curves for all objects in the data archive rather than to focus on accurate and well-calibrated measurements. The diverse nature of the dataset means that it is not trivial to write a purely automated algorithm that can perform fully calibrated measurements. Correct calibration of the photometry for ULTRACAM requires to the following steps: 47
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+48
+
+• Using ﬂat ﬁelds to take into account the varying sensitivity of the individual pixels of the CCD detector. • Subtracting bias frames from each image to remove the additional counts caused by having a non-zero bias on the CCD. • Using a standard star to calculate the oﬀset magnitude required to calibrate to the standard magnitude system. For ULTRACAM these are usually Sloan u, g, r, i magnitudes. • Computing the atmospheric extinction for the night by ﬁtting extinction curves for a number of bright objects that have been measured over a range of airmass. During a typical night at the telescope, the observers will take steps to ensure that there are suﬃcient data to perform this calibration. They will take several bias frames, ﬂat-ﬁelds and will observe standard stars. When the reduction is performed later, these various datasets will be combined to calibrate the photometry of the target objects. The automated pipeline built for this project lacks the ability to correctly identify the appropriate bias readings, ﬂat-ﬁelds and standard stars that should be used for photometric calibration. This requires human intervention. Therefore, this step is skipped altogether. The magnitudes and ﬂux counts produced by the automated pipeline are not calibrated and will diﬀer from their true values by a certain oﬀset. It is possible to take the output of the automated pipeline and calibrate the photometry, but, at the moment, this is a manual process.
+
+4.2.2
+
+Comparison of the 2 pipelines
+
+Since the ULTRACAM already has a well-established data reduction pipeline, it is useful to compare the results of this pipeline with the new, automated one built in this project. As mentioned above, the automated pipeline does not perform calibrated photometry, but we can still compare the non-calibrated photometry to get an estimate of how well our new pipeline performs. In order to do this, we chose a run of a target object that has often been observed with the ULTRACAM. The object is NN Ser, a white-dwarf, M-dwarf eclipsing binary. The speciﬁc run in question is 2013-07-13/run111. Running the automated pipeline on this run is achieved by simply typing: runbuilder.py 2013-07-13/run111 on the command line. Please refer to the user
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+49
+
+manual 6 for instructions on how to install and run the pipeline. The reduction takes about 5 minutes of processing time running on a standard desktop machine in the University of Warwick Astronomy department. The output of this reduction can be seen at http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-13/ run111.html.
+
+Figure 4.1: Snapshot taken from the automated pipeline browser for 2013-0713/run111, target:NNSer. This is a stacked image from the ’red’ CCD with the Sloan ’i’ ﬁlter. The light-curves in ﬁgures 4.2 and 4.3 are a good demonstration of the reduction of an interesting eclipse, but, in order to perform a comparison of the two pipelines, it makes more sense to choose two objects in this run that we can assume are constant objects. The two objects we have chosen are the two brightest objects in the ﬁeld and are labeled ’0’ and ’1’ in ﬁgure 4.1. We are making the assumption that these two objects are of constant brightness. Since we will be comparing the diﬀerential photometry of these two objects, in other words, the ratio Counts0 /Counts1 , any variations due to the systematic eﬀects of the observation itself, such as atmospheric transmission, etc will be equivalent for both objects. Figures 4.4 and 4.8 show the diﬀerential photometry for the two pipelines. Both of the pipelines have consistent values and agree with each to well within 1 standard deviation.
+
+4.2.3
+
+Apertures
+
+Since the automated pipeline relies on the third party software, SExtractor, to determine the apertures on each frame, objects that do not meet the required signal to noise ratio on any particular frame will not be detected and therefore have no
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+50
+
+25000
+
+20000
+
+i g u
+
+15000 Counts 10000 5000 0 0.940
+
+0.945
+
+0.950
+
+0.955 0.960 MJD +56486
+
+0.965
+
+0.970
+
+0.975
+
+Figure 4.2: Light curve of the target object, NN Ser produced using the automated pipeline. The vertical axis is the raw ﬂux measurements calculated by SExtractor. aperture deﬁned for that frame. This means that objects that fade or are generally quite faint, might ’disappear’ on some frames and then ’re-appear’ on subsequent frames. The tracking algorithm allows a ’re-appearing’ object to be identiﬁed with an object that appeared on previous frames provided that the pixel location is roughly similar. An illustration of this can be seen in ﬁgures 4.2 and 4.3 where the automated pipeline ’loses’ the target object in the ’g’ and ’u’ bands after the ingress of the primary eclipse, but picks it up again at the start of egress. In contrast, the traditional reduction pipeline can have apertures that are linked to other objects in the ﬁeld and can therefore continue to calculate ﬂux in the aperture for the target even if the target is barely detectable above the sky background.
+
+4.3
+
+Colour-Colour plots
+
+Although the automated pipeline does not perform a calibration of the magnitudes of the objects, by using standard stars and extinction corrections, it is still possible
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+51
+
+25000 20000 15000 Counts 10000 5000 0 −5000 0.940
+
+i g u
+
+0.945
+
+0.950
+
+0.955 0.960 MJD +56486
+
+0.965
+
+0.970
+
+0.975
+
+Figure 4.3: Light curve of the target object, NN Ser, produced using the standard pipeline. to create colour-colour diagrams provided that we are not concerned with the correct oﬀsets for our (u − g) and (g − r) axes. For a few selected runs, where we have ¿ 100 objects clearly identiﬁed for the run, we can produce non-calibrated colour-colour diagrams. It should be added that it is possible to produce calibrated colour-colour diagrams from the automated pipeline, if we manually perform the calibration and correct our ﬁgures. Comment: We can include Matthew’s colour colour plot here.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+52
+
+Table 4.1: Table showing the statistics of the diﬀerential photometry produced by dividing the ﬂux counts for object ’0’ by the ﬂux counts for object ’1’. Filter Traditional pipeline Automated pipeline mean[std.dev] mean[std.dev] ’i’ 1.2521[0.0036] 1.2523[0.0034] ’g’ 1.2247[0.0045] 1.2240[0.0042] ’u’ 1.264[0.019] 1.259[0.017]
+
+1.32 1.30 1.28
+Counts0/Counts1
+
+i g u
+
+1.26 1.24 1.22 1.20 0.940 0.945 0.950 0.955 0.960 MJD +56486 0.965 0.970 0.975
+
+Figure 4.4: The light-curve of the ﬂux ratio of object ’0’ and object ’1’ as labelled in ﬁgure 4.1 produced by the automated pipeline. The vertical axis shows the ﬂux counts for object ’0’ divided by the ﬂux counts for object ’1’. Both of the objects are assumed to be constant sources.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+53
+
+1.32 1.30 1.28
+Counts0/Counts1
+
+i g u
+
+1.26 1.24 1.22 1.20 0.940 0.945 0.950 0.955 0.960 MJD +56486 0.965 0.970 0.975
+
+Figure 4.5: The light-curve of the ﬂux ratio object ’0’ object ’1’ as labelled in ﬁgure 4.1 produced by the traditional pipeline. The vertical axis shows the ﬂux counts for object ’0’ divided by the ﬂux counts for object ’1’. Both of the objects are assumed to be constant sources.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+54
+
+−1
+
+0
+
+1
+
+(u-g)
+
+2
+
+3
+
+4
+
+5 −2.0
+
+−1.5
+
+−1.0
+
+−0.5
+
+0.0
+
+(g-i)
+
+0.5
+
+1.0
+
+1.5
+
+2.0
+
+2.5
+
+Figure 4.6: The colour-colour plot of run: 2013-07-21/run010. The plot contains 110 objects located near the Kepler exoplanet host KIC5115978, which is slightly out of the galactic plane. The ﬁeld contains The oﬀsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+55
+
+−1
+
+0
+
+1
+
+(u-g)
+
+2
+
+3
+
+4
+
+5 −2.0
+
+−1.5
+
+−1.0
+
+−0.5
+
+(g-i)
+
+0.0
+
+0.5
+
+1.0
+
+1.5
+
+Figure 4.7: The colour-colour plot of run: 2013-07-21/run011. The oﬀsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+56
+
+−1
+
+0
+
+1
+
+2 (u-g) 3 4 5 6 −3
+
+−2
+
+−1
+
+0
+
+1 (g-i)
+
+2
+
+3
+
+4
+
+5
+
+Figure 4.8: The colour-colour plot of run: 2011-04-22/run019. The ﬁeld contains 1088 objects identiﬁed in edge of the globular cluster Omega Centaurus. The oﬀsets on the x and y axes are both arbitrary as the photometry has not been calibrated to photometric standards. The extreme blue outliers are errors caused by the pipeline mis-identifying objects across the three channels.
+
+Chapter 5
+
+Objects identiﬁed by the automated pipeline
+5.1 Object identiﬁcation
+
+For each night, an ’index page’ is generated, which shows a list of all of the runs in the night along with thumbnail images of the ﬁeld of view. This allows the user to quickly navigate to the runs that are ’of interest’. In other words, runs that contain science data, rather than acquisitions, biases, ﬂat-ﬁelds. By clicking on the thumbnail of the run, they are taken to a ’run page’. This page shows the full image for each of the three channels. These images are created by stacking all of the individual frames in the run. The page also shows all of the objects that have been identiﬁed and have light-curves available. The user can view the light-curves by using the mouse to click on each object, or can scroll through all of the light-curves systematically, by using the left and right arrow keys. Scrolling through the light curves in a systematic fashion makes it easy for the user to quickly identify which objects are showing an obvious variability. All of the objects listed below were discovered in this way. The task is made relatively easy in the browser interface and it is possible to inspect the light curves at a rate of about 1-2 objects per second. In future, we plan to apply some statistical tests to these data to perform the light curve inspection as a stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. References to VVV, LSST, NGTS, Wasp, Astrokit software, etc.
+
+57
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+58
+
+5.2
+
+Discovered objects
+
+Below we list some of the variable objects that have discovered as a result of running the automated pipeline on a fraction of the ULTRACAM archive. The pipeline is usually invoked by running a single command on a night’s worth of data. For example, to build the light-curves for the night of, say, 2014-08-21, then a single command, daybuilder.py 2014-08-21 is issued from the command line. The pipeline then runs through all of the data for that night and generates a set of web pages. Depending on the amount of data for that night, this can take 1 hour to 8 hours.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+59
+
+5.2.1
+
+Eclipsing binaries
+W UMa contact binary 2005-05-10-run012-73 19:44:09/8, 40:16:34.4 (J2000) 2005-05-10 (232, 65)
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2005-05-10/run012.html
+
+Classiﬁcation ObjectID RA, DEC Run date Pixel position URL:
+
+−6 −4 −2
+umag
+
+0 2 4 6 8 0.00 0.05 0.10 0.15 0.20 0.25
+
+−0.3 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.00 −0.3 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.00
+
+gmag
+
+0.05
+
+0.10
+
+0.15
+
+0.20
+
+0.25
+
+imag
+
+0.05
+
+0.10
+
+MJD +53501
+
+0.15
+
+0.20
+
+0.25
+
+Discussion of this object.
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Classiﬁcation ObjectID RA, DEC Run date Pixel position URL: W UMa contact binary 2013-07-21-run010-48 19:44:09/8, 40:16:34.4 (J2000) 2013-07-21 (452, 332)
+
+60
+
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.ht
+
+−0.4 −0.2 0.0
+umag
+
+0.2 0.4 0.6 0.8 0.90 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.90 −0.1 0.0 0.92 0.94 0.96 0.98 1.00 1.02 1.04 0.92 0.94 0.96 0.98 1.00 1.02 1.04
+
+imag
+
+gmag
+
+0.1 0.2 0.3 0.90 0.92 0.94 0.96 0.98 MJD +56494 1.00 1.02 1.04
+
+Discussion of this object.
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Classiﬁcation ObjectID RA, DEC Run date Pixel position URL: W UMa contact binary 2013-07-21-run010-163 19:44:10.3, 40:18:08.1 (J2000) 2013-07-21 (417, 650)
+
+61
+
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.ht
+
+−2 0
+umag
+
+2 4 6 8 0.90 0.92 0.94 0.96 0.98 1.00 1.02 1.04
+
+−0.4 −0.2 0.0
+gmag
+
+0.2 0.4 0.6 0.90 −0.3 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.90 0.92 0.94 0.96 0.98 MJD +56494 1.00 1.02 1.04 0.92 0.94 0.96 0.98 1.00 1.02 1.04
+
+Discussion of this object.
+
+imag
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Classiﬁcation ObjectID Pixel position RA, DEC URL: Eclipsing binary 2013-07-21-run011-162 (726, 341) 19:54:01.7, 40:37:34 (J2000)
+
+62
+
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run011.ht
+
+−1.5 −1.0 −0.5 0.0 0.5 1.0 1.5 2.0 2.5 3.0 0.02 −0.4 −0.2 0.0
+
+umag
+
+0.04
+
+0.06
+
+0.08
+
+0.10
+
+0.12
+
+0.14
+
+0.16
+
+gmag
+
+0.2 0.4 0.6 0.02 −0.3 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.02 0.04 0.06 0.08 0.10 MJD +56495 0.12 0.14 0.16 0.04 0.06 0.08 0.10 0.12 0.14 0.16
+
+The light curve of this object includes a primary eclipse of the object. Since the primary eclipse has a ’ﬂat-bottom’ we can conclude that this eclipse is total (ie that the primary is completely obscured by the secondary during the eclipse. This also means that the primary has a small diameter than the secondary. The primary
+
+imag
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+63
+
+eclipse duration is xxx minutes. The depth of the eclipse is about 0.7 magnitudes which corresponds to an actual drop in ﬂux of 50%. It is notable that the ingress and the egress demonstrates broad ’wings’ suggesting that the object being eclipsed (primary) is extended and the shape of the curve suggest tidal distortion of the secondary. Although the object is in a Kepler ﬁeld and is, in fact, close to KOI-1546, a search through the Kepler archive
+1
+
+reveals that it is not listed. This is probably
+
+because the object is too faint and the data for this object has not been downloaded.
+
+1
+
+https://archive.stsci.edu/kepler/data_search/search.php
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+64
+
+5.2.2
+
+Intrinsic variables
+δ Scuti 2013-07-21-run010-23 (54, 362) 19:44:19.6, 40:16:43.7 (J2000)
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run010.html
+
+Classiﬁcation ObjectID Pixel position RA, DEC URL:
+
+−0.10 −0.08 −0.06 −0.04 −0.02 0.00 0.02 0.04 0.06 0.08 0.90 −0.04 −0.03 −0.02 −0.01 0.00 0.01 0.02 0.03 0.90 −0.03 −0.02 −0.01 0.00 0.01 0.02 0.03 0.04 0.90
+
+umag
+
+0.92
+
+0.94
+
+0.96
+
+0.98
+
+1.00
+
+1.02
+
+1.04
+
+gmag
+
+0.92
+
+0.94
+
+0.96
+
+0.98
+
+1.00
+
+1.02
+
+1.04
+
+imag
+
+0.92
+
+0.94
+
+0.96 0.98 MJD +56494
+
+1.00
+
+1.02
+
+1.04
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+65
+
+This object was found on a run that included the exoplanet host, KIC5115978, which has at least one planet, Borucki et al. [2011]. The new variable is located about 6 arc minutes away from the target. A search of the Kepler data archive
+2
+
+gives no results for this object. Unfortunately this object is not in a Kepler ﬁeld of view, but lies in a position that does not fall on the Kepler CCD. We have no further photometry for this object. There is evidence that the colour is varying in phase with magnitude, most noticeably in g − i. The lightcurve is the shape we would expect, with a steeper slope during increasing ﬂux than decreasing. This object is an A or F class star, as would be expected for -Scuties. The period is approximately 0.04 days, consistent with the expected range 0.03-0.3 days.
+
+2
+
+http://archive.stsci.edu/kepler/kepler_fov/search.php
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+66
+
+5.2.3
+
+Near Earth objects
+Asteroid: 1998 SU139 2011-08-26-run014-110 start: (217, 9), end: (505, 54) 291 pixels or 101” 0.35”/pixel 12355s (3.43 hours) 0.495”/minute or 29.68”/hour MJD=55800.038, 20:51:12, -08:31:25 (J2000)
+
+Classiﬁcation ObjectID Pixel position Distance travelled Field scale Duration of run Tangential angular velocity RA, DEC URL:
+
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2011-08-26/run
+
+−0.4 −0.2
+gmag
+
+0.0 0.2 0.4 0.96 −0.4 −0.3 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.96 0.98 1.00 1.02 1.04 1.06 1.08 1.10 1.12
+
+rmag
+
+0.98
+
+1.00
+
+1.02
+
+1.04 MJD +55799
+
+1.06
+
+1.08
+
+1.10
+
+1.12
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+67
+
+0.0025
+
+0.0020
+
+0.0015
+
+0.0010
+
+0.0005
+
+0.0000 0.00
+
+0.02
+
+0.04
+
+0.06
+
+0.08
+
+0.10
+
+0.12
+
+0.14
+
+0.16
+
+The light curve of this object displays a clear sinusoid which must be caused by the object’s rotation. A periodogram of these data peaks at a frequency of 0.0108minutes−1 (a spin period of 1.53 hours) for the ’i’ ﬁlter and 0.0098minutes−1 (a spin period of 1.70 hours) for the ’g’ ﬁlter. We assume that this asteriod’s spin is caused by the YORP eﬀect Bottke et al. [2006]. A look-up using the NEOChecker tool on the website of the IAU’s Minor Planet Center
+3
+
+returns a result for this candidate as, most probably, asteroid 1998
+
+SU139. The world coordinates reported by the tool diﬀered from our own determination by about 6.5’. There is a clear relationship between the size of the asteroid and the minimum spin period. Observationally, it can be shown that, for an asteroid with a diameter greater than 250 metres, the spin period cannot be less than 2.33 hours, Jacobson et al. [2014]. The theoretical reasoning for this ’spin cut-oﬀ’ is that, assuming these asteroids are ’rubble-piles’ then, above certain angular velocity, the centrifugal forces pulling the rubble pile apart will be stronger than the gravitational forces holding it together and the rubble pile will break up. At the moment, only two asteroids have been found that are exceptions to this rule, 2001 OE84 and 2005 UW163 with periods of 0.486 and 1.290 hours respectively, Chang et al. [2014]. There are several more unconﬁrmed super-fast rotators (SFR) asteroids reported by Masiero et al. [2009] and Dermawan et al. [2011]. Since these objects have low brightness and fast rotation, periods have not yet been accurately determined. Many of the light curves only have few tens of data points. The fact that we have managed to determine a spin period for this object demonstrated the fact that UL3
+
+http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+68
+
+TRACAM is a suitable instrument to use for follow up observations of these other candidates. The diameter of the asteroid can be estimated by using its absolute magnitude H and an assumption for the albedo p using the formula, adapted from Jewitt et al. [2013] D=
+1130 √ 10−H/5 p
+
+We have taken H = 15.2 from the JPL Small-Body Database 4 and assumed an albedo of p = 0.297 for a V-type asteroid. This gives a diameter, D = 1.89km for this asteroid. If our period is correct, this could mean that we have discovered a new member of this rare, fast rotator class of asteroid.
+
+4
+
+http://ssd.jpl.nasa.gov/sbdb.cgi
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Classiﬁcation ObjectID Pixel position Distance travelled Field scale Duration of run Tangential angular velocity RA, DEC URL:
+
+69
+
+Asteroid: 9108 Toruyusa (1997 AZ6) [oﬀset of 7 arc minutes 2009-01-04-run024-61 start: (137, 422), end: (226, 447) 92 pixels or 32” 0.35”/pixel 3221s (53.7 minutes) 0.596”/minute or 35”/hour MJD=54836.26642, 08:04:52.3 +16:18:10.6 (J2000)
+
+http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2009-01-
+
+Using the NEOChecker
+
+5
+
+tool, the object detected in this run appears to be
+
+a well known asteroid, 9108 Toruyusa. The light curve, which lasts approximately 1 hour shows no signiﬁcant variation and it has not been possible to determine a spin period for this asteroid.
+
+5
+
+http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi
+
+Chapter 6
+
+Automated software user manual
+6.1 Running the pipeline
+
+The automated pipeline is run after the data has been obtained at the telescope. It operates on the raw ULTRACAM data, reducing it and preparing output ﬁles that are used for the Web browsing interface. The pipeline can be run anytime after the data has been recorded and is therefore useful for browsing and sharing ULTRACAM observations immediately after performing the observations, or much later, when wishing to reduce the data for a run that exists in the ULTRACAM archive.
+
+6.1.1
+
+Prerequisites
+
+The pipeline is written in the Python programming language and needs a working Python environment. It is currently running on Python version 2.6.9, but has also been tested on version 2.7.6. Within the Python path, the following fairly wellknown Python libraries should be installed. • Numpy NumPy is a well-known package for scientiﬁc computing with Python. It is available from http://www.numpy.org. • Astropy Astropy Project is a community eﬀort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages. Available at http://www.astropy.org/. • Matplotlib matplotlib is a python 2D plotting library itcan be used in python
+
+70
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+71
+
+scripts, the python and ipython shell. It is available at http://matplotlib. org/ • Image The Image package contains the Python Imaging Library. This library is used for loading, creating and modifying bitmap images and is used by the pipeline to create the PNG images that are used on the web pages. It can be found at http://effbot.org/imagingbook/pil-index.htm. • Jinja The Jinja2 package contains tools for creating and using template ﬁles and merging them with dynamic data. The pipeline uses this module to create the HTML ﬁles for the web site. It can be found at http://jinja.pocoo. org/. Along with these packages, the following standard Python modules are also used by the pipeline. These packages are nearly always included by default in Python distributions. • Math A module to perform some basic mathematical operations. • Argparse A module that aids the creation of ’command-line parameters’ for the scripts in the pipeline. • Time A module for performing time functions and operations. • DateTime A module for formatting and manageing date and calendar objects. • JSON A module for reading, writing and parsing JSON-formatted data objects. The source extration and ﬂux measurement activity in the pipeline is performed by the third party software, called SExtractor, Bertin and Arnouts [2006]. SExtractor can be downloaded and installed from http://www.astromatic.net/ software/sextractor. If downloading and compiling from the source, there is a good guide available at: http://wiki.ipb.ac.rs/index.php/SExtractor_installation. In order to serve the web site, a web server is needed. Fortunately, since the web site consists purely of static ﬁles, a simple HTTP server is required. For example, an instance of the Apache web server with no server-side add-ons is perfectly adequate.
+
+6.1.2
+
+Installing the Python code
+
+The core code of the automated pipeline exists in the ’git’ repository. It is therefore easy to download the code into a local directory, by typing the command: git clone
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+72
+
+https://github.com/rashley2712/ucambuilder. This will create a sub directory called ucambuilder which will contain all of the required Python code for running the automated pipeline. Since, it is likely that you will not be running the pipeline from this directory, an important next step is to add this directory to your PATH and PYTHONPATH environment variables.
+
+6.1.3
+
+Conﬁg ﬁle
+
+It is a good idea to create a separate directory to keep conﬁguration ﬁles and temporary ﬁles. It is also good practice to run the pipeline from this folder as it will, by default, look in the local directory for the conﬁguration ﬁles. In this folder, you should create a few conﬁguration ﬁles that you can modify as desired before running the pipeline. In order to get a pre-built set of conﬁguration ﬁles, you can use a ’git’ repository to create and download a folder with the default set. Typing git clone https://github.com/rashley2712/ultracam-auto will download the conﬁguration ﬁles into a folder called ultracam-auto. The following ﬁles are needed as conﬁguration ﬁles: • ucambuilder.conf This is the pipeline’s main conﬁguration ﬁle and is used to store the parameters that specify where the pipeline should look for the raw data, where it should write the output ﬁles, etc. This is discussed in more detail in the next section of this document. • default.sex Is the conﬁguration ﬁle that is loaded when SExtractor. This ﬁles contains many parameters that instructs SExtractor on how to perform the source extraction and ﬂux calculation in the image. More details on these parameters can be found in the Sextractor User Manual 1 . • default.param This ﬁle lists the columns that we want SExtractor to include in the output catalog. These columns are read by the automated pipeline in order to build up the master catalog. We need SExtractor to output ﬂux measurements, pixel coordinates and measurement ﬂags. Generally these parameters do not need to be edited. • default.conv This ﬁle deﬁnes the proﬁle of the convolution ﬁlter that Sextractor applies to the image before source extraction.
+
+6.1.4
+
+ucambuilder.conf
+
+A sample of the main conﬁguration ﬁle for the automated pipeline is shown below.
+1
+
+https://www.astromatic.net/pubsvn/software/sextractor/trunk/doc/sextractor.pdf
+
+Draft of 1:09 pm, Saturday, November 22, 2014 DEBUG 1
+
+73
+
+# The debug l e v e l t o be used by t h e v a r i o u s s c r i p t s . Can / s t o r a g e / a s t r o 2 /www/phrnaw/ s i t e d e v / s t o r a g e / a s t r o 1 / phsaap / u l t r a c a m / raw data 0 1 0 # Write a f i t s # Write a f i t s f i l e o r not ? f i l e o r not ?
+
+SITE PATH ULTRACAMRAW WRITE FITS WRITE JSON KEEP TMP FILES RUNTEMPLATE DAYTEMPLATE MINPIXELDISTANCE RUNINFO WORKINGDIR ROOTURL SEX MAGNITUDE
+
+# The path t o t h e
+
+# Path t o t h e Ultracam raw data
+
+# Keep t h e temporary ( s e x t r a c t o r ) f i l e s ?
+
+/ s t o r a g e / a s t r o 2 /www/phrnaw/ s i t e d e v / s i t e c o d e / runxxx . j i n j a 10 / s t o r a g e / a s t r o 1 / phsaap / u l t r a c a m / l o g s / u l t r a . j s o n / s t o r a g e / a s t r o 2 /phrnaw/ w o r k i n g d i r h t t p : / / deneb . a s t r o . warwick . ac . uk/phrnaw/ s i t e d e v / FLUX AUTO 95
+
+/ s t o r a g e / a s t r o 2 /www/phrnaw/ s i t e d e v / s i t e c o d e /day−xxxx−xx−x
+
+COMPARISON THRESHOLD
+
+These parameters should be modiﬁed before running the pipeline. • SITE PATH Speciﬁes where the document root for the web folder is. The pipeline will write the HTML and JSON ﬁles to this folder. For each date in the archive, the pipeline will create sub-directories in the format YYYY-MM-DD. A web server should be conﬁgured to serve HTTP requests from this folder. • ULTRACAMRAW This should point to the root folder where the raw ULTRACAM data is stored. Within this folder there will be sub-folders corresponding to each date on which the ULTRACAM was active. These folders will contain .dat and .xml ﬁles corresponding to each run recording during that observing night. • ROOTURL Speciﬁes where the SITE PATH is accessed in URL space. In other words, this is the URL to the web site that is conﬁgured to serve ﬁles from the SITE PATH folder. • WORKINGDIR This is a folder where the pipeline will place temporary working ﬁles used to connect the intermediate stages of the pipeline. They are not required for the web version of the output, but they can be useful to debug and diagnose the running of the pipeline to better understand how it has arrived at the ﬁnal results. • RUNINFO The location of ﬁle that contains important meta-data about the ULTRACAM archive, such as run numbers, durations, comments and RA
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+74
+
+and DEC locations of the ﬁeld. This data is used to add information to the web pages and to aid the astrometry solution. • RUNTEMPLATE & DAYTEMPLATE Specify the location of the HTML template ﬁles that are used to create the ﬁnal versions that for the web pages. • SEX MAGNITUDE This parameter instructs the pipeline which value of the ﬂux estimate produced by SExtractor to use for the brightness measurement of the object in the master catalog. Possible values are FLUX AUTO, FLUX APER, MAG AUTO & MAG APER. • MINPIXELDISTANCE The minimum pixel diﬀerence used to allow a match of an object across the 3 channels. If the object is more than this distance from the same object in a diﬀerent channel, then it is treated as a new object. • COMPARISON THRESHOLD The pipeline tries to ﬁnd an object that can act as a comparison object for the other objects in the ﬁeld. It does this by performing a statistical test for consistency of the diﬀerential ﬂux measurements of the top 20 brightest objects in the ﬁeld and then choosing the brightest of the objects that has the lowest standard deviation of the mean with another object in the ﬁeld. This comparison is not used during the data reduction portion of the pipeline, but it is automatically selected as the default comparison object when the web browser session is ﬁrst loaded. This parameter deﬁnes the minimum percentage of the run that the object has to persist on in order to be considered as a comparison object.
+
+6.1.5
+
+Producing the output for a particular run
+
+runbuilder.py The quickest way to create the output for a particular run is to use the macroscript, runbuilder.py. This script chains together the various stages of the pipeline to produce the HTML and JSON output required to view a particular run. It runs each of the following scripts in the pipeline in turn: objectdbcreator.py, postprocessor.py, wcssolver.py, mergeobjects.py and create html.py. runbuilder.py takes the following command line parameters: • runName This is a path to the .xml and .dat for a speciﬁc run and is speciﬁed in the format YYYY-MM-DD/runXXX (for example 2013-07-21/run011). • -n[n] --numframes [n] Speciﬁes the number of frames you would like the script to process. The default is all of the frames in the run. Making this
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+75
+
+number smaller is useful for running a quick test. For example, -n100 will run through 100 frames only. • -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called “ultracam.conf” in the local directory. • -w Use this switch to disable the astrometric solution step in the pipeline. This can be used to save time when we have a run where we do not expect to ﬁnd an astrometric solution. This occurs when the run has only two or three objects on it and/or the windowed portions of the CCD are very small. • -v[version] --version [version] Specify a unique string to act as an identiﬁer for an alternate version of the output of the pipeline. This can be used if we want to re-run the pipeline, but with diﬀerent SExtractor parameters and compare the outputs. The resulting web pages will have a URL that has this version string appended. For more information on the output of runbuilder.py see the section below, describing ’Output while running’. When runbuilder.py has completed, it will display the URL to the output run in the terminal window. This URL can then be copied into a web browser’s location bar in order to access the results of the reduction. objectdbcreator.py This is the most important script in the automated pipeline. It takes the raw image data in the ULTRACAM archive and sends it to SExtractor for processing. Based on the SExtractor output, it compiles and maintains a list of objects across all of the frames and each of the channels. These are given as three output catalogs when the script ﬁnishes running. objectdbcreator.py takes the following command line parameters: • runName This is a path to the .xml and .dat for a speciﬁc run and is speciﬁed in the format YYYY-MM-DD/runXXX (for example 2013-07-21/run011). • -d[n] --debug [n] Use this parameter to determine how much output you would like to see while the program is running. There are 3 debug levels, 1 is silent (except for errors) and is the default debug level; 2 shows general progress of the pipeline; 3 shows detailed info to help with debugging. Note that the default is ‘silent’ and therefore, unless there are errors, you will not
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+76
+
+see anything on the command line and a long run through the data could last an hour or more. It is recommended that you use -d2 in most cases. • -n[n] --numframes [n] Speciﬁes the number of frames you would like the script to process. The default is all of the frames in the run. Making this number smaller is useful for running a quick test. For example, -n100 will run through 100 frames only. • -s[n] --startframe [n] Speciﬁes which frame to start at. The default is frame 1 (the ﬁrst frame in the run). • -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called ultracam.conf in the local directory. • -C[r,g,b] --channels [r,g,b] Which channels to operate the pipeline over. By default, the script will process all three channels, namely, r, g, and b. This parameter allows you to specify a subset of these channels. For example, you could omit the processing of the ‘green channel’ by passing in -Crb. • -p --preview Specifying this parameter enables a preview window for each frame and each channel using Matplotlib. This allows you to see each frame as it is being processed. The colour palettes match the channel, red for r, green for g and blue for b. The preview window also draws a green circle around each object that SExtractor has identiﬁed on that particular frame. Warning: This preview slows down the pipeline signiﬁcantly so should only be used for information and debugging purposes. • -t[n] --sleep [n] Time to pause (in seconds) between the processing of each frame. Useful for debugging in ‘preview’ mode. • -r --crop For ‘preview’ mode, crop the windows to show only the areas that were not masked in the original data. Useful for runs where the windows are fairly small. • -v[version] --version [version] Specify a unique string to act as an identiﬁer for an alternate version of the output of the pipeline. This can be used if we want to re-run the pipeline, but with diﬀerent SExtractor parameters and compare the outputs. The resulting web pages will have a URL that has this version string appended.
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Output while running
+
+77
+
+If the --debug option is left to the default value of 1 then the output will be mostly silent with only errors appearing in stdout. This mode is designed for use during the running of the pipeline across a complete night where we want to suppress a lot of the output. If you are running objectdbcreator.py in standalone mode, then -d2 is recommended. The output of the script with -d2 set looks like this:
+
+[ 1 0 : 3 1 : 2 5 ] 0 0 : 1 0 : 2 2 Frame : [ 1 6 8 1 , 1 6 8 1 87%] MJD: 5 6 4 9 5 . 1 3 9 5 4 6 6 r : 1 8 9 9 g : 1 0 3
+
+[ 1 0 : 3 1 : 2 7 ] 0 0 : 1 0 : 1 9 Frame : [ 1 6 8 2 , 1 6 8 2 87%] MJD: 5 6 4 9 5 . 1 3 9 6 1 3 2 r : 1 9 0 0 g : 1 0 3
+
+[ 1 0 : 3 1 : 2 9 ] 0 0 : 1 0 : 1 7 Frame : [ 1 6 8 3 , 1 6 8 3 87%] MJD: 5 6 4 9 5 . 1 3 9 6 7 9 9 r : 1 9 0 0 g : 1 0 3
+
+[ 1 0 : 3 1 : 3 2 ] 0 0 : 1 0 : 1 4 Frame : [ 1 6 8 4 , 1 6 8 4 87%] MJD: 5 6 4 9 5 . 1 3 9 7 4 6 5 r : 1 9 0 0 g : 1 0 3 Where, • [10:31:25] is the current time, in HH-MM-SS format; • [00:10:22] is the estimated time remaining, in HH-MM-SS format, until this stage of the pipeline has completed. ; • Frame:[1681, 1681 87%] The ﬁrst number is the absoluted frame number being processed (starts at ﬁrst frame of the run = 1), the second number is the relative frame being processed (diﬀerent if the start frame was not = 1), and the percentage completed; • MJD:56495.1395466 is the MJD for this frame; • r:1899 g:1030 b:551 shows the number of objects being tracked in each of the r, g, b channels. postprocessor.py The second stage of the pipeline performs a ﬁltering of the data as described in section ??. It also creates output catalog ﬁles containing an ordered list of the pixel coordinates and ﬂuxes for the brightest objects in the ﬁeld for each of the r, g, b channels. These can be used as inputs to the Astrometry.net software for the solving of the WCS coordinates for the ﬁeld. postprocessor.py takes the following command line parameters: • runName This is a path to the .xml and .dat for a speciﬁc run and is speciﬁed in the format YYYY-MM-DD/runXXX (for example 2013-07-21/run011).
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+78
+
+• -d[n] --debug [n] Use this parameter to determine how much output you would like to see while the program is running. There are 3 debug levels, 1 is silent (except for errors). • --xyls UIse this switch to create the output catalogs for Astrometry.net. The script will create three catalogs (r, g, b) in FITS format for input into the Astrometry.net software. • -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called ultracam.conf in the local directory. • -v[version] --version [version] Specify a unique string to act as an identiﬁer for an alternate version of the output of the pipeline. This can be used if we want to re-run the pipeline, but with diﬀerent SExtractor parameters and compare the outputs. The resulting web pages will have a URL that has this version string appended. wcssolver.py This script conﬁgures and runs the WCS solving step of the pipeline. It is really just a script that prepares and runs the Astrometry.net package. wcssolver.py takes the following command line parameters: • runName This is a path to the .xml and .dat for a speciﬁc run and is speciﬁed in the format YYYY-MM-DD/runXXX (for example 2013-07-21/run011). • -d[n] --debug [n] Use this parameter to determine how much output you would like to see while the program is running. There are 3 debug levels, 1 is silent (except for errors). • -f --forcesolve The script usually checks the WORKINGDIR to see if a WCS solution for this ﬁeld already exists and will skip Astrometry.net if it ﬁnds one. Use this switch to force the script to call Astrometry.net even if a solution already exists. • -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called ultracam.conf in the local directory. • -v[version] --version [version] Specify a unique string to act as an identiﬁer for an alternate version of the output of the pipeline. This can be used if
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+79
+
+we want to re-run the pipeline, but with diﬀerent SExtractor parameters and compare the outputs. The resulting web pages will have a URL that has this version string appended. mergeobjects.py This script loads the three separate catalogs and performs a merge of the objects into one ’master’ catalog. It also writes the JSON ﬁles that are placed in the web server’s directory, ready to be loaded by the HTML and Javascript for viewing the results. mergeobjects.py takes the following command line parameters: • runName This is a path to the .xml and .dat for a speciﬁc run and is speciﬁed in the format YYYY-MM-DD/runXXX (for example 2013-07-21/run011). • -d[n] --debug [n] Use this parameter to determine how much output you would like to see while the program is running. There are 3 debug levels, 1 is silent (except for errors). • -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called ultracam.conf in the local directory. • -v[version] --version [version] Specify a unique string to act as an identiﬁer for an alternate version of the output of the pipeline. This can be used if we want to re-run the pipeline, but with diﬀerent SExtractor parameters and compare the outputs. The resulting web pages will have a URL that has this version string appended. create html.py This script takes the run meta-data and merges this with the HTML templates stored in RUNTEMPLATE to create the HTML ﬁles used for web browsing. create html.py takes the following command line parameters: • runName This is a path to the .xml and .dat for a speciﬁc run and is speciﬁed in the format YYYY-MM-DD/runXXX (for example 2013-07-21/run011). • -d[n] --debug [n] Use this parameter to determine how much output you would like to see while the program is running. There are 3 debug levels, 1 is silent (except for errors).
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+80
+
+• -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called ultracam.conf in the local directory. • -v[version] --version [version] Specify a unique string to act as an identiﬁer for an alternate version of the output of the pipeline. This can be used if we want to re-run the pipeline, but with diﬀerent SExtractor parameters and compare the outputs. The resulting web pages will have a URL that has this version string appended.
+
+6.1.6
+
+Producing the output for a full night’s observing
+
+There is a macro Python script called daybuilder.py that runs the pipeline on all of the runs in any particular night. The script eﬀectively runs the runbuilder.py script for all of the runs found on the date speciﬁed. It also produces a summary web page showing all of the runs with descriptions and thumbnails, making navigating the reductions for that night quite easy. daybuilder.py takes the following command line parameters: • runDate The date for the night of interest. Speciﬁed in the format YYYY-MM-DD. • -d[n] --debug [n] Use this parameter to determine how much output you would like to see while the program is running. There are 3 debug levels, 1 is silent (except for errors). • -c[filename] --configfile [filename] Allows you to specify an alternative conﬁguration ﬁle. By default, the script will look for a ﬁle called ultracam.conf in the local directory. • -r --buildruns Build the run output for each run (if no existing output found). • -f --forcebuildruns Force build of each run (even if existing data is found).
+
+6.2
+6.2.1
+
+Using the archive
+Night summary page
+
+Once the pipeline has been run, the HTML and JSON ﬁles will be ready to view through a web. You can access the output of any night of observing by entering a URL into the web browser of the following format, http://deneb.astro.warwick.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+81
+
+ac.uk/phrnaw/sitedev/YYYY-MM-DD/index.html where you need to substitute the YYYY-MM-DD portion of the URL with the date in question. This will load an HTML page showing you all of the runs that occured during that night. This list will include aquisition runs, biases and ﬂat ﬁelds as well as the science runs. The page shows a thumbnail of each run along with a description of the target object, RA and DEC, run duration and the comments entered by the observer at the telescope. Clicking on the run thumbnail will take you to the web page for that particular run.
+
+6.2.2
+
+Run page
+
+When viewing the web page for a particular run, the user can navigate the lightcurves for all of the objects identiﬁed by the pipeline. Interaction with the data in the page is through the mouse and keyboard. Many of the actions are triggered by a single key press. There are also tickboxes, and radio buttons that allow the selection of various options. Page loading process The page has three main components, HTML, Javascript and JSON. The HTML and Javascript deﬁne the page structure and the interactions that can occur, while the JSON contains the reduction data for all of the objects in the run. The JSON dataﬁle is requested from the web server as soon as the HTML and Javascript has ﬁnished loading (within 1 second or so). For long runs with many (¿20) objects, this ﬁle can be quite large and will take some time to download. Depending on the data size and the speed of the internet connection, this download could take up to a minute or more, although in most cases it is usually completed in a few seconds. The status window at the top of the page will give an indication of when this data has completed the download. The request for the JSON data is made using an ’asynchronous’ call and this means that the page is still working and some interactions can take place, like choosing the base image for example, but since to main data has not yet arrived, it won’t be possible to display a light-curve. r Selecting a base image The pipeline produces a deep image for each channel (r, g, b) based on stacking all of the individual frames captured by ULTRACAM. The page loads all three images in the background and, by default, displays the ’green’ channel initially. Switching between these images can be performed by pressing the r, g and b keys on the
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+82
+
+Figure 6.1: Example of the web page summarising a full night’s observing.
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+83
+
+keyboard. You can also switch these images by slecteing either the Red, Green or Blue of the Base Image radio options found below the image itself. Viewing a light-curve The quickest way to view a light-curve of any particular object is to simply click on the object with the mouse. If the object has been identiﬁed by the pipeline and there are suﬃcient data to display, then a light curve for this object will appear in the panel below the radio buttons and checkboxes on the page. While moving the mouse over the base image, the cursor that displays the (x, y) coordinates (or the (RA, DEC) coordinates will display a green background if the object underneath it has the required data for a light-curve. Object markers and Object labels Each object that has been identiﬁedby the pipeline has a unique identiﬁer in the master catalog. In order to view these IDs, you can toggle the object ’labels’ on and oﬀ. This is done by pressing the (letter ’l’) l key, or clicking the Show labels checkbox. This will draw lavels next to each object identiﬁed by the pipeline that has photometry available in the channel that is currently selected for the base image. If you want to see each of the identiﬁed objects shown as a circle centred on each object, rather than a label, then pressing the m key or checking the Show circles check box will toggle the drawing of circles of radius 15 pixels around each object. Selecting a comparison star During the ﬁnal stage of the pipeline, a test is performed on the brightest objects to see if any can act as comparison stars for the run. The test takes into account the standard deviation of the star’s ﬂux measurments in comparison to the other bright stars in the ﬁeld. If an object is deemed to be signiﬁcantly ’constant’ enough, then it is ﬂagged as a potential comparison star. When the data has ﬁnished loading, this comparison star (if one exists) is selected. The test is performed independantly for each channel. It is possible for the user to select a diﬀerent comparison star for each channel. This is done by selecting the object and pressing the key c. When the object is selected, a black diamond is drawn around the object. When the object is selected as the comparison object, this diamond will change to a square. To indicate that a comparison object for this channel has now been selected, the Comparison objects status area will now indicate the Object ID, or the comparison and the the
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+84
+
+Figure 6.2: Selecting an object to act as the comparison. First select the object, then press the c key on the keyboard. The cursor will change from a diamond to a square, indicating that this object is now the comparison for this channel (’r’ in this case).
+
+Figure 6.3: Sample of the control panel of the run web page. This screenshot shows some of the radio buttons and checkboxes available to the user to manipulate the displayed light-curves. light-curve of the comparison object will be displayed below the light-curve of the target object. Re-scaling the light curve The vertical axis on the light curve of the target object can be adjusted to adapt to the dynamic range of the ﬂux measurements. By default, when the page is loaded, the light-curve of the target is calculated as the ratio of the ﬂux of the target object to the ﬂux of the comparison object. This value is then also normalised to ﬁll the range from [0to1]. The normalisation step can be disabled by unchecking the Normalise the chart check box on the web page. Feedback from early users of this page has suggested moving to a magnitude (log10 ) scale by default. This will be implemented in the next iteration of the pipeline. In order to view the light-curve in raw ﬂux measurements, rather than as a ratio with the comparison, then the Use comparison check box can be unchecked.
+
+Draft of 1:09 pm, Saturday, November 22, 2014 Plotting the position of the object
+
+85
+
+Once an object is selected, it is possible to produce a chart of the object’s (x, y) pixel position during the duration of the run. Pressing the p key will produce this plot, which Exporting to a CSV ﬁle Once a light-curve is displayed, pressing the e key will start the download of a comma-seperated value (CSV) ﬁle. Most browsers will allow you to rename this ﬁle and save to the local disk. The data saved will reﬂect the light-curve that is currently displayed. ie. If the current light curve is displaying normalised values, then these are the ones that will be exported in the CSV ﬁle.
+
+6.2.3
+
+Walkthrough - spotting an exoplanet transit
+
+Chapter 7
+
+Conclusion
+The purpose of this project was to create a pipeline that automatically reduces the data contained in the ULTRACAM archive and to make it easily accessible to interested users around the world. To that extent we have succeeded. We wrote an automated pipeline that was able to process all of the data archive and produce web pages allowing the user to browse all of the ULTRACAM runs from ﬁrst-light in 2004 to the present. The automated pipeline enabled the checking of thousands of objects in hundreds of runs by rapidly scanning each light-curve by eye. With this process we found a few dozen objects that exhibited variability that had not yet been documented. Some of these objects are discussed in chapter 5. We were also able to reproduce light-curves for the objects that were the original targets of the run without having prior knowledge about which were the intended targets. For example, we ’discovered’ GU Mus, an X-ray binary, serendipitously, but after checking the ﬁnding charts, realised that this was a known variable and the intended target of the observer. Despite causing premature excitement, this ’error’ goes some way to demonstrating that the automated pipeline is a legitimate and useful method of processing the ULTRACAM data. It enables the rapid inspection, browsing and sharing of the output of ULTRACAM. The pipeline lacks robust photometric reduction processes. So, while it is useful for producing light-curves that are easily inspected by eye, it does not produce calibrated magnitudes and colours. The output of the pipeline can be used as input for a ﬁnal calibration task, but this needs manual intervention to ﬁnd the relevant runs that contain the standard stars and to ﬁnd the appropriate runs containing ﬂat ﬁelds and biases to apply to the reduction.
+
+86
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+87
+
+7.1
+
+Current status of the pipeline
+
+Running the reduction of the automated pipeline is incredibly simple. As all of the tasks are automated, one single command is all that is needed to reduce a full night’s worth of data and prepare all of the web pages used for browsing that night. A macro script was created to allow the pipeline to make use of the internal distributed computing facility at the University of Warwick, called, Cluster of Workstations (CoWs). This has enabled us to go back through the entire ULTRACAM archive and process the vast majority of the runs. We have processed 373 nights out of a total of 406.
+
+7.1.1
+
+Areas for immediate improvement
+
+Finding a good astrometric solution for any particular ﬁeld fails in many cases and, at the moment, we only have astrometric solutions for xx% of the runs. The issues with ﬁnding good astrometric solutions are discussed in section 2.3.4. This is an area that could be improved by experimenting with diﬀerent astrometry packages, such as Scamp from Astromatic.net 1 . It is also worth trying to use diﬀerent reference catalogs for Astrometry.net software if we can ﬁnd bluer and deeper catalogs to index. ULTRACAM was designed to be used as a high speed photometric camera. Many of the science runs use very short exposure times and for runs lasting longer than 30 minutes or so, the raw data could contain more than 100,000 frames. The automated pipeline is not optimised to run across these high cadence runs. It could be argued that this is not particularly important since these runs have very few objects on them, many only have two objects in the windowed portion of the CCD, the target and a comparison. In these situations, the traditional pipeline is more suited to the task of reduction, since setting up the apertures is a very quick and easy process. Nevertheless, if we want the automated pipeline to be suited for all of the ULTRACAM data, then some optimisation for these high cadence runs is desired. For runs with high cadence and for runs with many objects, the volume of data stored in the JSON ﬁles is fairly large ∼ 300 Mbyte. This taxes the memory management of the browser. With a standard desktop machine (8 Gbyte RAM, 1.6GHz Intel i5 with 6Mbyte cache) this is not a critical problem as all of the run pages load and function in Firefox and Chrome. Nevertheless, the lag times when loading the data and plotting the light-curves can be several tens of seconds and this
+1
+
+http://www.astromatic.net/software/scamp
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+88
+
+makes the user interface sluggish. Javascript relies on internal garbage collection to handle most of its memory management and it is clear that, in these high load runs, memory leaks will eventually cause the browser to reach a memory maximum. Although it doesn’t crash, the lag becomes longer than a minute and the page needs a reload. The obvious solution to this problem is the reduce the amount of data that is loaded in to the browser. This would require a change in the application architecture to balance the load between the client (browser) and the web server. This approach would increase the amount of code required on the server and is discussed in section 3.2. ULTRACAM is used to observe transits of exoplanets with high precision photometry and timing. The exoplanet targets are relatively bright compared to most objects observed by ULTRACAM and, in order to avoid saturating the CCDs, the telescope is deliberately de-focussed in order to spread the light over many more pixels and this results in star images that resemble discs, rather than a fairly tightly constrained Moﬀat proﬁle. The source extraction software, SExtractor, is able to treat these extended images and measure the total ﬂux, but this requires a change to the conﬁguration parameters. This step is not automated by the pipeline at the moment, but this is planned for the next version.
+
+7.2
+
+Future improvements to the automated pipeline
+example.
+
+• Photometric calibration using, say, Sloan ﬁelds, citing PTF pipeline as an
+
+• Server-side and client-side components for the browser interface to remedy memory problems. • Automatic variability detection and light-curve classiﬁcation. • Investigate source-extraction alternatives to cope with crowded ﬁelds and outof-focus runs. • Automatic tweaking of the source extractor parameters: The pipeline has a fairly ’brute-force’ approach to reducing the photometry as it has to deal with a very diverse set of input data and therefore relies on ’best-guess’ values for parameters such as aperture-size, background variability, object-detection thresholds and distance matching. Many of the reductions could be improved by tweaking these parameters to match the speciﬁc conditions of the particular run. It is conceivable that these tweaks could be automated in certain cases
+
+Draft of 1:09 pm, Saturday, November 22, 2014 • Ability to combine ’consecutive’ runs.
+
+89
+
+7.3
+
+Recommendations for ULTRACAM users
+
+During the processing of the 10 year long ULTRACAM data archive, it has become clear that, by following a few simple guidelines, the observers can aid the automatic photometric reduction of the data. • Accurate entry of the target info: Finding an accurate WCS solution for each of the ﬁelds is improved when we have a world coordinate for the target object. Since the camera does not automatically acquire pointing data from the telescope, this information is dependant on the observer entering this information into the observing log, either as explicit coordinates or by providing an accurate and recognised object identiﬁer that can later be referenced. • Flat-ﬁelds, biases and photometric standards: The automated pipeline is not able to calibrate the photometry using standard stars since, at the moment, there is no reliable way to determine which runs contain measurements of relevant photometric standards. This process is performed manually in the traditional version of the pipeline. This is also true for ﬂat-ﬁelds and for bias frames. If a standard practice of entering certain metadata into the observing logs was adopted, then we might be able to automate the application of ﬂatﬁelds, biases and photometric standards to the automated pipeline. • Avoiding ﬁeld rotation • Large ﬁelds of view if you can. Don’t worry about data size.
+
+Bibliography
+C. Aerts, J. Christensen-Dalsgaard, and D. W. Kurtz. Asteroseismology. Springer, 2010. E. Bertin. Automatic astrometric and photometric calibration with SCAMP. In ASP Conference Series, Vol. 351, 2006, C. Gabriel, C. Arviset, D. Ponz, and E. Solano, eds, page 112, 2006. E. Bertin and S. Arnouts. SExtractor: Software for source extraction. Astronomy & Astrophysics Supplement, 317:393, 2006. W. J. Borucki, D. G. Koch, G. Basri, N. Batalha, A. Boss, T. M. Brown, D. Caldwell, J. Christensen-Dalsgaard, W. D. Cochran, E. DeVore, E. W. Dunham, A. K. Dupree, T. N. Gautier, III, J. C. Geary, R. Gilliland, A. Gould, S. B. Howell, J. M. Jenkins, H. Kjeldsen, D. W. Latham, J. J. Lissauer, G. W. Marcy, D. G. Monet, D. Sasselov, J. Tarter, D. Charbonneau, L. Doyle, E. B. Ford, J. Fortney, M. J. Holman, S. Seager, J. H. Steﬀen, W. F. Welsh, C. Allen, S. T. Bryson, L. Buchhave, H. Chandrasekaran, J. L. Christiansen, D. Ciardi, B. D. Clarke, J. L. Dotson, M. Endl, D. Fischer, F. Fressin, M. Haas, E. Horch, A. Howard, H. Isaacson, J. Kolodziejczak, J. Li, P. MacQueen, S. Meibom, A. Prsa, E. V. Quintana, J. Rowe, W. Sherry, P. Tenenbaum, G. Torres, J. D. Twicken, J. Van Cleve, L. Walkowicz, and H. Wu. Characteristics of Kepler Planetary Candidates Based on the First Data Set. Astrophysical Journal, 728:117, February 2011. doi: 10.1088/0004-637X/728/2/117. W. F. Bottke, Jr., D. Vokrouhlick´, D. P. Rubincam, and D. Nesvorn´. y y The
+
+Yarkovsky and Yorp Eﬀects: Implications for Asteroid Dynamics. Annual Review of Earth and Planetary Sciences, 34:157–191, May 2006. doi: 10.1146/annurev. earth.34.031405.125154. J. R. Burton, C. A. Watson, S. P. Littlefair, V. S. Dhillon, N. P. Gibson, T. R.
+
+90
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+91
+
+Marsh, and D. Pollacco. z’-band Ground-based Detection of the Secondary Eclipse of WASP-19b. ApJS, 201:36, August 2012. doi: 10.1088/0067-0049/201/2/36. Chan-Kao Chang, Adam Waszczak, Hsing-Wen Lin, Wing-Huen Ip, Thomas. A. Prince, Shrinivas R. Kulkarni, Russ Laher, and Jason Surace. A new large superfast rotator: (335433) 2005 UW163. Astrophysical Journal, 391:L35, 2014. James R. A. Davenport, Andrew C. Becker, Andrew A. West, John J. Bochanski, Suzanne L. Hawley, Jon Holtzman, Heather C. Gunning, Eric J. Hilton, Ferah A. Munshi, and Meagan Albright. The very short period m dwarf binary sdss j001641000925. The Astrophysical Journal, 764(1):62, 2013. URL http://stacks.iop.org/0004-637X/764/i=1/a=62. B. Dermawan, T. Nakamura, and F. Yoshida. Subaru lightcurve observations of sub-km-sized main-belt asteroids. Publ. Astron. Soc. Japan, 63:555–576, 2011. V. S. Dhillon, T. R. Marsh, M. J. Stevenson, D. C. Atkinson, P. Kerry, P. T. Peacocke, A. J. A. Vick, S. M. Beard, D. J. Ives, D. W. Lunney, S. A. McLay, C. J. Tierney, J. Kelly, S. P. Littlefair, R. Nicholson, R. Pashley, E. T. Harlaftis, and K. O’Brien. ULTRACAM: an ultrafast, triple-beam CCD camera for high-speed astrophysics. Monthly Notices of the Royal Astronomical Society, 378:825–840, July 2007. doi: 10.1111/j.1365-2966.2007.11881.x. P. P. Eggleton and A. A. Tokovinin. A catalogue of multiplicity among bright stellar systems. Monthly Notices of the Royal Astronomical Society, 389:869–879, 2008. Gerald Handler. Asteroseismology. In D. Oswalt, T. and M. A. Barstow, editors, Planets, Stars and Stellar Systems, Volume 4: Stellar Structure and Evolution, chapter 4, pages 208–239. Springer Science, 2013. D. W. Hogg and D. Lang. Astrometry.net. http://www.astrometry.net, 2012. Seth A. Jacobson, Francesco Marzari, Alessandro Rossi, Daniel J. Scheeres, and Donald R. Davis. Eﬀect of rotational disruption on the size-frequency distribution of the main belt asteroid population. Monthly Notices of the Royal Astronomical Society: Letters, 439:L94, 2014. David Jewitt, Masateru Ishiguro, and Jessica Agarwal. Large particles in active asteroid P/2010 A2. Astrophysical Journal, 764:L5, 2013. A. F. Kowalski, M. Mathioudakis, S. L. Hawley, E. J. Hilton, V. S. Dhillon, T. R. Marsh, and C. M. Copperwheat. White Light Flare Continuum Observations with
+
+Draft of 1:09 pm, Saturday, November 22, 2014
+
+92
+
+ULTRACAM. In C. Johns-Krull, M. K. Browning, and A. A. West, editors, 16th Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun, volume 448 of Astronomical Society of the Paciﬁc Conference Series, page 1157, December 2011. R. G. Kron. Astrophysical Journal Supplement Series, 43:305, 1980. L. B. Lucy. The Structure of Contact Binaries. Astrophysical Journal, 151:1123, March 1968. doi: 10.1086/149510. ˇ Joseph Masiero, Robert Jedicke, Josef Durech, Stephen Gwyn, Larry Denneau, and Jeﬀ Larsen. The thousand asteroid light curve survey. Icarus, 204:145, 2009. Isabella Paganano. Stellar activity. In D. Oswalt, T. and M. A. Barstow, editors, Planets, Stars and Stellar Systems, Volume 4: Stellar Structure and Evolution, chapter 10, pages 588–547. Springer Science, 2013. T. Shahbaz, V. S. Dhillon, T. R. Marsh, J. Casares, C. Zurita, and P. A. Charles. Observations of the quiescent X-ray transients GRS 1124-684 (=GUMus) and Cen X-4 (=V822Cen) taken with ULTRACAM on the VLT. Monthly Notices of the Royal Astronomical Society, 403:2167–2175, April 2010. doi: 10.1111/j.1365-2966. 2010.16262.x. David L. Shupe and Richard N. Hook. The SIP convention for representing distortion in ﬁts imageheaders, 2008. URL http://fits.gsfc.nasa.gov/registry/sip/ SIP_distortion_v1_0.pdf. Ovidiu Vaduvescu. Observing near earth asteroids with a small telescope. Romanian Astronomical Journal, 2005. B. Warner. Cataclysmic Variable Stars. Cambridge University Press, September 2003.
+
+

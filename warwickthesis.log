@@ -1,0 +1,319 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2014.6.13)  26 AUG 2014 12:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**warwickthesis.tex
+(./warwickthesis.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/share/texmf/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./warwickthesis.sty
+*************************************************************
+** Warwick Thesis Style File Sept 1996 
+*************************************************************
+\hour=\count88
+\minute=\count89
+\dow=\count90
+\leap=\count91
+\x=\count92
+\y=\count93
+) (/usr/local/share/texmf/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/share/texmf/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/share/texmf/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/share/texmf/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/share/texmf/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count94
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count95
+)
+(/usr/local/share/texmf/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks15
+) (./warwickthesis.aux)
+\openout1 = `warwickthesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+
+(/usr/local/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count96
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen106
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
+\everyMPtoPDFconversion=\toks17
+) (/usr/local/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/share/texmf/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/share/texmf/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/share/texmf/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/share/texmf/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/share/texmf/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/share/texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/share/texmf/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/share/texmf/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<images/the_warwick_uni_black.pdf, id=1, 157.58875pt x 46.1725pt>
+File: images/the_warwick_uni_black.pdf Graphic file (type pdf)
+
+<use images/the_warwick_uni_black.pdf>
+Package pdftex.def Info: images/the_warwick_uni_black.pdf used on input line 18
+4.
+(pdftex.def)             Requested size: 170.71652pt x 50.02193pt.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 184.
+
+
+(/usr/local/share/texmf/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 184.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 184.
+Missing character: There is no â in font phvr7t!
+Missing character: There is no € in font phvr7t!
+Missing character: There is no ™ in font phvr7t!
+Missing character: There is no â in font phvr7t!
+Missing character: There is no € in font phvr7t!
+Missing character: There is no ™ in font phvr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 184.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 184.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 184.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/the_warwick_uni_b
+lack.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 184.
+
+
+(/usr/local/share/texmf/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 184.
+
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 184--184
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+
+ []
+
+[2] <images/crest_black.pdf, id=17, 64.24pt x 80.3pt>
+File: images/crest_black.pdf Graphic file (type pdf)
+
+<use images/crest_black.pdf>
+Package pdftex.def Info: images/crest_black.pdf used on input line 188.
+(pdftex.def)             Requested size: 142.26378pt x 177.84413pt.
+
+<the_warwick_uni_black.pdf, id=18, 157.58875pt x 46.1725pt>
+File: the_warwick_uni_black.pdf Graphic file (type pdf)
+
+<use the_warwick_uni_black.pdf>
+Package pdftex.def Info: the_warwick_uni_black.pdf used on input line 188.
+(pdftex.def)             Requested size: 170.71652pt x 50.02193pt.
+
+Overfull \hbox (29.30411pt too wide) in paragraph at lines 188--188
+ [][] 
+ []
+
+[3 <./images/crest_black.pdf> <./the_warwick_uni_black.pdf>]
+(./warwickthesis.toc)
+\tf@toc=\write3
+\openout3 = `warwickthesis.toc'.
+
+ [1
+
+] [2
+
+] [3
+
+] [4
+
+]
+Chapter 1.
+
+Package natbib Warning: Citation `ballentine82' on page 1 undefined on input li
+ne 267.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+Package natbib Warning: Citation `abraham_etal' on page 1 undefined on input li
+ne 271.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+Package natbib Warning: Citation `MTW' on page 1 undefined on input line 275.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--278
+
+ []
+
+No file warwickthesis.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[1
+
+] (./warwickthesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 2098 strings out of 493747
+ 29326 string characters out of 3148626
+ 95506 words of memory out of 3500000
+ 5364 multiletter control sequences out of 15000+200000
+ 15891 words of font info for 40 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 38i,8n,24p,495b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/share/texmf/fonts/enc/dvips/base/8r.enc}</
+usr/local/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/sha
+re/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/share/texmf/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/local/share/texmf/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/local/share/texmf/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/local/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/share/texmf
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/share/texmf/fonts/type1/urw/he
+lvetic/uhvro8a.pfb>
+Output written on warwickthesis.pdf (8 pages, 142474 bytes).
+PDF statistics:
+ 80 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
