@@ -30,6 +30,58 @@ archivePrefix = "arXiv",
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
+@INPROCEEDINGS{lsst,
+   author = {{Tyson}, J.~A.},
+    title = "{Large Synoptic Survey Telescope: Overview}",
+booktitle = {Survey and Other Telescope Technologies and Discoveries},
+     year = 2002,
+   series = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+   volume = 4836,
+   eprint = {astro-ph/0302102},
+   editor = {{Tyson}, J.~A. and {Wolff}, S.},
+    month = dec,
+    pages = {10-20},
+      doi = {10.1117/12.456772},
+   adsurl = {http://adsabs.harvard.edu/abs/2002SPIE.4836...10T},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{typicalflares,
+   author = {{Moffett}, T.~J.},
+    title = "{UV Ceti flare stars - Observational data}",
+  journal = {\apjs},
+ keywords = {Astronomical Catalogs, Stellar Mass Ejection, Stellar Spectrophotometry, Variable Stars, Astronomical Photometry, Data Reduction, Error Analysis, Flares, Tables (Data)},
+     year = 1974,
+    month = dec,
+   volume = 29,
+    pages = {1-42},
+      doi = {10.1086/190330},
+   adsurl = {http://adsabs.harvard.edu/abs/1974ApJS...29....1M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+
+@ARTICLE{BakosHATNet,
+   author = {{Bakos}, G.~{\'A}. and {L{\'a}z{\'a}r}, J. and {Papp}, I. and 
+	{S{\'a}ri}, P. and {Green}, E.~M.},
+    title = "{System Description and First Light Curves of the Hungarian Automated Telescope, an Autonomous Observatory for Variability Search}",
+  journal = {\pasp},
+   eprint = {astro-ph/0206001},
+ keywords = {Instrumentation: Miscellaneous, Methods: Data Analysis, Stars: Variables: Other, Techniques: Photometric, Telescopes},
+     year = 2002,
+    month = sep,
+   volume = 114,
+    pages = {974-987},
+      doi = {10.1086/342382},
+   adsurl = {http://adsabs.harvard.edu/abs/2002PASP..114..974B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
 @ARTICLE{PollaccoSuperWASP,
    author = {{Pollacco}, D.~L. and {Skillen}, I. and {Collier Cameron}, A. and 
 	{Christian}, D.~J. and {Hellier}, C. and {Irwin}, J. and {Lister}, T.~A. and 
@@ -109,6 +161,22 @@ archivePrefix = "arXiv",
    adsurl = {http://adsabs.harvard.edu/abs/2010MNRAS.403.2167S},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
+
+@ARTICLE{optimalapertures,
+   author = {{Naylor}, T.},
+    title = "{An optimal extraction algorithm for imaging photometry}",
+  journal = {\mnras},
+ keywords = {METHODS: DATA ANALYSIS, TECHNIQUES: IMAGE PROCESSING, TECHNIQUES: PHOTOMETRIC},
+     year = 1998,
+    month = may,
+   volume = 296,
+    pages = {339-346},
+      doi = {10.1046/j.1365-8711.1998.01314.x},
+   adsurl = {http://adsabs.harvard.edu/abs/1998MNRAS.296..339N},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
 
 @ARTICLE{2012ApJS..201...36B,
    author = {{Burton}, J.~R. and {Watson}, C.~A. and {Littlefair}, S.~P. and 
@@ -500,6 +568,23 @@ archivePrefix = "arXiv",
      year = 2010,
     month = jan,
    adsurl = {http://adsabs.harvard.edu/abs/2010arXiv1001.2010W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{Irwin2007,
+   author = {{Irwin}, J. and {Irwin}, M. and {Aigrain}, S. and {Hodgkin}, S. and 
+	{Hebb}, L. and {Moraux}, E.},
+    title = "{The Monitor project: data processing and light curve production}",
+  journal = {\mnras},
+   eprint = {astro-ph/0612395},
+ keywords = {methods: data analysis, techniques: photometric, surveys},
+     year = 2007,
+    month = mar,
+   volume = 375,
+    pages = {1449-1462},
+      doi = {10.1111/j.1365-2966.2006.11408.x},
+   adsurl = {http://adsabs.harvard.edu/abs/2007MNRAS.375.1449I},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 

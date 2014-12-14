@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,6 +19,14 @@ G.~{\'A}. {Bakos}, J.~{L{\'a}z{\'a}r}, I.~{Papp}, P.~{S{\'a}ri}, and E.~M.
   Telescope, an Autonomous Observatory for Variability Search}.
 \newblock \emph{\pasp}, 114:\penalty0 974--987, September 2002.
 \newblock \doi{10.1086/342382}.
+
+\bibitem[{Bento} and {Wheatley}(2011)]{Wasp15b}
+J.~{Bento} and P.~{Wheatley}.
+\newblock {Optical Transmission Photometry of Large Scale Height Planets
+  WASP-15b and WASP-17b}.
+\newblock In \emph{AAS/Division for Extreme Solar Systems Abstracts}, volume~2
+  of \emph{AAS/Division for Extreme Solar Systems Abstracts}, page 4003,
+  September 2011.
 
 \bibitem[Bertin(2006)]{scamp}
 E.~Bertin.
@@ -58,15 +66,6 @@ W.~J. {Borucki}, D.~G. {Koch}, G.~{Basri}, N.~{Batalha}, A.~{Boss}, T.~M.
   Data Set}.
 \newblock \emph{Astrophysical Journal}, 728:\penalty0 117, February 2011.
 \newblock \doi{10.1088/0004-637X/728/2/117}.
-
-\bibitem[{Bottke} et~al.(2006){Bottke}, {Vokrouhlick{\'y}}, {Rubincam}, and
-  {Nesvorn{\'y}}]{yorpeffect}
-W.~F. {Bottke}, Jr., D.~{Vokrouhlick{\'y}}, D.~P. {Rubincam}, and
-  D.~{Nesvorn{\'y}}.
-\newblock {The Yarkovsky and Yorp Effects: Implications for Asteroid Dynamics}.
-\newblock \emph{Annual Review of Earth and Planetary Sciences}, 34:\penalty0
-  157--191, May 2006.
-\newblock \doi{10.1146/annurev.earth.34.031405.125154}.
 
 \bibitem[{Burdanov} et~al.(2014){Burdanov}, {Krushinsky}, and
   {Popov}]{Astrokit2014}
@@ -154,6 +153,13 @@ D.~W. Hogg and D.~Lang.
 \newblock Astrometry.net.
 \newblock http://www.astrometry.net, 2012.
 
+\bibitem[{Irwin} et~al.(2007){Irwin}, {Irwin}, {Aigrain}, {Hodgkin}, {Hebb},
+  and {Moraux}]{Irwin2007}
+J.~{Irwin}, M.~{Irwin}, S.~{Aigrain}, S.~{Hodgkin}, L.~{Hebb}, and E.~{Moraux}.
+\newblock {The Monitor project: data processing and light curve production}.
+\newblock \emph{\mnras}, 375:\penalty0 1449--1462, March 2007.
+\newblock \doi{10.1111/j.1365-2966.2006.11408.x}.
+
 \bibitem[Jacobson et~al.(2014)Jacobson, Marzari, Rossi, Scheeres, and
   Davis]{Jacobson2014}
 Seth~A. Jacobson, Francesco Marzari, Alessandro Rossi, Daniel~J. Scheeres, and
@@ -203,6 +209,18 @@ A.~F.~J. {Moffat}.
   Photographic Emulsion and Application to Photographic Photometry}.
 \newblock \emph{\aap}, 3:\penalty0 455, December 1969.
 
+\bibitem[{Moffett}(1974)]{typicalflares}
+T.~J. {Moffett}.
+\newblock {UV Ceti flare stars - Observational data}.
+\newblock \emph{\apjs}, 29:\penalty0 1--42, December 1974.
+\newblock \doi{10.1086/190330}.
+
+\bibitem[{Naylor}(1998)]{optimalapertures}
+T.~{Naylor}.
+\newblock {An optimal extraction algorithm for imaging photometry}.
+\newblock \emph{\mnras}, 296:\penalty0 339--346, May 1998.
+\newblock \doi{10.1046/j.1365-8711.1998.01314.x}.
+
 \bibitem[Paganano(2013)]{stellaractivity}
 Isabella Paganano.
 \newblock Stellar activity.
@@ -250,6 +268,15 @@ David~L. Shupe and Richard~N. Hook.
   imageheaders, 2008.
 \newblock URL
   \url{http://fits.gsfc.nasa.gov/registry/sip/SIP_distortion_v1_0.pdf}.
+
+\bibitem[{Tyson}(2002)]{lsst}
+J.~A. {Tyson}.
+\newblock {Large Synoptic Survey Telescope: Overview}.
+\newblock In J.~A. {Tyson} and S.~{Wolff}, editors, \emph{Survey and Other
+  Telescope Technologies and Discoveries}, volume 4836 of \emph{Society of
+  Photo-Optical Instrumentation Engineers (SPIE) Conference Series}, pages
+  10--20, December 2002.
+\newblock \doi{10.1117/12.456772}.
 
 \bibitem[Vaduvescu(2005)]{neosmalltelescope}
 Ovidiu Vaduvescu.

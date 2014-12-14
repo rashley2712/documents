@@ -47,7 +47,6 @@
 \usepackage{listings}
 \usepackage{tabularx}
 
-
 \mastersthesis                     %% Uncomment one of these; if you don't
 % \phdthesis                         %% use either, the default is \phdthesis.
 
@@ -196,6 +195,7 @@
 
 
 \begin{document}
+\setlength{\pdfpxdimen}{1in/150}
 
 \thesiscopyrightpage                 %! Generate the copyright page for the library.
 %%%%%%%%%%% \thesiscopyrightpagehardcopyonly This only applies for a masters thesis that will not go online.
@@ -291,10 +291,10 @@ a degree at any level.
 \chapter{Introduction}\label{chap:introduction}
 \input introduction.tex
 
-\chapter{Automating the reduction of the imaging photometry}\label{chap:datareduction}
+\chapter{Automating the reduction pipeline}\label{chap:datareduction}
 \input datareduction.tex
 
-\chapter{Creating a browse-able front-end for the data}\label{chap:webfrontend}
+\chapter{Creating a web enabled light-curve browser}\label{chap:webfrontend}
 \input webfrontend.tex
 
 \chapter{Results from the automated pipeline}\label{chap:results}
@@ -308,9 +308,6 @@ a degree at any level.
 
 %!!!!!!!!!!!!!!!
 
-\appendix                            %% this will do the appendices
-  \chapter{Automated software user manual}\label{chap:usermanual}
-    \input usermanual.tex
 
 \bibliographystyle{plainnat}
 
@@ -325,4 +322,7 @@ a degree at any level.
 %\begin{thesisauthorvita}             %% Write your vita here; it can be
 %                                     %% anything in LaTeX2e par-mode.
 %\end{thesisauthorvita}               %%
+\appendix                            %% this will do the appendices
+  \chapter{Automated software user manual}\label{chap:usermanual}
+    \input usermanual.tex
 \end{document}                       %% Done.
