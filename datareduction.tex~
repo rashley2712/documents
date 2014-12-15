@@ -156,14 +156,12 @@ In order to facilitate the automatic running of the pipeline across the entire U
 The output from SExtractor is a FITS file that contains a catalog of all of the detected objects with measurements of their flux. Each individual window of each frame in each channel (r, g, b) are treated separately by SExtractor and there is no tracking of objects. The catalog returned by SExtractor doesn't maintain a list of object identifiers (IDs) that are consistent from frame to frame. Since the source extraction is performed for each frame individually, the ranking of the objects may change and some fainter objects may not appear in each returned catalog. The task of building and maintaining a consistent list of the objects is undertaken by the automated pipeline software built for this project. 
 
 \subsubsection{Object tracking}
-The automated pipeline creates light-curves for all of the objects and, in order to do so, it needs to keep track of these objects throughout the run (across frames and channels). The approach is to use the pixel $(x, y)$ coordinates of the objects returned by SExtractor as the key attribute for identifying an object that recurs from frame to frame. 
-
-For each window sent to SExtractor, the pipeline performs the following steps:
+The automated pipeline creates light-curves for all of the objects and, in order to do so, it needs to keep track of these objects throughout the run (across frames and channels). The approach is to use the pixel $(x, y)$ coordinates of the objects returned by SExtractor as the key attribute for identifying an object that recurs from frame to frame. For each window sent to SExtractor, the pipeline performs the following steps:
 \begin{enumerate}
-  \item \emph{Read} the catalog file, containing the $(x, y)$ coordinates and fluxes for all objects in the window.
-  \item \emph{Rank} all of the objects from brightest to faintest.
-  \item \emph{Transform} the pixel coordinates from the reference frame of the individual window, to an overall reference frame, matching the size of the full CCD. 
-  \item \emph{Match} all objects in the catalog. For each object in the list, check its proximity to any objects that have been identified on previous frames. The distance threshold for a match is configurable and the default is 10 pixels. If there is more than one match, the closest match wins. If there is no match, then this is a `new' object and it is added it to the list of detected objects.  
+  \item{Read} the catalog file, containing the $(x, y)$ coordinates and fluxes for all objects in the window.
+  \item{Rank} all of the objects from brightest to faintest.
+  \item{Transform} the pixel coordinates from the reference frame of the individual window, to an overall reference frame, matching the size of the full CCD. 
+  \item{Match} all objects in the catalog. For each object in the list, check its proximity to any objects that have been identified on previous frames. The distance threshold for a match is configurable and the default is 10 pixels. If there is more than one match, the closest match wins. If there is no match, then this is a `new' object and it is added it to the list of detected objects.  
 \end{enumerate}
 
 The algorithm begins with an empty list of objects. In the first frame, this list grows to include most of the objects we expect to detect in the run. However, the number of objects being tracked will slowly increase as the run is being processed. At this stage of the pipeline we do not remove any objects from our list. 
@@ -186,7 +184,7 @@ For each detected object in the window, we store:
 \label{sect:filtering}
 Before the pipeline attempts to match objects across each of the three channels (r, g, b), it performs a 'clean-up' of these data. It makes three passes of the object list performing the following filtering:
 
-\emph{Cosmic ray} filtering. This step filters out any object that appears on only one frame in the run. 
+Cosmic ray filtering: This step filters out any object that appears on only one frame in the run. 
 
 \emph{Low coverage filtering}. This step removes any objects that appear on fewer than a pre-defined percentage of frames. This value is configurable. The default is 20\%. This value should be set to `0' if we are looking for any kind of transient object in the run. 
 
@@ -197,7 +195,7 @@ At this stage, the pipeline has produced three distinct object catalogs. One for
 
 The position we use is the \emph{mean} pixel position of the object through the duration of the run. So we have three values to match $(\bar{x}, \bar{y})_{red}$, $(\bar{x}, \bar{y})_{green}$ and $(\bar{x}, \bar{y})_{blue}$. Since the red catalog (which is derived from the optical channel that is usually configured to use the the Sloan `i' or `r' filter) has the most number of objects detected, it is used to seed the master catalog. In other words, the master catalog is initialised with all of the objects in the red catalog. For each object in the `master' catalog, the pipeline consults the catalogs from the other two channels looking for a nearest match in distance within a pre-defined threshold.
 
-For each object in the green catalog indexed by the letter $i$, we calculate its distance from each object in the master catalog $D_{i,j}$ by  \begin{equation}D_{i,j} = \sqrt{(\bar{x}_{red, j}-\bar{x}_{green, i})^2 + (\bar{y}_{red, j}-\bar{y}_{green, i})^2}\end{equation}.  The matched master object for this green object is the one with the closest pixel distance $(D_{i,j})_{min}$. We merge these two objects together in the catalog, which now contains one unique identifier (number) and the red and green photometry. If there is no match within the minimum distance threshold, then the object is treated as a `new' object and added to the master catalog. It is possible that an object can be identified in the green channel, but not in the red. In this case, it is still added to the master catalog as a new object. This means that we have the capability of dealing with objects that have photometry in one or two colours, but not all three. 
+For each object in the green catalog indexed by the letter $i$, we calculate its distance from each object in the master catalog $D_{i,j}$. \begin{equation}D_{i,j} = \sqrt{(\bar{x}_{red, j}-\bar{x}_{green, i})^2 + (\bar{y}_{red, j}-\bar{y}_{green, i})^2}\end{equation}  The matched master object for this green object is the one with the closest pixel distance $(D_{i,j})_{min}$. We merge these two objects together in the catalog, which now contains one unique identifier (number) and the red and green photometry. If there is no match within the minimum distance threshold, then the object is treated as a `new' object and added to the master catalog. It is possible that an object can be identified in the green channel, but not in the red. In this case, it is still added to the master catalog as a new object. This means that we have the capability of dealing with objects that have photometry in one or two colours, but not all three. 
 
 The process is then repeated for the blue catalog. Again we match the blue coordinates to each object in the master catalog. First trying for a match of the blue coordinates to the red coordinates and then, if no match is found, we repeat looking for a match between the blue coordinates and the green coordinates. Once again, if no match is found, then the object is added to the master catalog as a `new' object.  
 

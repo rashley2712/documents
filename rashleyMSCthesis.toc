@@ -54,8 +54,8 @@
 \contentsline {section}{\numberline {4.1}Introduction}{54}{section.4.1}
 \contentsline {section}{\numberline {4.2}Quality of the photometry}{54}{section.4.2}
 \contentsline {section}{\numberline {4.3}Object matching accuracy}{63}{section.4.3}
-\contentsline {section}{\numberline {4.4}Finding variable objects}{64}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}X-ray transient: GU Mus}{64}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.4}Finding variable objects}{66}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}X-ray transient: GU Mus}{66}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Exoplanet transit: KIC 511978}{69}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Flare star: YZ CMi}{69}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Covering the entire ULTRACAM archive}{70}{section.4.5}
@@ -101,6 +101,6 @@
 \contentsline {subsubsection}{Viewing a light-curve}{109}{section*.28}
 \contentsline {subsubsection}{Object markers and Object labels}{110}{section*.29}
 \contentsline {subsubsection}{Selecting a comparison star}{110}{section*.30}
-\contentsline {subsubsection}{Re-scaling the light curve}{110}{section*.31}
+\contentsline {subsubsection}{Re-scaling the light-curve}{110}{section*.31}
 \contentsline {subsubsection}{Plotting the position of the object}{111}{section*.32}
 \contentsline {subsubsection}{Exporting to a CSV file}{111}{section*.33}

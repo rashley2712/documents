@@ -43,17 +43,17 @@ A sample of the main configuration file for the automated pipeline is shown belo
 \lstset{basicstyle=\scriptsize}
 \begin{lstlisting}
 DEBUG   1       # The debug level to be used by the various scripts. Can be 1, 2, 3
-SITE_PATH       /storage/astro2/www/phrnaw/sitedev      # The path to the website
-ULTRACAMRAW     /storage/astro1/phsaap/ultracam/raw_data        # Path to the Ultracam raw data
+SITE_PATH       /storage/homedir/www/ultracam      # The path to the website
+ULTRACAMRAW     /storage/ultracam/raw_data        # Path to the Ultracam raw data
 WRITE_FITS      0       # Write a fits file or not?
 WRITE_JSON      1       # Write a fits file or not?
 KEEP_TMP_FILES  0       # Keep the temporary (sextractor) files?
-RUNTEMPLATE     /storage/astro2/www/phrnaw/sitedev/sitecode/runxxx.jinja
-DAYTEMPLATE     /storage/astro2/www/phrnaw/sitedev/sitecode/day-xxxx-xx-xx.jinja
+RUNTEMPLATE     /storage/homedir/www/ultracam/sitecode/runxxx.jinja
+DAYTEMPLATE     /storage/homedir/www/ultracam/sitedev/sitecode/day-xxxx-xx-xx.jinja
 MINPIXELDISTANCE        10
-RUNINFO         /storage/astro1/phsaap/ultracam/logs/ultra.json
-WORKINGDIR      /storage/astro2/phrnaw/workingdir
-ROOTURL         http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/
+RUNINFO         /storage/ultracam/logs/ultra.json
+WORKINGDIR      /storage/homedir/workingdir
+ROOTURL         http://www.astro.warwick.ac.uk/ultracam/
 SEX_MAGNITUDE   FLUX_AUTO
 COMPARISON_THRESHOLD    95
 \end{lstlisting}
@@ -212,7 +212,7 @@ The page has three main components, HTML, Javascript and JSON. The HTML and Java
 The pipeline produces a deep image for each channel (r, g, b) based on stacking all of the individual frames captured by ULTRACAM. The page loads all three images in the background and, by default, displays the 'green' channel initially. Switching between these images can be performed by pressing the \texttt{r}, \texttt{g} and \texttt{b} keys on the keyboard. You can also switch these images by selecting either the \texttt{Red},  \texttt{Green} or \texttt{Blue} of the \texttt{Base Image} radio options found below the image itself.
 
 \subsubsection{Viewing a light-curve}
-The quickest way to view a light-curve of any particular object is to simply click on the object with the mouse. If the object has been identified by the pipeline and there are sufficient data to display, then a light curve for this object will appear in the panel below the radio buttons and checkboxes on the page. While moving the mouse over the base image, the cursor that displays the $(x, y)$ coordinates (or the $(RA, DEC)$) coordinates will display a green background if the object underneath it has the required data for a light-curve.
+The quickest way to view a light-curve of any particular object is to simply click on the object with the mouse. If the object has been identified by the pipeline and there are sufficient data to display, then a light-curve for this object will appear in the panel below the radio buttons and checkboxes on the page. While moving the mouse over the base image, the cursor that displays the $(x, y)$ coordinates (or the $(RA, DEC)$) coordinates will display a green background if the object underneath it has the required data for a light-curve.
 
 \subsubsection{Object markers and Object labels}
 Each object that has been identifiedby the pipeline has a unique identifier in the master catalog. In order to view these IDs, you can toggle the object `labels' on and off. This is done by pressing the (letter 'l') \texttt{l} key, or clicking the \texttt{Show labels} checkbox. This will draw lavels next to each object identified by the pipeline that has photometry available in the channel that is currently selected for the base image. If you want to see each of the identified objects shown as a circle centred on each object, rather than a label, then pressing the \texttt{m} key or checking the \texttt{Show circles} check box will toggle the drawing of circles of radius 15 pixels around each object.   
@@ -230,8 +230,8 @@ During the final stage of the pipeline, a test is performed on the brightest obj
   \label{fig:selectcomparison}
 \end{figure}  
 
-\subsubsection{Re-scaling the light curve}
-The vertical axis on the light curve of the target object can be adjusted to adapt to the dynamic range of the flux measurements. By default, when the page is loaded, the light-curve of the target is calculated as the ratio of the flux of the target object to the flux of the comparison object. This value is then also normalised to fill the range from $[0 to 1]$. The normalisation step can be disabled by unchecking the \texttt{Normalise the chart} check box on the web page. Feedback from early users of this page has suggested moving to a magnitude ($log_{10}$) scale by default. This will be implemented in the next iteration of the pipeline. In order to view the light-curve in raw flux measurements, rather than as a ratio with the comparison, then the \texttt{Use comparison} check box can be unchecked.
+\subsubsection{Re-scaling the light-curve}
+The vertical axis on the light-curve of the target object can be adjusted to adapt to the dynamic range of the flux measurements. By default, when the page is loaded, the light-curve of the target is calculated as the ratio of the flux of the target object to the flux of the comparison object. This value is then also normalised to fill the range from $[0 - 1]$. The normalisation step can be disabled by unchecking the \texttt{Normalise the chart} check box on the web page. Feedback from early users of this page has suggested moving to a magnitude ($log_{10}$) scale by default. This will be implemented in the next iteration of the pipeline. In order to view the light-curve in raw flux measurements, rather than as a ratio with the comparison, then the \texttt{Use comparison} check box can be unchecked.
 
 \begin{figure}
   \centering
@@ -244,6 +244,6 @@ The vertical axis on the light curve of the target object can be adjusted to ada
 Once an object is selected, it is possible to produce a chart of the object's $(x, y)$ pixel position during the duration of the run. Pressing the \texttt{p} key will produce this plot, which will display a chart of how the object's position varies during the course of the run. An example of this plot is shown in figure \ref{fig:positiondrift}.
 
 \subsubsection{Exporting to a CSV file}
-Once a light-curve is displayed, pressing the \texttt{e} key will start the download of a comma-seperated value (CSV) file. Most browsers will allow you to rename this file and save to the local disk. The data saved will reflect the light-curve that is currently displayed. ie. If the current light curve is displaying normalised values, then these are the ones that will be exported in the CSV file.
+Once a light-curve is displayed, pressing the \texttt{e} key will start the download of a comma-seperated value (CSV) file. Most browsers will allow you to rename this file and save to the local disk. The data saved will reflect the light-curve that is currently displayed. ie. If the current light-curve is displaying normalised values, then these are the ones that will be exported in the CSV file.
 
 %\subsection{Walkthrough - spotting an exoplanet transit}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2014.11.20)  15 DEC 2014 15:02
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2014.11.20)  15 DEC 2014 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,7 +642,7 @@ id=920, 1084.05pt x 1035.87pt>
 File: images/overlay_multiply.png Graphic file (type png)
 
 <use images/overlay_multiply.png>
-Package pdftex.def Info: images/overlay_multiply.png used on input line 210.
+Package pdftex.def Info: images/overlay_multiply.png used on input line 208.
 (pdftex.def)             Requested size: 284.52756pt x 271.88043pt.
 
 <images/overlay_multiply_closeup.png, id=921, 207.02344pt x 176.15813pt>
@@ -650,17 +650,17 @@ File: images/overlay_multiply_closeup.png Graphic file (type png)
 
 <use images/overlay_multiply_closeup.png>
 Package pdftex.def Info: images/overlay_multiply_closeup.png used on input line
- 217.
+ 215.
 (pdftex.def)             Requested size: 142.26378pt x 121.05733pt.
 
 <images/position_drift.png, id=924, 657.95813pt x 264.99pt>
 File: images/position_drift.png Graphic file (type png)
 
 <use images/position_drift.png>
-Package pdftex.def Info: images/position_drift.png used on input line 224.
+Package pdftex.def Info: images/position_drift.png used on input line 222.
 (pdftex.def)             Requested size: 398.33858pt x 160.43063pt.
 
-Overfull \hbox (0.85359pt too wide) in paragraph at lines 224--225
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 222--223
  [][] 
  []
 
@@ -669,17 +669,17 @@ File: images/position_drift_longrun.png Graphic file (type png)
 
 <use images/position_drift_longrun.png>
 Package pdftex.def Info: images/position_drift_longrun.png used on input line 2
-31.
+29.
 (pdftex.def)             Requested size: 398.33858pt x 154.61223pt.
 
-Overfull \hbox (0.85359pt too wide) in paragraph at lines 231--232
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 229--230
  [][] 
  []
 
 [36] [37 <./images/overlay_multiply.png> <./images/overlay_multiply_closeup.png
  (PNG copy)>] [38 <./images/position_drift.png (PNG copy)> <./images/position_d
 rift_longrun.png (PNG copy)>] [39]
-Overfull \hbox (1.17514pt too wide) in paragraph at lines 271--272
+Overfull \hbox (1.17514pt too wide) in paragraph at lines 269--270
 []\OT1/cmr/m/it/10.95 Choice of ref-er-ence in-dex by colour\OT1/cmr/m/n/10.95 
 : The As-trom-e-try.net soft-ware uses USNO-
  []
@@ -693,14 +693,14 @@ to.pdf>
 (epstopdf)                    size: 286926 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/sip_correction_r_10
 x-eps-converted-to.pdf images/sip_correction_r_10x.eps>
-(epstopdf)             \includegraphics on input line 279.
+(epstopdf)             \includegraphics on input line 277.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/sip_correction_r_10x-eps-converted-to.pdf, id=959, 867.24pt x 867.24pt>
 File: images/sip_correction_r_10x-eps-converted-to.pdf Graphic file (type pdf)
 <use images/sip_correction_r_10x-eps-converted-to.pdf>
 Package pdftex.def Info: images/sip_correction_r_10x-eps-converted-to.pdf used 
-on input line 279.
+on input line 277.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
 Package epstopdf Info: Source file: <images/sip_correction_g_5x.eps>
 (epstopdf)                    date: 2014-12-15 11:35:18
@@ -711,7 +711,7 @@ o.pdf>
 (epstopdf)                    size: 330194 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/sip_correction_g_5x
 -eps-converted-to.pdf images/sip_correction_g_5x.eps>
-(epstopdf)             \includegraphics on input line 286.
+(epstopdf)             \includegraphics on input line 284.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/sip_correction_g_5x-eps-converted-to.pdf, id=960, 867.24pt x 867.24pt>
@@ -719,7 +719,7 @@ File: images/sip_correction_g_5x-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/sip_correction_g_5x-eps-converted-to.pdf>
 Package pdftex.def Info: images/sip_correction_g_5x-eps-converted-to.pdf used o
-n input line 286.
+n input line 284.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
 Package epstopdf Info: Source file: <images/sip_correction_b_10x.eps>
 (epstopdf)                    date: 2014-12-15 11:36:00
@@ -730,14 +730,14 @@ to.pdf>
 (epstopdf)                    size: 385411 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/sip_correction_b_10
 x-eps-converted-to.pdf images/sip_correction_b_10x.eps>
-(epstopdf)             \includegraphics on input line 293.
+(epstopdf)             \includegraphics on input line 291.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/sip_correction_b_10x-eps-converted-to.pdf, id=961, 867.24pt x 867.24pt>
 File: images/sip_correction_b_10x-eps-converted-to.pdf Graphic file (type pdf)
 <use images/sip_correction_b_10x-eps-converted-to.pdf>
 Package pdftex.def Info: images/sip_correction_b_10x-eps-converted-to.pdf used 
-on input line 293.
+on input line 291.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
  [40] [41 <./images/sip_correction_r_10x-eps-converted-to.pdf>] [42 <./images/s
 ip_correction_g_5x-eps-converted-to.pdf>] [43 <./images/sip_correction_b_10x-ep
@@ -750,7 +750,7 @@ Package epstopdf Info: Source file: <images/greentored.eps>
 (epstopdf)                    size: 330165 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/greentored-eps-conv
 erted-to.pdf images/greentored.eps>
-(epstopdf)             \includegraphics on input line 308.
+(epstopdf)             \includegraphics on input line 306.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/greentored-eps-converted-to.pdf, id=1015, 867.24pt x 867.24pt>
@@ -758,7 +758,7 @@ File: images/greentored-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/greentored-eps-converted-to.pdf>
 Package pdftex.def Info: images/greentored-eps-converted-to.pdf used on input l
-ine 308.
+ine 306.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
 Package epstopdf Info: Source file: <images/bluetored.eps>
 (epstopdf)                    date: 2014-12-14 10:42:57
@@ -768,7 +768,7 @@ Package epstopdf Info: Source file: <images/bluetored.eps>
 (epstopdf)                    size: 385434 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/bluetored-eps-conve
 rted-to.pdf images/bluetored.eps>
-(epstopdf)             \includegraphics on input line 315.
+(epstopdf)             \includegraphics on input line 313.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/bluetored-eps-converted-to.pdf, id=1016, 867.24pt x 867.24pt>
@@ -776,7 +776,7 @@ File: images/bluetored-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/bluetored-eps-converted-to.pdf>
 Package pdftex.def Info: images/bluetored-eps-converted-to.pdf used on input li
-ne 315.
+ne 313.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
 ) [44] [45 <./images/greentored-eps-converted-to.pdf>] [46 <./images/bluetored-
 eps-converted-to.pdf>] [47]
@@ -1016,29 +1016,23 @@ f>
 (epstopdf)                    size: 354352 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/ratio-of-ratios-eps
 -converted-to.pdf images/ratio-of-ratios.eps>
-(epstopdf)             \includegraphics on input line 113.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 <images/ratio-of-ratios-eps-converted-to.pdf, id=1408, 867.24pt x 867.24pt>
 File: images/ratio-of-ratios-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/ratio-of-ratios-eps-converted-to.pdf>
 Package pdftex.def Info: images/ratio-of-ratios-eps-converted-to.pdf used on in
-put line 113.
+put line 112.
 (pdftex.def)             Requested size: 398.33858pt x 398.33977pt.
 
-Overfull \hbox (0.85359pt too wide) in paragraph at lines 113--114
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 112--113
  [][] 
  []
 
 [59 <./images/nn_ser_compare_zoom_b-eps-converted-to.pdf>] [60 <./images/compar
 e_photometry-eps-converted-to.pdf>] [61 <./images/compare_photometry_2-eps-conv
 erted-to.pdf>] [62 <./images/ratio-of-ratios-eps-converted-to.pdf>]
-Overfull \hbox (14.37222pt too wide) in paragraph at lines 124--124
-[]\OT1/cmr/m/n/10.95 In fig-ure []4.11[] we have plot-ted a colour-colour di-a-
-gram of run \OT1/cmr/m/it/10.95 2013-07-21/run010\OT1/cmr/m/n/10.95 .
- []
-
-[63]
 Package epstopdf Info: Source file: <images/2013-07-21-run010-2colour.eps>
 (epstopdf)                    date: 2014-12-15 13:24:57
 (epstopdf)                    size: 95748 bytes
@@ -1048,19 +1042,19 @@ rted-to.pdf>
 (epstopdf)                    size: 33124 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-2
 colour-eps-converted-to.pdf images/2013-07-21-run010-2colour.eps>
-(epstopdf)             \includegraphics on input line 132.
+(epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-2colour-eps-converted-to.pdf, id=1607, 867.24pt x 867
+<images/2013-07-21-run010-2colour-eps-converted-to.pdf, id=1587, 867.24pt x 867
 .24pt>
 File: images/2013-07-21-run010-2colour-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use images/2013-07-21-run010-2colour-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-2colour-eps-converted-to.pdf 
-used on input line 132.
+used on input line 125.
 (pdftex.def)             Requested size: 398.33858pt x 398.33977pt.
 
-Overfull \hbox (0.85359pt too wide) in paragraph at lines 132--133
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
@@ -1074,71 +1068,77 @@ converted-to.pdf>
 (epstopdf)                    size: 21039 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/colour-colour-zoom-
 with-labels-eps-converted-to.pdf images/colour-colour-zoom-with-labels.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/colour-colour-zoom-with-labels-eps-converted-to.pdf, id=1608, 867.24pt 
+<images/colour-colour-zoom-with-labels-eps-converted-to.pdf, id=1588, 867.24pt 
 x 867.24pt>
 File: images/colour-colour-zoom-with-labels-eps-converted-to.pdf Graphic file (
 type pdf)
  <use images/colour-colour-zoom-with-labels-eps-converted-to.pdf>
 Package pdftex.def Info: images/colour-colour-zoom-with-labels-eps-converted-to
-.pdf used on input line 139.
+.pdf used on input line 132.
 (pdftex.def)             Requested size: 341.43306pt x 341.43787pt.
 
-<images/mismatch-run010_r.png, id=1611, 165.61874pt x 165.61874pt>
+<images/mismatch-run010_r.png, id=1591, 165.61874pt x 165.61874pt>
 File: images/mismatch-run010_r.png Graphic file (type png)
 
 <use images/mismatch-run010_r.png>
-Package pdftex.def Info: images/mismatch-run010_r.png used on input line 146.
+Package pdftex.def Info: images/mismatch-run010_r.png used on input line 139.
 (pdftex.def)             Requested size: 119.2467pt x 119.24539pt.
 
-<images/mismatch-run010_g.png, id=1612, 165.61874pt x 165.61874pt>
+<images/mismatch-run010_g.png, id=1592, 165.61874pt x 165.61874pt>
 File: images/mismatch-run010_g.png Graphic file (type png)
 
 <use images/mismatch-run010_g.png>
-Package pdftex.def Info: images/mismatch-run010_g.png used on input line 147.
+Package pdftex.def Info: images/mismatch-run010_g.png used on input line 140.
 (pdftex.def)             Requested size: 119.2467pt x 119.24539pt.
 
-<images/mismatch-run010_b.png, id=1613, 165.61874pt x 165.61874pt>
+<images/mismatch-run010_b.png, id=1593, 165.61874pt x 165.61874pt>
 File: images/mismatch-run010_b.png Graphic file (type png)
 
 <use images/mismatch-run010_b.png>
-Package pdftex.def Info: images/mismatch-run010_b.png used on input line 148.
+Package pdftex.def Info: images/mismatch-run010_b.png used on input line 141.
 (pdftex.def)             Requested size: 119.2467pt x 119.24539pt.
+
+Overfull \hbox (14.37222pt too wide) in paragraph at lines 146--146
+[]\OT1/cmr/m/n/10.95 In fig-ure []4.11[] we have plot-ted a colour-colour di-a-
+gram of run \OT1/cmr/m/it/10.95 2013-07-21/run010\OT1/cmr/m/n/10.95 .
+ []
+
+[63] [64 <./images/2013-07-21-run010-2colour-eps-converted-to.pdf>] [65 <./imag
+es/colour-colour-zoom-with-labels-eps-converted-to.pdf> <./images/mismatch-run0
+10_r.png> <./images/mismatch-run010_g.png> <./images/mismatch-run010_b.png>]
 Package epstopdf Info: Source file: <images/2011-04-22-run019-omegacen-colourma
 gnitude.eps>
-(epstopdf)                    date: 2014-12-13 14:48:37
-(epstopdf)                    size: 28140 bytes
+(epstopdf)                    date: 2014-12-15 16:28:53
+(epstopdf)                    size: 34383 bytes
 (epstopdf)             Output file: <images/2011-04-22-run019-omegacen-colourma
 gnitude-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-12-13 14:48:42
-(epstopdf)                    size: 115083 bytes
+(epstopdf)                    date: 2014-12-15 16:32:34
+(epstopdf)                    size: 155466 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/2011-04-22-run019-o
 megacen-colourmagnitude-eps-converted-to.pdf images/2011-04-22-run019-omegacen-
 colourmagnitude.eps>
-(epstopdf)             \includegraphics on input line 162.
+(epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf, id=161
-6, 867.24pt x 867.24pt>
+<images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf, id=169
+4, 867.24pt x 867.24pt>
 File: images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf>
 Package pdftex.def Info: images/2011-04-22-run019-omegacen-colourmagnitude-eps-
-converted-to.pdf used on input line 162.
+converted-to.pdf used on input line 152.
 (pdftex.def)             Requested size: 341.43306pt x 341.43787pt.
 
-[64] [65 <./images/2013-07-21-run010-2colour-eps-converted-to.pdf>] [66 <./imag
-es/colour-colour-zoom-with-labels-eps-converted-to.pdf> <./images/mismatch-run0
-10_r.png> <./images/mismatch-run010_g.png> <./images/mismatch-run010_b.png>]
-[67 <./images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf>]
-<images/gumus-comparison-lc.png, id=1726, 790.45313pt x 233.37187pt>
+[66] [67 <./images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.
+pdf>] <images/gumus-comparison-lc.png, id=1726, 790.45313pt x 233.37187pt>
 File: images/gumus-comparison-lc.png Graphic file (type png)
 
 <use images/gumus-comparison-lc.png>
-Package pdftex.def Info: images/gumus-comparison-lc.png used on input line 175.
+Package pdftex.def Info: images/gumus-comparison-lc.png used on input line 176.
 
 (pdftex.def)             Requested size: 426.79134pt x 126.00468pt.
 
@@ -1146,15 +1146,15 @@ Package pdftex.def Info: images/gumus-comparison-lc.png used on input line 175.
 File: images/gumus-discovery-lc.png Graphic file (type png)
 
 <use images/gumus-discovery-lc.png>
-Package pdftex.def Info: images/gumus-discovery-lc.png used on input line 176.
+Package pdftex.def Info: images/gumus-discovery-lc.png used on input line 177.
 (pdftex.def)             Requested size: 426.79134pt x 126.00468pt.
 
-Overfull \hbox (29.30635pt too wide) in paragraph at lines 175--177
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 176--178
  [][] 
  []
 
 
-Overfull \hbox (29.30635pt too wide) in paragraph at lines 175--177
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 176--178
  [] 
  []
 
@@ -1163,22 +1163,22 @@ Overfull \hbox (29.30635pt too wide) in paragraph at lines 175--177
 File: images/koi823-r-lc.png Graphic file (type png)
 
 <use images/koi823-r-lc.png>
-Package pdftex.def Info: images/koi823-r-lc.png used on input line 186.
+Package pdftex.def Info: images/koi823-r-lc.png used on input line 187.
 (pdftex.def)             Requested size: 426.79134pt x 126.00468pt.
 
 <images/koi823-g-lc.png, id=1738, 790.45313pt x 233.37187pt>
 File: images/koi823-g-lc.png Graphic file (type png)
 
 <use images/koi823-g-lc.png>
-Package pdftex.def Info: images/koi823-g-lc.png used on input line 187.
+Package pdftex.def Info: images/koi823-g-lc.png used on input line 188.
 (pdftex.def)             Requested size: 426.79134pt x 126.00468pt.
 
-Overfull \hbox (29.30635pt too wide) in paragraph at lines 186--188
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 187--189
  [][] 
  []
 
 
-Overfull \hbox (29.30635pt too wide) in paragraph at lines 186--188
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 187--189
  [] 
  []
 
@@ -1186,11 +1186,11 @@ Overfull \hbox (29.30635pt too wide) in paragraph at lines 186--188
 File: images/ultraflare-on-YZCMi.png Graphic file (type png)
 
 <use images/ultraflare-on-YZCMi.png>
-Package pdftex.def Info: images/ultraflare-on-YZCMi.png used on input line 197.
+Package pdftex.def Info: images/ultraflare-on-YZCMi.png used on input line 198.
 
 (pdftex.def)             Requested size: 426.79134pt x 324.34683pt.
 
-Overfull \hbox (29.30635pt too wide) in paragraph at lines 197--198
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
@@ -1723,7 +1723,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
 Here is how much of TeX's memory you used:
  8098 strings out of 493747
  126650 string characters out of 3148625
- 234007 words of memory out of 3500000
+ 233919 words of memory out of 3500000
  10794 multiletter control sequences out of 15000+200000
  18582 words of font info for 49 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1746,7 +1746,7 @@ local/share/texmf/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/share/te
 xmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/share/texmf/fonts/type1/urw
 /helvetic/uhvr8a.pfb></usr/local/share/texmf/fonts/type1/urw/helvetic/uhvro8a.p
 fb>
-Output written on rashleyMSCthesis.pdf (121 pages, 14375824 bytes).
+Output written on rashleyMSCthesis.pdf (121 pages, 14415769 bytes).
 PDF statistics:
  2644 PDF objects out of 2984 (max. 8388607)
  1586 compressed objects within 16 object streams

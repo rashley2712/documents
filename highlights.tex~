@@ -1,12 +1,12 @@
 \section{Introduction}
-The web-enabled light-curve browser has allowed us to quickly inspect the light-curves of many thousands of objects in the ULTRACAM archive so far. Although we have not yet taken a systematic approach to examine the whole archive, our ad-hoc reviews of the data have already revealed some interesting new variable objects. We highlight a few of these in this chapter. 
+The web-enabled light-curve browser allows one to quickly inspect the light-curves of many thousands of objects in the ULTRACAM archive so far. Although a systematic approach has not yet been taken to to examine the whole archive, our ad-hoc reviews of the data have already revealed some interesting new variable objects. a few of these are highlighted in this chapter. 
 
 \section{Exploring the photometry}
 The pipeline is usually invoked by running a single command on a night's worth of data. For example, to build the light-curves for the night of, say, \emph{2014-08-21}, then a single command, \texttt{daybuilder.py 2014-08-21} is issued from the command line. The pipeline then runs through all of the data for that night and generates a set of web pages. Depending on the amount of data for that night, this can take 1 hour to 8 hours. 
 
-For each night, an index page, which shows a list of all of the runs in the night along with thumbnail images of the field of view, is created. This allows the user to quickly navigate to the runs that are of interest. In other words, runs that contain science data, rather than acquisitions, biases or flat-fields. By clicking on the thumbnail of the run, the user is taken to a run page. This page shows the full image for each of the three channels. These images are created by stacking all of the individual frames in the run. The page also shows all of the objects that have been identified and have light-curves available. The user can view the light-curves by using the mouse to click on each object, or can scroll through all of the light-curves systematically, by using the left and right arrow keys. Scrolling through the light curves in a systematic fashion makes it easy for the user to quickly identify which objects are showing an obvious variability. All of the objects listed below were discovered in this way. 
+For each night, an index page, which shows a list of all of the runs in the night along with thumbnail images of the field of view, is created. This allows the user to quickly navigate to the runs that are of interest. In other words, runs that contain science data, rather than acquisitions, biases or flat-fields. By clicking on the thumbnail of the run, the user is taken to a run page. This page shows the full image for each of the three channels. These images are created by stacking all of the individual frames in the run. The page also shows all of the objects that have been identified and have light-curves available. The user can view the light-curves by using the mouse to click on each object, or can scroll through all of the light-curves systematically, by using the left and right arrow keys. Scrolling through the light-curves in a systematic fashion makes it easy for the user to quickly identify which objects are showing an obvious variability. All of the objects listed below were discovered in this way. 
 
-With this manual inspection it is possible to inspect the light curves at a rate of about 1-2 objects per second. In future, we plan to apply some automated tests to these data to perform the light curve inspection as an integral stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. The recently published Astrokit software, \citep{Astrokit2014} is a tool that we plan to trial in the next version of the automated pipeline. 
+With this manual inspection it is possible to inspect the light-curves at a rate of about 1-2 objects per second. In future, we plan to apply some automated tests to these data to perform the light-curve inspection as an integral stage of the automated pipeline. Algorithms to perform these sorts of tests are already known and becoming increasingly more widespread as more large scale sky surveys are being used throughout astronomy research. We plan to re-use work from one or more of these surveys. The recently published Astrokit software, \citep{Astrokit2014} is a tool that we plan to trial in the next version of the automated pipeline. 
 
 \section{Discovered objects}
 As discussed in the introduction, chapter \ref{chap:introduction}, we expect to find some new variables in the ULTRACAM archive. These will be objects displaying some kind of variability that is clearly visible over the length of the run and with the cadence of the observations. This will include eclipsing binaries, contact binaries, flare stars, RR Lyrae and $\delta$ Scuti stars. We might also expect to see other short period variables like cataclysmic variables and DV white dwarfs. Since the pipeline is able to track slow moving objects, we can also expect that we will capture some photometry of asteroids that drift through the field.   
@@ -14,7 +14,7 @@ As discussed in the introduction, chapter \ref{chap:introduction}, we expect to 
 We have only inspected approximately 20\% of the reduced data but we have found a few dozen variable objects so far. Below we list a selection of these objects. 
 
 \begin{table}
-  \caption{Table of a few of the interesting objects that have been revealed using the automated pipeline. This list contains just a few highlights of the dozen objects detected so far.}
+  \caption{Table of a few of the interesting objects that have been revealed using the automated pipeline. This list contains just a few highlights of the few dozen objects detected so far.}
   \begin{tabularx}{15.4cm}{ l  l  l }
   \hline
   Type& ID & Position, J(2000) \\
@@ -71,7 +71,7 @@ We have only inspected approximately 20\% of the reduced data but we have found 
 
    \\
   \end{tabular}
-  \caption{Finding charts for the objects listed in table \ref{tab:newobjects}, excluding the asteroids. These charts are taken from the Web interface of the processed ULTRACAM archive and are to be used to help identify the target when reviewing the data in the web browser.}
+  \caption{Finding charts for the objects listed in table \ref{tab:newobjects}, excluding the asteroids. These charts screencaptures taken from the web interface of the processed ULTRACAM archive and are used to help identify the target when reviewing the data in the web browser.}
   \label{tab:findingcharts}
 \end{table}
 
@@ -82,7 +82,7 @@ We have only inspected approximately 20\% of the reduced data but we have found 
   \begin{figure}
     \center
     \includegraphics[width=120mm]{images/2005-05-10-run012-lightcurve-bin16.eps} 
-    \caption{Sloan i and g light curves of object: 2005-05-10-run012-73. The data points are binned by a factor of 16. }
+    \caption{Sloan i and g light-curves of object: 2005-05-10-run012-73. The data points are binned by a factor of 16. }
     \label{fig:2005-05-10-run012}
   \end{figure}
   
@@ -98,7 +98,7 @@ We have only inspected approximately 20\% of the reduced data but we have found 
   %Pixel position & (232, 65) \\
   %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2005-05-10/run012.html} \\
   
-The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005, \citep{tariq2010}. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light curve in all three of the Sloan i, g, and u bands. The flickering can be seen in figure \ref{fig:gumus-discovery}. About 4 arc minutes to the west we have detected a suspected {W UMa} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 390$ minutes or 0.27 days. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. The object was too faint in the Sloan u band for us to produce any photometry. 
+The original target of this run was the X-ray transient, {GU Mus}, that was observed in quiescence in 2005, \citep{tariq2010}. The compact object, thought to be a black hole, was accreting at the time and flickering is apparent in the optical light-curve in all three of the Sloan i, g, and u bands. The flickering can be seen in figure \ref{fig:gumus-discovery}. About 4 arc minutes to the west we have detected a suspected {W UMa} contact binary with an apparent magnitude of $\sim21$ in Sloan g and period of $\sim 390$ minutes or 0.27 days. Visual inspection of the light-curves in figure \ref{fig:2005-05-10-run012} shows evidence of the O'Connell effect where the peak brightness of the second maximum is larger than the first. The object was too faint in the Sloan u band for us to produce any photometry. 
 
 The cause of the O'Connell effect is something that is still under some debate. Differences in the depth of the minima of the light-curves is something that is expected and is caused by the different sizes and temperatures of each component in the system. Reasons for the difference in the height of the maxima are less obvious. Based on a geometric model of the eclipse, we would expect the maxima to be of equal brightness. When the light-curve is at a maximum we are seeing the system side-on with the maximum area ellipsoidal faces presented to the observer. Current explanations for the O'Connell effect consist of star-spots that are locked in rotational synchronisation with the orbit and are presented preferentially on one side of the system and gas streams that create a hot-spot on or near one of the stars. There are several other proposed explanations and these are discussed in \citet{oconnelleffect}.  
 
@@ -109,7 +109,7 @@ In figure \ref{fig:2005-05-10-run012-colour} we plot the $(g-r)$ colour of the o
 
 \begin{figure}
   \includegraphics[width=120mm]{images/2013-07-21-run010-48_lightcurve-bin4.eps} 
-  \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-48. The data points are binned by a factor of 4.}
+  \caption{Sloan i, g and u light-curves of object: 2013-07-21-run010-48. The data points are binned by a factor of 4.}
   \label{fig:2013-07-21-run010-48}
 \end{figure}
 
@@ -128,9 +128,9 @@ In figure \ref{fig:2005-05-10-run012-colour} we plot the $(g-r)$ colour of the o
 %   Run date & 2013-07-21 \\
 %   Pixel position & (452, 332) \\
  
-This variable was the first one picked up by the automated pipeline and revealed itself during the very early development of the software. It appears on a relatively crowded Kepler field which has at least 5 newly discovered variable objects. Although this field has been monitored by the Kepler satellite, a search through the Kepler online archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} has not resulted in any data for this object. Since the aim of the Kepler mission is to discover exoplanets via observation of transits on stars that are relatively constant, it usually discards stars that are clearly variable. 
+This variable was the first one picked up by the automated pipeline and revealed itself during the very early development of the software. It appears on a relatively crowded Kepler field which has at least 5 newly discovered variable objects. Although this field has been monitored by the Kepler satellite, a search through the Kepler online archive \footnote{\url{https://archive.stsci.edu/kepler/data_search/search.php}} has not resulted in any data for this object. Since the aim of the Kepler mission is to discover exoplanets via observation of transits on stars that are relatively constant, it usually discards stars that are clearly variable and favours only the bright stars in the field. 
 
-We suggest that this object is another {W UMa} variable with an approximate period 400 minutes or 0.27 days. Unfortunately we do not have complete period coverage of the object's orbit and therefore this period is a rough estimate. The target, KIC 5115978, has been observed with ULTRACAM on another occasion, 2013-07-28, but the field was set up differently (more to the west) and this object was not included. 
+We suggest that this object is another {W UMa} variable with an approximate period 400 minutes or 0.27 days. Unfortunately we do not have complete period coverage of the object's orbit and therefore this period is a rough estimate. The target, KIC 5115978, was observed with ULTRACAM on another occasion, 2013-07-28, but the field was set up differently (more to the west) and this object was not included. 
 
 The colour plots for the object are shown in figure \ref{fig:2013-07-21-run010-48-colour}. As for the previous object, it seems that the $(g-i)$ colour peak coincides with the brightness maximum.
 
@@ -139,7 +139,7 @@ The colour plots for the object are shown in figure \ref{fig:2013-07-21-run010-4
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-163_lightcurve-bin8.eps}
-  \caption{Sloan i and g light curves of object: 2013-07-21-run010-163. Data points are binned by a factor of 8.}
+  \caption{Sloan i and g light-curves of object: 2013-07-21-run010-163. Data points are binned by a factor of 8.}
   \label{fig:2013-07-21-run010-163}
 \end{figure}
 
@@ -166,7 +166,7 @@ This object is another suspected {W Uma} variable found on the same field as the
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run011-162_lightcurve-bin8.eps}
-  \caption{Sloan i, g and u light curves of object: 2013-07-21-run011-162. Data points are binned by a factor of 8.}
+  \caption{Sloan i, g and u light-curves of object: 2013-07-21-run011-162. Data points are binned by a factor of 8.}
   \label{fig:2013-07-21-run011-162}
 \end{figure}
 
@@ -183,7 +183,7 @@ This object is another suspected {W Uma} variable found on the same field as the
 %   RA, DEC & 19:54:01.7, 40:37:34 (J2000) \\
 %   URL: \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2013-07-21/run011.html} \\
 
-The light curve of this object includes a primary eclipse. Since the eclipse profile has a flat-bottom we can conclude that this eclipse is total (ie that the primary is completely obscured by the secondary during the eclipse). This also means that the primary has a smaller diameter than the secondary. The primary eclipse duration is 37 minutes. The depth of the eclipse is about 0.7 magnitudes which corresponds to a drop in flux of about 50\%. 
+The light-curve of this object appears to include an eclipse. Since the eclipse has totality as indicated by the flat-bottom and the drop in flux of about 50\% it is most likely the primary eclipse. Since their is a totatality to this eclispe it indicates that the primary has a smaller diameter than the secondary. The primary eclipse duration is 37 minutes with a drop in flux of about 0.7 magnitudes. 
 
 It is notable that the ingress and the egress demonstrates broad `wings' suggesting that the object being eclipsed (primary) is extended and the shape of the curve suggests tidal distortion of the secondary. The colour plots in figure \ref{fig:2013-07-21-run011-162-colour} show that the minimum of the $(g-i)$ coincides with the center of the eclipse. The colour plots do not show the clear flat-bottom that we see in the light-curves for $i$ and $g$. 
 
@@ -194,7 +194,7 @@ Although the object is in a Kepler field and is, in fact, close to KOI-1546, a s
 \begin{figure}
   \center
   \includegraphics[width=120mm]{images/2013-07-21-run010-23_lightcurve-bin8.eps} \\
-  \caption{Sloan i, g and u light curves of object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
+  \caption{Sloan i, g and u light-curves of object: 2013-07-21-run010-23. Data points are binned by a factor of 8.}
   \label{fig:2013-07-21-run010-23}
 \end{figure}
 
@@ -220,7 +220,7 @@ There is evidence that the colour is varying in phase with magnitude, most notic
 \begin{figure}
   \center
   \includegraphics[width=140mm]{images/2011-08-26-run014-110-lightcurve-bin4.eps} 
-  \caption{Sloan i, g light curves of asteroid: 2011-08-26-run014-110. Data points are binned by a factor of 4.}
+  \caption{Sloan i, g light-curves of asteroid: 2011-08-26-run014-110. Data points are binned by a factor of 4.}
   \label{fig:2011-08-26-run014-110}
 \end{figure}
 
@@ -228,7 +228,7 @@ There is evidence that the colour is varying in phase with magnitude, most notic
 \begin{figure}
   \center
   \includegraphics[width=90mm]{images/2011-08-26-run014-110-pgram-bin4.eps} 
-  \caption{Periodogram of both the i and g light curves for the object: 2011-08-26-run014-110. The peaks occur at $g_{peak} = 0.0107 \ \mbox{minutes}^{-1}$ and  $r_{peak} = 0.0114\ \mbox{minutes}^{-1}$ }
+  \caption{Periodogram of both the i and g light-curves for the object: 2011-08-26-run014-110. The peaks occur at $g_{peak} = 0.0107 \ \mbox{minutes}^{-1}$ and  $r_{peak} = 0.0114\ \mbox{minutes}^{-1}$ }
   \label{fig:asteroidpgram}
 \end{figure}
 
@@ -243,7 +243,7 @@ There is evidence that the colour is varying in phase with magnitude, most notic
 %   Tangential angular velocity & 0.424"/minute or 25.4"/hour\\ 
 %   RA, DEC & MJD=55800.038, 20:51:12, -08:31:25 (J2000) \\
   %URL: & \small \url{http://deneb.astro.warwick.ac.uk/phrnaw/sitedev/2011-08-26/run014.html} \\
-The target for this ULTRACAM run: \emph{ 2011-08-26-run014} was the eclipsing binary millisecond pulsar PSR J2051-0827r. During the course of this run (3.43 hours), an asteroid entered the field and traveled across it at a rate of about 0.424"/minute or 25.4"/hour. Since the automated pipeline is able to track moving object, it produced a light-curve for the asteroid. The light-curve displays clear modulation which is assumed to be caused by variations in reflected sunlight as the object rotates. A periodogram of these data peaks at a frequency of 0.0114 minutes\textsuperscript{-1} (a spin period of $1.46$ hours) for the i filter and 0.0107 minutes\textsuperscript{-1} (a spin period of $1.56$ hours) for the g filter, if we assume that one period in the light curve is equal to exactly one rotation of the asteroid. This might not be true if the asteroid has several light and dark patches on its surface. 
+The target for this ULTRACAM run \emph{2011-08-26-run014}, was the eclipsing binary millisecond pulsar PSR J2051-0827. During the course of this run (3.43 hours), an asteroid entered the field and traveled across it at a rate of about 0.424"/minute or 25.4"/hour. Since the automated pipeline is able to track moving object, it produced a light-curve for the asteroid. The light-curve displays clear modulation which is assumed to be caused by variations in reflected sunlight as the object rotates. A periodogram of these data peaks at a frequency of 0.0114 minutes\textsuperscript{-1} (a spin period of $1.46$ hours) for the i filter and 0.0107 minutes\textsuperscript{-1} (a spin period of $1.56$ hours) for the g filter, if we assume that one period in the light-curve is equal to exactly one rotation of the asteroid. This might not be true if the asteroid has several light and dark patches on its surface. 
 
 %Rotation of asteroids is driven by a process known as the YORP effect, \citep{yorpeffect}. 
 A look-up using the \emph{NEOChecker} tool on the website of the IAU's Minor Planet Center \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} returns a result for this candidate as, most probably, asteroid \emph{1998 SU139}. The world coordinates reported by the tool differed from our own determination by about 6.5'. 
@@ -258,7 +258,7 @@ There is a clear relationship between the size of the asteroid and the minimum s
   \end{figure}
   
 
-There are several more unconfirmed super-fast rotators (SFR) asteroids reported by \citet{Masiero2009} and \citet{Dermawan2011}. Since these objects have low brightness and fast rotation, periods have not yet been accurately determined. Many of the light curves only have few tens of data points. The fact that we have managed to determine a spin period for this object demonstrates that ULTRACAM is a suitable instrument to use for follow up observations of these other candidates.  
+There are several more unconfirmed super-fast rotators (SFR) asteroids reported by \citet{Masiero2009} and \citet{Dermawan2011}. Since these objects have low brightness and fast rotation, periods have not yet been accurately determined. Many of the light-curves only have few tens of data points. The fact that we have managed to determine a spin period for this object demonstrates that ULTRACAM is a suitable instrument to use for follow up observations of these other candidates.  
 
 The diameter of the asteroid can be estimated by using its absolute magnitude $H$ and an assumption for the albedo $p$ using the formula, adapted from \citet{Jewitt2013}
 
@@ -270,7 +270,7 @@ If our period is correct, this could mean that we have discovered a new member o
 
 \subsection{Asteroid: 910 Toruyusa}
   
-This asteroid was discovered moving through the field of the ULTRACAM run, \emph{ 2009-01-04-run024}. Using the NEOChecker \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} tool, the object detected in this run appears to be a well known asteroid, 9108 Toruyusa. The light curve, which lasts approximately 1 hour shows no significant variation and it has therefore not been possible to determine a spin period for this asteroid. It is likely that the spin period is much longer than the length of the run. During the run, the asteroid moved through the field at a rate of about  0.514"/minute or 31"/hour. 
+This asteroid was discovered moving through the field of the ULTRACAM run, \emph{ 2009-01-04-run024}. Using the NEOChecker \footnote{http://www.minorplanetcenter.net/cgi-bin/checkneo.cgi} tool, the object detected in this run appears to be a well known asteroid, 9108 Toruyusa. The light-curve, which lasts approximately 1 hour shows no significant variation and it has therefore not been possible to determine a spin period for this asteroid. It is likely that the spin period is much longer than the length of the run. During the run, the asteroid moved through the field at a rate of about  0.514"/minute or 31"/hour. 
 
 % Classification & Asteroid: 9108 Toruyusa (1997 AZ6) [offset of 7 arc minutes from the computed ephemeris]\\
 %   ObjectID & 2009-01-04-run024-61 \\
