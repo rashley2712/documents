@@ -4,101 +4,103 @@
 \contentsline {chapter}{Abbreviations}{vii}{chapter*.5}
 \contentsline {chapter}{Chapter{} \numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Candidate objects}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Eclipsing binaries}{4}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.2}Candidate objects}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Eclipsing binaries}{3}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}{W UMa} systems}{4}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Ellipsoidal variables}{5}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {1.2.4}Cataclysmic variables}{5}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {1.2.5}Intrinsic variables}{6}{subsection.1.2.5}
-\contentsline {subsubsection}{RR Lyrae stars}{6}{section*.6}
+\contentsline {subsection}{\numberline {1.2.5}Intrinsic variables}{5}{subsection.1.2.5}
+\contentsline {subsubsection}{RR Lyrae stars}{5}{section*.6}
 \contentsline {subsubsection}{$\delta $ Scuti stars}{6}{section*.7}
-\contentsline {subsubsection}{Pulsating White Dwarfs}{7}{section*.8}
-\contentsline {subsection}{\numberline {1.2.6}Flare stars}{7}{subsection.1.2.6}
+\contentsline {subsubsection}{Pulsating White Dwarfs}{6}{section*.8}
+\contentsline {subsection}{\numberline {1.2.6}Flare stars}{6}{subsection.1.2.6}
 \contentsline {subsection}{\numberline {1.2.7}Asteroids}{7}{subsection.1.2.7}
 \contentsline {section}{\numberline {1.3}The ULTRACAM instrument}{8}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Camera Optics}{9}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Filter sets}{10}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Field size and pixel scale}{10}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}High speed operation}{12}{subsection.1.3.4}
-\contentsline {section}{\numberline {1.4}ULTRACAM data}{13}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Data capture}{13}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Typical run length}{18}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Run cadences}{20}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}The data archive}{21}{subsection.1.4.4}
-\contentsline {section}{\numberline {1.5}Summary}{22}{section.1.5}
-\contentsline {chapter}{Chapter{} \numberline {2}Automating the reduction pipeline}{23}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction}{23}{section.2.1}
-\contentsline {section}{\numberline {2.2}Data reduction for CCD images in Astronomy}{24}{section.2.2}
-\contentsline {subsubsection}{Bias subtraction:}{26}{section*.9}
-\contentsline {subsubsection}{Flat fields:}{26}{section*.10}
-\contentsline {subsubsection}{Source extraction \& aperture creation:}{26}{section*.11}
-\contentsline {subsubsection}{Sky subtraction \& Flux measurement:}{27}{section*.12}
-\contentsline {section}{\numberline {2.3}Current method of ULTRACAM data reduction}{28}{section.2.3}
-\contentsline {section}{\numberline {2.4}Automating the pipeline}{30}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Motivation for automating the pipeline}{30}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Algorithm of the automated pipeline}{30}{subsection.2.4.2}
-\contentsline {subsubsection}{Key stages for automation}{30}{section*.13}
-\contentsline {subsubsection}{Source extraction}{32}{section*.14}
-\contentsline {subsubsection}{Flux measurement}{36}{section*.15}
-\contentsline {subsubsection}{Object tracking}{38}{section*.16}
-\contentsline {subsubsection}{Cross matching across channels}{40}{section*.17}
-\contentsline {subsection}{\numberline {2.4.3}WCS solutions}{44}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Summary}{47}{section.2.5}
-\contentsline {chapter}{Chapter{} \numberline {3}Creating a web enabled light-curve browser}{50}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{50}{section.3.1}
-\contentsline {section}{\numberline {3.2}Web browsers}{50}{section.3.2}
-\contentsline {section}{\numberline {3.3}Web technologies}{51}{section.3.3}
-\contentsline {section}{\numberline {3.4}The Web site}{54}{section.3.4}
-\contentsline {section}{\numberline {3.5}Accessing the data}{54}{section.3.5}
-\contentsline {section}{\numberline {3.6}Summary}{56}{section.3.6}
-\contentsline {chapter}{Chapter{} \numberline {4}Results from the automated pipeline}{57}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{57}{section.4.1}
-\contentsline {section}{\numberline {4.2}Quality of the photometry}{58}{section.4.2}
+\contentsline {subsection}{\numberline {1.3.1}Camera Optics}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Filter sets}{9}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Field size and pixel scale}{9}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}High-speed operation}{11}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}ULTRACAM data}{12}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Data capture}{12}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Typical run length}{16}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Run cadences}{17}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}The data archive}{19}{subsection.1.4.4}
+\contentsline {section}{\numberline {1.5}Summary}{19}{section.1.5}
+\contentsline {chapter}{Chapter{} \numberline {2}Automating the reduction pipeline}{20}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{20}{section.2.1}
+\contentsline {section}{\numberline {2.2}Data reduction for CCD images in Astronomy}{21}{section.2.2}
+\contentsline {subsubsection}{Bias subtraction:}{22}{section*.9}
+\contentsline {subsubsection}{Flat fields:}{23}{section*.10}
+\contentsline {subsubsection}{Source extraction \& aperture creation:}{23}{section*.11}
+\contentsline {subsubsection}{Sky subtraction \& Flux measurement:}{23}{section*.12}
+\contentsline {section}{\numberline {2.3}Current method of ULTRACAM data reduction}{24}{section.2.3}
+\contentsline {section}{\numberline {2.4}Automating the pipeline}{25}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Algorithm of the automated pipeline}{25}{subsection.2.4.1}
+\contentsline {subsubsection}{Key stages for automation}{26}{section*.13}
+\contentsline {subsubsection}{Source extraction}{27}{section*.14}
+\contentsline {subsubsection}{Flux measurement}{30}{section*.15}
+\contentsline {subsubsection}{Object tracking}{33}{section*.16}
+\contentsline {subsubsection}{Cross matching across channels}{35}{section*.17}
+\contentsline {subsection}{\numberline {2.4.2}WCS solutions}{39}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Summary}{44}{section.2.5}
+\contentsline {chapter}{Chapter{} \numberline {3}Creating a web enabled light-curve browser}{48}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{48}{section.3.1}
+\contentsline {section}{\numberline {3.2}Web browsers}{48}{section.3.2}
+\contentsline {section}{\numberline {3.3}Web technologies}{49}{section.3.3}
+\contentsline {section}{\numberline {3.4}The Web site}{51}{section.3.4}
+\contentsline {section}{\numberline {3.5}Accessing the data}{52}{section.3.5}
+\contentsline {section}{\numberline {3.6}Summary}{52}{section.3.6}
+\contentsline {chapter}{Chapter{} \numberline {4}Results from the automated pipeline}{54}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{54}{section.4.1}
+\contentsline {section}{\numberline {4.2}Quality of the photometry}{54}{section.4.2}
 \contentsline {section}{\numberline {4.3}Object matching accuracy}{63}{section.4.3}
-\contentsline {section}{\numberline {4.4}Finding variable objects}{68}{section.4.4}
-\contentsline {section}{\numberline {4.5}Covering the entire ULTRACAM archive}{73}{section.4.5}
-\contentsline {section}{\numberline {4.6}Summary}{74}{section.4.6}
-\contentsline {chapter}{Chapter{} \numberline {5}Objects identified by the automated pipeline}{75}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{75}{section.5.1}
-\contentsline {section}{\numberline {5.2}Exploring the photometry}{75}{section.5.2}
-\contentsline {section}{\numberline {5.3}Discovered objects}{76}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}{W UMa}: 2005-05-10-run012-73}{78}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}{W UMa}: 2013-07-21-run010-48}{79}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}{W UMa}: 2013-07-21-run010-163}{81}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Eclipsing binary: 2013-07-21-run011-162}{83}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}$\delta $ Scuti: 2013-07-21-run010-23}{84}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Asteroid: 1998 SU139}{86}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}Asteroid: 910 Toruyusa}{89}{subsection.5.3.7}
-\contentsline {section}{\numberline {5.4}Summary}{90}{section.5.4}
-\contentsline {chapter}{Chapter{} \numberline {6}Conclusion}{91}{chapter.6}
-\contentsline {section}{\numberline {6.1}Current status of the pipeline}{92}{section.6.1}
-\contentsline {section}{\numberline {6.2}Areas for immediate improvement}{92}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future enhancements}{94}{section.6.3}
-\contentsline {section}{\numberline {6.4}Recommendations for ULTRACAM users}{95}{section.6.4}
-\contentsline {section}{\numberline {6.5}Summary}{96}{section.6.5}
-\contentsline {chapter}{Appendix{} \numberline {A}Automated software user manual}{102}{appendix.A}
-\contentsline {section}{\numberline {A.1}Running the pipeline}{102}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Prerequisites}{102}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Installing the Python code}{104}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Config file}{104}{subsection.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}ucambuilder.conf}{105}{subsection.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Producing the output for a particular run}{107}{subsection.A.1.5}
-\contentsline {subsubsection}{runbuilder.py}{107}{section*.19}
-\contentsline {subsubsection}{objectdbcreator.py}{108}{section*.20}
-\contentsline {subsubsection}{Output while running}{110}{section*.21}
-\contentsline {subsubsection}{postprocessor.py}{110}{section*.22}
-\contentsline {subsubsection}{wcssolver.py}{111}{section*.23}
-\contentsline {subsubsection}{mergeobjects.py}{112}{section*.24}
-\contentsline {subsubsection}{create\_html.py}{112}{section*.25}
-\contentsline {subsection}{\numberline {A.1.6}Producing the output for a full night's observing}{113}{subsection.A.1.6}
-\contentsline {section}{\numberline {A.2}Using the archive}{114}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Night summary page}{114}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Run page}{114}{subsection.A.2.2}
-\contentsline {subsubsection}{Page loading process}{114}{section*.26}
-\contentsline {subsubsection}{Selecting a base image}{116}{section*.27}
-\contentsline {subsubsection}{Viewing a light-curve}{116}{section*.28}
-\contentsline {subsubsection}{Object markers and Object labels}{116}{section*.29}
-\contentsline {subsubsection}{Selecting a comparison star}{117}{section*.30}
-\contentsline {subsubsection}{Re-scaling the light curve}{117}{section*.31}
-\contentsline {subsubsection}{Plotting the position of the object}{118}{section*.32}
-\contentsline {subsubsection}{Exporting to a CSV file}{118}{section*.33}
+\contentsline {section}{\numberline {4.4}Finding variable objects}{64}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}X-ray transient: GU Mus}{64}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Exoplanet transit: KIC 511978}{69}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Flare star: YZ CMi}{69}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Covering the entire ULTRACAM archive}{70}{section.4.5}
+\contentsline {section}{\numberline {4.6}Summary}{71}{section.4.6}
+\contentsline {chapter}{Chapter{} \numberline {5}Objects identified by the automated pipeline}{72}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{72}{section.5.1}
+\contentsline {section}{\numberline {5.2}Exploring the photometry}{72}{section.5.2}
+\contentsline {section}{\numberline {5.3}Discovered objects}{73}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}{W UMa}: 2005-05-10-run012-73}{75}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}{W UMa}: 2013-07-21-run010-48}{76}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}{W UMa}: 2013-07-21-run010-163}{78}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Eclipsing binary: 2013-07-21-run011-162}{78}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}$\delta $ Scuti: 2013-07-21-run010-23}{81}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Asteroid: 1998 SU139}{83}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Asteroid: 910 Toruyusa}{86}{subsection.5.3.7}
+\contentsline {section}{\numberline {5.4}Summary}{86}{section.5.4}
+\contentsline {chapter}{Chapter{} \numberline {6}Conclusion}{87}{chapter.6}
+\contentsline {section}{\numberline {6.1}Current status of the pipeline}{88}{section.6.1}
+\contentsline {section}{\numberline {6.2}Areas for immediate improvement}{88}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future enhancements}{89}{section.6.3}
+\contentsline {section}{\numberline {6.4}Recommendations for ULTRACAM users}{90}{section.6.4}
+\contentsline {section}{\numberline {6.5}Summary}{91}{section.6.5}
+\contentsline {chapter}{Appendix{} \numberline {A}Automated software user manual}{97}{appendix.A}
+\contentsline {section}{\numberline {A.1}Running the pipeline}{97}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Prerequisites}{97}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Installing the Python code}{98}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Config file}{99}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}ucambuilder.conf}{99}{subsection.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Producing the output for a particular run}{101}{subsection.A.1.5}
+\contentsline {subsubsection}{runbuilder.py}{101}{section*.19}
+\contentsline {subsubsection}{objectdbcreator.py}{102}{section*.20}
+\contentsline {subsubsection}{Output while running}{103}{section*.21}
+\contentsline {subsubsection}{postprocessor.py}{104}{section*.22}
+\contentsline {subsubsection}{wcssolver.py}{105}{section*.23}
+\contentsline {subsubsection}{mergeobjects.py}{105}{section*.24}
+\contentsline {subsubsection}{create\_html.py}{106}{section*.25}
+\contentsline {subsection}{\numberline {A.1.6}Producing the output for a full night's observing}{107}{subsection.A.1.6}
+\contentsline {section}{\numberline {A.2}Using the archive}{107}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Night summary page}{107}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Run page}{109}{subsection.A.2.2}
+\contentsline {subsubsection}{Page loading process}{109}{section*.26}
+\contentsline {subsubsection}{Selecting a base image}{109}{section*.27}
+\contentsline {subsubsection}{Viewing a light-curve}{109}{section*.28}
+\contentsline {subsubsection}{Object markers and Object labels}{110}{section*.29}
+\contentsline {subsubsection}{Selecting a comparison star}{110}{section*.30}
+\contentsline {subsubsection}{Re-scaling the light curve}{110}{section*.31}
+\contentsline {subsubsection}{Plotting the position of the object}{111}{section*.32}
+\contentsline {subsubsection}{Exporting to a CSV file}{111}{section*.33}
