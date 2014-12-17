@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2014.11.20)  16 DEC 2014 13:47
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2014.11.20)  17 DEC 2014 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,7 +320,7 @@ LaTeX Info: Redefining \nameref on input line 197.
 
 \c@lstlisting=\count122
 
-<the_warwick_uni_blue.pdf, id=321, 156.585pt x 45.16875pt>
+<the_warwick_uni_blue.pdf, id=317, 156.585pt x 45.16875pt>
 File: the_warwick_uni_blue.pdf Graphic file (type pdf)
 
 <use the_warwick_uni_blue.pdf>
@@ -369,14 +369,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--199
 
  []
 
-[2] <crest_fullcolour.pdf, id=353, 40.15pt x 50.1875pt>
+[2] <crest_fullcolour.pdf, id=349, 40.15pt x 50.1875pt>
 File: crest_fullcolour.pdf Graphic file (type pdf)
 
 <use crest_fullcolour.pdf>
 Package pdftex.def Info: crest_fullcolour.pdf used on input line 203.
 (pdftex.def)             Requested size: 142.26378pt x 177.87045pt.
 
-<the_warwick_uni_black.pdf, id=354, 157.58875pt x 46.1725pt>
+<the_warwick_uni_black.pdf, id=350, 157.58875pt x 46.1725pt>
 File: the_warwick_uni_black.pdf Graphic file (type pdf)
 
 <use the_warwick_uni_black.pdf>
@@ -399,7 +399,7 @@ l.29 ...ing the reduction pipeline}{20}{chapter.2}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 ...\numberline {5.4}Summary}{89}{section.5.4}
+l.74 ...\numberline {5.4}Summary}{88}{section.5.4}
                                                    [2])
 \tf@toc=\write4
 \openout4 = `rashleyMSCthesis.toc'.
@@ -430,7 +430,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
  [1
 
 ]
-<images/wienslaw.png, id=494, 765.86125pt x 403.5075pt>
+<images/wienslaw.png, id=489, 765.86125pt x 403.5075pt>
 File: images/wienslaw.png Graphic file (type png)
 
 <use images/wienslaw.png>
@@ -441,14 +441,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 17.
  [2] [3 <./images/wienslaw.png>]
-<images/wuma_diagram.png, id=533, 23.37868pt x 16.36034pt>
+<images/wuma_diagram.png, id=528, 23.37868pt x 16.36034pt>
 File: images/wuma_diagram.png Graphic file (type png)
 
 <use images/wuma_diagram.png>
 Package pdftex.def Info: images/wuma_diagram.png used on input line 30.
 (pdftex.def)             Requested size: 256.0748pt x 179.22783pt.
  [4 <./images/wuma_diagram.png (PNG copy)>]
-[5] [6] <images/EQ_Peg_typical_flare.png, id=569, 479.54156pt x 325.96782pt>
+[5] [6] <images/EQ_Peg_typical_flare.png, id=564, 479.54156pt x 325.96782pt>
 File: images/EQ_Peg_typical_flare.png Graphic file (type png)
 
 <use images/EQ_Peg_typical_flare.png>
@@ -462,7 +462,7 @@ do-main as-tron-omy, ([]Dhillon
  []
 
 [7 <./images/EQ_Peg_typical_flare.png (PNG copy)>]
-<images/ucamoptics.png, id=586, 993.7125pt x 563.10374pt>
+<images/ucamoptics.png, id=581, 993.7125pt x 563.10374pt>
 File: images/ucamoptics.png Graphic file (type png)
 
 <use images/ucamoptics.png>
@@ -475,14 +475,14 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
  [8 <./images/ucamoptics.png (PNG copy)>]
-<images/IMG_0121_scaled.JPG, id=598, 411.136pt x 405.1135pt>
+<images/IMG_0121_scaled.JPG, id=593, 411.136pt x 405.1135pt>
 File: images/IMG_0121_scaled.JPG Graphic file (type jpg)
 
 <use images/IMG_0121_scaled.JPG>
 Package pdftex.def Info: images/IMG_0121_scaled.JPG used on input line 92.
 (pdftex.def)             Requested size: 256.0748pt x 252.32372pt.
 
-<images/ucamresponsecurves.png, id=600, 620.3175pt x 807.015pt>
+<images/ucamresponsecurves.png, id=595, 620.3175pt x 807.015pt>
 File: images/ucamresponsecurves.png Graphic file (type png)
 
 <use images/ucamresponsecurves.png>
@@ -490,28 +490,28 @@ Package pdftex.def Info: images/ucamresponsecurves.png used on input line 102.
 (pdftex.def)             Requested size: 369.88582pt x 481.20811pt.
  [9 <./images/IMG_0121_scaled.JPG>] [10 <./images/ucamresponsecurves.png (PNG c
 opy)>]
-<images/ccd.png, id=619, 1358.07375pt x 990.70125pt>
+<images/ccd.png, id=614, 1358.07375pt x 990.70125pt>
 File: images/ccd.png Graphic file (type png)
  <use images/ccd.png>
 Package pdftex.def Info: images/ccd.png used on input line 131.
 (pdftex.def)             Requested size: 256.0748pt x 186.79909pt.
 
 [11 <./images/ccd.png (PNG copy)>]
-<images/run010_r_inverted.png, id=626, 1084.05pt x 1035.87pt>
+<images/run010_r_inverted.png, id=620, 1084.05pt x 1035.87pt>
 File: images/run010_r_inverted.png Graphic file (type png)
 
 <use images/run010_r_inverted.png>
 Package pdftex.def Info: images/run010_r_inverted.png used on input line 144.
 (pdftex.def)             Requested size: 341.43306pt x 326.25336pt.
 
-<images/run016_r_inverted.png, id=627, 1084.05pt x 1035.87pt>
+<images/run016_r_inverted.png, id=621, 1084.05pt x 1035.87pt>
 File: images/run016_r_inverted.png Graphic file (type png)
 
 <use images/run016_r_inverted.png>
 Package pdftex.def Info: images/run016_r_inverted.png used on input line 153.
 (pdftex.def)             Requested size: 341.43306pt x 326.25336pt.
 
-<images/run018_r_inverted.png, id=628, 1084.05pt x 1035.87pt>
+<images/run018_r_inverted.png, id=622, 1084.05pt x 1035.87pt>
 File: images/run018_r_inverted.png Graphic file (type png)
 
 <use images/run018_r_inverted.png>
@@ -531,7 +531,7 @@ onverted-to.pdf images/hist0-600_log.eps>
 (epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hist0-600_log-eps-converted-to.pdf, id=663, 578.16pt x 433.62pt>
+<images/hist0-600_log-eps-converted-to.pdf, id=658, 578.16pt x 433.62pt>
 File: images/hist0-600_log-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/hist0-600_log-eps-converted-to.pdf>
@@ -551,7 +551,7 @@ ps-converted-to.pdf images/cadences_hist0-25.eps>
 (epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/cadences_hist0-25-eps-converted-to.pdf, id=701, 578.16pt x 433.62pt>
+<images/cadences_hist0-25-eps-converted-to.pdf, id=696, 578.16pt x 433.62pt>
 File: images/cadences_hist0-25-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/cadences_hist0-25-eps-converted-to.pdf>
@@ -577,21 +577,21 @@ Overfull \hbox (3.87912pt too wide) in paragraph at lines 9--10
 -si-tive semi-conductors
  []
 
-[21] [22] [23] [24] <images/setaper.png, id=799, 561.59813pt x 369.63094pt>
+[21] [22] [23] [24] <images/setaper.png, id=793, 561.59813pt x 369.63094pt>
 File: images/setaper.png Graphic file (type png)
 
 <use images/setaper.png>
 Package pdftex.def Info: images/setaper.png used on input line 48.
 (pdftex.def)             Requested size: 312.9803pt x 205.9936pt.
  [25] [26 <./images/setaper.png (PNG copy)>]
-<images/flowchart.png, id=826, 1395.2125pt x 786.94pt>
+<images/flowchart.png, id=821, 1395.2125pt x 786.94pt>
 File: images/flowchart.png Graphic file (type png)
 
 <use images/flowchart.png>
 Package pdftex.def Info: images/flowchart.png used on input line 91.
 (pdftex.def)             Requested size: 369.88582pt x 208.62216pt.
 
-<images/webpublish.png, id=827, 1366.35469pt x 773.13844pt>
+<images/webpublish.png, id=822, 1366.35469pt x 773.13844pt>
 File: images/webpublish.png Graphic file (type png)
 
 <use images/webpublish.png>
@@ -604,7 +604,7 @@ OT1/cmr/m/it/10.95 SEx-trac-tor\OT1/cmr/m/n/10.95 , ([]Bertin and Arnouts[],
  []
 
 [27] [28 <./images/flowchart.png (PNG copy)> <./images/webpublish.png (PNG copy
-)>] [29] <images/2012-09-03_g_default.png, id=859, 694.09312pt x 375.65344pt>
+)>] [29] <images/2012-09-03_g_default.png, id=854, 694.09312pt x 375.65344pt>
 File: images/2012-09-03_g_default.png Graphic file (type png)
 
 <use images/2012-09-03_g_default.png>
@@ -612,7 +612,7 @@ Package pdftex.def Info: images/2012-09-03_g_default.png used on input line 127
 .
 (pdftex.def)             Requested size: 317.9892pt x 172.10336pt.
 
-<images/2012-09-03_g_15sigma.png, id=860, 681.29532pt x 377.91188pt>
+<images/2012-09-03_g_15sigma.png, id=855, 681.29532pt x 377.91188pt>
 File: images/2012-09-03_g_15sigma.png Graphic file (type png)
 
 <use images/2012-09-03_g_15sigma.png>
@@ -621,7 +621,7 @@ Package pdftex.def Info: images/2012-09-03_g_15sigma.png used on input line 128
 (pdftex.def)             Requested size: 317.9892pt x 176.39035pt.
  [30] [31 <./images/2012-09-03_g_default.png (PNG copy)> <./images/2012-09-03_g
 _15sigma.png (PNG copy)>]
-<images/sex_apertures_auto_cropped.png, id=885, 56.46094pt x 56.46094pt>
+<images/sex_apertures_auto_cropped.png, id=880, 56.46094pt x 56.46094pt>
 File: images/sex_apertures_auto_cropped.png Graphic file (type png)
 
 <use images/sex_apertures_auto_cropped.png>
@@ -629,7 +629,7 @@ Package pdftex.def Info: images/sex_apertures_auto_cropped.png used on input li
 ne 148.
 (pdftex.def)             Requested size: 142.26378pt x 142.28227pt.
 
-<images/sex_apertures_fixed_cropped.png, id=886, 56.46094pt x 56.46094pt>
+<images/sex_apertures_fixed_cropped.png, id=881, 56.46094pt x 56.46094pt>
 File: images/sex_apertures_fixed_cropped.png Graphic file (type png)
 
 <use images/sex_apertures_fixed_cropped.png>
@@ -638,14 +638,14 @@ ine 149.
 (pdftex.def)             Requested size: 142.26378pt x 142.28227pt.
  [32] [33 <./images/sex_apertures_auto_cropped.png (PNG copy)> <./images/sex_ap
 ertures_fixed_cropped.png (PNG copy)>] [34] [35] <images/overlay_multiply.png, 
-id=920, 1084.05pt x 1035.87pt>
+id=915, 1084.05pt x 1035.87pt>
 File: images/overlay_multiply.png Graphic file (type png)
 
 <use images/overlay_multiply.png>
 Package pdftex.def Info: images/overlay_multiply.png used on input line 208.
 (pdftex.def)             Requested size: 284.52756pt x 271.88043pt.
 
-<images/overlay_multiply_closeup.png, id=921, 207.02344pt x 176.15813pt>
+<images/overlay_multiply_closeup.png, id=916, 207.02344pt x 176.15813pt>
 File: images/overlay_multiply_closeup.png Graphic file (type png)
 
 <use images/overlay_multiply_closeup.png>
@@ -653,7 +653,7 @@ Package pdftex.def Info: images/overlay_multiply_closeup.png used on input line
  215.
 (pdftex.def)             Requested size: 142.26378pt x 121.05733pt.
 
-<images/position_drift.png, id=924, 657.95813pt x 264.99pt>
+<images/position_drift.png, id=919, 657.95813pt x 264.99pt>
 File: images/position_drift.png Graphic file (type png)
 
 <use images/position_drift.png>
@@ -664,7 +664,7 @@ Overfull \hbox (0.85359pt too wide) in paragraph at lines 222--223
  [][] 
  []
 
-<images/position_drift_longrun.png, id=927, 673.01437pt x 261.22594pt>
+<images/position_drift_longrun.png, id=922, 673.01437pt x 261.22594pt>
 File: images/position_drift_longrun.png Graphic file (type png)
 
 <use images/position_drift_longrun.png>
@@ -696,7 +696,7 @@ x-eps-converted-to.pdf images/sip_correction_r_10x.eps>
 (epstopdf)             \includegraphics on input line 277.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/sip_correction_r_10x-eps-converted-to.pdf, id=959, 867.24pt x 867.24pt>
+<images/sip_correction_r_10x-eps-converted-to.pdf, id=954, 867.24pt x 867.24pt>
 File: images/sip_correction_r_10x-eps-converted-to.pdf Graphic file (type pdf)
 <use images/sip_correction_r_10x-eps-converted-to.pdf>
 Package pdftex.def Info: images/sip_correction_r_10x-eps-converted-to.pdf used 
@@ -714,7 +714,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 284.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/sip_correction_g_5x-eps-converted-to.pdf, id=960, 867.24pt x 867.24pt>
+<images/sip_correction_g_5x-eps-converted-to.pdf, id=955, 867.24pt x 867.24pt>
 File: images/sip_correction_g_5x-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/sip_correction_g_5x-eps-converted-to.pdf>
@@ -733,7 +733,7 @@ x-eps-converted-to.pdf images/sip_correction_b_10x.eps>
 (epstopdf)             \includegraphics on input line 291.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/sip_correction_b_10x-eps-converted-to.pdf, id=961, 867.24pt x 867.24pt>
+<images/sip_correction_b_10x-eps-converted-to.pdf, id=956, 867.24pt x 867.24pt>
 File: images/sip_correction_b_10x-eps-converted-to.pdf Graphic file (type pdf)
 <use images/sip_correction_b_10x-eps-converted-to.pdf>
 Package pdftex.def Info: images/sip_correction_b_10x-eps-converted-to.pdf used 
@@ -750,15 +750,15 @@ Package epstopdf Info: Source file: <images/greentored.eps>
 (epstopdf)                    size: 330165 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/greentored-eps-conv
 erted-to.pdf images/greentored.eps>
-(epstopdf)             \includegraphics on input line 306.
+(epstopdf)             \includegraphics on input line 305.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/greentored-eps-converted-to.pdf, id=1015, 867.24pt x 867.24pt>
+<images/greentored-eps-converted-to.pdf, id=1010, 867.24pt x 867.24pt>
 File: images/greentored-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/greentored-eps-converted-to.pdf>
 Package pdftex.def Info: images/greentored-eps-converted-to.pdf used on input l
-ine 306.
+ine 305.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
 Package epstopdf Info: Source file: <images/bluetored.eps>
 (epstopdf)                    date: 2014-12-14 10:42:57
@@ -768,15 +768,15 @@ Package epstopdf Info: Source file: <images/bluetored.eps>
 (epstopdf)                    size: 385434 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/bluetored-eps-conve
 rted-to.pdf images/bluetored.eps>
-(epstopdf)             \includegraphics on input line 313.
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/bluetored-eps-converted-to.pdf, id=1016, 867.24pt x 867.24pt>
+<images/bluetored-eps-converted-to.pdf, id=1011, 867.24pt x 867.24pt>
 File: images/bluetored-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/bluetored-eps-converted-to.pdf>
 Package pdftex.def Info: images/bluetored-eps-converted-to.pdf used on input li
-ne 313.
+ne 312.
 (pdftex.def)             Requested size: 397.48499pt x 397.49286pt.
 ) [44] [45 <./images/greentored-eps-converted-to.pdf>] [46 <./images/bluetored-
 eps-converted-to.pdf>] [47]
@@ -784,7 +784,7 @@ Chapter 3.
 (./webfrontend.tex [48
 
 ] [49] [50] [51]
-<images/run031_on_the_night_of_2005-08-15.png, id=1091, 983.675pt x 1537.745pt>
+<images/run031_on_the_night_of_2005-08-15.png, id=1087, 983.675pt x 1537.745pt>
 File: images/run031_on_the_night_of_2005-08-15.png Graphic file (type png)
 <use images/run031_on_the_night_of_2005-08-15.png>
 Package pdftex.def Info: images/run031_on_the_night_of_2005-08-15.png used on i
@@ -799,7 +799,7 @@ Chapter 4.
 (./results.tex [54
 
 ]
-<images/2013-07-13-run111-r-withlabels.png, id=1110, 494.59781pt x 249.18094pt>
+<images/2013-07-13-run111-r-withlabels.png, id=1106, 494.59781pt x 249.18094pt>
 File: images/2013-07-13-run111-r-withlabels.png Graphic file (type png)
 <use images/2013-07-13-run111-r-withlabels.png>
 Package pdftex.def Info: images/2013-07-13-run111-r-withlabels.png used on inpu
@@ -818,7 +818,7 @@ s-converted-to.pdf images/nn_ser_compare_r.eps>
 (epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/nn_ser_compare_r-eps-converted-to.pdf, id=1121, 867.24pt x 433.62pt>
+<images/nn_ser_compare_r-eps-converted-to.pdf, id=1117, 867.24pt x 433.62pt>
 File: images/nn_ser_compare_r-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/nn_ser_compare_r-eps-converted-to.pdf>
@@ -842,7 +842,7 @@ _r-eps-converted-to.pdf images/nn_ser_compare_zoom_r.eps>
 (epstopdf)             \includegraphics on input line 27.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/nn_ser_compare_zoom_r-eps-converted-to.pdf, id=1122, 867.24pt x 433.62p
+<images/nn_ser_compare_zoom_r-eps-converted-to.pdf, id=1118, 867.24pt x 433.62p
 t>
 File: images/nn_ser_compare_zoom_r-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -866,7 +866,7 @@ df>
 s-converted-to.pdf images/nn_ser_compare_g.eps>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
-<images/nn_ser_compare_g-eps-converted-to.pdf, id=1123, 867.24pt x 433.62pt>
+<images/nn_ser_compare_g-eps-converted-to.pdf, id=1119, 867.24pt x 433.62pt>
 File: images/nn_ser_compare_g-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/nn_ser_compare_g-eps-converted-to.pdf>
@@ -890,7 +890,7 @@ _g-eps-converted-to.pdf images/nn_ser_compare_zoom_g.eps>
 (epstopdf)             \includegraphics on input line 41.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/nn_ser_compare_zoom_g-eps-converted-to.pdf, id=1124, 867.24pt x 433.62p
+<images/nn_ser_compare_zoom_g-eps-converted-to.pdf, id=1120, 867.24pt x 433.62p
 t>
 File: images/nn_ser_compare_zoom_g-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -914,7 +914,7 @@ df>
 s-converted-to.pdf images/nn_ser_compare_b.eps>
 (epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
-<images/nn_ser_compare_b-eps-converted-to.pdf, id=1125, 867.24pt x 433.62pt>
+<images/nn_ser_compare_b-eps-converted-to.pdf, id=1121, 867.24pt x 433.62pt>
 File: images/nn_ser_compare_b-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/nn_ser_compare_b-eps-converted-to.pdf>
@@ -938,7 +938,7 @@ _b-eps-converted-to.pdf images/nn_ser_compare_zoom_b.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/nn_ser_compare_zoom_b-eps-converted-to.pdf, id=1126, 867.24pt x 433.62p
+<images/nn_ser_compare_zoom_b-eps-converted-to.pdf, id=1122, 867.24pt x 433.62p
 t>
 File: images/nn_ser_compare_zoom_b-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -971,7 +971,7 @@ eps-converted-to.pdf images/compare_photometry.eps>
 (epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/compare_photometry-eps-converted-to.pdf, id=1398, 867.24pt x 867.24pt>
+<images/compare_photometry-eps-converted-to.pdf, id=1394, 867.24pt x 867.24pt>
 File: images/compare_photometry-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/compare_photometry-eps-converted-to.pdf>
@@ -995,7 +995,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/compare_photometry_2-eps-converted-to.pdf, id=1401, 867.24pt x 867.24pt
+<images/compare_photometry_2-eps-converted-to.pdf, id=1397, 867.24pt x 867.24pt
 >
 File: images/compare_photometry_2-eps-converted-to.pdf Graphic file (type pdf)
  <use images/compare_photometry_2-eps-converted-to.pdf>
@@ -1018,7 +1018,7 @@ f>
 -converted-to.pdf images/ratio-of-ratios.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
-<images/ratio-of-ratios-eps-converted-to.pdf, id=1408, 867.24pt x 867.24pt>
+<images/ratio-of-ratios-eps-converted-to.pdf, id=1404, 867.24pt x 867.24pt>
 File: images/ratio-of-ratios-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/ratio-of-ratios-eps-converted-to.pdf>
@@ -1045,7 +1045,7 @@ colour-eps-converted-to.pdf images/2013-07-21-run010-2colour.eps>
 (epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-2colour-eps-converted-to.pdf, id=1587, 867.24pt x 867
+<images/2013-07-21-run010-2colour-eps-converted-to.pdf, id=1583, 867.24pt x 867
 .24pt>
 File: images/2013-07-21-run010-2colour-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1071,7 +1071,7 @@ with-labels-eps-converted-to.pdf images/colour-colour-zoom-with-labels.eps>
 (epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/colour-colour-zoom-with-labels-eps-converted-to.pdf, id=1588, 867.24pt 
+<images/colour-colour-zoom-with-labels-eps-converted-to.pdf, id=1584, 867.24pt 
 x 867.24pt>
 File: images/colour-colour-zoom-with-labels-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1080,21 +1080,21 @@ Package pdftex.def Info: images/colour-colour-zoom-with-labels-eps-converted-to
 .pdf used on input line 132.
 (pdftex.def)             Requested size: 341.43306pt x 341.43787pt.
 
-<images/mismatch-run010_r.png, id=1591, 165.61874pt x 165.61874pt>
+<images/mismatch-run010_r.png, id=1587, 165.61874pt x 165.61874pt>
 File: images/mismatch-run010_r.png Graphic file (type png)
 
 <use images/mismatch-run010_r.png>
 Package pdftex.def Info: images/mismatch-run010_r.png used on input line 139.
 (pdftex.def)             Requested size: 119.2467pt x 119.24539pt.
 
-<images/mismatch-run010_g.png, id=1592, 165.61874pt x 165.61874pt>
+<images/mismatch-run010_g.png, id=1588, 165.61874pt x 165.61874pt>
 File: images/mismatch-run010_g.png Graphic file (type png)
 
 <use images/mismatch-run010_g.png>
 Package pdftex.def Info: images/mismatch-run010_g.png used on input line 140.
 (pdftex.def)             Requested size: 119.2467pt x 119.24539pt.
 
-<images/mismatch-run010_b.png, id=1593, 165.61874pt x 165.61874pt>
+<images/mismatch-run010_b.png, id=1589, 165.61874pt x 165.61874pt>
 File: images/mismatch-run010_b.png Graphic file (type png)
 
 <use images/mismatch-run010_b.png>
@@ -1124,7 +1124,7 @@ colourmagnitude.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf, id=169
-4, 867.24pt x 867.24pt>
+0, 867.24pt x 867.24pt>
 File: images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
@@ -1134,7 +1134,7 @@ converted-to.pdf used on input line 152.
 (pdftex.def)             Requested size: 341.43306pt x 341.43787pt.
 
 [66] [67 <./images/2011-04-22-run019-omegacen-colourmagnitude-eps-converted-to.
-pdf>] <images/gumus-comparison-lc.png, id=1726, 790.45313pt x 233.37187pt>
+pdf>] <images/gumus-comparison-lc.png, id=1722, 790.45313pt x 233.37187pt>
 File: images/gumus-comparison-lc.png Graphic file (type png)
 
 <use images/gumus-comparison-lc.png>
@@ -1142,7 +1142,7 @@ Package pdftex.def Info: images/gumus-comparison-lc.png used on input line 175.
 
 (pdftex.def)             Requested size: 426.79134pt x 126.00468pt.
 
-<images/gumus-discovery-lc.png, id=1727, 790.45313pt x 233.37187pt>
+<images/gumus-discovery-lc.png, id=1723, 790.45313pt x 233.37187pt>
 File: images/gumus-discovery-lc.png Graphic file (type png)
 
 <use images/gumus-discovery-lc.png>
@@ -1159,14 +1159,14 @@ Overfull \hbox (29.30635pt too wide) in paragraph at lines 175--177
  []
 
 [68 <./images/gumus-comparison-lc.png> <./images/gumus-discovery-lc.png>]
-<images/koi823-r-lc.png, id=1737, 790.45313pt x 233.37187pt>
+<images/koi823-r-lc.png, id=1733, 790.45313pt x 233.37187pt>
 File: images/koi823-r-lc.png Graphic file (type png)
 
 <use images/koi823-r-lc.png>
 Package pdftex.def Info: images/koi823-r-lc.png used on input line 186.
 (pdftex.def)             Requested size: 426.79134pt x 126.00468pt.
 
-<images/koi823-g-lc.png, id=1738, 790.45313pt x 233.37187pt>
+<images/koi823-g-lc.png, id=1734, 790.45313pt x 233.37187pt>
 File: images/koi823-g-lc.png Graphic file (type png)
 
 <use images/koi823-g-lc.png>
@@ -1182,7 +1182,7 @@ Overfull \hbox (29.30635pt too wide) in paragraph at lines 186--188
  [] 
  []
 
-<images/ultraflare-on-YZCMi.png, id=1740, 642.90187pt x 488.57532pt>
+<images/ultraflare-on-YZCMi.png, id=1736, 642.90187pt x 488.57532pt>
 File: images/ultraflare-on-YZCMi.png Graphic file (type png)
 
 <use images/ultraflare-on-YZCMi.png>
@@ -1224,7 +1224,7 @@ Overfull \hbox (40.68727pt too wide) in paragraph at lines 32--34
 [][]
  []
 
-<images/2005-05-10-run012-73.png, id=1771, 225.84375pt x 180.675pt>
+<images/2005-05-10-run012-73.png, id=1767, 225.84375pt x 180.675pt>
 File: images/2005-05-10-run012-73.png Graphic file (type png)
 
 <use images/2005-05-10-run012-73.png>
@@ -1232,7 +1232,7 @@ Package pdftex.def Info: images/2005-05-10-run012-73.png used on input line 45.
 
 (pdftex.def)             Requested size: 128.0374pt x 102.43443pt.
 
-<images/2013-07-21-run010-48.png, id=1772, 224.33812pt x 180.675pt>
+<images/2013-07-21-run010-48.png, id=1768, 224.33812pt x 180.675pt>
 File: images/2013-07-21-run010-48.png Graphic file (type png)
 
 <use images/2013-07-21-run010-48.png>
@@ -1240,7 +1240,7 @@ Package pdftex.def Info: images/2013-07-21-run010-48.png used on input line 51.
 
 (pdftex.def)             Requested size: 128.0374pt x 103.1209pt.
 
-<images/2013-07-21-run010-163.png, id=1773, 224.33812pt x 180.675pt>
+<images/2013-07-21-run010-163.png, id=1769, 224.33812pt x 180.675pt>
 File: images/2013-07-21-run010-163.png Graphic file (type png)
 
 <use images/2013-07-21-run010-163.png>
@@ -1248,7 +1248,7 @@ Package pdftex.def Info: images/2013-07-21-run010-163.png used on input line 57
 .
 (pdftex.def)             Requested size: 128.0374pt x 103.1209pt.
 
-<images/2013-07-21-run011-162.png, id=1774, 224.33812pt x 180.675pt>
+<images/2013-07-21-run011-162.png, id=1770, 224.33812pt x 180.675pt>
 File: images/2013-07-21-run011-162.png Graphic file (type png)
 
 <use images/2013-07-21-run011-162.png>
@@ -1256,7 +1256,7 @@ Package pdftex.def Info: images/2013-07-21-run011-162.png used on input line 63
 .
 (pdftex.def)             Requested size: 128.0374pt x 103.1209pt.
 
-<images/2013-07-21-run010-23.png, id=1775, 224.33812pt x 180.675pt>
+<images/2013-07-21-run010-23.png, id=1771, 224.33812pt x 180.675pt>
 File: images/2013-07-21-run010-23.png Graphic file (type png)
 
 <use images/2013-07-21-run010-23.png>
@@ -1271,98 +1271,26 @@ Overfull \hbox (22.62721pt too wide) in paragraph at lines 39--74
 [74] [75 <./images/2005-05-10-run012-73.png> <./images/2013-07-21-run010-48.png
 > <./images/2013-07-21-run010-163.png> <./images/2013-07-21-run011-162.png> <./
 images/2013-07-21-run010-23.png>]
-Package epstopdf Info: Source file: <images/2005-05-09-run010-run012-lightcurve
--bin16.eps>
-(epstopdf)                    date: 2014-12-16 13:18:07
-(epstopdf)                    size: 105490 bytes
-(epstopdf)             Output file: <images/2005-05-09-run010-run012-lightcurve
--bin16-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-12-16 13:19:43
-(epstopdf)                    size: 85979 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/2005-05-09-run010-r
-un012-lightcurve-bin16-eps-converted-to.pdf images/2005-05-09-run010-run012-lig
-htcurve-bin16.eps>
-(epstopdf)             \includegraphics on input line 83.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/2005-05-09-run010-run012-lightcurve-bin16-eps-converted-to.pdf, id=1795
-, 867.24pt x 650.43pt>
-File: images/2005-05-09-run010-run012-lightcurve-bin16-eps-converted-to.pdf Gra
-phic file (type pdf)
-
-<use images/2005-05-09-run010-run012-lightcurve-bin16-eps-converted-to.pdf>
-Package pdftex.def Info: images/2005-05-09-run010-run012-lightcurve-bin16-eps-c
-onverted-to.pdf used on input line 83.
-(pdftex.def)             Requested size: 341.43306pt x 256.07838pt.
-Package epstopdf Info: Source file: <images/2005-05-09-run010-run012-colourcurv
-e-bin16.eps>
-(epstopdf)                    date: 2014-12-16 13:29:56
-(epstopdf)                    size: 65375 bytes
-(epstopdf)             Output file: <images/2005-05-09-run010-run012-colourcurv
-e-bin16-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-12-16 13:30:04
-(epstopdf)                    size: 51145 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/2005-05-09-run010-r
-un012-colourcurve-bin16-eps-converted-to.pdf images/2005-05-09-run010-run012-co
-lourcurve-bin16.eps>
-(epstopdf)             \includegraphics on input line 84.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/2005-05-09-run010-run012-colourcurve-bin16-eps-converted-to.pdf, id=179
-6, 867.24pt x 361.35pt>
-File: images/2005-05-09-run010-run012-colourcurve-bin16-eps-converted-to.pdf Gr
-aphic file (type pdf)
-
-<use images/2005-05-09-run010-run012-colourcurve-bin16-eps-converted-to.pdf>
-Package pdftex.def Info: images/2005-05-09-run010-run012-colourcurve-bin16-eps-
-converted-to.pdf used on input line 84.
-(pdftex.def)             Requested size: 341.43306pt x 142.26578pt.
-Package epstopdf Info: Source file: <images/2005-05-10-run012-lightcurve-bin16.
-eps>
-(epstopdf)                    date: 2014-12-13 10:19:48
-(epstopdf)                    size: 94395 bytes
-(epstopdf)             Output file: <images/2005-05-10-run012-lightcurve-bin16-
-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-12-13 10:20:13
-(epstopdf)                    size: 75435 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/2005-05-10-run012-l
-ightcurve-bin16-eps-converted-to.pdf images/2005-05-10-run012-lightcurve-bin16.
-eps>
+Package epstopdf Info: Source file: <images/2005-05-10-run012-phasedlc.eps>
+(epstopdf)                    date: 2014-12-17 13:57:11
+(epstopdf)                    size: 258979 bytes
+(epstopdf)             Output file: <images/2005-05-10-run012-phasedlc-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2014-12-17 13:57:18
+(epstopdf)                    size: 222335 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/2005-05-10-run012-p
+hasedlc-eps-converted-to.pdf images/2005-05-10-run012-phasedlc.eps>
 (epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2005-05-10-run012-lightcurve-bin16-eps-converted-to.pdf, id=1797, 867.2
-4pt x 650.43pt>
-File: images/2005-05-10-run012-lightcurve-bin16-eps-converted-to.pdf Graphic fi
-le (type pdf)
-
-<use images/2005-05-10-run012-lightcurve-bin16-eps-converted-to.pdf>
-Package pdftex.def Info: images/2005-05-10-run012-lightcurve-bin16-eps-converte
-d-to.pdf used on input line 96.
-(pdftex.def)             Requested size: 341.43306pt x 256.07838pt.
-Package epstopdf Info: Source file: <images/2005-05-10-run012-colourcurve-bin16
-.eps>
-(epstopdf)                    date: 2014-12-13 10:21:25
-(epstopdf)                    size: 60191 bytes
-(epstopdf)             Output file: <images/2005-05-10-run012-colourcurve-bin16
--eps-converted-to.pdf>
-(epstopdf)                    date: 2014-12-13 10:21:29
-(epstopdf)                    size: 45482 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/2005-05-10-run012-c
-olourcurve-bin16-eps-converted-to.pdf images/2005-05-10-run012-colourcurve-bin1
-6.eps>
-(epstopdf)             \includegraphics on input line 97.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/2005-05-10-run012-colourcurve-bin16-eps-converted-to.pdf, id=1798, 867.
-24pt x 361.35pt>
-File: images/2005-05-10-run012-colourcurve-bin16-eps-converted-to.pdf Graphic f
-ile (type pdf)
-
-<use images/2005-05-10-run012-colourcurve-bin16-eps-converted-to.pdf>
-Package pdftex.def Info: images/2005-05-10-run012-colourcurve-bin16-eps-convert
-ed-to.pdf used on input line 97.
-(pdftex.def)             Requested size: 341.43306pt x 142.26578pt.
+<images/2005-05-10-run012-phasedlc-eps-converted-to.pdf, id=1791, 867.24pt x 10
+03.75pt>
+File: images/2005-05-10-run012-phasedlc-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use images/2005-05-10-run012-phasedlc-eps-converted-to.pdf>
+Package pdftex.def Info: images/2005-05-10-run012-phasedlc-eps-converted-to.pdf
+ used on input line 96.
+(pdftex.def)             Requested size: 341.43306pt x 395.18271pt.
 Package epstopdf Info: Source file: <images/2005-05-10-pgram-bin16.eps>
 (epstopdf)                    date: 2014-12-16 13:43:53
 (epstopdf)                    size: 48324 bytes
@@ -1372,26 +1300,18 @@ d-to.pdf>
 (epstopdf)                    size: 22267 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/2005-05-10-pgram-bi
 n16-eps-converted-to.pdf images/2005-05-10-pgram-bin16.eps>
-(epstopdf)             \includegraphics on input line 110.
+(epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2005-05-10-pgram-bin16-eps-converted-to.pdf, id=1799, 578.16pt x 433.62
+<images/2005-05-10-pgram-bin16-eps-converted-to.pdf, id=1792, 578.16pt x 433.62
 pt>
 File: images/2005-05-10-pgram-bin16-eps-converted-to.pdf Graphic file (type pdf
 )
  <use images/2005-05-10-pgram-bin16-eps-converted-to.pdf>
 Package pdftex.def Info: images/2005-05-10-pgram-bin16-eps-converted-to.pdf use
-d on input line 110.
+d on input line 111.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
-
-
-LaTeX Warning: Reference `fig:2005-05-10-run012-colour' on page 76 undefined on
- input line 125.
-
-[76] [77 <./images/2005-05-09-run010-run012-lightcurve-bin16-eps-converted-to.p
-df> <./images/2005-05-09-run010-run012-colourcurve-bin16-eps-converted-to.pdf>]
-[78 <./images/2005-05-10-run012-lightcurve-bin16-eps-converted-to.pdf> <./image
-s/2005-05-10-run012-colourcurve-bin16-eps-converted-to.pdf>]
+ [76] [77 <./images/2005-05-10-run012-phasedlc-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/2013-07-21-run010-48_lightcurve-bin
 4.eps>
 (epstopdf)                    date: 2014-12-13 10:23:44
@@ -1403,17 +1323,17 @@ Package epstopdf Info: Source file: <images/2013-07-21-run010-48_lightcurve-bin
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-4
 8_lightcurve-bin4-eps-converted-to.pdf images/2013-07-21-run010-48_lightcurve-b
 in4.eps>
-(epstopdf)             \includegraphics on input line 131.
+(epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-48_lightcurve-bin4-eps-converted-to.pdf, id=1948, 867
+<images/2013-07-21-run010-48_lightcurve-bin4-eps-converted-to.pdf, id=1847, 867
 .24pt x 939.51pt>
 File: images/2013-07-21-run010-48_lightcurve-bin4-eps-converted-to.pdf Graphic 
 file (type pdf)
 
 <use images/2013-07-21-run010-48_lightcurve-bin4-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-48_lightcurve-bin4-eps-conver
-ted-to.pdf used on input line 131.
+ted-to.pdf used on input line 132.
 (pdftex.def)             Requested size: 341.43306pt x 369.891pt.
 Package epstopdf Info: Source file: <images/2013-07-21-run010-48_colourcurve-bi
 n4.eps>
@@ -1426,20 +1346,20 @@ n4-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-4
 8_colourcurve-bin4-eps-converted-to.pdf images/2013-07-21-run010-48_colourcurve
 -bin4.eps>
-(epstopdf)             \includegraphics on input line 138.
+(epstopdf)             \includegraphics on input line 139.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-48_colourcurve-bin4-eps-converted-to.pdf, id=1949, 86
+<images/2013-07-21-run010-48_colourcurve-bin4-eps-converted-to.pdf, id=1848, 86
 7.24pt x 650.43pt>
 File: images/2013-07-21-run010-48_colourcurve-bin4-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use images/2013-07-21-run010-48_colourcurve-bin4-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-48_colourcurve-bin4-eps-conve
-rted-to.pdf used on input line 138.
+rted-to.pdf used on input line 139.
 (pdftex.def)             Requested size: 341.43306pt x 256.07838pt.
 
-[79 <./images/2005-05-10-pgram-bin16-eps-converted-to.pdf>] [80 <./images/2013-
+[78 <./images/2005-05-10-pgram-bin16-eps-converted-to.pdf>] [79 <./images/2013-
 07-21-run010-48_lightcurve-bin4-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/2013-07-21-run010-163_lightcurve-bi
 n8.eps>
@@ -1452,17 +1372,17 @@ n8-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-1
 63_lightcurve-bin8-eps-converted-to.pdf images/2013-07-21-run010-163_lightcurve
 -bin8.eps>
-(epstopdf)             \includegraphics on input line 161.
+(epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-163_lightcurve-bin8-eps-converted-to.pdf, id=2034, 86
+<images/2013-07-21-run010-163_lightcurve-bin8-eps-converted-to.pdf, id=1932, 86
 7.24pt x 650.43pt>
 File: images/2013-07-21-run010-163_lightcurve-bin8-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use images/2013-07-21-run010-163_lightcurve-bin8-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-163_lightcurve-bin8-eps-conve
-rted-to.pdf used on input line 161.
+rted-to.pdf used on input line 162.
 (pdftex.def)             Requested size: 341.43306pt x 256.07838pt.
 Package epstopdf Info: Source file: <images/2013-07-21-run010-163_colourcurve-b
 in8.eps>
@@ -1475,17 +1395,17 @@ in8-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-1
 63_colourcurve-bin8-eps-converted-to.pdf images/2013-07-21-run010-163_colourcur
 ve-bin8.eps>
-(epstopdf)             \includegraphics on input line 168.
+(epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-163_colourcurve-bin8-eps-converted-to.pdf, id=2035, 8
+<images/2013-07-21-run010-163_colourcurve-bin8-eps-converted-to.pdf, id=1933, 8
 67.24pt x 361.35pt>
 File: images/2013-07-21-run010-163_colourcurve-bin8-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use images/2013-07-21-run010-163_colourcurve-bin8-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-163_colourcurve-bin8-eps-conv
-erted-to.pdf used on input line 168.
+erted-to.pdf used on input line 169.
 (pdftex.def)             Requested size: 341.43306pt x 142.26578pt.
 Package epstopdf Info: Source file: <images/2013-07-21-run011-162_lightcurve-bi
 n8.eps>
@@ -1498,17 +1418,17 @@ n8-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run011-1
 62_lightcurve-bin8-eps-converted-to.pdf images/2013-07-21-run011-162_lightcurve
 -bin8.eps>
-(epstopdf)             \includegraphics on input line 188.
+(epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run011-162_lightcurve-bin8-eps-converted-to.pdf, id=2036, 86
+<images/2013-07-21-run011-162_lightcurve-bin8-eps-converted-to.pdf, id=1934, 86
 7.24pt x 939.51pt>
 File: images/2013-07-21-run011-162_lightcurve-bin8-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use images/2013-07-21-run011-162_lightcurve-bin8-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run011-162_lightcurve-bin8-eps-conve
-rted-to.pdf used on input line 188.
+rted-to.pdf used on input line 189.
 (pdftex.def)             Requested size: 341.43306pt x 369.891pt.
 Package epstopdf Info: Source file: <images/2013-07-21-run011-162_colourcurve-b
 in8.eps>
@@ -1521,37 +1441,37 @@ in8-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run011-1
 62_colourcurve-bin8-eps-converted-to.pdf images/2013-07-21-run011-162_colourcur
 ve-bin8.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run011-162_colourcurve-bin8-eps-converted-to.pdf, id=2037, 8
+<images/2013-07-21-run011-162_colourcurve-bin8-eps-converted-to.pdf, id=1935, 8
 67.24pt x 650.43pt>
 File: images/2013-07-21-run011-162_colourcurve-bin8-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use images/2013-07-21-run011-162_colourcurve-bin8-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run011-162_colourcurve-bin8-eps-conv
-erted-to.pdf used on input line 195.
+erted-to.pdf used on input line 196.
 (pdftex.def)             Requested size: 341.43306pt x 256.07838pt.
 
-[81 <./images/2013-07-21-run010-48_colourcurve-bin4-eps-converted-to.pdf>]
-[82 <./images/2013-07-21-run010-163_lightcurve-bin8-eps-converted-to.pdf> <./im
-ages/2013-07-21-run010-163_colourcurve-bin8-eps-converted-to.pdf>] [83 <./image
+[80 <./images/2013-07-21-run010-48_colourcurve-bin4-eps-converted-to.pdf>]
+[81 <./images/2013-07-21-run010-163_lightcurve-bin8-eps-converted-to.pdf> <./im
+ages/2013-07-21-run010-163_colourcurve-bin8-eps-converted-to.pdf>] [82 <./image
 s/2013-07-21-run011-162_lightcurve-bin8-eps-converted-to.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 212.
+(Font)              <12> on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 212.
+(hyperref)                removing `math shift' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delta' on input line 212.
+(hyperref)                removing `\delta' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 212.
+(hyperref)                removing `math shift' on input line 213.
 
 Package epstopdf Info: Source file: <images/2013-07-21-run010-23_lightcurve-bin
 8.eps>
@@ -1564,17 +1484,17 @@ Package epstopdf Info: Source file: <images/2013-07-21-run010-23_lightcurve-bin
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-2
 3_lightcurve-bin8-eps-converted-to.pdf images/2013-07-21-run010-23_lightcurve-b
 in8.eps>
-(epstopdf)             \includegraphics on input line 216.
+(epstopdf)             \includegraphics on input line 217.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-23_lightcurve-bin8-eps-converted-to.pdf, id=2183, 867
+<images/2013-07-21-run010-23_lightcurve-bin8-eps-converted-to.pdf, id=2082, 867
 .24pt x 939.51pt>
 File: images/2013-07-21-run010-23_lightcurve-bin8-eps-converted-to.pdf Graphic 
 file (type pdf)
 
 <use images/2013-07-21-run010-23_lightcurve-bin8-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-23_lightcurve-bin8-eps-conver
-ted-to.pdf used on input line 216.
+ted-to.pdf used on input line 217.
 (pdftex.def)             Requested size: 341.43306pt x 369.891pt.
 Package epstopdf Info: Source file: <images/2013-07-21-run010-23_colourcurve-bi
 n8.eps>
@@ -1587,21 +1507,21 @@ n8-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2013-07-21-run010-2
 3_colourcurve-bin8-eps-converted-to.pdf images/2013-07-21-run010-23_colourcurve
 -bin8.eps>
-(epstopdf)             \includegraphics on input line 223.
+(epstopdf)             \includegraphics on input line 224.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2013-07-21-run010-23_colourcurve-bin8-eps-converted-to.pdf, id=2184, 86
+<images/2013-07-21-run010-23_colourcurve-bin8-eps-converted-to.pdf, id=2083, 86
 7.24pt x 650.43pt>
 File: images/2013-07-21-run010-23_colourcurve-bin8-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use images/2013-07-21-run010-23_colourcurve-bin8-eps-converted-to.pdf>
 Package pdftex.def Info: images/2013-07-21-run010-23_colourcurve-bin8-eps-conve
-rted-to.pdf used on input line 223.
+rted-to.pdf used on input line 224.
 (pdftex.def)             Requested size: 341.43306pt x 256.07838pt.
 
-[84 <./images/2013-07-21-run011-162_colourcurve-bin8-eps-converted-to.pdf>]
-[85 <./images/2013-07-21-run010-23_lightcurve-bin8-eps-converted-to.pdf>]
+[83 <./images/2013-07-21-run011-162_colourcurve-bin8-eps-converted-to.pdf>]
+[84 <./images/2013-07-21-run010-23_lightcurve-bin8-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/2011-08-26-run014-110-lightcurve-bi
 n4.eps>
 (epstopdf)                    date: 2014-12-13 10:18:06
@@ -1613,20 +1533,20 @@ n4-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2011-08-26-run014-1
 10-lightcurve-bin4-eps-converted-to.pdf images/2011-08-26-run014-110-lightcurve
 -bin4.eps>
-(epstopdf)             \includegraphics on input line 242.
+(epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2011-08-26-run014-110-lightcurve-bin4-eps-converted-to.pdf, id=2266, 86
+<images/2011-08-26-run014-110-lightcurve-bin4-eps-converted-to.pdf, id=2164, 86
 7.24pt x 650.43pt>
 File: images/2011-08-26-run014-110-lightcurve-bin4-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use images/2011-08-26-run014-110-lightcurve-bin4-eps-converted-to.pdf>
 Package pdftex.def Info: images/2011-08-26-run014-110-lightcurve-bin4-eps-conve
-rted-to.pdf used on input line 242.
+rted-to.pdf used on input line 243.
 (pdftex.def)             Requested size: 398.33858pt x 298.7548pt.
 
-Overfull \hbox (0.85359pt too wide) in paragraph at lines 242--243
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 243--244
  [] 
  []
 
@@ -1641,42 +1561,42 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/2011-08-26-run014-1
 10-pgram-bin4-eps-converted-to.pdf images/2011-08-26-run014-110-pgram-bin4.eps>
 
-(epstopdf)             \includegraphics on input line 250.
+(epstopdf)             \includegraphics on input line 251.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/2011-08-26-run014-110-pgram-bin4-eps-converted-to.pdf, id=2267, 578.16p
+<images/2011-08-26-run014-110-pgram-bin4-eps-converted-to.pdf, id=2165, 578.16p
 t x 433.62pt>
 File: images/2011-08-26-run014-110-pgram-bin4-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use images/2011-08-26-run014-110-pgram-bin4-eps-converted-to.pdf>
 Package pdftex.def Info: images/2011-08-26-run014-110-pgram-bin4-eps-converted-
-to.pdf used on input line 250.
+to.pdf used on input line 251.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
- [86 <./images/2013-07-21-run010-23_colourcurve-bin8-eps-converted-to.pdf>] [87
+ [85 <./images/2013-07-21-run010-23_colourcurve-bin8-eps-converted-to.pdf>] [86
  <./images/2011-08-26-run014-110-lightcurve-bin4-eps-converted-to.pdf> <./image
 s/2011-08-26-run014-110-pgram-bin4-eps-converted-to.pdf>]
-<images/jacobson-asteroid-rotation-dot.png, id=2389, 529.98pt x 318.43968pt>
+<images/jacobson-asteroid-rotation-dot.png, id=2287, 529.98pt x 318.43968pt>
 File: images/jacobson-asteroid-rotation-dot.png Graphic file (type png)
 
 <use images/jacobson-asteroid-rotation-dot.png>
 Package pdftex.def Info: images/jacobson-asteroid-rotation-dot.png used on inpu
-t line 275.
+t line 276.
 (pdftex.def)             Requested size: 312.9803pt x 188.05756pt.
- [88 <./images/jacobson-asteroid-rotation-dot.png (PNG copy)>]) [89]
+ [87 <./images/jacobson-asteroid-rotation-dot.png (PNG copy)>]) [88]
 Chapter 6.
-(./conclusion.tex [90
+(./conclusion.tex [89
 
-] [91] [92] [93]) (./rashleyMSCthesis.bbl [94] [95
+] [90] [91] [92]) (./rashleyMSCthesis.bbl [93] [94
 
 ]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-[96] [97] [98]) [99]
+[95] [96] [97]) [98]
 Appendix A.
-(./usermanual.tex [100
+(./usermanual.tex [99
 
 ]
 Overfull \hbox (36.10132pt too wide) in paragraph at lines 23--24
@@ -1685,13 +1605,13 @@ wiki . ipb . ac . rs / index . php / SExtractor _ installation$[]\OT1/cmr/m/n/1
 0.95 . 
  []
 
-[101]
+[100]
 Overfull \hbox (25.82439pt too wide) in paragraph at lines 45--46
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
  []
 
-[102]
+[101]
 Overfull \hbox (15.62416pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1701,13 +1621,13 @@ Overfull \hbox (25.82439pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[103] [104] [105]
+[102] [103] [104]
 Overfull \hbox (0.24188pt too wide) in paragraph at lines 105--106
 []\OT1/cmtt/m/n/10.95 -C[r,g,b] --channels [r,g,b] \OT1/cmr/m/n/10.95 Which cha
 n-nels to op-er-ate the pipeline over.
  []
 
-[106]
+[105]
 Overfull \hbox (10.52405pt too wide) in paragraph at lines 119--120
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1727,14 +1647,14 @@ Overfull \hbox (10.52405pt too wide) in paragraph at lines 122--123
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[107] [108] [109]
+[106] [107] [108]
 Overfull \hbox (0.5063pt too wide) in paragraph at lines 185--186
 []\OT1/cmtt/m/n/10.95 runDate \OT1/cmr/m/n/10.95 The date for the night of in-t
 er-est. Spec-i-fied in the for-mat \OT1/cmtt/m/n/10.95 YYYY-MM-DD\OT1/cmr/m/n/1
 0.95 . 
  []
 
-<images/index_webpage.png, id=2571, 975.645pt x 1755.55875pt>
+<images/index_webpage.png, id=2471, 975.645pt x 1755.55875pt>
 File: images/index_webpage.png Graphic file (type png)
 
 <use images/index_webpage.png>
@@ -1744,22 +1664,22 @@ Package pdftex.def Info: images/index_webpage.png used on input line 200.
 
 LaTeX Warning: Float too large for page by 25.8086pt on input line 203.
 
-[110] [111 <./images/index_webpage.png>] [112]
-<images/selectedobject.png, id=2591, 140.02313pt x 140.02313pt>
+[109] [110 <./images/index_webpage.png>] [111]
+<images/selectedobject.png, id=2491, 140.02313pt x 140.02313pt>
 File: images/selectedobject.png Graphic file (type png)
 
 <use images/selectedobject.png>
 Package pdftex.def Info: images/selectedobject.png used on input line 227.
 (pdftex.def)             Requested size: 113.81102pt x 113.8155pt.
 
-<images/selectedcomparison.png, id=2592, 140.02313pt x 140.02313pt>
+<images/selectedcomparison.png, id=2492, 140.02313pt x 140.02313pt>
 File: images/selectedcomparison.png Graphic file (type png)
 
 <use images/selectedcomparison.png>
 Package pdftex.def Info: images/selectedcomparison.png used on input line 228.
 (pdftex.def)             Requested size: 113.81102pt x 113.8155pt.
- [113]
-<images/webcontrols.png, id=2600, 725.71124pt x 105.39375pt>
+ [112]
+<images/webcontrols.png, id=2500, 725.71124pt x 105.39375pt>
 File: images/webcontrols.png Graphic file (type png)
 
 <use images/webcontrols.png>
@@ -1772,14 +1692,14 @@ Overfull \hbox (0.85359pt too wide) in paragraph at lines 238--239
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 327.
- [114 <./images/selectedobject.png> <./images/selectedcomparison.png> <./images
+ [113 <./images/selectedobject.png> <./images/selectedcomparison.png> <./images
 /webcontrols.png (PNG copy)>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
  (./rashleyMSCthesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `rashleyMSCthesis.out' has not changed.
-(rerunfilecheck)             Checksum: E139AB85AA3B5805969EC51A14082D56;5498.
+(rerunfilecheck)             Checksum: 0E2AAA8553B3D8257F6CABE04233B895;5428.
 
 
 LaTeX Warning: There were undefined references.
@@ -1790,10 +1710,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
  ) 
 Here is how much of TeX's memory you used:
- 8119 strings out of 493747
- 127660 string characters out of 3148625
- 233243 words of memory out of 3500000
- 10808 multiletter control sequences out of 15000+200000
+ 8100 strings out of 493747
+ 126544 string characters out of 3148625
+ 233230 words of memory out of 3500000
+ 10793 multiletter control sequences out of 15000+200000
  18582 words of font info for 49 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  29i,13n,32p,1943b,1627s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1815,10 +1735,10 @@ local/share/texmf/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/share/te
 xmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/share/texmf/fonts/type1/urw
 /helvetic/uhvr8a.pfb></usr/local/share/texmf/fonts/type1/urw/helvetic/uhvro8a.p
 fb>
-Output written on rashleyMSCthesis.pdf (124 pages, 14567335 bytes).
+Output written on rashleyMSCthesis.pdf (123 pages, 14533581 bytes).
 PDF statistics:
- 2770 PDF objects out of 2984 (max. 8388607)
- 1627 compressed objects within 17 object streams
- 416 named destinations out of 1000 (max. 500000)
- 1023 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2669 PDF objects out of 2984 (max. 8388607)
+ 1594 compressed objects within 16 object streams
+ 415 named destinations out of 1000 (max. 500000)
+ 1000 words of extra memory for PDF output out of 10000 (max. 10000000)
 

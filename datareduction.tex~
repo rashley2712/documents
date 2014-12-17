@@ -186,9 +186,9 @@ Before the pipeline attempts to match objects across each of the three channels 
 
 Cosmic ray filtering: This step filters out any object that appears on only one frame in the run. 
 
-\emph{Low coverage filtering}. This step removes any objects that appear on fewer than a pre-defined percentage of frames. This value is configurable. The default is 20\%. This value should be set to `0' if we are looking for any kind of transient object in the run. 
+Low coverage filtering: This step removes any objects that appear on fewer than a pre-defined percentage of frames. This value is configurable. The default is 20\%. This value should be set to `0' if we are looking for any kind of transient object in the run. 
 
-\emph{Single pixel filtering}. This step removes any object that has a Flux radius, as measured by SExtractor, that is less than or equal to 1 pixel.
+Single pixel filtering: This step removes any object that has a Flux radius, as measured by SExtractor, that is less than or equal to 1 pixel.
 
 \subsubsection{Cross matching across channels}
 At this stage, the pipeline has produced three distinct object catalogs. One for each of the red, green and blue channels. These catalogs now contain position and photometric information for each object detected in the run.  The pipeline attempts to cross-identify objects in each of the three catalogs. This is done based on the object's average position $(\bar{x}, \bar{y})$ in each channel and the minimum distance between it and it's corresponding location in the other channel. If there is an astrometric solution for each channel then this is used in favour of the pixel position as the astrometric solutions are likely to be more accurate than the pixel positions. Unfortunately, for most of our runs, we do not have an astrometric solution and we have to revert to matching based on pixel distance. Astrometric solutions, and our difficulties with finding solutions, are discussed later in this chapter in section \ref{sect:astrometry}.
@@ -220,7 +220,7 @@ Yet another complication is caused by the time-variation in this non-overlap of 
 \begin{figure}
   \centering
   \includegraphics[width=140mm]{images/position_drift.png}
-  \caption{Screen capture from the web interface showing a plot of the $(x, y)$ position of the object in the lower left corner of figure \ref{fig:nonoverlapzoom} showing how the position varies of the course of the run (~3 hours). During this time the airmass, $\sec z$, of the target field varies from 1.02 to 1.21. Note how the $x$ position of the object in the blue channel drifts with respect to the $x$ position of the object in the red and green channels. The step changes in the object's position are caused by the observer making manual adjustments to the guiding at the telescope. }
+  \caption{Screen capture from the web interface showing a plot of the $(x, y)$ position of the object in the lower left corner of figure \ref{fig:nonoverlapzoom} showing how the position varies of the course of the run ($\sim 3$ hours). During this time the airmass, $\sec z$, of the target field varies from 1.02 to 1.21. Note how the $x$ position of the object in the blue channel drifts with respect to the $x$ position of the object in the red and green channels. The step changes in the object's position are caused by the observer making manual adjustments to the guiding at the telescope. }
 \label{fig:positiondrift}
 \end{figure}
 
@@ -293,11 +293,11 @@ In addition to providing Astrometry.net with a catalog of objects to match, we a
 \label{fig:sipblue}
 \end{figure}
 
-If Astrometry.net can find a solution for our field, it generates a FITS format file containing the parameters defining the solution. These parameters consist of the position in right ascension and declination $(\alpha_{ref}, \delta_{ref})$ of a particular reference pixel in the image $(x_{ref}, y_{ref})$, plus 4 parameters that define a transformation matrix to move from pixel coordinates $(x, y)$ to world coordinates, $(\alpha, \delta)$. These values are labeled $CD1\_1$, $CD1\_2$, $CD2\_1$ and $CD2\_2$. The transformation from pixel coordinates to world coordinates is then given by: 
-
-$\left(\begin{array}{c} \alpha \\ \delta \end{array} \right) = \left(\begin{array}{c} \alpha_{ref} \\ \delta_{ref} \end{array} \right) + 
+If Astrometry.net can find a solution for our field, it generates a FITS format file containing the parameters defining the solution. These parameters consist of the position in right ascension and declination $(\alpha_{ref}, \delta_{ref})$ of a particular reference pixel in the image $(x_{ref}, y_{ref})$, plus 4 parameters that define a transformation matrix to move from pixel coordinates $(x, y)$ to world coordinates, $(\alpha, \delta)$. These values are labeled $CD1\_1$, $CD1\_2$, $CD2\_1$ and $CD2\_2$. The transformation from pixel coordinates to world coordinates is then given by: \begin{equation} 
+\left(\begin{array}{c} \alpha \\ \delta \end{array} \right) = \left(\begin{array}{c} \alpha_{ref} \\ \delta_{ref} \end{array} \right) + 
 \left(\begin{array}{cc}  CD1\_1 & CD1\_2 \\ CD2\_1  & CD2\_2 \\ \end{array}\right) 
-\left(\begin{array}{c} x' \\ y' \end{array} \right)$
+\left(\begin{array}{c} x' \\ y' \end{array} \right)
+\end{equation}
 
 Where $(x', y')$ are the pixel offsets to the reference pixel $(x_{ref}, y_{ref})$.
 

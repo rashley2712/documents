@@ -220,7 +220,7 @@ Yet another complication is caused by the time-variation in this non-overlap of 
 \begin{figure}
   \centering
   \includegraphics[width=140mm]{images/position_drift.png}
-  \caption{Screen capture from the web interface showing a plot of the $(x, y)$ position of the object in the lower left corner of figure \ref{fig:nonoverlapzoom} showing how the position varies of the course of the run (~3 hours). During this time the airmass, $\sec z$, of the target field varies from 1.02 to 1.21. Note how the $x$ position of the object in the blue channel drifts with respect to the $x$ position of the object in the red and green channels. The step changes in the object's position are caused by the observer making manual adjustments to the guiding at the telescope. }
+  \caption{Screen capture from the web interface showing a plot of the $(x, y)$ position of the object in the lower left corner of figure \ref{fig:nonoverlapzoom} showing how the position varies of the course of the run ($\sim 3$ hours). During this time the airmass, $\sec z$, of the target field varies from 1.02 to 1.21. Note how the $x$ position of the object in the blue channel drifts with respect to the $x$ position of the object in the red and green channels. The step changes in the object's position are caused by the observer making manual adjustments to the guiding at the telescope. }
 \label{fig:positiondrift}
 \end{figure}
 
@@ -293,12 +293,11 @@ In addition to providing Astrometry.net with a catalog of objects to match, we a
 \label{fig:sipblue}
 \end{figure}
 
-If Astrometry.net can find a solution for our field, it generates a FITS format file containing the parameters defining the solution. These parameters consist of the position in right ascension and declination $(\alpha_{ref}, \delta_{ref})$ of a particular reference pixel in the image $(x_{ref}, y_{ref})$, plus 4 parameters that define a transformation matrix to move from pixel coordinates $(x, y)$ to world coordinates, $(\alpha, \delta)$. These values are labeled $CD1\_1$, $CD1\_2$, $CD2\_1$ and $CD2\_2$. The transformation from pixel coordinates to world coordinates is then given by: 
-
-$\left(\begin{array}{c} \alpha \\ \delta \end{array} \right) = \left(\begin{array}{c} \alpha_{ref} \\ \delta_{ref} \end{array} \right) + 
+If Astrometry.net can find a solution for our field, it generates a FITS format file containing the parameters defining the solution. These parameters consist of the position in right ascension and declination $(\alpha_{ref}, \delta_{ref})$ of a particular reference pixel in the image $(x_{ref}, y_{ref})$, plus 4 parameters that define a transformation matrix to move from pixel coordinates $(x, y)$ to world coordinates, $(\alpha, \delta)$. These values are labeled $CD1\_1$, $CD1\_2$, $CD2\_1$ and $CD2\_2$. The transformation from pixel coordinates to world coordinates is then given by: \begin{equation} 
+\left(\begin{array}{c} \alpha \\ \delta \end{array} \right) = \left(\begin{array}{c} \alpha_{ref} \\ \delta_{ref} \end{array} \right) + 
 \left(\begin{array}{cc}  CD1\_1 & CD1\_2 \\ CD2\_1  & CD2\_2 \\ \end{array}\right) 
-\left(\begin{array}{c} x' \\ y' \end{array} \right)$
-
+\left(\begin{array}{c} x' \\ y' \end{array} \right)
+\end{equation}
 Where $(x', y')$ are the pixel offsets to the reference pixel $(x_{ref}, y_{ref})$.
 
 \begin{figure}
