@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -220,13 +220,6 @@ T.~{Naylor}.
 \newblock {An optimal extraction algorithm for imaging photometry}.
 \newblock \emph{\mnras}, 296:\penalty0 339--346, May 1998.
 \newblock \doi{10.1046/j.1365-8711.1998.01314.x}.
-
-\bibitem[Paganano(2013)]{stellaractivity}
-Isabella Paganano.
-\newblock Stellar activity.
-\newblock In D.~Oswalt, T. and M.~A. Barstow, editors, \emph{Planets, Stars and
-  Stellar Systems, Volume 4: Stellar Structure and Evolution}, chapter~10,
-  pages 588--547. Springer Science, 2013.
 
 \bibitem[Phinney and Kulkarni(1994)]{pulsarreview}
 E.~S. Phinney and S.~R. Kulkarni.
