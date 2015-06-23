@@ -59,7 +59,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[CSS081231]{CSS081231: A short period eclipsing polar}
+\title[CSS081231]{CSS081231: Time resolved spectra and high speed photometry of an eclipsing polar}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -117,7 +117,7 @@ CSS081231:071126+440405 is not a ROSAT source, but it appears in the Swift X-Ray
 
 
 \section{Observations}
-Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounted on the 2.5m Thai National Telescope during 2014 and 2015. Exposure times varied from 1.6 to 3.6 seconds depending on the conditions of the night. For the first three observations the Sloane g filter was used and for the last three observations the KG5 filter was used. The KG5 filter has a broad optical passband stretching from $\sim3500 \AA~ \mbox{to} \sim7000 \AA$ and was chosen to allow the maximum light throughput without any potential contamination in the red from the M dwarf companion.  Data was reduced using the ULTRACAM pipeline (Marsh reference) with a comparison star located about xx arcminutes to XX from the target and located at RA, DEC. The details for these nights is shown in table \ref{tab:photometry}. 
+Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounted on the 2.5m Thai National Telescope during 2014 and 2015. Exposure times varied from 1.6 to 3.6 seconds depending on the conditions of the night. For the first three observations the Sloane g filter was used and for the last three observations the KG5 filter was used. The KG5 filter has a broad optical passband stretching from $\sim3500 \AA~ \mbox{to} \sim7000 \AA$ and was chosen to allow the maximum light throughput without any potential contamination in the red from the M dwarf companion.  Data was reduced using the ULTRACAM pipeline (Marsh reference) with a comparison star located about xx arcminutes to XX from the target and located at RA, DEC. The details for these nights is shown in Table \ref{tab:photometry}. From this data we measure the eclipse ingress and egress times to a typical precision of 0.3 seconds. Light-curves of all of the eclipses are shown in Fig. \ref{fig:stacked-eclipses}. 
 
 \begin{table}
   \caption{Photometry used in this study. The instrument used was ULTRASPEC, mounted on the 2.5m Thai National Telescope at the Thai National Observatory.}
@@ -158,6 +158,15 @@ a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse tim
 \label{fig:lightcurves}
 \end{figure*}
 
+% Stacked eclipses
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{images/stacked_eclipses.eps}
+\caption{The eclipse profiles of all seven of the eclipses recorded at the Thai National Telescope. The flux ratio is the counts for the target star compared to counts for our comparison (as described in the text). Each eclipse is shown with the MJD of the day it was taken. Two eclipses were observed on the night of 2014-02-07 (MJD 56695). Each light-curve is 4 units for clarity.}
+\label{fig:stacked-eclipses}
+\end{figure}
+
+
 % Radial velocity fit
 \begin{figure}
 \centering
@@ -171,7 +180,7 @@ a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse tim
 \centering
 \includegraphics[width=\textwidth]{images/CSS081231_spectra.eps}
 \caption[Caption for spectra]{The optical spectra of CSS081231 taken at 6 stages of the orbital cycle during outburst in December 2014. Cyclotron humps are seen in the early and late stages of the orbit when the accretion spot is in view. During the mid-phases of the orbit the accretion spot is eclipsed by the white dwarf. }
-\label{fig:spectra-outpurst}
+\label{fig:spectra-outburst}
 \end{figure*}
 
 % Quiescent spectra
@@ -187,7 +196,7 @@ a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse tim
 \centering
 \includegraphics[width=\textwidth]{images/blue_spectra.eps}
 \caption[Caption for spectra]{The blue optical spectra of CSS081231 taken at 16 stages of the orbital cycle during quiesence in February 2009.  }
-\label{fig:spectra-quiescent}
+\label{fig:spectra-quiescent-blue}
 \end{figure*}
 
 \subsection{Maths}
