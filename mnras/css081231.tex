@@ -104,14 +104,8 @@ stars -- individual -- CSS081231:071126+440405 -- binares: eclipsing -- stars: c
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
+CSS081231:071126+440405 is an eclipsing polar cataclysmic variable..... more intro ....
 
-This is a simple template for authors to write new MNRAS papers.
-See \texttt{mnras\_sample.tex} for a more complex example, and \texttt{mnras\_guide.tex}
-for a full user guide.
-
-All papers should start with an Introduction section, which sets the work
-in context, cites relevant earlier studies in the field by \citet{Others2013},
-and describes the problem the authors aim to solve \citep[e.g.][]{Author2012}.
 
 CSS081231:071126+440405 is not a ROSAT source, but it appears in the Swift X-Ray Telescope Point Source Catalog \citep{2014ApJS..210....8E}. It was detected at $3.36 ^{+0.83} _{-0.72} cts/s$ in the full 0.3-10keV band, but the fluxes for the individual soft, medium and hard bands are also given. It is available from Vizier as catalogue IX/43.
 
@@ -143,6 +137,13 @@ but since our observations have been taken with instruments operating at a much 
 \begin{equation}BJD(TDB) = 2454833.207854(12) + E\times0.0813768096(5)\end{equation}
 a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse times are indicated in green. The light curve for all of our high time resolution photometry is shown in Fig. \ref{fig:lightcurves}.
 
+\subsection{Eclipse timings}
+The primary eclipse was observed 7 times in 6 different occasions.  We converted all eclipse times to barycentric dynamical time (TDB) in the form of modified Julian days and corrected to the barycentre of the Solar System, giving what we refer to as BMJD(TDB).
+
+For all our new data we determined the time of mid-egress by a least-squares fit of a function composed of a sigmoid and a straight line of the form, 
+\begin{equation}f = \frac{a_1}{1+e^{-a_2(x-a_3)}} + a_4 + a_5(x - a_3)\end{equation}
+In order to measure the centre of the eclipse, we fitted this function to both the ingress and the egress for each eclipse and then used the mid-point between these two values.
+
 % O-C Diagram
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/css081231_oc.eps}
@@ -164,6 +165,15 @@ a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse tim
 \includegraphics[width=\columnwidth]{images/stacked_eclipses.eps}
 \caption{The eclipse profiles of all seven of the eclipses recorded at the Thai National Telescope. The flux ratio is the counts for the target star compared to counts for our comparison (as described in the text). Each eclipse is shown with the MJD of the day it was taken. Two eclipses were observed on the night of 2014-02-07 (MJD 56695). Each light-curve is 4 units for clarity.}
 \label{fig:stacked-eclipses}
+\end{figure}
+
+
+% Example egress fit
+\begin{figure}
+\centering
+\includegraphics[height=\columnwidth, angle=270]{images/egress.eps}
+\caption[Caption for egress]{An example of the sigmoid fitting method applied to an egress of the primary eclipse. The vertical dashed line is the value used as the time measure of the eclipse egress.}
+\label{fig:egress}
 \end{figure}
 
 
