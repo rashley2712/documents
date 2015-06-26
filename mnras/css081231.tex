@@ -64,16 +64,18 @@
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
 \author[R.P. Ashley et al.]{
-R.P. Ashley,$^{1}$\thanks{E-mail: r.p.ashley@warwick.ac.uk}
-A. Aungwerojwit,$^{2, 3}$
-B.T. G{\"a}nsicke$^{1}$
-M.A. Hollands$^{1}$
-and T.R. Marsh$^{1}$
+R.P. Ashley$^{1}$\thanks{E-mail: r.p.ashley@warwick.ac.uk},
+A. Aungwerojwit$^{2, 3}$,
+B.T. G{\"a}nsicke$^{1}$,
+M.A. Hollands$^{1}$,
+T.R. Marsh$^{1}$ and \newauthor
+John Southworth$^{4}$
 \\
 % List of institutions
 $^{1}$Department of Physics, University of Warwick, Gibbet Hill Road, Coventry, CV4 7AL, UK\\
 $^{2}$Department of Physics, Faculty of Science, Naresuan University, Phitsanulok 65000, Thailand\\
-$^{3}$ThEP Center, CHE, 328 Si Ayutthaya Road, Bangkok 10400, Thailand
+$^{3}$ThEP Center, CHE, 328 Si Ayutthaya Road, Bangkok 10400, Thailand\\
+$^{4}$Astrophysics Group, Keele University, Staffordshire, ST5 5BG, UK
 }
 
 % These dates will be filled out by the publisher
@@ -111,20 +113,20 @@ CSS081231:071126+440405 is not a ROSAT source, but it appears in the Swift X-Ray
 
 
 \section{Observations}
-Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounted on the 2.5m Thai National Telescope during 2014 and 2015. Exposure times varied from 1.6 to 3.6 seconds depending on the conditions of the night. For the first three observations the Sloane g filter was used and for the last three observations the KG5 filter was used. The KG5 filter has a broad optical passband stretching from $\sim3500 \AA~ \mbox{to} \sim7000 \AA$ and was chosen to allow the maximum light throughput without any potential contamination in the red from the M dwarf companion.  Data was reduced using the ULTRACAM pipeline (Marsh reference) with a comparison star located about xx arcminutes to XX from the target and located at RA, DEC. The details for these nights is shown in Table \ref{tab:photometry}. From this data we measure the eclipse ingress and egress times to a typical precision of 0.3 seconds. Light-curves of all of the eclipses are shown in Fig. \ref{fig:stacked-eclipses}. 
+Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounted on the 2.5m Thai National Telescope during 2014 and 2015. Exposure times varied from 1.6 to 3.6 seconds depending on the conditions of the night. For the first three observations the Sloane g filter was used and for the last three observations the KG5 filter was used. The KG5 filter has a broad optical passband stretching from $\sim3500 \AA~ \mbox{to} \sim7000 \AA$ and was chosen to allow the maximum light throughput without any potential contamination in the red from the M dwarf companion.  Data was reduced using the ULTRACAM reduction pipeline (Marsh reference) with a comparison star located about 35 arcseconds to the W from the target and located at RA 07:11:23, DEC +44:04:13 (J2000). The details for these nights are shown in Table \ref{tab:photometry}. 
 
 \begin{table}
   \caption{Photometry used in this study. The instrument used was ULTRASPEC, mounted on the 2.5m Thai National Telescope at the Thai National Observatory.}
   \begin{tabular}{ l  l  l  l  l  }
   \hline
-  Instrument & Date & Filter & $T_{\mbox{exp}}$& Total time \\
+  Date & BJD & Filter & $T_{\mbox{exp}}$& Total time \\
   \hline
-    TNT - ULTRASPEC & 2014/02/06 & Sloan g (tbc)& 1.6s & 147.8m \\
-    TNT - ULTRASPEC & 2014/02/07 & Sloan g (tbc)& 1.7s & 166.2m \\
-    TNT - ULTRASPEC & 2014/02/08 & Sloan g (tbc)& 2.8s & 73.6m \\
-    TNT - ULTRASPEC & 2014/12/12 & KG5 & 3.6s & 95.1m \\
-    TNT - ULTRASPEC & 2015/01/01 & KG5 & 2.0s & 118.2m \\
-    TNT - ULTRASPEC & 2015/01/03 & KG5 & 2.0s & 131.1m \\
+    2014/02/06 & 2456695 & Sloan g (tbc)& 1.6s & 147.8m \\
+    2014/02/07 & 2456696 & Sloan g (tbc)& 1.7s & 166.2m \\
+    2014/02/08 & 2456697 & Sloan g (tbc)& 2.8s & 73.6m \\
+    2014/12/12 & 2457004 & KG5 & 3.6s & 95.1m \\
+    2015/01/01 & 2457024 & KG5 & 2.0s & 118.2m \\
+    2015/01/03 & 2457026 & KG5 & 2.0s & 131.1m \\
     
   \hline
   \end{tabular}
@@ -138,13 +140,31 @@ but since our observations have been taken with instruments operating at a much 
 a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse times are indicated in green. The light curve for all of our high time resolution photometry is shown in Fig. \ref{fig:lightcurves}.
 
 \subsection{Eclipse timings}
-The primary eclipse was observed 7 times in 6 different occasions.  We converted all eclipse times to barycentric dynamical time (TDB) in the form of modified Julian days and corrected to the barycentre of the Solar System, giving what we refer to as BMJD(TDB).
+The primary eclipse was observed 7 times on 6 different occasions.  We converted all eclipse times to barycentric dynamical time (TDB) in the form of modified Julian days and corrected to the barycentre of the Solar System, giving what we refer to as BMJD(TDB).
 
 For all our new data we determined the time of mid-egress by a least-squares fit of a function composed of a sigmoid and a straight line of the form, 
 \begin{equation}f = \frac{a_1}{1+e^{-a_2(x-a_3)}} + a_4 + a_5(x - a_3)\end{equation}
-where $f$ and $x$ are the flux measurements and timing of our observations and $a_1$ to $a_5$ are the 
+where $f$ and $x$ are the flux measurements and timing of our observations and $a_1$ to $a_5$ are the fit parameters with $a_3$ being the time at which ingress or egress occurs. 
 
-In order to measure the centre of the eclipse, we fitted this function to both the ingress and the egress for each eclipse and then used the mid-point between these two values.
+In order to measure the centre of the eclipse, we fitted this function to both the ingress and the egress for each eclipse and then used the mid-point between these two values as our eclipse time. Using this method we measure the eclipse ingress and egress times to a typical precision of 0.3 seconds. All eclipse timings are reported in Table \ref{tab:eclipses}. Light-curves of all of the eclipses are shown in Fig. \ref{fig:stacked-eclipses}. 
+
+\begin{table}
+  \caption{Details of the 7 primary eclipses. Ingress, egress and centre of eclipse times are shown as time since start of BJD (days).}
+  \begin{tabular}{ l  l  l  l  l  }
+  \hline
+ 	BJD & Ingress & Egress & Centre & Duration (s) \\
+  \hline
+    2456695 & 0.269480 & 0.274504 & 0.2719921 & 434.1(0.3) \\
+    2456696 & 0.245999 & 0.251026 & 0.2485129 & 434.4(0.2) \\
+    2456696 & 0.327374 & 0.332403 & 0.3298889 & 434.5(0.1) \\
+    2456697 & 0.222525 & 0.227548 & 0.2250372 & 434.0(0.2) \\
+    2457004 & 0.338635 & 0.343661 & 0.3411487 & 434.3(0.2) \\
+    2457024 & 0.357335 & 0.362353 & 0.3598445 & 433.6(0.3) \\
+    2457026 & 0.310374 & 0.315401 & 0.3128882 & 434.3(0.3) \\
+  \hline
+  \end{tabular}
+  \label{tab:eclipses}
+\end{table}
 
 % O-C Diagram
 \begin{figure}
@@ -211,45 +231,11 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \label{fig:spectra-quiescent-blue}
 \end{figure*}
 
-\subsection{Maths}
-\label{sec:maths} % used for referring to this section from elsewhere
+\subsection{Spectra}
+\label{sec:spectra} % used for referring to this section from elsewhere
+CSS081231 was observed on two separate occasions. Once in February 2009 when the it was in quiescence and then again in December 2014 during outburst. On both occasions the target was observed using the ISIS instrument on the William Herschel Telescope in La Palma. During the 2009 observations, 17 spectra were taken in the optical region, spanning a wavelength range of $\lambda \lambda$ 4200 $\AA$ to 8800 $\AA$ with a typical dispersion of 0.23-0.93 $\AA$ per pixel. The spectra covered all phases of an orbit. The gratings used were the R1200 in the blue arm and the R316R in the red arm. In December 2014, six spectra were obtained covering a wavelength range of $\lambda\lambda$ 3200 $\AA$ to 9200 $\AA$ with a typical dispersion of 0.86-1.81~$\AA$ per pixel. In both cases pixels were binned to factor of 2 in the dispersion direction. 
 
-Simple mathematics can be inserted into the flow of the text e.g. $2\times3=6$
-or $v=220$\,km\,s$^{-1}$, but more complicated expressions should be entered
-as a numbered equation:
-
-\begin{equation}
-    x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
-	\label{eq:quadratic}
-\end{equation}
-
-Refer back to them as e.g. equation~(\ref{eq:quadratic}).
-
-\subsection{Figures and tables}
-
-Figures and tables should be placed at logical positions in the text. Don't worry about the exact layout, which will be handled by the publishers.
-
-Figures are referred to as e.g. Fig.~\ref{fig:example_figure}, and tables as
-e.g. Table~\ref{tab:example_table}.
-
-
-% Example table
-\begin{table}
-	\centering
-	\caption{This is an example table. Captions appear above each table.
-	Remember to define the quantities, symbols and units used.}
-	\label{tab:example_table}
-	\begin{tabular}{lccr} % four columns, alignment for each
-		\hline
-		A & B & C & D\\
-		\hline
-		1 & 2 & 3 & 4\\
-		2 & 4 & 6 & 8\\
-		3 & 5 & 7 & 9\\
-		\hline
-	\end{tabular}
-\end{table}
-
+Cyclotron humps are clearly visible in the spectra and especially strong at phase immediately before and after the eclipse. In order to estimate the magnetic field strength we found two 
 
 \section{Conclusions}
 
