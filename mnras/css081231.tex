@@ -136,7 +136,7 @@ Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounte
 The ephemeris given by \citet{Schwope2015} is 
 \begin{equation}BJD(TDB) = 2454833.207868(14) + E\times0.0813768094(6)\end{equation}
 but since our observations have been taken with instruments operating at a much higher time resolution than the sources used by Schwope, we have re-computed the ephemeris by combining our own eclipse times with those documented in the Schwope paper. Our recomputed ephemeris is 
-\begin{equation}BJD(TDB) = 2454833.207854(12) + E\times0.0813768096(5)\end{equation}
+\begin{equation}BJD(TDB) = 2454833.207854(12) + E\times0.0813768096(5)\label{eq:ephemeris}\end{equation}
 a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse times are indicated in green. The light curve for all of our high time resolution photometry is shown in Fig. \ref{fig:lightcurves}.
 
 \subsection{Eclipse timings}
@@ -185,7 +185,7 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{images/stacked_eclipses.eps}
-\caption{The eclipse profiles of all seven of the eclipses recorded at the Thai National Telescope. The flux ratio is the counts for the target star compared to counts for our comparison (as described in the text). Each eclipse is shown with the MJD of the day it was taken. Two eclipses were observed on the night of 2014-02-07 (MJD 56695). Each light-curve is 4 units for clarity.}
+\caption{The eclipse profiles of all seven of the eclipses recorded at the Thai National Telescope. The flux ratio is the counts for the target star compared to counts for our comparison (as described in the text). Each eclipse is shown with the MJD of the day it was taken. Two eclipses were observed on the night of 2014-02-07 (MJD 56695). Each light-curve is offset by 4 units for clarity.}
 \label{fig:stacked-eclipses}
 \end{figure}
 
@@ -235,18 +235,34 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \label{sec:spectra} % used for referring to this section from elsewhere
 CSS081231 was observed on two separate occasions. Once in February 2009 when the it was in quiescence and then again in December 2014 during outburst. On both occasions the target was observed using the ISIS instrument on the William Herschel Telescope in La Palma. During the 2009 observations, 17 spectra were taken in the optical region, spanning a wavelength range of $\lambda \lambda$ 4200 $\AA$ to 8800 $\AA$ with a typical dispersion of 0.23-0.93 $\AA$ per pixel. The spectra covered all phases of an orbit. The gratings used were the R1200 in the blue arm and the R316R in the red arm. In December 2014, six spectra were obtained covering a wavelength range of $\lambda\lambda$ 3200 $\AA$ to 9200 $\AA$ with a typical dispersion of 0.86-1.81~$\AA$ per pixel. In both cases pixels were binned to factor of 2 in the dispersion direction. 
 
-Cyclotron humps are clearly visible in the spectra and especially strong at phase immediately before and after the eclipse. In order to estimate the magnetic field strength we found two 
+Cyclotron humps are clearly visible in the spectra and especially strong at phases immediately before and after the eclipse. In order to estimate the magnetic field strength we found the wavelength for the hump maxima of two consecutive humps for the spectrum taken at phase 0.12 (as shown in Fig. \ref{fig:spectra-quiescent}) by fitting a quadratic to the continuum. The maxima occured at wavelengths $\lambda  = 8092$ and $6430 \AA$. Using the formula, 
+\begin{equation}B = \frac{2 \pi m_e c}{e}(\frac{1}{\lambda_1} - \frac{1}{\lambda_2})\end{equation}
+we calculate the field strength at the accretion pole to be $B = 34MG$.
+
+The time resolved spectra taken during quiesence show a clear sodium doublet (Na I) at $\lambda 8183$ and $8194 \AA$ for most of the phases. This feature is associated with the photosphere of the M-dwarf companion. A trail of the spectra shows a clear movement due to doppler shift through the orbital cycle. For each of the 17 spectra we fitted a double gaussian to the spectra using a least squares approach. The gaussian took the form of, 
+\begin{equation}f_\lambda = a_0 + a_1 e^{-\frac{1}{2}(\frac{\lambda - a_2}{a_3})^2} + a_4 e^{-\frac{1}{2}(\frac{\lambda - (a_2 - \delta)}{a_3})^2}  \end{equation}
+where $f_\lambda$ is the measured flux at the wavelength, $\lambda$. During the least squares convergence we kept the separation $\delta$ fixed at $11 \AA$; the depth of the lines $a_1$ and $a_4$ free to vary but equal to each other and the width of the lines $a_3$ fixed to $3.4 \AA$. The fitted wavelengths were converted to radial velocities and we fitted a sinusoid to the result. The sinusoid's period was fixed to the known orbital period as determined from photometry and quoted in equation~(\ref{eq:ephemeris}). The fitted radial velocity profile is shown in Fig. \ref{fig:rv-fit}. Our fitted radial velocity has a $K_2$ semi-amplitude of $435(12) km.s^{-1}$. 
+
+\section{M-dwarf spectral type}
+In order to determine the spectral type of the M-dwarf a spectrum taken during primary eclipse was matched to templates of M-dwarfs M0 to M9 taken from the SDSS catalog. The spectrum taken at phase 0.99 in Fig. \ref{fig:spectra-quiescent} is a 300s exposure centred on phase 0.99 and runs from phase 0.97 to 1.01. Inspection of the eclipse profiles shown in Fig. \ref{fig:stacked-eclipses} shows that this spectrum covers only phases that are in full eclipse and is therefore a spectrum of the M-dwarf only without contamination from the White Dwarf or the accretion stream. We fitted this spectrum to a list of template spectra taken from the SDSS catalog (reference) spanning spectral types dM0 to dM9. Our best fit spectrum is that of a dM5 and this is shown in Fig. \ref{fig:sloanfit}. 
+
+
+% fit to the Sloane models
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{images/modelfit.eps}
+\caption[Caption for spectrum]{The spectrum taken at phase 0.9975 (during primary eclipse) shows the mDwarf secondary without contamination from the accretion stream of the primary. The spectrum was fitted to a list of SDSS template spectra and the best match was to a dM5. Our observed spectrum is in black with the template (offset by 0.5) in blue and our residuals in red. }
+\label{fig:sloanfit}
+\end{figure*}
+
+
 
 \section{Conclusions}
 
-The last numbered section should briefly summarise what has been done, and describe
-the final conclusions which the authors draw from their work.
+Conclusions....
 
 \section*{Acknowledgements}
-
-The Acknowledgements section is not numbered. Here you can thank helpful
-colleagues, acknowledge funding agencies, telescopes and facilities used etc.
-Try to keep it short.
+We would like to thank...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
