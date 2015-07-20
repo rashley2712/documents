@@ -59,7 +59,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[CSS081231]{CSS081231: Time resolved spectra and high speed photometry of an eclipsing polar}
+\title[CRTS\,J0711+4404]{CRTS\,J0711+4404: Time resolved spectra and high speed photometry of an eclipsing polar}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -92,7 +92,7 @@ $^{4}$Astrophysics Group, Keele University, Staffordshire, ST5 5BG, UK
 
 % Abstract of the paper
 \begin{abstract}
-CSS081231:071126+440405 is an eclipsing polar with a period of 117 minutes. Small and medium sized telescopes have photometry of the system dating back to late 2008. The ephemeris was computed shortly after discovery and then revised recently following five years of subsequent observations. Newer photometric observations have allowed us to place tighter contraints on the orbital parameters. We have obtained six optical spectra of the system covering phases 0.24 to 0.90 during outburst and sixteen optical spectra taken during quiescence. The spectra show clear cyclotron humps, revealing magnetic field strength of $B  \sim 34 MG$.
+CSS081231:071126+440405 is an eclipsing polar with a period of 117 minutes. Small and medium sized telescopes have photometry of the system dating back to late 2008. The ephemeris was computed shortly after discovery and then revised recently following five years of subsequent observations. Newer photometric observations have allowed us to place tighter contraints on the orbital parameters. We have obtained six optical spectra of the system covering phases 0.24 to 0.90 during outburst and sixteen optical spectra taken during quiescence including a spectrum taken during the primary eclipse revealing the spectral type of the donor star to be dM5.5. The spectra show clear cyclotron humps modulating during the orbital cycle. The surface magnetic field strength at the accreting pole is $B  \sim 34 MG$.
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -106,41 +106,44 @@ stars -- individual -- CSS081231:071126+440405 -- binares: eclipsing -- stars: c
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-CSS081231:071126+440405 is an eclipsing polar cataclysmic variable..... more intro ....
-
-
-CSS081231:071126+440405 is not a ROSAT source, but it appears in the Swift X-Ray Telescope Point Source Catalog \citep{2014ApJS..210....8E}. It was detected at $3.36 ^{+0.83} _{-0.72} cts/s$ in the full 0.3-10keV band, but the fluxes for the individual soft, medium and hard bands are also given. It is available from Vizier as catalogue IX/43.
-
+CSS081231:071126+440405 (hereafter,  CRTS\,J0711+4404) is an eclipsing polar cataclysmic variable..... more intro ....
 
 \section{Observations}
-Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounted on the 2.5m Thai National Telescope during 2014 and 2015. Exposure times varied from 1.6 to 3.6 seconds depending on the conditions of the night. For the first three observations the Sloane g filter was used and for the last three observations the KG5 filter was used. The KG5 filter has a broad optical passband stretching from $\sim3500 \AA~ \mbox{to} \sim7000 \AA$ and was chosen to allow the maximum light throughput without any potential contamination in the red from the M dwarf companion.  Data was reduced using the ULTRACAM reduction pipeline (Marsh reference) with a comparison star located about 35 arcseconds to the W from the target and located at RA 07:11:23, DEC +44:04:13 (J2000). The details for these nights are shown in Table \ref{tab:photometry}. 
+\subsection{High speed photometry}
+
+Six nights of photometry were obtained using ULTRASPEC \citep{ULTRASPEC}, mounted on the 2.5m Thai National Telescope during 2014 and 2015. Exposure times varied from 1.6 to 3.6 seconds depending on the conditions of the night. For the first three observations the Sloane g filter was used and for the last three observations the KG5 filter was used. The KG5 filter has a broad optical passband stretching from $\sim3500 \AA~ \mbox{to} \sim7000 \AA$ and was chosen to allow the maximum light throughput while avoiding contamination from the M dwarf companion.  Data was reduced using the ULTRACAM reduction pipeline (Marsh reference) with a comparison star located about 35 arcseconds to the W from the target and located at RA 07:11:23, DEC +44:04:13 (J2000). The details for these nights are shown in Table \ref{tab:photometry}. 
 
 \begin{table}
   \caption{Photometry used in this study. The instrument used was ULTRASPEC, mounted on the 2.5m Thai National Telescope at the Thai National Observatory.}
   \begin{tabular}{ l  l  l  l  l  }
   \hline
-  Date & BJD & Filter & $T_{\mbox{exp}}$& Total time \\
+  Date & BJD & Filter & $T_{\mbox{exp}}(s)$& Total time (min)\\
   \hline
-    2014/02/06 & 2456695 & Sloan g (tbc)& 1.6s & 147.8m \\
-    2014/02/07 & 2456696 & Sloan g (tbc)& 1.7s & 166.2m \\
-    2014/02/08 & 2456697 & Sloan g (tbc)& 2.8s & 73.6m \\
-    2014/12/12 & 2457004 & KG5 & 3.6s & 95.1m \\
-    2015/01/01 & 2457024 & KG5 & 2.0s & 118.2m \\
-    2015/01/03 & 2457026 & KG5 & 2.0s & 131.1m \\
+    2014/02/06 & 2456695 & Sloan g & 1.6 & 147.8 \\
+    2014/02/07 & 2456696 & Sloan g & 1.7 & 166.2 \\
+    2014/02/08 & 2456697 & Sloan g & 2.8 & 73.6 \\
+    2014/12/12 & 2457004 & KG5 & 3.6 & 95.1 \\
+    2015/01/01 & 2457024 & KG5 & 2.0 & 118.2 \\
+    2015/01/03 & 2457026 & KG5 & 2.0 & 131.1 \\
     
   \hline
   \end{tabular}
   \label{tab:photometry}
 \end{table}
 
-The ephemeris given by \citet{Schwope2015} is 
-\begin{equation}BJD(TDB) = 2454833.207868(14) + E\times0.0813768094(6)\end{equation}
-but since our observations have been taken with instruments operating at a much higher time resolution than the sources used by Schwope, we have re-computed the ephemeris by combining our own eclipse times with those documented in the Schwope paper. Our recomputed ephemeris is 
-\begin{equation}BJD(TDB) = 2454833.207854(12) + E\times0.0813768096(5)\label{eq:ephemeris}\end{equation}
-a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse times are indicated in green. The light curve for all of our high time resolution photometry is shown in Fig. \ref{fig:lightcurves}.
+As in previous observations, the light curves display strong flickering variability and a steep-sided eclipse. \citet{Schwope2015} finds pre-eclipse dips at phase xx. We do not see the equivalent dips in any of our seven light curves. It is possible, as discussed by Schwope that the cause of these dips, namely, the self-occultation of the accretion stream is a transient feature and was not present on during our observations. \emph{If there are any differences between the g-band and the KG5 light curves, mention and explain.}
+
+\subsection{Phase resolved spectroscopy}
+CRTS\,J0711+4404 was observed on two separate nights. Once in February 2009 when it was in quiescence and then again in December 2014 during outburst. On both nights the target was observed using the ISIS dual-beam spectrograph on the William Herschel Telescope in La Palma. During the 2009 observations, 17 spectra were taken in the optical region, spanning a wavelength range of  $4200$\AA\, to $8800$\AA\, with a typical dispersion of $0.23-0.93$\AA\, per pixel. The spectra covered all phases of an orbit. The gratings used were the R1200 in the blue arm and the R316R in the red arm. In December 2014, six spectra were obtained covering a wavelength range of $\lambda\lambda 3200 \AA$ to $9200 \AA$ with a typical dispersion of $0.86 - 1.81 \AA$ per pixel. In both cases pixels were binned to factor of 2 in the dispersion direction. 
+
+\subsection{X-ray fluxes}
+CRTS\,J0711+4404 is not a ROSAT source, but it appears in the Swift X-Ray Telescope Point Source Catalog \citep{2014ApJS..210....8E}. It was detected at $3.36 ^{+0.83} _{-0.72} cts/s$ in the full 0.3-10keV band, but the fluxes for the individual soft, medium and hard bands are also given. It is available from Vizier as catalogue IX/43.
+\emph{Comment: Need to include a longer discussion of the newer Schwope paper here... or leave out this section altogether.}
+
+\section{Analysis}
 
 \subsection{Eclipse timings}
-The primary eclipse was observed 7 times on 6 different occasions.  We converted all eclipse times to barycentric dynamical time (TDB) in the form of modified Julian days and corrected to the barycentre of the Solar System, giving what we refer to as BMJD(TDB).
+The primary eclipse was observed 7 times on 6 different nights.  We converted all eclipse times to barycentric dynamical time (TDB) in the form of modified Julian days and corrected to the barycentre of the Solar System, giving what we refer to as BMJD(TDB).
 
 For all our new data we determined the time of mid-egress by a least-squares fit of a function composed of a sigmoid and a straight line of the form, 
 \begin{equation}f = \frac{a_1}{1+e^{-a_2(x-a_3)}} + a_4 + a_5(x - a_3)\end{equation}
@@ -166,10 +169,16 @@ In order to measure the centre of the eclipse, we fitted this function to both t
   \label{tab:eclipses}
 \end{table}
 
+Small and medium sized telescopes have photometry of the system dating back to late 2008. These observations were compiled and reported by \citet{Schwope2015}. Schwope revised the original ephemeris that was published shortly by  \citet{Thorne2010}. The ephemeris given by Schwope is 
+\begin{equation}BJD(TDB) = 2454833.207868(14) + E\times0.0813768094(6)\end{equation}
+but since our observations have been taken with instruments operating at a much higher time resolution than the sources used by Schwope, we have re-computed the ephemeris by combining our own eclipse times with those documented in the Schwope paper. Our recomputed ephemeris is 
+\begin{equation}BJD(TDB) = 2454833.207854(12) + E\times0.0813768096(5)\label{eq:ephemeris}\end{equation}
+a revised O-C plot is shown in Fig. \ref{fig:ocdiagram} with the new eclipse times are indicated in green. The light curves for all of our high time resolution photometry is shown in Fig. \ref{fig:lightcurves}.
+
 % O-C Diagram
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/css081231_oc.eps}
-    \caption{The observed minus calculated times for all of the eclipse data as reported by \citet{Schwope2015} with our additional observations shown in green (on the right of the plot). }
+    \caption{The observed minus calculated times for all of the eclipse data as reported by \citet{Schwope2015} with our additional observations indicated by the green arrows in the diagram.  }
     \label{fig:ocdiagram}
 \end{figure}
 
@@ -177,7 +186,7 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth]{images/CSS081231_TNT_photometry.eps}
-\caption[Caption for photometry]{The light curves of CSS081231. Exposure lengths vary from 1.6 to 3.6 seconds. The brightness of our target is measured as the fractional counts relative to our comparison star (described in the text). Each orbit is offset by 2 units for clarity.}
+\caption[Caption for photometry]{ \emph{This figure to be removed. Only here for reference for the time being.}The light curves of CRTS\,J0711+4404. Exposure lengths vary from 1.6 to 3.6 seconds. The brightness of our target is measured as the fractional counts relative to our comparison star (described in the text). Each orbit is offset by 2 units for clarity.}
 \label{fig:lightcurves}
 \end{figure*}
 
@@ -198,12 +207,16 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \label{fig:egress}
 \end{figure}
 
+\subsection{Donor star spectral type}
+In order to determine the spectral type of the M-dwarf, a spectrum taken during primary eclipse was matched to templates of M-dwarfs M0 to M9 taken from the SDSS catalog \citep{Bochanski2007}. Careful choice of the exposures ensured that we have a 300 second exposure taken entirely within the 433 second duration eclipse. The spectrum taken at phase 0.99 in Fig. \ref{fig:spectra-quiescent} is a 300s exposure centred on phase 0.99 and runs from phase 0.97 to 1.01.  Inspection of the eclipse profiles shown in Fig. \ref{fig:stacked-eclipses} shows that this spectrum covers only those phases that are in full eclipse and we can conclude that it is a spectrum of the M-dwarf only (ie without contamination from the White Dwarf or the accretion stream). We fitted this spectrum to a set  of template spectra taken from the SDSS catalog (reference) spanning spectral types dM0 to dM9. Our best fit spectrum is that of a dM5 and this is shown in Fig. \ref{fig:sloanfit}. 
+
+
 
 % Radial velocity fit
 \begin{figure}
 \centering
 \includegraphics[height=\columnwidth, angle=270]{images/NaIrvfit.eps}
-\caption[Caption for RVs]{A fit to the computed radial velocities of the Na I doublet at 8183\AA~ and 8194\AA. The $K_2$ amplitude for the fit is 435(12) km/s.     }
+\caption[Caption for RVs]{A fit to the computed radial velocities of the Na I doublet at 8183\AA~ and 8194\AA. The $K_2$ amplitude for the fit is 435(12) km/s.  The period was fixed to 117 minutes as determined from the optical photometry and defined in equation \ref{eq:ephemeris}. }
 \label{fig:rv-fit}
 \end{figure}
 
@@ -219,7 +232,7 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth]{images/CSS081231_spectra_q.eps}
-\caption[Caption for spectra]{The optical spectra of CSS081231 taken at 16 stages of the orbital cycle during quiesence in February 2009.  }
+\caption[Caption for spectra]{The optical spectra of CRTS\,J0711+4404 taken at 16 stages of the orbital cycle during quiesence in February 2009.  }
 \label{fig:spectra-quiescent}
 \end{figure*}
 
@@ -227,25 +240,22 @@ In order to measure the centre of the eclipse, we fitted this function to both t
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth]{images/blue_spectra.eps}
-\caption[Caption for spectra]{The blue optical spectra of CSS081231 taken at 16 stages of the orbital cycle during quiesence in February 2009.  }
+\caption[Caption for spectra]{ \emph{This figure to be removed. Only here for reference for the time being.} The blue optical spectra of CRTS\,J0711+4404 taken at 16 stages of the orbital cycle during quiesence in February 2009.  }
 \label{fig:spectra-quiescent-blue}
 \end{figure*}
 
-\subsection{Spectra}
-\label{sec:spectra} % used for referring to this section from elsewhere
-CSS081231 was observed on two separate occasions. Once in February 2009 when the it was in quiescence and then again in December 2014 during outburst. On both occasions the target was observed using the ISIS instrument on the William Herschel Telescope in La Palma. During the 2009 observations, 17 spectra were taken in the optical region, spanning a wavelength range of $\lambda \lambda$ 4200 $\AA$ to 8800 $\AA$ with a typical dispersion of 0.23-0.93 $\AA$ per pixel. The spectra covered all phases of an orbit. The gratings used were the R1200 in the blue arm and the R316R in the red arm. In December 2014, six spectra were obtained covering a wavelength range of $\lambda\lambda$ 3200 $\AA$ to 9200 $\AA$ with a typical dispersion of 0.86-1.81~$\AA$ per pixel. In both cases pixels were binned to factor of 2 in the dispersion direction. 
-
-Cyclotron humps are clearly visible in the spectra and especially strong at phases immediately before and after the eclipse. In order to estimate the magnetic field strength we found the wavelength for the hump maxima of two consecutive humps for the spectrum taken at phase 0.12 (as shown in Fig. \ref{fig:spectra-quiescent}) by fitting a quadratic to the continuum. The maxima occured at wavelengths $\lambda  = 8092$ and $6430 \AA$. Using the formula, 
-\begin{equation}B = \frac{2 \pi m_e c}{e}(\frac{1}{\lambda_1} - \frac{1}{\lambda_2})\end{equation}
-we calculate the field strength at the accretion pole to be $B = 34MG$.
-
-The time resolved spectra taken during quiesence show a clear sodium doublet (Na I) at $\lambda 8183$ and $8194 \AA$ for most of the phases. This feature is associated with the photosphere of the M-dwarf companion. A trail of the spectra shows a clear movement due to doppler shift through the orbital cycle. For each of the 17 spectra we fitted a double gaussian to the spectra using a least squares approach. The gaussian took the form of, 
+\subsection{Radial velocities}
+The time resolved spectra taken during quiesence show a clear sodium doublet (Na I) at $8183$~\AA~ and $8194$\AA \, for most of the phases. This feature is associated with the photosphere of the M-dwarf companion. A trail of the spectra shows a clear movement due to doppler shift through the orbital cycle. For each of the 17 spectra we fitted a double gaussian to the spectra using a least squares approach. The gaussian took the form of, 
 \begin{equation}f_\lambda = a_0 + a_1 e^{-\frac{1}{2}(\frac{\lambda - a_2}{a_3})^2} + a_4 e^{-\frac{1}{2}(\frac{\lambda - (a_2 - \delta)}{a_3})^2}  \end{equation}
 where $f_\lambda$ is the measured flux at the wavelength, $\lambda$. During the least squares convergence we kept the separation $\delta$ fixed at $11 \AA$; the depth of the lines $a_1$ and $a_4$ free to vary but equal to each other and the width of the lines $a_3$ fixed to $3.4 \AA$. The fitted wavelengths were converted to radial velocities and we fitted a sinusoid to the result. The sinusoid's period was fixed to the known orbital period as determined from photometry and quoted in equation~(\ref{eq:ephemeris}). The fitted radial velocity profile is shown in Fig. \ref{fig:rv-fit}. Our fitted radial velocity has a $K_2$ semi-amplitude of $435(12) km.s^{-1}$. 
 
-\section{M-dwarf spectral type}
-In order to determine the spectral type of the M-dwarf a spectrum taken during primary eclipse was matched to templates of M-dwarfs M0 to M9 taken from the SDSS catalog. The spectrum taken at phase 0.99 in Fig. \ref{fig:spectra-quiescent} is a 300s exposure centred on phase 0.99 and runs from phase 0.97 to 1.01. Inspection of the eclipse profiles shown in Fig. \ref{fig:stacked-eclipses} shows that this spectrum covers only phases that are in full eclipse and is therefore a spectrum of the M-dwarf only without contamination from the White Dwarf or the accretion stream. We fitted this spectrum to a list of template spectra taken from the SDSS catalog (reference) spanning spectral types dM0 to dM9. Our best fit spectrum is that of a dM5 and this is shown in Fig. \ref{fig:sloanfit}. 
+If we assume a mass of $0.15M_{\odot}$ for the companion star (from \citet{Knigge2011} donor star sequence), with $P_{orb} = 117min$, and into Keplers 3rd law and adopting inclination $i=90^o$, this would, at imply a $\sim 1M_{\odot}$ white dwarf.
 
+
+\subsection{Magnetic field strength}
+Cyclotron humps are clearly visible in the spectra and especially strong at phases immediately before and after the eclipse. In order to estimate the magnetic field strength we found the wavelength for the hump maxima of two consecutive humps for the spectrum taken at phase 0.12 (as shown in Fig. \ref{fig:spectra-quiescent}) by fitting a quadratic to the continuum. The maxima occured at wavelengths $\lambda  = 8092$ and $6430 \AA$. Using the formula, 
+\begin{equation}B = \frac{2 \pi m_e c}{e}(\frac{1}{\lambda_1} - \frac{1}{\lambda_2})\end{equation}
+we calculate the field strength at the accretion pole to be $B = 34MG$.
 
 % fit to the Sloane models
 \begin{figure*}
@@ -255,6 +265,13 @@ In order to determine the spectral type of the M-dwarf a spectrum taken during p
 \label{fig:sloanfit}
 \end{figure*}
 
+% Stacked phased (subtracted spectra)
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{images/subtracted_stacked.eps}
+\caption[Caption for spectrum]{The residual spectra, after subtraction of the mDwarf companion.  }
+\label{fig:sloanfit}
+\end{figure*}
 
 
 \section{Conclusions}
@@ -287,12 +304,12 @@ We would like to thank...
 
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
-\appendix
+%\appendix
 
-\section{Some extra material}
+%\section{Some extra material}
 
-If you want to present additional material which would interrupt the flow of the main paper,
-it can be placed in an Appendix which appears after the list of references.
+%If you want to present additional material which would interrupt the flow of the main paper,
+%it can be placed in an Appendix which appears after the list of references.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
