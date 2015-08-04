@@ -1,0 +1,145 @@
+% mnras_template.tex
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+% \usepackage(graphicx,tabularx}
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[Richard Ashley - PhD project]{PhD Progress report - Richard Ashley}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[R.P. Ashley et al.]{
+R.P. Ashley$^{1}$\thanks{E-mail: r.p.ashley@warwick.ac.uk}\\
+% List of institutions
+$^{1}$Department of Physics, University of Warwick, Gibbet Hill Road, Coventry, CV4 7AL, UK\\
+}
+
+% These dates will be filled out by the publisher
+\date{4 August 2015}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2015}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Outline of the project}
+Recent large scale synoptic surveys such as the Catalina Real-time Transit Survey (CRTS)  and the Pan-STARRS survey have yielded a large number of newly discovered transient objects. Many of these objects are compact binaries that exhibit transient phenomena due to the nature of the interaction of the components of the binary. This list includes cataclysmic variable stars that undergo outbursts, binaries that eclipse and pairs of stars that show modulation in their light-curves due to their orbit around each other. Understanding the evolution of these objects benefits from having a large population sample such that the broader statistics of the overall population can be modelled. This is used to place constraints on masses of the components, orbital mechanics and the relative time spent in each phase of the evolution of these systems. Objects detected in these large-scale surveys need to be studied in more detail through having their light-curves resolved with a higher time resolution and with more complete coverage than the surveys can provide. These photometric light-curves will reveal eclipses, phased modulations and timing variations and therefore allow the resolution of the orbital parameters of the systems. 
+
+The University of Warwick has recently acquired a 1 metre telescope located at the Roque de los Muchachos Observatory. This telescope will be used to follow up new transient objects detected in current surveys such as, but not limited to, Pan-STARRS and CRTS. Since the telescope is not fully commissioned at the moment, a large portion of the PhD project will be the undertaking of the commissioning of the telescope including creation of the software required to operate the telescope remotely and robotically. 
+
+\section{Literature review}
+
+\subsection{Compact objects found in surveys}
+\citet{Breedt2014} demonstrates the utility of large scale surveys in producing a list of transient objects worthy of follow up study. In this case the Catalina Real Time Survey (CRTS). The original and primary purpose of CRTS is to detect near-Earth objects such as asteriods that are of interest to solar system astronomers and could be important for an early warning of any objects on a potential collision course with Earth. The survey makes use of a network of xx small telescope situation in yy locations around the world. The survey covers an area of the sky of zz degrees and revisits most locations several times a year. Over the course of the last yy years, it has built a large database of object photometry, covering yy objects with approximately xx data points for each. Photometry 
+
+\section{Current study of compact binary objects}
+
+
+
+\section{Conclusions}
+
+Conclusions....
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+% The best way to enter references is to use BibTeX:
+
+\bibliographystyle{mnras}
+\bibliography{../rashley} % if your bibtex file is called example.bib
+
+
+% Alternatively you could enter them by hand, like this:
+% This method is tedious and prone to error if you have lots of references
+%\begin{thebibliography}{99}
+%\bibitem[\protect\citeauthoryear{Author}{2012}]{Author2012}
+%Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
+%\bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
+%Others S., 2012, Journal of Interesting Stuff, 17, 198
+%\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+%\appendix
+
+%\section{Some extra material}
+
+%If you want to present additional material which would interrupt the flow of the main paper,
+%it can be placed in an Appendix which appears after the list of references.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
