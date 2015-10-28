@@ -5,25 +5,25 @@
 \contentsline {chapter}{Chapter{} \numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Candidate objects}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Eclipsing binaries}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.1}Eclipsing binaries}{4}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}{W UMa} systems}{4}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Ellipsoidal variables}{5}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {1.2.4}Cataclysmic variables}{5}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {1.2.5}Intrinsic variables}{5}{subsection.1.2.5}
-\contentsline {subsubsection}{RR Lyrae stars}{5}{section*.6}
+\contentsline {subsection}{\numberline {1.2.5}Intrinsic variables}{6}{subsection.1.2.5}
+\contentsline {subsubsection}{RR Lyrae stars}{6}{section*.6}
 \contentsline {subsubsection}{$\delta $ Scuti stars}{6}{section*.7}
 \contentsline {subsubsection}{Pulsating White Dwarfs}{6}{section*.8}
-\contentsline {subsection}{\numberline {1.2.6}Flare stars}{6}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.6}Flare stars}{7}{subsection.1.2.6}
 \contentsline {subsection}{\numberline {1.2.7}Asteroids}{7}{subsection.1.2.7}
-\contentsline {section}{\numberline {1.3}The ULTRACAM instrument}{8}{section.1.3}
+\contentsline {section}{\numberline {1.3}The ULTRACAM instrument}{7}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Camera Optics}{8}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Filter sets}{9}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}Field size and pixel scale}{9}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}High-speed operation}{11}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.4}High-speed operation}{9}{subsection.1.3.4}
 \contentsline {section}{\numberline {1.4}ULTRACAM data}{12}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Data capture}{12}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Typical run length}{16}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Run cadences}{18}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.1}Data capture}{16}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Typical run length}{17}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Run cadences}{17}{subsection.1.4.3}
 \contentsline {subsection}{\numberline {1.4.4}The data archive}{19}{subsection.1.4.4}
 \contentsline {section}{\numberline {1.5}Summary}{19}{section.1.5}
 \contentsline {chapter}{Chapter{} \numberline {2}Automating the reduction pipeline}{20}{chapter.2}
