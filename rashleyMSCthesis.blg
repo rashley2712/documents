@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rashleyMSCthesis.aux
 The style file: plainnat.bst
 Database file #1: rashley.bib
-You've used 37 entries,
+Warning--empty publisher in HellierBook
+You've used 40 entries,
             2773 wiz_defined-function locations,
-            851 strings with 14199 characters,
-and the built_in function-call counts, 23836 in all, are:
-= -- 1896
-> -- 2195
-< -- 28
-+ -- 737
-- -- 700
-* -- 2223
-:= -- 3872
-add.period$ -- 130
-call.type$ -- 37
-change.case$ -- 340
-chr.to.int$ -- 37
-cite$ -- 74
-duplicate$ -- 807
-empty$ -- 1407
-format.name$ -- 753
-if$ -- 4817
+            872 strings with 14682 characters,
+and the built_in function-call counts, 25180 in all, are:
+= -- 2010
+> -- 2272
+< -- 30
++ -- 764
+- -- 724
+* -- 2337
+:= -- 4086
+add.period$ -- 141
+call.type$ -- 40
+change.case$ -- 356
+chr.to.int$ -- 40
+cite$ -- 81
+duplicate$ -- 868
+empty$ -- 1518
+format.name$ -- 780
+if$ -- 5094
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 37
-newline$ -- 211
-num.names$ -- 154
-pop$ -- 652
+missing$ -- 41
+newline$ -- 228
+num.names$ -- 166
+pop$ -- 686
 preamble$ -- 1
-purify$ -- 305
+purify$ -- 319
 quote$ -- 0
-skip$ -- 727
+skip$ -- 767
 stack$ -- 0
-substring$ -- 513
-swap$ -- 109
+substring$ -- 561
+swap$ -- 115
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 397
-warning$ -- 0
-while$ -- 144
+type$ -- 425
+warning$ -- 1
+while$ -- 155
 width$ -- 0
-write$ -- 522
+write$ -- 563
+(There was 1 warning)

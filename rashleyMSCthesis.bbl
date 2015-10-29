@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -148,6 +148,11 @@ Gerald Handler.
   Stellar Systems, Volume 4: Stellar Structure and Evolution}, chapter~4, pages
   208--239. Springer Science, 2013.
 
+\bibitem[{Hellier}(2001)]{HellierBook}
+C.~{Hellier}.
+\newblock \emph{{Cataclysmic Variable Stars}}.
+\newblock January 2001.
+
 \bibitem[Hogg and Lang(2012)]{astrometry}
 D.~W. Hogg and D.~Lang.
 \newblock Astrometry.net.
@@ -196,6 +201,15 @@ L.~B. {Lucy}.
 \newblock \emph{Astrophysical Journal}, 151:\penalty0 1123, March 1968.
 \newblock \doi{10.1086/149510}.
 
+\bibitem[{Marigo} et~al.(2008){Marigo}, {Girardi}, {Bressan}, {Groenewegen},
+  {Silva}, and {Granato}]{Marigo2008}
+P.~{Marigo}, L.~{Girardi}, A.~{Bressan}, M.~A.~T. {Groenewegen}, L.~{Silva},
+  and G.~L. {Granato}.
+\newblock {Evolution of asymptotic giant branch stars. II. Optical to
+  far-infrared isochrones with improved TP-AGB models}.
+\newblock \emph{\aap}, 482:\penalty0 883--905, May 2008.
+\newblock \doi{10.1051/0004-6361:20078467}.
+
 \bibitem[Masiero et~al.(2009)Masiero, Jedicke, \v{D}urech, Gwyn, Denneau, and
   Larsen]{Masiero2009}
 Joseph Masiero, Robert Jedicke, Josef \v{D}urech, Stephen Gwyn, Larry Denneau,
@@ -214,6 +228,12 @@ T.~J. {Moffett}.
 \newblock {UV Ceti flare stars - Observational data}.
 \newblock \emph{\apjs}, 29:\penalty0 1--42, December 1974.
 \newblock \doi{10.1086/190330}.
+
+\bibitem[{Morris}(1985)]{EllipsoidalReview1985}
+S.~L. {Morris}.
+\newblock {The ellipsoidal variable stars}.
+\newblock \emph{\apj}, 295:\penalty0 143--152, August 1985.
+\newblock \doi{10.1086/163359}.
 
 \bibitem[{Naylor}(1998)]{optimalapertures}
 T.~{Naylor}.
